@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="">
+    <title>post-it test</title>
+    <link rel="stylesheet" href="../css/_simple_dragging_test.css">
+
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel" src="../unprocessed_js/_simple_dragging_test.js"></script>
+
+<div id ="thing"></div>
+
+<script>
+    const myclose = function(ele) {
+        console.log(ele);
+        // let id = ele.parentElement.parentElement.id;
+        // document.getElementById(id).outerHTML = "";
+    };
+</script>
+
+
+
+<!--<div class="draggable postit" id="postit_1">-->
+    <!--<div class="handle">-->
+        <!--<button type="button" class="close close_postit" aria-label="Close" onclick='myclose(this)'>-->
+            <!--<span aria-hidden="true">&times;</span>-->
+        <!--</button>-->
+    <!--</div>-->
+    <!--<textarea class="postit-text">Hola</textarea>-->
+<!--</div>-->
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+
+/*title*/
+.logo{
+    position:absolute;
+}
+
+
+/*app bar*/
+.mdl-layout__header{
+    background-color: #357888;
+    height: 60px;
+}
+
+.logo{
+
+}
+.house{
+    height: 95px;
+    /* text-align: center; */
+    margin: 20px;
+    margin-left: 20%;
+    /* position: absolute; */
+    /* right: 50px; */
+}
+
+.word{
+    margin-top: 7px;
+}
