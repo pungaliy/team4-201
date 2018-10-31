@@ -1,0 +1,31 @@
+{
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "interactjs": "^1.3.4",
+    "jQuery": "^1.7.4",
+    "jquery": "^3.3.1",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  },
+  "name": "suitehome",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benv28/team4-201.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benv28/team4-201/issues"
+  },
+  "homepage": "https://github.com/benv28/team4-201#readme",
+  "description": ""
+}
