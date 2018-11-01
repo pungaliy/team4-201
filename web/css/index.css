@@ -25,6 +25,7 @@
     background-color: #adcbd8b5;
     height: 80vmin;
     margin-top: 3vmin;
+    position: relative;
 }
 .page-content{
     width: auto;

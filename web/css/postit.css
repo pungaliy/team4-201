@@ -72,3 +72,20 @@
     height: 3vmin;
     background: #db7a36;
 }
+
+.addButton{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.mdl-button--fab.mdl-button--colored {
+    background: rgb(53, 120, 136);
+    color: rgb(255,255,255);
+}
+
+.messageBoard{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
