@@ -16,4 +16,8 @@ public class SockCalendar {
     public SortedSet<SockEvent> getSockEvents() {
         return sockEvents;
     }
+
+    public boolean addSockEvent(SockEvent sockEvent) {
+        return sockEvents.add(sockEvent);
+    }
 }

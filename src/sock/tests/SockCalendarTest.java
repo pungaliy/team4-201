@@ -1,6 +1,8 @@
-package sock.calendar;
+package sock.tests;
 
 import org.junit.jupiter.api.Test;
+import sock.calendar.SockCalendar;
+import sock.calendar.SockEvent;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -28,8 +30,8 @@ class SockCalendarTest {
         endDateTime2.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
         SockEvent sockEvent2 = new SockEvent("Test Event 2", startDateTime2, endDateTime2);
 
-        sockCalendar.getSockEvents().add(sockEvent1);
-        sockCalendar.getSockEvents().add(sockEvent2);
+        sockCalendar.addSockEvent(sockEvent1);
+        sockCalendar.addSockEvent(sockEvent2);
 
         var iterator = sockCalendar.getSockEvents().iterator();
         assertEquals(sockEvent1, iterator.next());

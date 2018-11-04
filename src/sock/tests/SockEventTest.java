@@ -1,6 +1,7 @@
-package sock.calendar;
+package sock.tests;
 
 import org.junit.jupiter.api.Test;
+import sock.calendar.SockEvent;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
