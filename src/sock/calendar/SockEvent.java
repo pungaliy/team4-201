@@ -4,6 +4,9 @@ import java.util.Calendar;
 import java.util.Objects;
 
 /**
+ * SockEvent represents an event that is stored in Calendar objects. Each event has an eventSu
+ *
+ *
  * For Calendar objects, make sure to use GregorianCalendar objects.
  * Each Calendar object should have their timezone set, by calling .setTimeZone(TimeZone.getTimeZone(s)) on it, where s is a String that represents the time zone.
  * For PST timezone, it is "America/Los_Angeles", so you would call .setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"))
