@@ -1,8 +1,15 @@
 package sock.base;
 
+import com.google.gson.Gson;
 import sock.calendar.SockCalendar;
+import sock.calendar.SockEvent;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.TimeZone;
 
 public class SockRoom {
     private int roomID;
@@ -10,6 +17,12 @@ public class SockRoom {
     private ArrayList<SockUser> roomUsers;
 
     private SockCalendar roomCalendar;
+
+    public SockRoom(int roomID) {
+        this.roomID = roomID;
+        this.roomUsers = new ArrayList<>();
+        this.roomCalendar = new SockCalendar();
+    }
 
     public int getRoomID() {
         return roomID;
@@ -43,5 +56,35 @@ public class SockRoom {
         }
 
         return null;
+    }
+
+    /**
+     * DELETE THIS LATER.
+     *
+     * @param args
+     */
+    public static void main (String[] args) {
+        Calendar startDateTime1 = new GregorianCalendar(2018, 11, 5, 12, 0);
+        startDateTime1.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+        Calendar endDateTime1 = new GregorianCalendar(2018, 11, 5, 15, 0);
+        endDateTime1.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+        SockEvent event1 = new SockEvent("Event #1", startDateTime1, endDateTime1);
+
+        SockUser user1 = new SockUser(1);
+        user1.getUserCalendar().addSockEvent(event1);
+
+        SockRoom sockRoom = new SockRoom(1);
+        sockRoom.addSockUser(user1);
+
+        String json = new Gson().toJson(sockRoom);
+        PrintWriter printWriter = null;
+        try {
+            printWriter = new PrintWriter("A:\\Bub\\Desktop\\Calendar.txt");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        printWriter.write(json);
+        printWriter.flush();
+        printWriter.close();
     }
 }

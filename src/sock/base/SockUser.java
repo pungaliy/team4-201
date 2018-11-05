@@ -4,10 +4,10 @@ import sock.calendar.SockCalendar;
 
 public class SockUser {
     private int userID;
-
     private SockCalendar userCalendar;
 
-    public SockUser() {
+    public SockUser(int userID) {
+        this.userID = userID;
         this.userCalendar = new SockCalendar();
     }
 
