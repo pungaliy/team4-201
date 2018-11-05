@@ -11,6 +11,11 @@ import java.util.TimeZone;
 @javax.servlet.annotation.WebServlet(name = "GetRoomServlet", urlPatterns = {"/GetRoomServlet"})
 public class GetRoomServlet extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+
+    }
+
+    @Override
+    protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         //dummy setup data...
         Calendar startDateTime1 = new GregorianCalendar(2018, 11, 5, 12, 0);
         startDateTime1.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
@@ -29,10 +34,5 @@ public class GetRoomServlet extends javax.servlet.http.HttpServlet {
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         response.getWriter().write(json);
-    }
-
-    @Override
-    protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-
     }
 }
