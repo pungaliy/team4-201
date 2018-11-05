@@ -14,4 +14,16 @@ public class TabsLedger {
 		this.purchaser = buy;
 		this.splitters = split;
 	}
+
+	public Item getItemBought() {
+		return itemBought;
+	}
+
+	public tempUser getPurchaser() {
+		return purchaser;
+	}
+
+	public Vector<tempUser> getSplitters() {
+		return splitters;
+	}
 }

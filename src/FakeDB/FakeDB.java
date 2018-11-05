@@ -26,4 +26,23 @@ public class FakeDB {
 		tabsTotals = new Vector<TabsTotal>();
 
 	}
+
+	public tempUser SearchUserByEmail(String email){
+		for (tempUser u : users) {
+			if (u.getEmail().equals(email)){
+				return u;
+			}
+		}
+		return null;
+	}
+
+	public tempRoom SearchRoomByID(int ID){
+		for (tempRoom r : rooms){
+			if(r.getRoomID() == ID){
+				return r;
+			}
+		}
+		return null;
+	}
+
 }

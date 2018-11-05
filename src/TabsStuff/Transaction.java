@@ -19,5 +19,27 @@ public class Transaction {
 		this.itemBought = item;
 	}
 
+	public tempUser getPurchaser() {
+		return purchaser;
+	}
 
+	public float getAmount() {
+		return amount;
+	}
+
+	public int getRoomID() {
+		return roomID;
+	}
+
+	public TabsItem getItemBought() {
+		return itemBought;
+	}
+
+	public tempUser getSplitter() {
+		return splitter;
+	}
+
+	public boolean isConfirmed(){
+		return isConfirmed;
+	}
 }
