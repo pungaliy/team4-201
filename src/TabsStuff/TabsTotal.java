@@ -7,6 +7,12 @@ public class TabsTotal {
 	private tempUser user2;
 	private float amount;
 
+	public TabsTotal(tempUser user1, tempUser user2, float amount){
+		this.user1 = user1;
+		this.user2 = user2;
+		this.amount = amount;
+	}
+
 	public tempUser getUser1() {
 		return user1;
 	}

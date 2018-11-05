@@ -5,6 +5,12 @@ public class tempUser {
 	private String email;
 	private tempRoom room;
 
+	public tempUser(String name, String email, tempRoom room){
+		this.name = name;
+		this.email = email;
+		this.room = room;
+	}
+
 	public String getName(){
 		return this.name;
 	}
