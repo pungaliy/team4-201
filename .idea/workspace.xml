@@ -7,17 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="070a7389-c2ad-4722-a2c8-cd4645decc4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/FakeDB/FakeDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Methods/Magic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TabsStuff/GroceryItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabsStuff/GroceryItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TabsStuff/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabsStuff/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TabsStuff/TabsItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabsStuff/TabsItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TabsStuff/TabsLedger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabsStuff/TabsLedger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TabsStuff/TabsTotal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabsStuff/TabsTotal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TabsStuff/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabsStuff/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/temp/tempRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/temp/tempRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/temp/tempUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/temp/tempUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FakeDB/FakeDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FakeDB/FakeDB.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,14 +81,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2329" />
-          <entry key="txt" value="63" />
+          <entry key="java" value="2497" />
+          <entry key="txt" value="115" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2329" />
-          <entry key="PLAIN_TEXT" value="63" />
+          <entry key="JAVA" value="2497" />
+          <entry key="PLAIN_TEXT" value="115" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
@@ -157,10 +148,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TabsStuff/Transaction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
+            <state relative-caret-position="298">
               <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
             </state>
           </provider>
@@ -178,11 +169,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FakeDB/FakeDB.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="294">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+              <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -280,7 +271,6 @@
         <option value="$PROJECT_DIR$/web/unprocessed_js/loadRoom.js" />
         <option value="$PROJECT_DIR$/src/TabsStuff/tempUser.java" />
         <option value="$PROJECT_DIR$/notes.txt" />
-        <option value="$PROJECT_DIR$/src/FakeDB/FakeDB.java" />
         <option value="$PROJECT_DIR$/src/Methods/Magic.java" />
         <option value="$PROJECT_DIR$/src/temp/tempUser.java" />
         <option value="$PROJECT_DIR$/src/temp/tempRoom.java" />
@@ -290,6 +280,7 @@
         <option value="$PROJECT_DIR$/src/TabsStuff/TabsLedger.java" />
         <option value="$PROJECT_DIR$/src/TabsStuff/TabsTotal.java" />
         <option value="$PROJECT_DIR$/src/TabsStuff/Transaction.java" />
+        <option value="$PROJECT_DIR$/src/FakeDB/FakeDB.java" />
       </list>
     </option>
   </component>
@@ -344,6 +335,12 @@
               <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
               <item name="team4-201" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="FakeDB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
+              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="TabsStuff" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -365,7 +362,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541399757423" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541399866327" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -546,7 +543,7 @@
       <option name="presentableId" value="Default" />
       <updated>1541286217683</updated>
       <workItem from="1541286221611" duration="29595000" />
-      <workItem from="1541398830708" duration="924000" />
+      <workItem from="1541398830708" duration="1032000" />
     </task>
     <task id="LOCAL-00001" summary="First glance Calendar, Event implementations in Java.&#10;Basic test cases for SockEvent to check it works as it should.&#10;Made src, sock.calendar folder/packages.&#10;&#10;Need to implement rooms...? + users? Then servlets + JS.">
       <created>1541293821063</created>
@@ -597,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541399122623</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added constructors for temp and tabsstuff classes">
+      <created>1541399781051</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1541399781051</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -627,7 +631,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32036000" />
+    <option name="totallyTimeSpent" value="32144000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -652,7 +656,7 @@
       <window_info id="JavaEE:App" order="7" side_tool="true" />
       <window_info id="Image Layers" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32884902" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32884902" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49939758" visible="true" weight="0.33214286" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -663,7 +667,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006024" side_tool="true" weight="0.45357144" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32884902" />
+      <window_info anchor="bottom" id="Version Control" order="12" visible="true" weight="0.32884902" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -723,7 +727,8 @@
     <MESSAGE value="AJAX Code, in progress. Not detailed commit, just for Ben to look at where I'm at right now." />
     <MESSAGE value="Added JS. Need to figure out FullCalendar integration." />
     <MESSAGE value="Added classes basic implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added classes basic implementation" />
+    <MESSAGE value="Added constructors for temp and tabsstuff classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added constructors for temp and tabsstuff classes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -857,16 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FakeDB/FakeDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Methods/Magic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -950,8 +945,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TabsStuff/Transaction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
+        <state relative-caret-position="298">
           <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FakeDB/FakeDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

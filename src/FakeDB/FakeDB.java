@@ -16,4 +16,14 @@ public class FakeDB {
 	private Vector<TabsItem> tabsItems;
 	private Vector<Transaction> transactions;
 	private Vector<TabsTotal> tabsTotals;
+
+	public FakeDB(){
+		users = new Vector<tempUser>();
+		rooms = new Vector<tempRoom>();
+		groceryItems = new Vector<GroceryItem>();
+		tabsItems = new Vector<TabsItem>();
+		transactions = new Vector<Transaction>();
+		tabsTotals = new Vector<TabsTotal>();
+
+	}
 }
