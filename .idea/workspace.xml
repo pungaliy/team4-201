@@ -7,14 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e01caea0-f7ce-4d2e-ae68-6639be0f91c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/html/_calendar_test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/unprocessed_js/_calendar_test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/tabs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/html/tabs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/groceryblue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/groceryorange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/grocerypink.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/babel-doctor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/babel-node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/html/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/message.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

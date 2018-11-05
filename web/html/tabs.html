@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-blue.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/tabs.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <style>
+        .demo-list-control {
+            width: 300px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+                    <span class="logo">
+                        <img class="word" src="../resources/logo2.png" alt="Suite Home" height="42" >
+                    </span>
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+                <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+                    <i class="material-icons">search</i>
+                </label>
+                <div class="mdl-textfield__expandable-holder">
+                    <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title"><img class="house" src="../resources/logo.png" alt="Suite Home" height="60" ></span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="message.html">Home</a>
+            <a class="mdl-navigation__link" href="">Calendar</a>
+            <a class="mdl-navigation__link" href="tabs.html">Tabs</a>
+            <a class="mdl-navigation__link" href="">Chores</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <div class="mdl-grid">
+
+                <!--grocery list-->
+                <div class="grocery mdl-cell mdl-cell--4-col">
+                    <img class="grocerylist" src="../resources/groceryorange.png" alt="Suite Home" height="42" >
+
+                    <ul class="demo-list-control mdl-list">
+
+                        <!--one item in a list. use jsp to make more!-->
+                        <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                              Apple Juice
+                            </span>
+                            <span class="mdl-list__item-secondary-action">
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-1">
+                                    <input type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input"  />
+                                </label>
+                            </span>
+                        </li>
+                        <!---->
+
+                        <!-- make sure to change the id of the input and the for field in the label-->
+                        <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                              Febreeze
+                            </span>
+                            <span class="mdl-list__item-secondary-action">
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-2">
+                                    <input type="checkbox" id="list-checkbox-2" class="mdl-checkbox__input" />
+                                </label>
+                            </span>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="transaction mdl-cell mdl-cell--4-col">2</div>
+                <div class="amount mdl-cell mdl-cell--4-col">3</div>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>
