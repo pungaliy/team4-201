@@ -41,9 +41,9 @@ package src;
 //
 import com.google.gson.Gson;
 import com.mongodb.*;
-//import com.mongodb.MongoClient;
+import com.mongodb.MongoClient;
 import com.mongodb.client.MongoClients;
-import com.mongodb.client.MongoClient;
+//import com.mongodb.client.MongoClient;
 
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.MongoCollection;
@@ -82,19 +82,24 @@ public class DataBase {
     Gson gson;
 
     public DataBase() {
-        mongoClient = MongoClients.create();
+
+//        mongoClient = MongoClients.create();
         CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
                 fromProviders(PojoCodecProvider.builder().automatic(true).build()));
 
-        MongoClientSettings settings = MongoClientSettings.builder()
-                .codecRegistry(pojoCodecRegistry)
-                .build();
+        MongoClient mongoClient = new MongoClient("localhost", MongoClientOptions.builder().codecRegistry(pojoCodecRegistry).build());
+//        MongoClientSettings settings = MongoClientSettings.builder()
+//                .codecRegistry(pojoCodecRegistry)
+//                .build();
+
+
 //        MongoClient mongoClient = MongoClients.create(settings);
 //        mongoClient = MongoClients.create();
-        database = mongoClient.getDatabase("SuiteHome").withCodecRegistry(pojoCodecRegistry);
+        database = mongoClient.getDatabase("SuiteHome");//.withCodecRegistry(pojoCodecRegistry);
 //        database = mongoClient.getDatabase("SuiteHome");
         gson = new Gson();
     }
+
 
     public void insertNote(Note note) {
         MongoCollection<Note> collection = database.getCollection("notes", Note.class);
@@ -106,19 +111,17 @@ public class DataBase {
         //navigate to notes collection
         MongoCollection<Note> collection = database.getCollection("notes", Note.class);
         //only get notes for a specific room, store results in cursor obj
-        MongoCursor<Note> cursor = collection.find(eq("text", "note content 2")).iterator();
+        MongoCursor<Note> cursor = collection.find(eq("iDname", "room2")).iterator();
 
 //        cursor.ToArray().ToJson();
 
         try {
 
-            System.out.println("ter");
             while (cursor.hasNext()) {
 //                String tmp = cursor.next().toJson();
 //                System.out.println(tmp);
 //                results += tmp;
                 cursor.next().print();
-                System.out.println("ter");
             }
         } finally {
             cursor.close();
@@ -130,8 +133,8 @@ public class DataBase {
     public static void main(String [] args) {
         DataBase db  = new DataBase();
 
-        Note note  = new Note("note content 2", (float)1.23, (float)4.56, "room1");
+        Note note  = new Note("note content 2", "t", "s", "room2");
         db.insertNote(note);
-        db.retrieveNotes("room1");
+        db.retrieveNotes("room2");
     }
 }

@@ -1,14 +1,14 @@
 package src;
-
+//for now, change all doubles/ints to strings while i figure out the issues with mongoDB
 public class Note {
     private String text;
-    private double xPos;
-    private double yPos;
+    private String xPos;
+    private String yPos;
     private String IDname;
 
     public Note() {}
 
-    public Note(String content, double x, double y, String noteID) {
+    public Note(String content, String x, String y, String noteID) {
         this.setText(content);
         this.setxPos(x);
         this.setyPos(y);
@@ -16,29 +16,30 @@ public class Note {
     }
 
     public void print() {
-        System.out.println(IDname + ": " + xPos+", "+yPos+"; "+text);
+        System.out.println(getIDname() + ": " + getxPos() +", "+ getyPos() +"; "+ getText());
     }
+
     public String getText() {
         return text;
     }
 
-    public void setText(String text) {
+    public void setText(final String text) {
         this.text = text;
     }
 
-    public double getxPos() {
+    public String getxPos() {
         return xPos;
     }
 
-    public void setxPos(double xPos) {
+    public void setxPos(final String xPos) {
         this.xPos = xPos;
     }
 
-    public double getyPos() {
+    public String getyPos() {
         return yPos;
     }
 
-    public void setyPos(double yPos) {
+    public void setyPos(final String yPos) {
         this.yPos = yPos;
     }
 
@@ -46,7 +47,7 @@ public class Note {
         return IDname;
     }
 
-    public void setIDname(String IDname) {
+    public void setIDname(final String IDname) {
         this.IDname = IDname;
     }
 }
