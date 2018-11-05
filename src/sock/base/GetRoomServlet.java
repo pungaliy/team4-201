@@ -8,7 +8,7 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
-@javax.servlet.annotation.WebServlet(name = "GetRoomServlet")
+@javax.servlet.annotation.WebServlet(name = "GetRoomServlet", urlPatterns = {"/GetRoomServlet"})
 public class GetRoomServlet extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         //dummy setup data...
@@ -31,6 +31,7 @@ public class GetRoomServlet extends javax.servlet.http.HttpServlet {
         response.getWriter().write(json);
     }
 
+    @Override
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
 
     }
