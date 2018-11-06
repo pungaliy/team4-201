@@ -23,26 +23,26 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/dbsrc/mongodb-driver-core-3.8.2.jar!/" />
-          <root url="jar://$MODULE_DIR$/dbsrc/bson-3.8.2.jar!/" />
-          <root url="jar://$MODULE_DIR$/dbsrc/mongodb-driver-3.8.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/dbsrc/gson-2.8.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MODULE_DIR$/dbsrc/mongodb-driver-core-3.8.2-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/dbsrc/bson-3.8.2-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/dbsrc/mongodb-driver-3.8.2-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/dbsrc/gson-2.8.2-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/dbsrc/gson-2.8.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/dbsrc/mongodb-driver-core-3.8.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/dbsrc/mongodb-driver-3.8.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/dbsrc/bson-3.8.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MODULE_DIR$/dbsrc/gson-2.8.2-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/dbsrc/mongodb-driver-core-3.8.2-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/dbsrc/mongodb-driver-3.8.2-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/dbsrc/bson-3.8.2-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
