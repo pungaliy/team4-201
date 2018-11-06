@@ -1,4 +1,4 @@
-package src;
+package db;
 
 public class User {
     private String name;

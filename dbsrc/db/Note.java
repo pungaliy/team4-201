@@ -1,4 +1,4 @@
-package src;
+package db;
 
 //for now, change all doubles/ints to strings while i figure out the issues with mongoDB
 public final class Note {
