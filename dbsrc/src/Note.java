@@ -1,53 +1,62 @@
 package src;
+
 //for now, change all doubles/ints to strings while i figure out the issues with mongoDB
-public class Note {
+public final class Note {
     private String text;
-    private String xPos;
-    private String yPos;
-    private String IDname;
+    private double xpos;
+    private double ypos;
+    private String noteid;
+    private String roomid;
 
-    public Note() {}
+    public Note() {
+    }
 
-    public Note(String content, String x, String y, String noteID) {
-        this.setText(content);
-        this.setxPos(x);
-        this.setyPos(y);
-        this.setIDname(noteID);
+    public Note(final String content, final double x, final double y, final String noteid, String roomid) {
+        this.text = content;
+        this.xpos = x;
+        this.ypos = y;
+        this.noteid = noteid;
+        this.roomid = roomid;
+    }
+    public String getText() {
+        return this.text;
+    }
+    public String getNoteid() {
+        return this.noteid;
+    }
+    public double getXpos() {
+        return this.xpos;
+    }
+    public double getYpos() {
+        return this.ypos;
+    }
+    public String getRoomid() {
+        return this.roomid;
+    }
+    public void setRoomid(String roomid) {
+        this.roomid = roomid;
+    }
+    public void setText(String text) {
+        this.text = text;
+    }
+    public void setNoteid(String IDname) {
+        this.noteid= IDname;
+    }
+    public void setXpos(double xPos) {
+        this.xpos = xPos;
+    }
+    public void setYpos(double yPos) {
+        this.ypos = yPos;
     }
 
     public void print() {
-        System.out.println(getIDname() + ": " + getxPos() +", "+ getyPos() +"; "+ getText());
+        System.out.println(noteid + ": " + xpos + ", " + ypos + "; " + text);
     }
 
-    public String getText() {
-        return text;
-    }
 
-    public void setText(final String text) {
-        this.text = text;
-    }
 
-    public String getxPos() {
-        return xPos;
-    }
-
-    public void setxPos(final String xPos) {
-        this.xPos = xPos;
-    }
-
-    public String getyPos() {
-        return yPos;
-    }
-
-    public void setyPos(final String yPos) {
-        this.yPos = yPos;
-    }
-
-    public String getIDname() {
-        return IDname;
-    }
-
-    public void setIDname(final String IDname) {
-        this.IDname = IDname;
-    }
+//    @Override
+//    public String toString() {
+//        return IDname + ": " + xPos + ", " + yPos + "; " + text;
+//    }
 }
