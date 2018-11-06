@@ -1,5 +1,6 @@
 package PostItServlets;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name= "SH5RetrievePostIts", urlPatterns = {"/retrieve_postits"})
+@WebServlet(name= "SH5RetrievePostIts", urlPatterns = {"/message-board"})
 public class SH5RetrievePostIts extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -22,8 +23,7 @@ public class SH5RetrievePostIts extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        String res = "{\"notes\": [{\"text\": \"abc123\",\"xpos\": 20, \"ypos\": 20, \"idname\": \"idname1\"},{\"text\": \"abc123\",\"xpos\": 20, \"ypos\": 20, \"idname\": \"idname2\"}]}";
-//        PrintWriter pw = response.getWriter();
-//        pw.print(res);
+        RequestDispatcher view = request.getRequestDispatcher("html/message.html");
+        view.forward(request, response);
     }
 }

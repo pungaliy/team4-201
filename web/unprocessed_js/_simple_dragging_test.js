@@ -118,7 +118,7 @@ var render_these_post_its = function(all_post_its){
 var render_post_its = function() {
     console.log("rendering...");
     $.ajax({
-        url : '/retrieve_postits',
+        url : '/message-board',
         method: 'POST',
         data: {},
         success: function(responseText) {
