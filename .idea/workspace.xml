@@ -7,13 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cca17ea1-f9ce-4722-b571-27d9ed2a58fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/team4_201_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/team4_201_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sock/calendar/AddEventServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sock/calendar/AddEventServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sock/calendar/SockEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sock/calendar/SockEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team4-201.iml" beforeDir="false" afterPath="$PROJECT_DIR$/team4-201.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/unprocessed_js/loadRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/unprocessed_js/loadRoom.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,12 +45,14 @@
         <counts>
           <entry key="java" value="906" />
           <entry key="js" value="182" />
+          <entry key="txt" value="118" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="906" />
           <entry key="JavaScript" value="182" />
+          <entry key="PLAIN_TEXT" value="118" />
         </counts>
       </usages-collector>
     </session>
@@ -194,7 +190,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541476068539" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541477100138" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -297,12 +293,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541452160882</updated>
-      <workItem from="1541452165677" duration="4638000" />
+      <workItem from="1541452165677" duration="5297000" />
     </task>
+    <task id="LOCAL-00001" summary="Added code for AddEventServlet, which will handle the user adding events to their calendar on the backend.">
+      <created>1541476403951</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1541476403951</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4638000" />
+    <option name="totallyTimeSpent" value="5297000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -356,6 +360,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added code for AddEventServlet, which will handle the user adding events to their calendar on the backend." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added code for AddEventServlet, which will handle the user adding events to their calendar on the backend." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/sock/tests/SockEventTest.java">
