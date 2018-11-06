@@ -8,6 +8,11 @@ function init() {
     });
 }
 
+/**
+ * Test function. Delete later.
+ *
+ * @private
+ */
 function _print() {
     console.log("This room's id is " + room.roomID);
 
@@ -25,7 +30,12 @@ function _print() {
     console.log();
 }
 
+/**
+ * Test function. Delete later.
+ * @private
+ */
 function _ajax() {
+    //JS Date objects have a month from 0-11, 10 would be November.
     var startDateTime = new Date(2018, 10, 6, 12, 0, 0, 0);
     var endDateTime = new Date(2018, 10, 6, 15, 0, 0, 0);
     addEvent("Event #1", startDateTime, endDateTime);
@@ -39,21 +49,23 @@ function _ajax() {
  * @param endDateTime JS Date object that holds the ending date and time.
  */
 function addEvent(eventSummary, startDateTime, endDateTime) {
-    $.post("/AddEventServlet", {
+    var event = {
         eventSummary: eventSummary,
         startDateTime: {
             year: startDateTime.getFullYear(),
-            month: startDateTime.getMonth() + 1,
+            month: startDateTime.getMonth(),
             dayOfMonth: startDateTime.getDate(),
             hourOfDay: startDateTime.getHours(),
             minute: startDateTime.getMinutes()
         },
         endDateTime: {
             year: endDateTime.getFullYear(),
-            month: endDateTime.getMonth() + 1,
+            month: endDateTime.getMonth(),
             dayOfMonth: endDateTime.getDate(),
             hourOfDay: endDateTime.getHours(),
             minute: endDateTime.getMinutes()
         }
-    });
+    };
+
+    $.post("/AddEventServlet", JSON.stringify(event));
 }

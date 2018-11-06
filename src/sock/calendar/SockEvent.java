@@ -75,4 +75,13 @@ public class SockEvent implements Comparable {
     public int hashCode() {
         return Objects.hash(eventSummary, startDateTime, endDateTime);
     }
+
+    @Override
+    public String toString() {
+        return ("eventSummary: " + eventSummary + ", " +
+                "startDateTime: " + startDateTime.getTime() + ", " +
+                "endDateTime: " +   endDateTime.getTime());
+    }
+
+
 }
