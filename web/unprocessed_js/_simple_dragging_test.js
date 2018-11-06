@@ -8,8 +8,16 @@ class PostIt extends React.Component {
     componentDidMount() {
         $(function() {
             $(".draggable").draggable({
-                containment: $("#post-it-container")
-            });
+                containment: $("#post-it-container"),
+                stop: function() {
+                    first_update_note(this)
+                },
+                stack: "div"
+                // changed: function () {
+                //     console.log("hey");
+                //     update_note(this)
+                // }
+            })
         });
     }
 
@@ -20,14 +28,13 @@ class PostIt extends React.Component {
                     top: this.props.ypos + "%",
                     left: this.props.xpos + "%",
                     position: "absolute"
-                }
-            }>
+                }}>
                 <div className="handle">
-                    <button type="button"  className="close_postit" onClick={() => myclose(this)}>
+                    <button type="button"  className="close_postit" onClick={() => close_this(this)}>
                         &times;
                     </button>
                 </div>
-                <textarea defaultValue={this.props.text} className="postit-text"/>
+                <textarea onBlur={() => update_note($("#" + this.props.idname))} defaultValue={this.props.text} className="postit-text"/>
             </div>
         );
     }
@@ -47,40 +54,82 @@ class PostIts extends React.Component {
     }
 }
 
+var update_note = function(value) {
+    first_update_note($(value))
+};
+
+var first_update_note = function(val) {
+    console.log(val);
+    console.log($(val).position());
+    console.log($(val).find('textarea').val());
+    var xpos = $(val).position().left / $("#post-it-container").width() * 100;
+    var ypos = $(val).position().top / $("#post-it-container").height() * 100;
+    $.ajax({
+        url: '/update_postit',
+        method: 'POST',
+        data : {
+            xpos : xpos,
+            ypos:  ypos,
+            text: $(val).find("textarea").val().toString(),
+            idname: $(val).attr('id').toString()
+        },
+    });
+};
 
 
+
+var close_this = function (self) {
+    $.ajax({
+        url : '/delete_postit',
+        method: 'POST',
+        data : {
+            idname: self.props.idname
+        },
+        success: function() {
+            render_post_its();
+        }
+    });
+};
 
 var new_post_it = function () {
-    var m_idname = "post-it_" + new Date().getTime();
-
-
+    let m_idname = "post-it_" + new Date().getTime();
+    $.ajax({
+        url : '/add_postit',
+        method: 'POST',
+        data : {
+            xpos : 0,
+            ypos: 0,
+            text: "",
+            idname: m_idname
+        },
+        success: function() {
+            render_post_its();
+        }
+    });
 };
 
-var render_post_its = function(all_post_its){
-
+var render_these_post_its = function(all_post_its){
+    var node = document.getElementById("thing2");
+    ReactDOM.unmountComponentAtNode(node);
     var parsed = JSON.parse(all_post_its);
-    ReactDOM.render(<PostIts notes={parsed.notes}/>, document.getElementById("thing2"));
-    // console.log(m_idname);
+    ReactDOM.render(<PostIts notes={parsed}/>, node);
 };
 
-var json_str = '{' +
-    '"notes": [' +
-    '{' +
-    '"text": "abc123",' +
-    '"xpos": 20, ' +
-    '"ypos": 20, ' +
-    '"idname": "idname1"'+
-    '},' +
-    '{' +
-    '"text": "abc123",' +
-    '"xpos": 20, ' +
-    '"ypos": 20, ' +
-    '"idname": "idname2"'+
-    '}' +
-    ']' +
-    '}';
+var render_post_its = function() {
+    console.log("rendering...");
+    $.ajax({
+        url : '/retrieve_postits',
+        method: 'POST',
+        data: {},
+        success: function(responseText) {
+            render_these_post_its(responseText)
+        }
+    });
+};
 
-render_post_its(json_str)
-console.log(json_str);
-
-
+$(window).trigger('resize');
+$(window).resize(function() {
+        console.log("resizing...");
+        render_post_its();
+    }
+);
