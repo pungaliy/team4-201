@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="">
+    <title>post-it test</title>
+    <link rel="stylesheet" href="../css/postit.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css
+' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src='https://unpkg.com/moment@2.22.2/moment.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js'></script>
+    <script>
+        $(function() {
+
+            $('#calendar').fullCalendar({
+                defaultView: 'agendaWeek',
+
+                header: {
+                    center: 'addEventButton'
+                },
+
+                customButtons: {
+                    addEventButton: {
+                        text: 'add event...',
+                        click: function() {
+                            var dateStr = prompt('Enter a date in YYYY-MM-DD format');
+                            var date = moment(dateStr);
+
+                            if (date.isValid()) {
+                                $('#calendar').fullCalendar('renderEvent', {
+                                    title: 'dynamic event',
+                                    start: date,
+                                    allDay: true
+                                });
+                                alert('Great. Now, update your database...');
+                            } else {
+                                alert('Invalid date.');
+                            }
+                        }
+                    }
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+<div id='calendar'></div>
+
+<!--<div id="root"></div>-->
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>-->
+<!--<script src="https://unpkg.com/react-big-calendar@0.20.1/lib/Calendar.js"></script>-->
+
+<!--<script type="text/babel" src="../unprocessed_js/_calendar_test.js"></script>-->
+
+</body>
+
+</html>
