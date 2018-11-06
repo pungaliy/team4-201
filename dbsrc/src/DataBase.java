@@ -71,12 +71,13 @@ public class DataBase {
 
     }
 
-    public static void main(String[] args) {
-        DataBase db = new DataBase();
 
-        Note note = new Note("note content main", 3.22, 2.33, "note1","room2");
-        db.insertNote(note);
-        String json = db.retrieveNotes("room2");
-        System.out.println(json);
-    }
+//    public static void main(String[] args) {
+//        DataBase db = new DataBase();
+//
+//        Note note = new Note("note content main", 3.22, 2.33, "note1","room2");
+//        db.insertNote(note);
+//        String json = db.retrieveNotes("room2");
+//        System.out.println(json);
+//    }
 }
