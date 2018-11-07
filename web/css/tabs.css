@@ -1,9 +1,41 @@
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #bbd2d6;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #dd9eb1;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 .mdl-list__item, .mdl-list__item .mdl-list__item-primary-content{
     padding: 0;
     font-family: arvo;
     color: #1a5d6d;
     width: 50vmin;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
 
+
+}
+.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp{
+    margin-top: 3vmin;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e0eff3eb;
+    font-family: arvo;
 }
 
 h1{
@@ -41,6 +73,8 @@ h1{
     margin-left: auto;
     margin-right: auto;
     padding: 0;
+    height: 50vmin;
+    overflow: auto;
 }
 
 .mdl-button--accent.mdl-button--accent.mdl-button--raised {
@@ -56,17 +90,31 @@ h1{
 
 }
 .addGroceryButton{
-    bottom: -35vmin;
-
+    top:3vmin;
 }
 .addTransactionButton{
-
-}
-transaction{
-
+    top:5vmin;
 }
 
-
-amount{
-
+.table-container {
+    border: 1px solid #963;
+    display: inline-block;
+    height: 150px;
+    padding-top: 1.875em;
+    position: relative;
+}
+.table-container > div {
+    border-color: #888;
+    border-style: solid;
+    border-width: 1px 1px 2px 1px;
+    height: 1.7em;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+table {
+    display: block;
+    height: 50vmin;
+    overflow-y: auto;
 }
