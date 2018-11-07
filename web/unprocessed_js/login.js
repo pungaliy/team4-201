@@ -1,6 +1,4 @@
 function onSignInHI(googleUser) {
-    var profile = googleUser.getBasicProfile();
-
     if(googleUser.hasGrantedScopes('https://www.googleapis.com/auth/calendar'))
     {
         console.log("we have already been granted the Calendar scope!")

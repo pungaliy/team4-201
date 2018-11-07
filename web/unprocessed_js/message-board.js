@@ -72,7 +72,7 @@ var first_update_note = function(val) {
             ypos:  ypos,
             text: $(val).find("textarea").val().toString(),
             idname: $(val).attr('id').toString()
-        },
+        }
     });
 };
 
@@ -127,9 +127,10 @@ var render_post_its = function() {
     });
 };
 
-$(window).trigger('resize');
 $(window).resize(function() {
         console.log("resizing...");
         render_post_its();
     }
 );
+
+render_post_its();
