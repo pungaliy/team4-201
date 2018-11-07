@@ -1,4 +1,10 @@
 import Methods.Magic;
+import TabsStuff.TabsItem;
+import TabsStuff.TabsLedger;
+import temp.tempRoom;
+import temp.tempUser;
+
+import java.util.Vector;
 
 public class CommandLineTest {
 	private Magic magic = new Magic();
@@ -20,8 +26,35 @@ public class CommandLineTest {
 		magic.getGroceryList(1);
 	}
 
+	public void TransactionTests(){
+ 		tempRoom room = new tempRoom(999);
+		tempUser user1 = new tempUser("User1", "email1", room);
+		tempUser user2 = new tempUser("User2", "email2", room);
+		tempUser user3 = new tempUser("User3", "email3", room);
+
+		//Fish: bought by user1, split with user2, user3, not himself
+		TabsItem fish = new TabsItem("Fish", 3, 16.5f);
+		Vector<tempUser> fishSplit = new Vector<tempUser>();
+		fishSplit.add(user2);
+		fishSplit.add(user3);
+		TabsLedger fishLedger = new TabsLedger(fish, user1, fishSplit);
+		magic.addTransactionToAllSplitters(fishLedger);
+
+		//Beef: bought by user2, split with user2 and user3
+		TabsItem beef = new TabsItem("Beef", 3, 30.0f);
+		Vector<tempUser> beefSplit = new Vector<tempUser>();
+		beefSplit.add(user2);
+		beefSplit.add(user3);
+		TabsLedger beefLedger = new TabsLedger(beef, user2, beefSplit);
+		magic.addTransactionToAllSplitters(beefLedger);
+
+		magic.printAllTransactions();
+
+	}
+
 	public static void main(String [] args){
  		CommandLineTest test = new CommandLineTest();
-		test.GroceryTests();
+		//test.GroceryTests();
+		test.TransactionTests();
 	}
 }

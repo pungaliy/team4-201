@@ -55,8 +55,8 @@ public class Magic {
 	public void printAllTransactions(){
 		Vector<Transaction> all = fakeDB.getAllTransactions();
 		for(Transaction t : all){
-			System.out.println("Payer: " + t.getPurchaser()
-					+ " Owner: " + t.getSplitter()
+			System.out.println("Payer: " + t.getPurchaser().getName()
+					+ " Owner: " + t.getSplitter().getName()
 					+ " Item: " + t.getItemBought().getItemName()
 					+ " Amount: " + t.getAmount());
 		}
