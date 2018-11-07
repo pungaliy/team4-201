@@ -10,11 +10,13 @@ import static com.mongodb.client.model.Filters.eq;
 
 public class NoteBase extends DataBase {
 
+//    inserts a note
     public void insertNote(Note note) {
         MongoCollection<Note> collection = database.getCollection("notes", Note.class);
         collection.insertOne(note);
     }
 
+//    retrieves all notes for a given roomid
     public String retrieveNotes(String roomID) {
         MongoCollection<Note> collection = database.getCollection("notes", Note.class);
 
@@ -28,11 +30,13 @@ public class NoteBase extends DataBase {
         return json;
     }
 
+// deletes note at noteid
     public void deleteNote(String noteID) {
         MongoCollection<Note> collection = database.getCollection("notes", Note.class);
         collection.deleteOne(eq("noteid", noteID));
     }
 
+//    updates all parameters of the note stored at the given note's noteid
     public void updateNote(Note note) {
         MongoCollection<Note> collection = database.getCollection("notes", Note.class);
         collection.replaceOne(eq("noteid", note.getNoteid()), note);
