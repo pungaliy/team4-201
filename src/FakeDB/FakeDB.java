@@ -45,4 +45,37 @@ public class FakeDB {
 		return null;
 	}
 
+	public void addGrocery(GroceryItem g){
+		groceryItems.add(g);
+		System.out.println("Grocery added!");
+	}
+
+	public void removeGrocery(String name, int roomID){
+		GroceryItem toRemove = null;
+		for(GroceryItem g : groceryItems){
+			if(g.getItemName().equals(name) && g.getRoomID() == roomID){
+				toRemove = g;
+			}
+		}
+		groceryItems.remove(toRemove);
+	}
+
+	public Vector<GroceryItem> getGroceryList(int roomID){
+		Vector<GroceryItem> gList = new Vector<GroceryItem>();
+		for(GroceryItem g : groceryItems){
+			if(g.getRoomID() == roomID){
+				gList.add(g);
+			}
+		}
+		return gList;
+	}
+
+	public void addSingleTransaction(Transaction t){
+		transactions.add(t);
+	}
+
+	public Vector<Transaction> getAllTransactions(){
+		return transactions;
+	}
+
 }
