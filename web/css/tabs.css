@@ -1,10 +1,67 @@
-grocery, grocerylist{
+.mdl-list__item, .mdl-list__item .mdl-list__item-primary-content{
+    padding: 0;
+    font-family: arvo;
+    color: #1a5d6d;
+    width: 50vmin;
+
+}
+
+h1{
+    text-align: center;
+    font-family: arvo;
+    font-size: 6vmin;
+    /* display: block; */
+    color: #cf5d7e;
+    padding: 0;
+    margin: 0;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+.grocerylist{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
 }
 
+.grocery{
+    border-right: 3px;
+    /* border-width: 0; */
+    /* border-style: solid; */
+    background-color: #c8dade61;
+    /* border-color: #357888; */
+    border-radius: 1vmin;
+    padding: 3vmin;
+    height: 80vmin;
+    box-shadow: 1px 1px 8px 2px #3578885c;
+    /* border-right: 3px; */
+}
+
+.list{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.mdl-button--accent.mdl-button--accent.mdl-button--raised {
+    font-family: arvo;
+    color: rgb(53, 120, 136);
+    background-color: rgba(53, 120, 136, 0.26);
+}
+.addGroceryButton, .addTransactionButton{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.addGroceryButton{
+    bottom: -35vmin;
+
+}
+.addTransactionButton{
+
+}
 transaction{
 
 }
