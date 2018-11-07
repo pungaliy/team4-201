@@ -50,7 +50,7 @@ h1{
     /* margin-right: auto; */
 }
 td{
-    max-width: 25vmin;
+    max-width: 20vmin;
     overflow-x: auto;
 }
 .grocerylist{
