@@ -1,4 +1,4 @@
-package db;
+package sock.database;
 
 import java.util.ArrayList;
 
