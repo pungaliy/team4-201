@@ -13,10 +13,9 @@ import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
 public class DataBase {
-    protected  MongoClient mongoClient;
+    protected MongoClient mongoClient;
     protected MongoDatabase database;
     protected Gson gson;
-
 
     public DataBase() {
         mongoClient = MongoClients.create();
