@@ -44,7 +44,7 @@ function _ajax() {
 }
 
 /**
- * Adds an event to the current user's calendar.
+ * Posts an event to the current user's calendar on the backend.
  *
  * @param eventSummary String that describes the event.
  * @param startDateTime JS Date object that holds the starting date and time.
