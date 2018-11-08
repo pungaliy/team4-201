@@ -169,6 +169,30 @@ public class CalendarSocket {
 
                 break;
             case ADD_EVENT:
+                Event event = gson.fromJson(calendarData.getJsonData(), Event.class);
+
+                //TODO: Update the database with the new event.
+
+                //TODO: Get actual retrieve users function.
+                for (var foo : calendarSessions) {
+                    boolean needsUpdating = foo.getUserID().equals(calendarData.getUserID());
+
+//                    var bar = retrieveUsers(foo.getRoomID());
+//                    for (User baz : bar) {
+//                        if (baz.getEmail().equals(calendarData.getUserID())) {
+//                            needsUpdating = true;
+//                        }
+//                    }
+
+                    if (needsUpdating) {
+                        try {
+                            foo.getSession().getBasicRemote().sendText(gson.toJson(new CalendarData(CalendarMessageType.UPDATE, foo.getUserID(), foo.getRoomID(), gson.toJson(event))));
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+
                 break;
             case UPDATE:
                 break;

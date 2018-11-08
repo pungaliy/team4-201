@@ -7,121 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cca17ea1-f9ce-4722-b571-27d9ed2a58fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_websocket_api_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.websocket-api-1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sock/calendar/CalendarSocket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sock/calendar/DBHackyEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sock/database/EventBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/unprocessed_js/calendar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fullcalendar-3.9.0/CHANGELOG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fullcalendar-3.9.0/CHANGELOG.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fullcalendar-3.9.0/CONTRIBUTING.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fullcalendar-3.9.0/CONTRIBUTING.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fullcalendar-3.9.0/demos/external-dragging.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullcalendar-3.9.0/demos/external-dragging.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fullcalendar-3.9.0/demos/php/get-events.php" beforeDir="false" afterPath="$PROJECT_DIR$/fullcalendar-3.9.0/demos/php/get-events.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fullcalendar-3.9.0/demos/php/utils.php" beforeDir="false" afterPath="$PROJECT_DIR$/fullcalendar-3.9.0/demos/php/utils.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fullcalendar-3.9.0/demos/themes.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullcalendar-3.9.0/demos/themes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/assign-symbols/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/assign-symbols/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/atob/LICENSE.DOCS" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/atob/LICENSE.DOCS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/atob/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/atob/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/base/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/base/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/base/node_modules/is-accessor-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/base/node_modules/is-accessor-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/base/node_modules/is-data-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/base/node_modules/is-data-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/base/node_modules/is-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/base/node_modules/is-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cache-base/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cache-base/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chokidar/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/chokidar/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/class-utils/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/class-utils/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/collection-visit/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/collection-visit/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/convert-source-map/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/convert-source-map/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/core-js/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/core-js/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/date-arithmetic/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/date-arithmetic/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/define-property/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/define-property/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/define-property/node_modules/is-accessor-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/define-property/node_modules/is-accessor-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/define-property/node_modules/is-data-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/define-property/node_modules/is-data-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/define-property/node_modules/is-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/define-property/node_modules/is-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/build/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/build/gyp-mac-tool" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/build/gyp-mac-tool" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/aproba/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/aproba/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/are-we-there-yet/CHANGES.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/are-we-there-yet/CHANGES.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/are-we-there-yet/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/are-we-there-yet/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/fs-minipass/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/fs-minipass/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/has-unicode/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/has-unicode/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/iconv-lite/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/iconv-lite/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/ini/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/ini/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/minipass/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/minipass/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/minizlib/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/minizlib/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/needle/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/needle/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/node-pre-gyp/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/node-pre-gyp/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/nopt/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/nopt/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/once/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/once/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/osenv/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/osenv/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/safe-buffer/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/safe-buffer/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/safer-buffer/Porting-Buffer.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/safer-buffer/Porting-Buffer.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/sax/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/sax/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/tar/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/tar/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/node_modules/yallist/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fsevents/node_modules/yallist/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fullcalendar/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fullcalendar/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fullcalendar/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fullcalendar/CONTRIBUTING.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/interactjs/dist/docs/module-interact.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/interactjs/dist/docs/module-interact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/interactjs/dist/docs/src_interact.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/interactjs/dist/docs/src_interact.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-accessor-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-accessor-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-data-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-data-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jquery/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/jquery/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/json5/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/json5/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/json5/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/json5/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lodash/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/lodash/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/map-visit/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/map-visit/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/moment/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/moment/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/moment/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/moment/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/nan/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nan/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/nan/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nan/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/nan/doc/asyncworker.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nan/doc/asyncworker.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/nan/doc/buffers.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nan/doc/buffers.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/nan/doc/converters.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nan/doc/converters.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/nan/doc/methods.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nan/doc/methods.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/nan/doc/new.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nan/doc/new.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/nan/doc/persistent.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nan/doc/persistent.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/nan/doc/v8_misc.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nan/doc/v8_misc.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/object-visit/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/object-visit/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/once/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/once/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/private/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/private/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prop-types/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/prop-types/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-big-calendar/node_modules/chokidar/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-big-calendar/node_modules/chokidar/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-big-calendar/node_modules/expand-brackets/node_modules/is-accessor-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-big-calendar/node_modules/expand-brackets/node_modules/is-accessor-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-big-calendar/node_modules/expand-brackets/node_modules/is-data-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-big-calendar/node_modules/expand-brackets/node_modules/is-data-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-big-calendar/node_modules/expand-brackets/node_modules/is-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-big-calendar/node_modules/expand-brackets/node_modules/is-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-big-calendar/node_modules/is-accessor-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-big-calendar/node_modules/is-accessor-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-big-calendar/node_modules/is-data-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-big-calendar/node_modules/is-data-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-big-calendar/node_modules/is-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-big-calendar/node_modules/is-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-big-calendar/node_modules/output-file-sync/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-big-calendar/node_modules/output-file-sync/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/readdirp/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/readdirp/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/readdirp/node_modules/expand-brackets/node_modules/is-accessor-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/readdirp/node_modules/expand-brackets/node_modules/is-accessor-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/readdirp/node_modules/expand-brackets/node_modules/is-data-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/readdirp/node_modules/expand-brackets/node_modules/is-data-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/readdirp/node_modules/expand-brackets/node_modules/is-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/readdirp/node_modules/expand-brackets/node_modules/is-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/readdirp/node_modules/is-accessor-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/readdirp/node_modules/is-accessor-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/readdirp/node_modules/is-data-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/readdirp/node_modules/is-data-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/readdirp/node_modules/is-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/readdirp/node_modules/is-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/safe-buffer/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/safe-buffer/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/snapdragon-node/node_modules/is-accessor-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/snapdragon-node/node_modules/is-accessor-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/snapdragon-node/node_modules/is-data-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/snapdragon-node/node_modules/is-data-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/snapdragon-node/node_modules/is-descriptor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/snapdragon-node/node_modules/is-descriptor/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map-resolve/changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map-resolve/changelog.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map-resolve/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map-resolve/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/uncontrollable/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/uncontrollable/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sock/base/GetRoomServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sock/base/GetRoomServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sock/base/SockRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sock/base/SockRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sock/calendar/AddEventServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sock/calendar/AddEventServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sock/calendar/SockCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sock/calendar/SockCalendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sock/calendar/SockEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sock/calendar/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sock/tests/SockCalendarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sock/tests/SockCalendarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sock/tests/SockEventTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sock/tests/EventTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team4-201.iml" beforeDir="false" afterPath="$PROJECT_DIR$/team4-201.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/_calendar_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/_calendar_test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/search.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/unprocessed_js/loadRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/unprocessed_js/loadRoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sock/calendar/CalendarSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sock/calendar/CalendarSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/unprocessed_js/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/unprocessed_js/calendar.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -149,7 +37,7 @@
           <entry key="css" value="1" />
           <entry key="html" value="10" />
           <entry key="iml" value="2" />
-          <entry key="java" value="37" />
+          <entry key="java" value="38" />
           <entry key="js" value="9" />
           <entry key="jsp" value="1" />
           <entry key="xml" value="1" />
@@ -160,7 +48,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="10" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="37" />
+          <entry key="JAVA" value="38" />
           <entry key="JSP" value="1" />
           <entry key="JavaScript" value="9" />
           <entry key="XML" value="1" />
@@ -169,19 +57,19 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="1648" />
-          <entry key="java" value="4847" />
-          <entry key="js" value="4385" />
+          <entry key="java" value="5382" />
+          <entry key="js" value="5517" />
           <entry key="jsp" value="4" />
-          <entry key="txt" value="362" />
+          <entry key="txt" value="523" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1648" />
-          <entry key="JAVA" value="4847" />
+          <entry key="JAVA" value="5382" />
           <entry key="JSP" value="4" />
-          <entry key="JavaScript" value="4385" />
-          <entry key="PLAIN_TEXT" value="362" />
+          <entry key="JavaScript" value="5517" />
+          <entry key="PLAIN_TEXT" value="523" />
         </counts>
       </usages-collector>
     </session>
@@ -191,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sock/calendar/CalendarSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="154" column="90" selection-start-line="154" selection-start-column="90" selection-end-line="154" selection-end-column="90" />
+            <state relative-caret-position="310">
+              <caret line="198" column="9" lean-forward="true" selection-start-line="198" selection-start-column="9" selection-end-line="198" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#CalendarMessageType#0;class#CalendarSocket#0" />
@@ -210,10 +98,11 @@
                 <element signature="e#1134#1135#0" expanded="true" />
                 <element signature="e#1169#1170#0" expanded="true" />
                 <element signature="class#CalendarSession#0;class#CalendarSocket#0" />
+                <element signature="class#PrimitiveUser#0;class#CalendarSocket#0" />
                 <element signature="e#346#347#0" expanded="true" />
                 <element signature="e#382#383#0" expanded="true" />
-                <element signature="e#4817#4818#0" expanded="true" />
-                <element signature="e#4860#4861#0" expanded="true" />
+                <element signature="e#7547#7548#0" expanded="true" />
+                <element signature="e#7590#7591#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -222,17 +111,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/unprocessed_js/calendar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/unprocessed_js/loadRoom.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="99" selection-start-line="99" selection-end-line="114" selection-end-column="5" />
+            <state relative-caret-position="-98">
+              <caret line="123" column="122" selection-start-line="123" selection-start-column="122" selection-end-line="123" selection-end-column="122" />
             </state>
           </provider>
         </entry>
@@ -326,7 +206,7 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="16" />
+    <option name="x" value="17" />
     <option name="y" value="23" />
     <option name="width" value="1273" />
     <option name="height" value="777" />
@@ -475,7 +355,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541663707968" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541667037596" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -647,11 +527,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541577180761</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="COMPLETE FUCKING OVERHAUL TO WEBSOCKETS FUCK AJAX YEET YEET YEET IT WORKS&#10;&#10;Deprecated:&#10;AddEventServlet.java&#10;SockCalendar.java&#10;loadRoom.js&#10;GetRoomServlet">
+      <created>1541663920675</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1541663920675</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44061000" />
+    <option name="totallyTimeSpent" value="47473000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -664,19 +551,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1273" height="777" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7467533" visible="true" weight="0.1925264" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7470167" visible="true" weight="0.1925264" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.25324675" side_tool="true" visible="true" weight="0.1925264" />
+      <window_info id="Web" order="7" sideWeight="0.2529833" side_tool="true" visible="true" weight="0.1925264" />
       <window_info id="Image Layers" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32554746" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38832116" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -738,7 +626,8 @@
     <MESSAGE value="Added frontend code to display/hide specific calendars, each &quot;calendar&quot; is a JS array of FullCalendar Event objects." />
     <MESSAGE value="It works for now." />
     <MESSAGE value="Moved database files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved database files." />
+    <MESSAGE value="COMPLETE FUCKING OVERHAUL TO WEBSOCKETS FUCK AJAX YEET YEET YEET IT WORKS&#10;&#10;Deprecated:&#10;AddEventServlet.java&#10;SockCalendar.java&#10;loadRoom.js&#10;GetRoomServlet" />
+    <option name="LAST_COMMIT_MESSAGE" value="COMPLETE FUCKING OVERHAUL TO WEBSOCKETS FUCK AJAX YEET YEET YEET IT WORKS&#10;&#10;Deprecated:&#10;AddEventServlet.java&#10;SockCalendar.java&#10;loadRoom.js&#10;GetRoomServlet" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/team4-201.iml">
@@ -914,10 +803,17 @@
     <entry file="file://$PROJECT_DIR$/src/sock/calendar/DBHackyEvent.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/_loadRoom_.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1545">
+          <caret line="103" column="30" lean-forward="true" selection-start-line="103" selection-start-column="30" selection-end-line="103" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sock/calendar/Event.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        <state relative-caret-position="-12">
+          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="17" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -932,17 +828,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/loadRoom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="99" selection-start-line="99" selection-end-line="114" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sock/calendar/CalendarSocket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="154" column="90" selection-start-line="154" selection-start-column="90" selection-end-line="154" selection-end-column="90" />
+        <state relative-caret-position="310">
+          <caret line="198" column="9" lean-forward="true" selection-start-line="198" selection-start-column="9" selection-end-line="198" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#CalendarMessageType#0;class#CalendarSocket#0" />
@@ -960,18 +849,19 @@
             <element signature="e#1134#1135#0" expanded="true" />
             <element signature="e#1169#1170#0" expanded="true" />
             <element signature="class#CalendarSession#0;class#CalendarSocket#0" />
+            <element signature="class#PrimitiveUser#0;class#CalendarSocket#0" />
             <element signature="e#346#347#0" expanded="true" />
             <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#4817#4818#0" expanded="true" />
-            <element signature="e#4860#4861#0" expanded="true" />
+            <element signature="e#7547#7548#0" expanded="true" />
+            <element signature="e#7590#7591#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/calendar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
+        <state relative-caret-position="-98">
+          <caret line="123" column="122" selection-start-line="123" selection-start-column="122" selection-end-line="123" selection-end-column="122" />
         </state>
       </provider>
     </entry>

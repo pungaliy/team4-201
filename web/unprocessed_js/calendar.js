@@ -38,9 +38,8 @@ function init() {
     calendarSocket.onmessage = function (event) {
         var message = JSON.parse(event.data);
         switch (message.messageType) {
-            case CalendarMessageType.INIT:
+            case CalendarMessageType.INIT: //payload will be an ArrayList<PrimitiveUser>
                 console.log("INIT Message received.");
-
                 room = JSON.parse(message.jsonData);
 
                 //convert every user's ArrayList<Event> into a FullCalendar compliant EventSource object
@@ -50,8 +49,8 @@ function init() {
 
                     //the EventSource object that will hold all the FullCalendar Event
                     var eventSource = {
-                        events: [],
-                        color: 'blue'
+                        events: []//,
+                        //color: 'blue'
                     };
 
                     //convert each Java Event object into a FullCalendar Event
@@ -79,18 +78,15 @@ function init() {
                 $(function() {
                     $('#calendar').fullCalendar({
                         defaultView: 'agendaWeek',
-                        // header: {
-                        //     center: 'addEventButton',
-                        // },
-                        //
-                        // customButtons: {
-                        //     addEventButton: {
-                        //         text: 'Add Events',
-                        //         click: function() {
-                        //
-                        //         }
-                        //     }
-                        // }
+                        header: {
+                            center: 'addEventButton',
+                        },
+                        customButtons: {
+                            addEventButton: {
+                                text: 'Add Events',
+                                click: addEvent
+                            }
+                        }
                     });
                 });
 
@@ -99,6 +95,10 @@ function init() {
                 for (i = 0; i < room.length; ++i) {
                     var checkboxID = (String("toggle" + room[i].userID + "Calendar")).replace('@', '');
 
+                    //TODO: Remove this when the actual HTML/CSS is set up.
+                    $("#checkboxes").append("<p>" + room[i].userID + "</p>" + "<br>");
+                    //END
+
                     var checkboxHTML = "<input type='checkbox' id='" + checkboxID + "' onChange='toggleCalendars()'>";
                     $("#checkboxes").append(checkboxHTML);
                     toggleEventMap.set(room[i].userID, false);
@@ -106,9 +106,11 @@ function init() {
                 break;
             case CalendarMessageType.ADD_EVENT:
                 console.log("ADD_EVENT Message received");
+                console.log("THIS SHOULDN'T EVER BE REACHED...SOMETHING BAD HAPPENED");
                 break;
-            case CalendarMessageType.UPDATE:
+            case CalendarMessageType.UPDATE: //payload will be a Java Event object
                 console.log("UPDATE Message received");
+                //TODO: HANDLE DEALING WITH THE JAVA EVENT OBJECT PAYLOAD...
                 break;
         }
     };
@@ -118,8 +120,41 @@ function init() {
     };
 }
 
+function addEvent() {
+    //TODO: Handle actually getting a date somehow when the add event form is implemented. Replace dummy Java Event object
+    var event = {
+        userID: userID,
+        eventSummary: "Javascript Sent Event",
+        startDateTime: {
+            year: 2018,
+            month: 10,
+            dayOfMonth: 6,
+            hourOfDay: 16,
+            minute: 0
+        },
+        endDateTime: {
+            year: 2018,
+            month: 10,
+            dayOfMonth: 6,
+            hourOfDay: 17,
+            minute: 0
+        }
+    };
+
+    //create the CalendarMessage object to send
+    var message = {
+        messageType: CalendarMessageType.ADD_EVENT,
+        userID: userID,
+        roomID: roomID,
+        jsonData: JSON.stringify(event)
+    };
+
+    //send the message
+    calendarSocket.send(JSON.stringify(message));
+}
+
 /**
- * Checks the toggled state for all checkboxes.
+ * Checks the toggled state for all checkboxes and renders/unrenders events on the calendar based on the event data.
  */
 function toggleCalendars() {
     var fullCalendar = $('#calendar').fullCalendar('getCalendar');
@@ -142,3 +177,43 @@ function toggleCalendars() {
     }
 
 }
+
+/**
+ * ArrayList<User> users = retrieveUsers(String roomid);
+ for (User foo : users) {
+	String userID = foo.getEmail();
+	ArrayList<Event> userEvents = retrieveEvents(userID);
+
+}
+ Json object:
+ userID
+ Events[]
+
+ JS:
+ “INIT”:
+ Create a connection, send a message “INIT” that contains USERID, ROOMID.
+
+ “ADDEVENT”
+ Send a message “ADDEVENT” that contains USERID, ROOMID, Event data.
+
+ “UPDATE”
+ Replace the old USERID+EVENTS object with the new one.
+
+ Server:
+ “INIT”
+ Accept connection.
+ Put the USERID, ROOMID, and SESSION into a Tuple.
+ Send a message “INIT” that contains a list of USERID + EVENTS object. (Room + Users)
+
+ “ADDEVENT”
+ Receive a message “ADDEVENT”. Create an Event object. Add it to the database.
+ Look through each Tuple. If ROOMID match, send an UPDATE message.
+
+ “UPDATE”:
+ Send a USERID + EVENTS object.
+
+ method newUserAdded(roomID) {
+	LOOK through TupleList for matching room IDs
+	if roomID matches, then do an UPDATE and send the UserId + Events obj in.
+}
+ */
