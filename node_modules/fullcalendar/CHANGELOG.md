@@ -197,8 +197,8 @@ Bugfixes:
 - event rendering when excessive `minTime`/`maxTime` (#2530)
 - event dragging not shown when excessive `minTime`/`maxTime` (#3055)
 - excessive `minTime`/`maxTime` not reflected in event fetching (#3514)
-	- when minTime is negative, or maxTime beyond 24 hours, when event data is requested
-	  via a function or a feed, the given data params will have time parts.
+	- when minTime is negative, or maxTime beyond 24 hours, when event jsonData is requested
+	  via a function or a feed, the given jsonData params will have time parts.
 - external event dragging via touchpunch broken (#3544)
 - can't make an immediate new selection after existing selection, with mouse.
   introduced in v3.2.0 (#3558)
@@ -352,7 +352,7 @@ v2.7.3 (2016-06-02)
 
 internal enhancements that plugins can benefit from:
 - EventEmitter not correctly working with stopListeningTo
-- normalizeEvent hook for manipulating event data
+- normalizeEvent hook for manipulating event jsonData
 
 
 v2.7.2 (2016-05-20)
@@ -571,7 +571,7 @@ v2.2.0 (2014-11-14)
 	- `eventOverlap`, `selectOverlap`, and similar
 	- `eventConstraint`, `selectConstraint`, and similar
 - Improvements to dragging and dropping external events ([2004])
-	- Associating with real event data. used with `eventReceive`
+	- Associating with real event jsonData. used with `eventReceive`
 	- Associating a `duration`
 - Performance boost for moment creation
 	- Be aware, FullCalendar-specific methods now attached directly to global moment.fn
@@ -803,7 +803,7 @@ v1.6.3 (2013-08-10)
 - `handleWindowResize` option ([PR 54])
 - `eventStartEditable`/`startEditable` options ([PR 49])
 - `eventDurationEditable`/`durationEditable` options ([PR 49])
-- specify function for `$.ajax` `data` parameter for JSON event sources ([PR 59])
+- specify function for `$.ajax` `jsonData` parameter for JSON event sources ([PR 59])
 - fixed bug with agenda event dropping in wrong column ([PR 55])
 - easier event element z-index customization ([PR 58])
 - classNames on past/future days ([PR 88])
@@ -863,7 +863,7 @@ v1.6.0 (2013-03-18)
 - finer snapping granularity for agenda view events ([495], thx @ms-doodle-com)
 - `eventAfterAllRender` ([753], thx @pdrakeweb)
 - `eventDataTransform` (thx @joeyspo)
-- `data-date` attributes on cells (thx @Jae)
+- `jsonData-date` attributes on cells (thx @Jae)
 - expose `$.fullCalendar.dateFormatters`
 - when clicking fast on buttons, prevent text selection
 - bundled with latest jQuery (1.9.1) and jQuery UI (1.10.2)

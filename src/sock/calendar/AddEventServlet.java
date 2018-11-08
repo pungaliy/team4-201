@@ -24,17 +24,17 @@ public class AddEventServlet extends HttpServlet {
             name = temp.nextElement();
         }
 
-        //convert the JSON data into a SockEvent
-        SockEvent sockEvent = new Gson().fromJson(name, SockEvent.class);
+        //convert the JSON data into a Event
+        Event event = new Gson().fromJson(name, Event.class);
 
         //add the event to the user's calendar
-        sockUser.getUserCalendar().addSockEvent(sockEvent);
+        sockUser.getUserCalendar().addSockEvent(event);
 
         //TODO: Update the database and push updates to all clients.
 
 
         //make sure it worked. delete later.
-        System.out.println(sockEvent);
+        System.out.println(event);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

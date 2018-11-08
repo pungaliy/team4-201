@@ -12,93 +12,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src='https://unpkg.com/moment@2.22.2/moment.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js'></script>
-    <script src="../unprocessed_js/loadRoom.js"></script>
-    <script>
-        //get the promise for the room data
-        var roomPromise = getRoomPromise();
-
-        //execute when the promise is fulfilled (the async request finished)
-        roomPromise.then(function (room) {
-            var eventsSourceUser1 = [{
-                title: "Hello World!",
-                start: moment(new Date(2018, 10, 6, 12, 0, 0, 0)),
-                end: moment(new Date(2018, 10, 6, 15, 0, 0, 0))
-            }, {
-                title: "Hello World!",
-                start: moment(new Date(2018, 10, 8, 12, 0, 0, 0)),
-                end: moment(new Date(2018, 10, 8, 18, 0, 0, 0))
-            }];
-
-            var eventsSourceUser2 = [{
-                title: "User 2!",
-                start: moment(new Date(2018, 10, 5, 9, 0, 0, 0)),
-                end: moment(new Date(2018, 10, 5, 13, 0, 0, 0))
-            }, {
-                title: "User 2!",
-                start: moment(new Date(2018, 10, 8, 15, 0, 0, 0)),
-                end: moment(new Date(2018, 10, 8, 16, 0, 0, 0))
-            }];
-
-            var showUser1Calendar = false;
-            var showUser2Calendar = false;
-
-            $(function() {
-                $('#calendar').fullCalendar({
-                    defaultView: 'agendaWeek',
-
-                    header: {
-                        center: 'addEventButton',
-                        left: 'toggleUser1CalendarButton',
-                        right: 'toggleUser2CalendarButton'
-                    },
-
-                    customButtons: {
-                        addEventButton: {
-                            text: 'Add Events',
-                            click: function() {
-                                //render the event on the calendar
-                                //$('#calendar').fullCalendar('addEventSource', eventsSourceUser1);
-
-                                //send the event info to the backend and add it to the SockUser
-                                //addEvent(eventSummary, startDateTime, endDateTime);
-
-                                alert('Success!');
-
-                            }
-                        },
-                        toggleUser1CalendarButton: {
-                            text: "Toggle User 1\'s calendar",
-                            click: function() {
-                                //add/remove the event on the calendar
-                                if (showUser1Calendar) {
-                                    $('#calendar').fullCalendar('removeEventSource', eventsSourceUser1);
-                                } else {
-                                    $('#calendar').fullCalendar('addEventSource', eventsSourceUser1);
-                                }
-                                showUser1Calendar = !showUser1Calendar;
-                            }
-                        },
-                        toggleUser2CalendarButton: {
-                            text: "Toggle User 2\'s calendar",
-                            click: function() {
-                                //add/remove the event on the calendar
-                                if (showUser2Calendar) {
-                                    $('#calendar').fullCalendar('removeEventSource', eventsSourceUser2);
-                                } else {
-                                    $('#calendar').fullCalendar('addEventSource', eventsSourceUser2);
-                                }
-                                showUser2Calendar = !showUser2Calendar;
-                            }
-                        }
-                    }
-                });
-
-            });
-        });
-    </script>
+    <script src="../unprocessed_js/calendar.js"></script>
 </head>
-<body>
-<div id='calendar'></div>
+<body onload="init()">
+<div id='calendar' style="width: 80%;"></div>
+<div id='checkboxes' style="float: right">
+
+</div>
 
 
 <!--<div id="root"></div>-->

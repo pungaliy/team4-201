@@ -2,7 +2,7 @@ package sock.base;
 
 import com.google.gson.Gson;
 import sock.calendar.SockCalendar;
-import sock.calendar.SockEvent;
+import sock.calendar.Event;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -64,27 +64,27 @@ public class SockRoom {
      * @param args
      */
     public static void main (String[] args) {
-        Calendar startDateTime1 = new GregorianCalendar(2018, 11, 5, 12, 0);
-        startDateTime1.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
-        Calendar endDateTime1 = new GregorianCalendar(2018, 11, 5, 15, 0);
-        endDateTime1.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
-        SockEvent event1 = new SockEvent("Event #1", startDateTime1, endDateTime1);
-
-        SockUser user1 = new SockUser(1);
-        user1.getUserCalendar().addSockEvent(event1);
-
-        SockRoom sockRoom = new SockRoom(1);
-        sockRoom.addSockUser(user1);
-
-        String json = new Gson().toJson(sockRoom);
-        PrintWriter printWriter = null;
-        try {
-            printWriter = new PrintWriter("A:\\Bub\\Desktop\\Calendar.txt");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        printWriter.write(json);
-        printWriter.flush();
-        printWriter.close();
+//        Calendar startDateTime1 = new GregorianCalendar(2018, 11, 5, 12, 0);
+//        startDateTime1.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+//        Calendar endDateTime1 = new GregorianCalendar(2018, 11, 5, 15, 0);
+//        endDateTime1.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+//        Event event1 = new Event("Event #1", startDateTime1, endDateTime1);
+//
+//        SockUser user1 = new SockUser(1);
+//        user1.getUserCalendar().addSockEvent(event1);
+//
+//        SockRoom sockRoom = new SockRoom(1);
+//        sockRoom.addSockUser(user1);
+//
+//        String json = new Gson().toJson(sockRoom);
+//        PrintWriter printWriter = null;
+//        try {
+//            printWriter = new PrintWriter("A:\\Bub\\Desktop\\Calendar.txt");
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        printWriter.write(json);
+//        printWriter.flush();
+//        printWriter.close();
     }
 }

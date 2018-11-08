@@ -1,7 +1,7 @@
 <?php
 
 //--------------------------------------------------------------------------------------------------
-// This script reads event data from a JSON file and outputs those events which are within the range
+// This script reads event jsonData from a JSON file and outputs those events which are within the range
 // supplied by the "start" and "end" GET parameters.
 //
 // An optional "timezone" GET parameter will force all ISO8601 date stings to a given timezone.
@@ -29,11 +29,11 @@ if (isset($_GET['timezone'])) {
   $timezone = new DateTimeZone($_GET['timezone']);
 }
 
-// Read and parse our events JSON file into an array of event data arrays.
+// Read and parse our events JSON file into an array of event jsonData arrays.
 $json = file_get_contents(dirname(__FILE__) . '/../json/events.json');
 $input_arrays = json_decode($json, true);
 
-// Accumulate an output array of event data arrays.
+// Accumulate an output array of event jsonData arrays.
 $output_arrays = array();
 foreach ($input_arrays as $array) {
 

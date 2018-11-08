@@ -23,7 +23,7 @@ In the description of your [Pull Request][Using Pull Requests], please include r
 
 ## Contributing Locales
 
-Please edit the original files in the `locale/` directory. DO NOT edit anything in the `dist/` directory. The build system will responsible for merging FullCalendar's `locale/` data with the [MomentJS locale data].
+Please edit the original files in the `locale/` directory. DO NOT edit anything in the `dist/` directory. The build system will responsible for merging FullCalendar's `locale/` jsonData with the [MomentJS locale jsonData].
 
 
 ## Other Ways to Contribute
@@ -118,7 +118,7 @@ If you have edited code (including **tests** and **translations**) and would lik
 [Codepen/JSFiddle]: http://fullcalendar.io/wiki/Reporting-Bugs/
 [Issue Tracker]: https://github.com/fullcalendar/fullcalendar/issues
 [Using Pull Requests]: https://help.github.com/articles/using-pull-requests/
-[MomentJS locale data]: https://github.com/moment/moment/tree/develop/locale
+[MomentJS locale jsonData]: https://github.com/moment/moment/tree/develop/locale
 [git]: http://git-scm.com/
 [node]: http://nodejs.org/
 [gulp-cli]: https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md

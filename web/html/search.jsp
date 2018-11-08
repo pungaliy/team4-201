@@ -20,7 +20,7 @@
         boolean loggedIn = (email != null && roomID != null);
 
         request.setAttribute("loggedIn", loggedIn);
-        request.setAttribute("room", null /** TODO: replace with actual room data**/);
+        request.setAttribute("room", null /** TODO: replace with actual room jsonData**/);
     %>
 </head>
 <body>
