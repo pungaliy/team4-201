@@ -111,6 +111,33 @@ function init() {
             case CalendarMessageType.UPDATE: //payload will be a Java Event object
                 console.log("UPDATE Message received");
                 //TODO: HANDLE DEALING WITH THE JAVA EVENT OBJECT PAYLOAD...
+                var javaEvent = JSON.parse(message.jsonData);
+                var javaEventUserID = javaEvent.userID;
+                var fullCalendarEvent = {
+                    title: javaEvent.eventSummary,
+                    start: new Date(javaEvent.startDateTime.year,
+                                    javaEvent.startDateTime.month,
+                                    javaEvent.startDateTime.dayOfMonth,
+                                    javaEvent.startDateTime.hourOfDay,
+                                    javaEvent.startDateTime.minute, 0, 0),
+                    end:   new Date(javaEvent.endDateTime.year,
+                                    javaEvent.endDateTime.month,
+                                    javaEvent.endDateTime.dayOfMonth,
+                                    javaEvent.endDateTime.hourOfDay,
+                                    javaEvent.endDateTime.minute, 0, 0)
+                };
+                for (i = 0; i < room.length; ++i) {
+                    if (room[i].userID == javaEventUserID) {
+                        room[i].events.events.push(fullCalendarEvent);
+
+                        if (toggleEventMap.get(room[i].userID)) {
+                            //reload the EventSource by removing it and readding it...
+                            $('#calendar').fullCalendar("removeEventSource", room[i].events);
+                            $('#calendar').fullCalendar("addEventSource", room[i].events);
+                        }
+                    }
+                }
+
                 break;
         }
     };

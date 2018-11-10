@@ -195,6 +195,7 @@ public class CalendarSocket {
 
                 break;
             case UPDATE:
+                //SHOULD NEVER BE REACHED....?????
                 break;
         }
     }

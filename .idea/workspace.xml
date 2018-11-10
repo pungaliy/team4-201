@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cca17ea1-f9ce-4722-b571-27d9ed2a58fe" name="Default Changelist" comment="">
+    <list default="true" id="cca17ea1-f9ce-4722-b571-27d9ed2a58fe" name="Default Changelist" comment="Need to handle Javascript side UPDATE message...then *maybe* it might be almost done?">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sock/calendar/CalendarSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sock/calendar/CalendarSocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/unprocessed_js/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/unprocessed_js/calendar.js" afterDir="false" />
@@ -57,30 +57,30 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="1648" />
-          <entry key="java" value="5382" />
-          <entry key="js" value="5517" />
+          <entry key="java" value="5417" />
+          <entry key="js" value="6022" />
           <entry key="jsp" value="4" />
-          <entry key="txt" value="523" />
+          <entry key="txt" value="647" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1648" />
-          <entry key="JAVA" value="5382" />
+          <entry key="JAVA" value="5417" />
           <entry key="JSP" value="4" />
-          <entry key="JavaScript" value="5517" />
-          <entry key="PLAIN_TEXT" value="523" />
+          <entry key="JavaScript" value="6022" />
+          <entry key="PLAIN_TEXT" value="647" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sock/calendar/CalendarSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="198" column="9" lean-forward="true" selection-start-line="198" selection-start-column="9" selection-end-line="198" selection-end-column="9" />
+            <state relative-caret-position="1684">
+              <caret line="197" column="50" selection-start-line="197" selection-start-column="50" selection-end-line="197" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#CalendarMessageType#0;class#CalendarSocket#0" />
@@ -108,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/unprocessed_js/calendar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-98">
-              <caret line="123" column="122" selection-start-line="123" selection-start-column="122" selection-end-line="123" selection-end-column="122" />
+            <state relative-caret-position="184">
+              <caret line="133" column="86" selection-start-line="133" selection-start-column="86" selection-end-line="133" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -176,8 +176,8 @@
         <option value="$PROJECT_DIR$/src/sock/base/GetRoomServlet.java" />
         <option value="$PROJECT_DIR$/src/sock/base/SockRoom.java" />
         <option value="$PROJECT_DIR$/web/html/_calendar_test.html" />
-        <option value="$PROJECT_DIR$/src/sock/calendar/CalendarSocket.java" />
         <option value="$PROJECT_DIR$/web/unprocessed_js/calendar.js" />
+        <option value="$PROJECT_DIR$/src/sock/calendar/CalendarSocket.java" />
       </list>
     </option>
   </component>
@@ -206,9 +206,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="17" />
     <option name="y" value="23" />
-    <option name="width" value="1273" />
+    <option name="width" value="1280" />
     <option name="height" value="777" />
   </component>
   <component name="ProjectView">
@@ -355,7 +354,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541667037596" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541708089652" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -534,11 +533,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541663920675</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Need to handle Javascript side UPDATE message...then *maybe* it might be almost done?">
+      <created>1541667103529</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1541667103529</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47473000" />
+    <option name="totallyTimeSpent" value="51241000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -550,28 +556,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1273" height="777" extended-state="6" />
+    <frame x="2" y="23" width="1273" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7470167" visible="true" weight="0.1925264" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.74660635" visible="true" weight="0.1925264" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.2529833" side_tool="true" visible="true" weight="0.1925264" />
+      <window_info id="Web" order="7" sideWeight="0.25339368" side_tool="true" visible="true" weight="0.1925264" />
       <window_info id="Image Layers" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38832116" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.18602762" visible="true" weight="0.35474452" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.30072993" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32846716" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49919224" weight="0.32846716" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50080776" side_tool="true" weight="0.4540146" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.81397235" side_tool="true" weight="0.35474452" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49919224" weight="0.42043796" />
@@ -627,7 +633,8 @@
     <MESSAGE value="It works for now." />
     <MESSAGE value="Moved database files." />
     <MESSAGE value="COMPLETE FUCKING OVERHAUL TO WEBSOCKETS FUCK AJAX YEET YEET YEET IT WORKS&#10;&#10;Deprecated:&#10;AddEventServlet.java&#10;SockCalendar.java&#10;loadRoom.js&#10;GetRoomServlet" />
-    <option name="LAST_COMMIT_MESSAGE" value="COMPLETE FUCKING OVERHAUL TO WEBSOCKETS FUCK AJAX YEET YEET YEET IT WORKS&#10;&#10;Deprecated:&#10;AddEventServlet.java&#10;SockCalendar.java&#10;loadRoom.js&#10;GetRoomServlet" />
+    <MESSAGE value="Need to handle Javascript side UPDATE message...then *maybe* it might be almost done?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Need to handle Javascript side UPDATE message...then *maybe* it might be almost done?" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/team4-201.iml">
@@ -828,10 +835,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/calendar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="133" column="86" selection-start-line="133" selection-start-column="86" selection-end-line="133" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sock/calendar/CalendarSocket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="198" column="9" lean-forward="true" selection-start-line="198" selection-start-column="9" selection-end-line="198" selection-end-column="9" />
+        <state relative-caret-position="1684">
+          <caret line="197" column="50" selection-start-line="197" selection-start-column="50" selection-end-line="197" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#CalendarMessageType#0;class#CalendarSocket#0" />
@@ -855,13 +869,6 @@
             <element signature="e#7547#7548#0" expanded="true" />
             <element signature="e#7590#7591#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/calendar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-98">
-          <caret line="123" column="122" selection-start-line="123" selection-start-column="122" selection-end-line="123" selection-end-column="122" />
         </state>
       </provider>
     </entry>
