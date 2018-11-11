@@ -5,150 +5,235 @@
  */
 var CalendarMessageType = Object.freeze({"INIT":"INIT", "ADD_EVENT":"ADD_EVENT", "UPDATE":"UPDATE"});
 
-var calendarSocket;
+/**
+ * A JavaScript Array of Java PrimitiveUser.
+ * The room itself and its room-wide calendar is also a PrimitiveUser.
+ * Each PrimitiveUser's ArrayList<Event> events will be deleted after initialization.
+ * ArrayList<Event> events will be replaced by a FullCalendar EventSource eventSource.
+ * Each PrimitiveUser will then have two variables, userID and eventSource.
+ */
 var room;
-var userID = "strawsnowrries@gmail.com";
-var roomID = "691337";
+
+/**
+ * A JavaScript Map.
+ * The Key is a PrimitiveUser's userID.
+ * The Value is a boolean that tracks if the PrimitiveUser's EventSource is added or removed from the FullCalendar.
+ * By default, the current user's calendar will be the only one added to the FullCalendar.
+ */
 var toggleEventMap;
 
-function init() {
-    //create a WebSocket to CalendarSocket
-    calendarSocket = new WebSocket("ws://localhost:8080/CalendarSocket");
+/**
+ * A JavaScript WebSocket that connects to "/CalendarSocket".
+ */
+var calendarSocket;
 
-    /**
-     * Send a request with type INIT. CalendarSocket should respond with a payload of all people in this user's room
-     * from the database for initializing the FullCalendar with.
-     *
-     * @param event
-     */
-    calendarSocket.onopen = function (event) {
-        console.log("CalendarSocket opened.");
+//TODO: Get actual userID and roomID of the current user on this page.
+var userID = "strawsnowrries@gmail.com";
+var roomID = "691337";
 
-        //structure the message in the form of a CalendarData object
-        var message = {
-            messageType: CalendarMessageType.INIT,
-            userID: userID,
-            roomID: roomID,
-            jsonData: null
-        };
+/**
+ * calendarSocket's onopen function.
+ *
+ * Send an INIT request to the server to get the Java CalendarData necessary for this page.
+ */
+function onopen(event) {
+    console.log("CalendarSocket opened.");
 
-        calendarSocket.send(JSON.stringify(message));
+    //structure the message in the form of a Java CalendarData object
+    var calendarData = {
+        messageType: CalendarMessageType.INIT,
+        userID: userID,
+        roomID: roomID,
+        jsonData: null
     };
 
-    calendarSocket.onmessage = function (event) {
-        var message = JSON.parse(event.data);
-        switch (message.messageType) {
-            case CalendarMessageType.INIT: //payload will be an ArrayList<PrimitiveUser>
-                console.log("INIT Message received.");
-                room = JSON.parse(message.jsonData);
-
-                //convert every user's ArrayList<Event> into a FullCalendar compliant EventSource object
-                for (i = 0; i < room.length; ++i) {
-                    var user = room[i];
-                    var events = user.events;
-
-                    //the EventSource object that will hold all the FullCalendar Event
-                    var eventSource = {
-                        events: []//,
-                        //color: 'blue'
-                    };
-
-                    //convert each Java Event object into a FullCalendar Event
-                    for (j = 0; j < events.length; ++j) {
-                        var moment = {
-                            title: events[j].eventSummary,
-                            start: new Date(events[j].startDateTime.year,
-                                            events[j].startDateTime.month,
-                                            events[j].startDateTime.dayOfMonth,
-                                            events[j].startDateTime.hourOfDay,
-                                            events[j].startDateTime.minute, 0, 0),
-                            end:   new Date(events[j].endDateTime.year,
-                                            events[j].endDateTime.month,
-                                            events[j].endDateTime.dayOfMonth,
-                                            events[j].endDateTime.hourOfDay,
-                                            events[j].endDateTime.minute, 0, 0)
-                        };
-                        eventSource.events.push(moment);
-                    }
-
-                    user.events = eventSource;
-                }
-
-                //load up the FullCalendar into #calendar
-                $(function() {
-                    $('#calendar').fullCalendar({
-                        defaultView: 'agendaWeek',
-                        header: {
-                            center: 'addEventButton',
-                        },
-                        customButtons: {
-                            addEventButton: {
-                                text: 'Add Events',
-                                click: addEvent
-                            }
-                        }
-                    });
-                });
-
-                //append checkboxes for toggling each calendar
-                toggleEventMap = new Map();
-                for (i = 0; i < room.length; ++i) {
-                    var checkboxID = (String("toggle" + room[i].userID + "Calendar")).replace('@', '');
-
-                    //TODO: Remove this when the actual HTML/CSS is set up.
-                    $("#checkboxes").append("<p>" + room[i].userID + "</p>" + "<br>");
-                    //END
-
-                    var checkboxHTML = "<input type='checkbox' id='" + checkboxID + "' onChange='toggleCalendars()'>";
-                    $("#checkboxes").append(checkboxHTML);
-                    toggleEventMap.set(room[i].userID, false);
-                }
-                break;
-            case CalendarMessageType.ADD_EVENT:
-                console.log("ADD_EVENT Message received");
-                console.log("THIS SHOULDN'T EVER BE REACHED...SOMETHING BAD HAPPENED");
-                break;
-            case CalendarMessageType.UPDATE: //payload will be a Java Event object
-                console.log("UPDATE Message received");
-                //TODO: HANDLE DEALING WITH THE JAVA EVENT OBJECT PAYLOAD...
-                var javaEvent = JSON.parse(message.jsonData);
-                var javaEventUserID = javaEvent.userID;
-                var fullCalendarEvent = {
-                    title: javaEvent.eventSummary,
-                    start: new Date(javaEvent.startDateTime.year,
-                                    javaEvent.startDateTime.month,
-                                    javaEvent.startDateTime.dayOfMonth,
-                                    javaEvent.startDateTime.hourOfDay,
-                                    javaEvent.startDateTime.minute, 0, 0),
-                    end:   new Date(javaEvent.endDateTime.year,
-                                    javaEvent.endDateTime.month,
-                                    javaEvent.endDateTime.dayOfMonth,
-                                    javaEvent.endDateTime.hourOfDay,
-                                    javaEvent.endDateTime.minute, 0, 0)
-                };
-                for (i = 0; i < room.length; ++i) {
-                    if (room[i].userID == javaEventUserID) {
-                        room[i].events.events.push(fullCalendarEvent);
-
-                        if (toggleEventMap.get(room[i].userID)) {
-                            //reload the EventSource by removing it and readding it...
-                            $('#calendar').fullCalendar("removeEventSource", room[i].events);
-                            $('#calendar').fullCalendar("addEventSource", room[i].events);
-                        }
-                    }
-                }
-
-                break;
-        }
-    };
-
-    calendarSocket.onclose = function (event) {
-        console.log("Socket closed.");
-    };
+    calendarSocket.send(JSON.stringify(calendarData));
 }
 
+/**
+ * calendarSocket's onmessage function.
+ * Handles receiving messages from the server of type INIT and UPDATE.
+ *
+ * INIT will initialize all the data for this page.
+ * First, it will parse the Java CalendarData object and use it to initialize all the data for this page.
+ * The Java CalendarData's jsonData will be a Java ArrayList<PrimitiveUser> for initializing the FullCalendar with.
+ * Second, it will render the FullCalendar on #calendar.
+ * Third, it will create and track checkboxes for toggling on and off each user's calendars.
+ *
+ * UPDATE will parse the Java CalendarData to handle an real-time update from the server.
+ * The Java CalendarData's jsonData will be a Java Event, which will then be parsed into a FullCalendar Event and added to the corresponding user's EventSource.
+ * The FullCalendar will then update itself after the new event has been added.
+ *
+ * @param event JSON.parse(event.data) will be a Java CalendarData object.
+ */
+function onmessage(event) {
+    var calendarData = JSON.parse(event.data);
+    switch (calendarData.messageType) {
+        case CalendarMessageType.INIT:
+            console.log("INIT Message received.");
+
+            //initialize room to an array of PrimitiveUser, the actual room itself and its roomwide calendar will also be a PrimitiveUser
+            room = JSON.parse(calendarData.jsonData);
+
+            //convert every PrimitiveUser's ArrayList<Event> into a FullCalendar compliant EventSource object
+            for (i = 0; i < room.length; ++i) {
+                let primitiveUser = room[i];
+                let events = primitiveUser.events;
+
+                //the EventSource object that will hold all the FullCalendar Event
+                let eventSource = {
+                    events: []
+                };
+
+                //convert each Java Event object into a FullCalendar Event
+                for (j = 0; j < events.length; ++j) {
+                    let moment = {
+                        title: events[j].eventSummary,
+                        start: new Date(events[j].startDateTime.year,
+                            events[j].startDateTime.month,
+                            events[j].startDateTime.dayOfMonth,
+                            events[j].startDateTime.hourOfDay,
+                            events[j].startDateTime.minute, 0, 0),
+                        end:   new Date(events[j].endDateTime.year,
+                            events[j].endDateTime.month,
+                            events[j].endDateTime.dayOfMonth,
+                            events[j].endDateTime.hourOfDay,
+                            events[j].endDateTime.minute, 0, 0)
+                    };
+                    eventSource.events.push(moment);
+                }
+
+                //create a new variable eventSource in each PrimitiveUser, then delete the ArrayList<Event> events since its no longer used
+                primitiveUser.eventSource = eventSource;
+                delete primitiveUser.events;
+            }
+
+            //append checkboxes for toggling each calendar to the HTML
+            toggleEventMap = new Map();
+            for (i = 0; i < room.length; ++i) {
+                let primitiveUser = room[i];
+
+                //make the id of each checkbox be "toggle___Calendar", where ___ is the PrimitiveUser's userID, but remove @ since its an illegal character
+                let checkboxID = (String("toggle" + primitiveUser.userID + "Calendar")).replace('@', '');
+
+                //TODO: Remove this when the actual HTML/CSS is set up.
+                $("#checkboxes").append("<p>" + primitiveUser.userID + "</p>" + "<br>");
+                //END
+
+                //create the line of HTML that will be appended to #checkboxes; by default, show only the user's calendar initially
+                let checkboxHTML = null;
+                if (primitiveUser.userID === userID) {
+                    checkboxHTML = "<input type='checkbox' id='" + checkboxID + "' onChange='toggleCalendars()' checked>";
+
+                    //mark this user's calendar as showing since it is the actual user on the page
+                    toggleEventMap.set(primitiveUser.userID, true);
+                } else {
+                    checkboxHTML = "<input type='checkbox' id='" + checkboxID + "' onChange='toggleCalendars()'>";
+
+                    //initialize the PrimitiveUser's calendar to not show initially
+                    toggleEventMap.set(primitiveUser.userID, false);
+                }
+
+                //add the checkbox to #checkboxes
+                $("#checkboxes").append(checkboxHTML);
+            }
+
+            //load up the FullCalendar into the div with id="calendar"
+            //WARNING: THIS BELOW METHOD IS ASYNCHRONOUS, BUT THE CONTENTS WILL BE EXECUTED IN SERIES.
+            $(function() {
+                $('#calendar').fullCalendar({
+                    defaultView: 'agendaWeek',
+                    //TODO: Remove these custom buttons, replace this initializer function with actual one.
+                    header: {
+                        center: 'addEventButton',
+                    },
+                    customButtons: {
+                        addEventButton: {
+                            text: 'Add Events',
+                            click: addEvent
+                        }
+                    }
+                });
+
+                for (i = 0; i < room.length; ++i) {
+                    let primitiveUser = room[i];
+                    if (primitiveUser.userID === userID) {
+                        $('#calendar').fullCalendar('addEventSource', primitiveUser.eventSource);
+                    }
+                }
+            });
+            break;
+        case CalendarMessageType.ADD_EVENT:
+            console.log("ADD_EVENT Message received...THIS SHOULD NEVER BE REACHED!!!");
+            break;
+        case CalendarMessageType.UPDATE: //payload will be a Java Event object
+            console.log("UPDATE Message received");
+
+            //convert the Java Event into a FullCalendar Event
+            var javaEvent = JSON.parse(calendarData.jsonData);
+            var javaEventUserID = javaEvent.userID;
+            var fullCalendarEvent = {
+                title: javaEvent.eventSummary,
+                start: new Date(javaEvent.startDateTime.year,
+                    javaEvent.startDateTime.month,
+                    javaEvent.startDateTime.dayOfMonth,
+                    javaEvent.startDateTime.hourOfDay,
+                    javaEvent.startDateTime.minute, 0, 0),
+                end:   new Date(javaEvent.endDateTime.year,
+                    javaEvent.endDateTime.month,
+                    javaEvent.endDateTime.dayOfMonth,
+                    javaEvent.endDateTime.hourOfDay,
+                    javaEvent.endDateTime.minute, 0, 0)
+            };
+
+            //find who this FullCalendar Event should belong to and add it to their events
+            for (i = 0; i < room.length; ++i) {
+                let primitiveUser = room[i];
+                if (primitiveUser.userID === javaEventUserID) {
+                    primitiveUser.eventSource.events.push(fullCalendarEvent);
+
+                    if (toggleEventMap.get(primitiveUser.userID)) {
+                        //reload the EventSource by removing it and re-adding it...
+                        $('#calendar').fullCalendar("removeEventSource", primitiveUser.eventSource);
+                        $('#calendar').fullCalendar("addEventSource", primitiveUser.eventSource);
+                    }
+                }
+            }
+
+            break;
+    }
+}
+
+/**
+ * calendarSocket's onclose function.
+ */
+function onclose(event) {
+    console.log("Socket closed.");
+}
+
+/**
+ * calendarSocket's onerror function.
+ */
+function onerror(event) {
+    console.log("ERROR.");
+}
+
+function init() {
+    //create a WebSocket to CalendarSocket and set its functions
+    calendarSocket = new WebSocket("ws://localhost:8080/CalendarSocket");
+    calendarSocket.onopen = onopen;
+    calendarSocket.onmessage = onmessage;
+    calendarSocket.onclose = onclose;
+    calendarSocket.onerror = onerror;
+}
+
+/**
+ * Handles adding an event to this user's calendar. This will take the event data that is submitted into the function,
+ * then proceed to send it to the server. This will not actually update the FullCalendar. The server will process the input,
+ * then proceed to send an UPDATE message to all appropriate FullCalendar. Updating will be handled in the UPDATE block in onmessage.
+ */
 function addEvent() {
-    //TODO: Handle actually getting a date somehow when the add event form is implemented. Replace dummy Java Event object
+    //TODO: Handle actually getting a date somehow when the add event form is implemented. Replace dummy Java Event object.
     var event = {
         userID: userID,
         eventSummary: "Javascript Sent Event",
@@ -168,16 +253,14 @@ function addEvent() {
         }
     };
 
-    //create the CalendarMessage object to send
-    var message = {
+    //create and send the CalendarData object
+    var calenderData = {
         messageType: CalendarMessageType.ADD_EVENT,
         userID: userID,
         roomID: roomID,
         jsonData: JSON.stringify(event)
     };
-
-    //send the message
-    calendarSocket.send(JSON.stringify(message));
+    calendarSocket.send(JSON.stringify(calenderData));
 }
 
 /**
@@ -187,22 +270,38 @@ function toggleCalendars() {
     var fullCalendar = $('#calendar').fullCalendar('getCalendar');
 
     for (i = 0; i < room.length; ++i) {
-        var user = room[i];
-
-        var checkboxID = (String("toggle" + room[i].userID + "Calendar")).replace('@', '');
-
+        var primitiveUser = room[i];
+        
+        var checkboxID = (String("toggle" + primitiveUser.userID + "Calendar")).replace('@', '');
         var checked = document.getElementById(checkboxID).checked;
 
-        if (checked !== toggleEventMap.get(user.userID)) {
+        if (checked !== toggleEventMap.get(primitiveUser.userID)) {
             if (checked) {
-                fullCalendar.addEventSource(user.events);
+                fullCalendar.addEventSource(primitiveUser.eventSource);
             } else {
-                fullCalendar.removeEventSource(user.events);
+                fullCalendar.removeEventSource(primitiveUser.eventSource);
             }
-            toggleEventMap.set(user.userID, checked);
+            toggleEventMap.set(primitiveUser.userID, checked);
         }
     }
+}
 
+function setAllCalendars() {
+    var fullCalendar = $('#calendar').fullCalendar('getCalendar');
+
+    for (i = 0; i < room.length; ++i) {
+        let primitiveUser = room[i];
+
+        let checkboxID = (String("toggle" + room[i].userID + "Calendar")).replace('@', '');
+        let checked = document.getElementById(checkboxID).checked;
+
+        //turn on all the unchecked ones
+        if (!checked) {
+            fullCalendar.addEventSource(primitiveUser.eventSource);
+            toggleEventMap.set(primitiveUser.userID, true);
+            document.getElementById(checkboxID).checked = true;
+        }
+    }
 }
 
 /**
