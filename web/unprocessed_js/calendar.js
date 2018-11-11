@@ -286,6 +286,9 @@ function toggleCalendars() {
     }
 }
 
+/**
+ * Forces every calendar to display. Updates toggleEventMap appropriately, and checkboxes on the page.
+ */
 function setAllCalendars() {
     var fullCalendar = $('#calendar').fullCalendar('getCalendar');
 
