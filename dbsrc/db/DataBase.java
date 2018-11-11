@@ -5,10 +5,14 @@ import com.google.gson.Gson;
 import com.mongodb.MongoClientSettings;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.codecs.configuration.CodecRegistry;
 import org.bson.codecs.pojo.PojoCodecProvider;
 
+import java.util.ArrayList;
+
+import static com.mongodb.client.model.Filters.eq;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
@@ -26,9 +30,14 @@ public class DataBase {
         database = mongoClient.getDatabase("SuiteHome").withCodecRegistry(pojoCodecRegistry);
     }
 
-//    public String retrieveUsers(String roomID) {
-//
-//    }
+    public ArrayList<User> retrieveUsers(String roomID) {
+        MongoCollection<User> collection = database.getCollection("users", User.class);
+        ArrayList<User> tmp = new ArrayList<>();
+        for( User user : collection.find(eq("roomid", roomID))) {
+            tmp.add(user);
+        }
+        return tmp;
+    }
 
 
 
