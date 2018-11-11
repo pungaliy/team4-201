@@ -271,7 +271,7 @@ function toggleCalendars() {
 
     for (i = 0; i < room.length; ++i) {
         var primitiveUser = room[i];
-        
+
         var checkboxID = (String("toggle" + primitiveUser.userID + "Calendar")).replace('@', '');
         var checked = document.getElementById(checkboxID).checked;
 
