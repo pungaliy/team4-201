@@ -7,8 +7,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e01caea0-f7ce-4d2e-ae68-6639be0f91c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/html/search_results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/set1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/set2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts/codropsicons/codropsicons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts/codropsicons/codropsicons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts/codropsicons/codropsicons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts/codropsicons/codropsicons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts/codropsicons/license.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.2.0/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.2.0/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.2.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.2.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fonts/font-awesome-4.2.0/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/html/registration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/html/text_test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/html/text_test2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/unprocessed_js/classie.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/search_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/search_results.html" afterDir="false" />
     </list>
     <list id="4b467718-25fe-45fd-8309-4d2b18a49a7b" name="" comment="" />
     <ignored path="C:\Users\kbcha\team4-201\.idea\shelf/" />
@@ -25,40 +43,43 @@
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.20" value="2" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="6" />
-          <entry key="html" value="17" />
-          <entry key="js" value="13" />
+          <entry key="css" value="12" />
+          <entry key="html" value="20" />
+          <entry key="js" value="14" />
           <entry key="json" value="6" />
           <entry key="png" value="2" />
+          <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="6" />
-          <entry key="HTML" value="17" />
+          <entry key="CSS" value="12" />
+          <entry key="HTML" value="20" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="6" />
-          <entry key="JavaScript" value="13" />
+          <entry key="JavaScript" value="14" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="439" />
-          <entry key="html" value="1157" />
+          <entry key="css" value="485" />
+          <entry key="html" value="1353" />
           <entry key="js" value="207" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="439" />
-          <entry key="HTML" value="1157" />
+          <entry key="CSS" value="485" />
+          <entry key="HTML" value="1353" />
           <entry key="JavaScript" value="207" />
         </counts>
       </usages-collector>
@@ -70,85 +91,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/html/tabs.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="42" column="61" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/html/message.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="928">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/tabs.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1616">
-              <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/postit.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="19" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/chores.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/html/chores.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state>
               <caret line="151" column="35" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/html/search_results.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/html/text_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="206">
+              <caret line="375" column="17" lean-forward="true" selection-start-line="340" selection-start-column="8" selection-end-line="375" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/html/index.html">
+        <entry file="file://$PROJECT_DIR$/web/html/registration.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="28" column="83" selection-end-line="42" />
+            <state relative-caret-position="237">
+              <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/set1.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="28" column="123" selection-start-line="28" selection-start-column="123" selection-end-line="28" selection-end-column="123" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/css/demo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -163,6 +145,13 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>js</find>
+      <find>.content</find>
+      <find>kaede</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -186,6 +175,11 @@
         <option value="$PROJECT_DIR$/web/css/chores.css" />
         <option value="$PROJECT_DIR$/web/html/chores.html" />
         <option value="$PROJECT_DIR$/web/html/search_results.html" />
+        <option value="$PROJECT_DIR$/web/css/set2.css" />
+        <option value="$PROJECT_DIR$/web/html/text_test.html" />
+        <option value="$PROJECT_DIR$/web/html/registration.html" />
+        <option value="$PROJECT_DIR$/web/css/set1.css" />
+        <option value="$PROJECT_DIR$/web/css/demo.css" />
       </list>
     </option>
   </component>
@@ -216,7 +210,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-12" />
     <option name="y" value="-12" />
     <option name="width" value="981" />
@@ -227,9 +221,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,17 +247,25 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="html" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
+              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="unprocessed_js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541924515118" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541976186126" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/TextInputEffects/TextInputEffects" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -275,9 +276,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kbcha\team4-201\web\resources" />
       <recent name="C:\Users\kbcha\team4-201\web\html" />
       <recent name="C:\Users\kbcha\team4-201\web\css" />
+      <recent name="C:\Users\kbcha\team4-201\web" />
+      <recent name="C:\Users\kbcha\team4-201\web\unprocessed_js" />
+      <recent name="C:\Users\kbcha\team4-201\web\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -379,18 +382,19 @@
       <workItem from="1541365277043" duration="7953000" />
       <workItem from="1541633986519" duration="874000" />
       <workItem from="1541834428086" duration="424000" />
-      <workItem from="1541917451437" duration="879000" />
+      <workItem from="1541917451437" duration="1316000" />
+      <workItem from="1541968955321" duration="6244000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45365000" />
+    <option name="totallyTimeSpent" value="52046000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.67276424" visible="true" weight="0.15465587" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.67276424" visible="true" weight="0.15708502" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -400,18 +404,18 @@
       <window_info id="Web" order="7" sideWeight="0.32723576" side_tool="true" weight="0.14736842" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.23309608" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3505338" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3291815" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.19395018" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.19395018" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.3291815" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -593,27 +597,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/chores.html">
+    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/classie.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/set2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="151" column="35" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
+        <state relative-caret-position="160">
+          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/text_test2.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
-          <caret line="28" column="83" selection-end-line="42" />
+          <caret line="37" column="79" lean-forward="true" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/fonts/codropsicons/license.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/text_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="375" column="17" lean-forward="true" selection-start-line="340" selection-start-column="8" selection-end-line="375" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/html/search_results.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+        <state relative-caret-position="303">
+          <caret line="58" column="6" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/chores.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="151" column="35" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/normalize.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/set1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="28" column="123" selection-start-line="28" selection-start-column="123" selection-end-line="28" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/registration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
         </state>
       </provider>
     </entry>
