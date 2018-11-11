@@ -172,9 +172,11 @@ public class CalendarSocket {
                 Event event = gson.fromJson(calendarData.getJsonData(), Event.class);
 
                 //TODO: Update the database with the new event.
+                //addEvent(event);
 
                 //TODO: Get actual retrieve users function.
                 for (var foo : calendarSessions) {
+                    //determines if this message be sent to this user's session
                     boolean needsUpdating = foo.getUserID().equals(calendarData.getUserID());
 
 //                    var bar = retrieveUsers(foo.getRoomID());
