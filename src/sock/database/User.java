@@ -1,23 +1,52 @@
 package sock.database;
 
+//db:
+//retrieve user object from id
+
 public class User {
-    private String name;
-    private String email;
-    private Room room;
+    private String fullName;
+    private String userID;
+    private String roomID;
+    private String imgURL;
 
-    public User(String name, String email, Room room) {
-        this.room = room;
-        this.email = email;
-        this.name = name;
+    //empty for codec purposes
+    public User() {}
+
+    public User(String fullName, String userID, String roomID) {
+        this.setFullName(fullName);
+        this.setUserID(userID);
+        this.setRoomID(roomID);
     }
 
-    public Room getRoom() {
-        return room;
+    public String getFullName() {
+        return fullName;
     }
-    public String getName() {
-        return name;
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
-    public String getEmail() {
-        return email;
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
+    }
+
+    public String getRoomID() {
+        return roomID;
+    }
+
+    public void setRoomID(String roomID) {
+        this.roomID = roomID;
+    }
+
+    public String getImgURL() {
+        return imgURL;
+    }
+
+    public void setImgURL(String imgURL) {
+        this.imgURL = imgURL;
     }
 }

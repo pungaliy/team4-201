@@ -1,21 +1,30 @@
 package sock.database;
 
+
+//RoomBase:
+//add room, retrieve room from id, check if room exists, add user to room
+
+
 import java.util.ArrayList;
 
 public class Room {
     private String roomID;
     private String roomStatus;
-    private ArrayList<User> residents;
-    private String roomImgURL;
+    private ArrayList<String> residents;
 
 
     //empty constructor, for codec purposes
     public Room() {}
 
-    public Room(String roomID, ArrayList<User> residents, String roomImgURL, String roomStatus) {
+    public Room(String roomID) {
+        this.roomID = roomID;
+        this.roomStatus = "DO NOT DISTURB";
+        this.residents = new ArrayList<String>();
+    }
+
+    public Room(String roomID, ArrayList<String> residents,  String roomStatus) {
         this.roomID = roomID;
         this.residents = residents;
-        this.roomImgURL = roomImgURL;
         this.roomStatus = roomStatus;
     }
 
@@ -37,19 +46,12 @@ public class Room {
         this.roomStatus = roomStatus;
     }
 
-    public ArrayList<User> getResidents() {
+    public ArrayList<String> getResidents() {
         return residents;
     }
 
-    public void setResidents(ArrayList<User> residents) {
+    public void setResidents(ArrayList<String> residents) {
         this.residents = residents;
     }
 
-    public String getRoomImgURL() {
-        return roomImgURL;
-    }
-
-    public void setRoomImgURL(String roomImgURL) {
-        this.roomImgURL = roomImgURL;
-    }
 }
