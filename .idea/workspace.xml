@@ -6,15 +6,15 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1b409f1-1ad5-4faf-b878-7f7604d5eae9" name="Default Changelist" comment="Implemented everyone, default show user calendar.">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/unnamed.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/unnamed/groceryblue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/unnamed/groceryorange.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/unnamed/grocerypink.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/unnamed/shelved.patch" beforeDir="false" />
+    <list default="true" id="e1b409f1-1ad5-4faf-b878-7f7604d5eae9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web/html/calendar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/html/chores.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sock/calendar/CalendarSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sock/calendar/CalendarSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/_calendar_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/_calendar_test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sock/database/CalendarBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sock/database/CalendarBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sock/database/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sock/database/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/message.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/tabs.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/tabs.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,18 +81,20 @@
     <session id="-270360944">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="1" />
-          <entry key="java" value="1" />
+          <entry key="html" value="7" />
+          <entry key="java" value="9" />
           <entry key="js" value="2" />
+          <entry key="jsp" value="1" />
           <entry key="png" value="3" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="1" />
+          <entry key="HTML" value="7" />
           <entry key="Image" value="3" />
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="9" />
+          <entry key="JSP" value="1" />
           <entry key="JavaScript" value="2" />
           <entry key="XML" value="1" />
         </counts>
@@ -100,31 +102,32 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="30" />
-          <entry key="java" value="139" />
+          <entry key="java" value="164" />
           <entry key="js" value="5189" />
-          <entry key="txt" value="50" />
+          <entry key="jsp" value="1346" />
+          <entry key="txt" value="226" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="30" />
-          <entry key="JAVA" value="139" />
+          <entry key="JAVA" value="164" />
+          <entry key="JSP" value="1346" />
           <entry key="JavaScript" value="5189" />
-          <entry key="PLAIN_TEXT" value="50" />
+          <entry key="PLAIN_TEXT" value="226" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sock/calendar/CalendarSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="193" column="25" lean-forward="true" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="25" />
+            <state relative-caret-position="2157">
+              <caret line="193" column="25" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#CalendarMessageType#0;class#CalendarSocket#0" />
                 <element signature="class#CalendarData#0;class#CalendarSocket#0" />
                 <element signature="class#CalendarSession#0;class#CalendarSocket#0" />
                 <element signature="class#PrimitiveUser#0;class#CalendarSocket#0" />
@@ -134,22 +137,39 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/unprocessed_js/calendar.js">
+        <entry file="file://$PROJECT_DIR$/web/html/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2941">
-              <caret line="173" column="51" lean-forward="true" selection-start-line="173" selection-start-column="51" selection-end-line="173" selection-end-column="51" />
+            <state relative-caret-position="357">
+              <caret line="21" column="80" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/html/calendar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/html/_calendar_test.html">
+        <entry file="file://$PROJECT_DIR$/src/sock/database/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="92" selection-start-line="9" selection-start-column="92" selection-end-line="9" selection-end-column="92" />
+            <state relative-caret-position="171">
+              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sock/database/DataBase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -163,6 +183,7 @@
         <option value="Jsp File" />
         <option value="JavaScript File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -193,7 +214,6 @@
         <option value="$PROJECT_DIR$/web/html/_getroomservlet_.html" />
         <option value="$PROJECT_DIR$/web/html/login.html" />
         <option value="$PROJECT_DIR$/src/sock/search/SearchServlet.java" />
-        <option value="$PROJECT_DIR$/web/html/search.jsp" />
         <option value="$PROJECT_DIR$/dbsrc/db/DataBase.java" />
         <option value="$PROJECT_DIR$/dbsrc/db/NoteBase.java" />
         <option value="$PROJECT_DIR$/src/sock/database/NoteBase.java" />
@@ -209,6 +229,13 @@
         <option value="$PROJECT_DIR$/web/unprocessed_js/calendar.js" />
         <option value="$PROJECT_DIR$/web/html/_calendar_test.html" />
         <option value="$PROJECT_DIR$/src/sock/calendar/CalendarSocket.java" />
+        <option value="$PROJECT_DIR$/src/sock/database/Event.java" />
+        <option value="$PROJECT_DIR$/src/sock/database/CalendarBase.java" />
+        <option value="$PROJECT_DIR$/web/html/search.jsp" />
+        <option value="$PROJECT_DIR$/web/html/chores.html" />
+        <option value="$PROJECT_DIR$/web/html/message.html" />
+        <option value="$PROJECT_DIR$/web/html/tabs.html" />
+        <option value="$PROJECT_DIR$/web/html/calendar.html" />
       </list>
     </option>
   </component>
@@ -273,6 +300,17 @@
               <item name="team4-201" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sock" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
+              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
+              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -353,13 +391,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541917711567" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541994254843" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -566,11 +605,25 @@
       <option name="project" value="LOCAL" />
       <updated>1541895821952</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="About to merge more database stuff into this branch. Please work.">
+      <created>1541918474888</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1541918474888</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Successful merge...? Pushing theoretical search results page for Shray. search.jsp file.">
+      <created>1541926726148</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1541926726148</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60163000" />
+    <option name="totallyTimeSpent" value="67619000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -583,8 +636,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.74660635" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.74660635" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -595,7 +649,7 @@
       <window_info id="Image Layers" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.18602762" visible="true" weight="0.30985916" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.18602762" visible="true" weight="0.30985916" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -660,7 +714,9 @@
     <MESSAGE value="COMPLETE FUCKING OVERHAUL TO WEBSOCKETS FUCK AJAX YEET YEET YEET IT WORKS&#10;&#10;Deprecated:&#10;AddEventServlet.java&#10;SockCalendar.java&#10;loadRoom.js&#10;GetRoomServlet" />
     <MESSAGE value="Need to handle Javascript side UPDATE message...then *maybe* it might be almost done?" />
     <MESSAGE value="Implemented everyone, default show user calendar." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented everyone, default show user calendar." />
+    <MESSAGE value="About to merge more database stuff into this branch. Please work." />
+    <MESSAGE value="Successful merge...? Pushing theoretical search results page for Shray. search.jsp file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Successful merge...? Pushing theoretical search results page for Shray. search.jsp file." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/team4-201.iml">
@@ -685,14 +741,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/login.css" />
-    <entry file="file://$PROJECT_DIR$/web/html/tabs.html" />
-    <entry file="file://$PROJECT_DIR$/web/html/login.html" />
     <entry file="file://$PROJECT_DIR$/web/html/_dragging_test.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sock/search/SearchServlet.java" />
     <entry file="file://$PROJECT_DIR$/web/html/_getroomservlet_.html" />
-    <entry file="file://$PROJECT_DIR$/web/html/search.jsp" />
     <entry file="file://$PROJECT_DIR$/src/sock/calendar/AddEventServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -717,45 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sock/database/DataBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sock/database/Note.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sock/database/EventBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#154#155#0" expanded="true" />
-            <element signature="e#181#182#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sock/database/NoteBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sock/tests/SockCalendarTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -767,13 +781,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-583">
           <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sock/database/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -791,13 +801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="66" column="10" selection-start-line="66" selection-start-column="10" selection-end-line="87" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sock/database/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -830,7 +833,7 @@
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/calendar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2941">
-          <caret line="173" column="51" lean-forward="true" selection-start-line="173" selection-start-column="51" selection-end-line="173" selection-end-column="51" />
+          <caret line="173" column="51" selection-start-line="173" selection-start-column="51" selection-end-line="173" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -845,17 +848,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sock/calendar/CalendarSocket.java">
+    <entry file="file://$PROJECT_DIR$/src/sock/database/CalendarBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="193" column="25" lean-forward="true" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="25" />
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sock/database/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sock/database/EventBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#CalendarMessageType#0;class#CalendarSocket#0" />
+            <element signature="e#154#155#0" expanded="true" />
+            <element signature="e#181#182#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sock/database/Note.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sock/database/NoteBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sock/database/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sock/database/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sock/calendar/CalendarSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2157">
+          <caret line="193" column="25" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="class#CalendarData#0;class#CalendarSocket#0" />
             <element signature="class#CalendarSession#0;class#CalendarSocket#0" />
             <element signature="class#PrimitiveUser#0;class#CalendarSocket#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sock/database/DataBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1062">
+          <caret line="67" column="7" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/tabs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="175" column="7" lean-forward="true" selection-end-line="175" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/search.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="37" column="37" lean-forward="true" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="80" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/chores.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="172" column="7" selection-start-line="172" selection-start-column="7" selection-end-line="172" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/calendar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
         </state>
       </provider>
     </entry>

@@ -1,4 +1,4 @@
-package db;
+package sock.database;
 
 public class Event {
     private String userID;

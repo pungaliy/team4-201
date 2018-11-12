@@ -1,4 +1,4 @@
-package db;
+package sock.database;
 
 import com.mongodb.client.MongoCollection;
 
