@@ -52,6 +52,20 @@ public class Magic {
 		}
 	}
 
+	public float getTabsTotal(tempUser user1, tempUser user2){
+		Vector<Transaction> toMinus = fakeDB.searchTransaction(user1, user2);
+		Vector<Transaction> toAdd = fakeDB.searchTransaction(user2, user1);
+		float amount = 0;
+		for(Transaction t : toAdd ){
+			amount += t.getAmount();
+		}
+		for(Transaction t : toMinus){
+			amount -= t.getAmount();
+		}
+
+		return amount;
+	}
+
 	public void printAllTransactions(){
 		Vector<Transaction> all = fakeDB.getAllTransactions();
 		for(Transaction t : all){

@@ -31,6 +31,7 @@ public class CommandLineTest {
 		tempUser user1 = new tempUser("User1", "email1", room);
 		tempUser user2 = new tempUser("User2", "email2", room);
 		tempUser user3 = new tempUser("User3", "email3", room);
+		tempUser user4 = new tempUser("User3", "email3", room);
 
 		//Fish: bought by user1, split with user2, user3, not himself
 		TabsItem fish = new TabsItem("Fish", 3, 16.5f);
@@ -48,7 +49,20 @@ public class CommandLineTest {
 		TabsLedger beefLedger = new TabsLedger(beef, user2, beefSplit);
 		magic.addTransactionToAllSplitters(beefLedger);
 
-		magic.printAllTransactions();
+		System.out.println("Between user2 and user3 (should be -45)");
+		System.out.println(magic.getTabsTotal(user2, user3));
+
+		System.out.println("Between user3 and user2 (should be 45)");
+		System.out.println(magic.getTabsTotal(user3, user2));
+
+		System.out.println("Between user1 and user3 (should be -24.75)");
+		System.out.println(magic.getTabsTotal(user1, user3));
+
+		System.out.println("Between user2 and user4 (should be 0)");
+		System.out.println(magic.getTabsTotal(user2, user4));
+
+
+		//magic.printAllTransactions();
 
 	}
 

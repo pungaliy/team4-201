@@ -78,4 +78,14 @@ public class FakeDB {
 		return transactions;
 	}
 
+	public Vector<Transaction> searchTransaction(tempUser purchaser, tempUser splitter){
+		Vector<Transaction> toReturn = new Vector<Transaction>();
+		for(Transaction t : transactions){
+			if(t.getPurchaser().equals(purchaser) && t.getSplitter().equals(splitter)){
+				toReturn.add(t);
+			}
+		}
+		return toReturn;
+	}
+
 }
