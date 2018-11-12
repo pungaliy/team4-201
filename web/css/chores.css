@@ -2,7 +2,7 @@
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
-    height: 0px;
+    height: 2px;
 }
 
 /* Track */
@@ -34,7 +34,7 @@
     margin-top: 3vmin;
     margin-left: auto;
     margin-right: auto;
-    background-color: #e0eff3eb;
+    background-color: #fffaf7c9;
     font-family: arvo;
 }
 
@@ -49,6 +49,10 @@ h1{
     /* margin-left: auto; */
     /* margin-right: auto; */
 }
+td{
+    max-width: 20vmin;
+    overflow-x: auto;
+}
 .grocerylist{
     display: block;
     margin-left: auto;
@@ -59,12 +63,12 @@ h1{
     border-right: 3px;
     /* border-width: 0; */
     /* border-style: solid; */
-    background-color: #c8dade61;
+    background-color: #ea9e6a40;
     /* border-color: #357888; */
     border-radius: 1vmin;
     padding: 3vmin;
     height: 80vmin;
-    box-shadow: 1px 1px 8px 2px #3578885c;
+    box-shadow: 1px 1px 8px 2px #cf9c79;
     /* border-right: 3px; */
 }
 
@@ -79,8 +83,8 @@ h1{
 
 .mdl-button--accent.mdl-button--accent.mdl-button--raised {
     font-family: arvo;
-    color: rgb(53, 120, 136);
-    background-color: rgba(53, 120, 136, 0.26);
+    color: rgb(207, 93, 126);
+    background-color: rgba(247, 187, 201, 0.69);
 }
 .addGroceryButton, .addTransactionButton{
     position: relative;
@@ -89,9 +93,7 @@ h1{
     margin-right: auto;
 
 }
-.addGroceryButton{
-    top:3vmin;
-}
+
 .addTransactionButton{
     top:5vmin;
 }
