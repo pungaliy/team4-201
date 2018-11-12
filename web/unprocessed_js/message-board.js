@@ -13,10 +13,6 @@ class PostIt extends React.Component {
                     first_update_note(this)
                 },
                 stack: "div"
-                // changed: function () {
-                //     console.log("hey");
-                //     update_note(this)
-                // }
             })
         });
     }
@@ -48,7 +44,7 @@ class PostIts extends React.Component {
         return (
             <div className="thing">
                 {this.props.notes.map((l) =>
-                    <PostIt text={l.text} xpos={l.xpos} ypos={l.ypos} idname={l.idname} key={l.idname}/>)}
+                    <PostIt text={l.text} xpos={l.xpos} ypos={l.ypos} idname={l.noteid} key={l.noteid}/>)}
             </div>
         );
     }
@@ -70,8 +66,8 @@ var first_update_note = function(val) {
         data : {
             xpos : xpos,
             ypos:  ypos,
-            text: $(val).find("textarea").val().toString(),
-            idname: $(val).attr('id').toString()
+            text: $(val).find("textarea").val(),
+            idname: $(val).attr('id')
         }
     });
 };

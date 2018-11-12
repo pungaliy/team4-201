@@ -1,5 +1,7 @@
 package PostItServlets;
 
+import db.NoteBase;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,16 +16,19 @@ public class SH5RetrievePostIts extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         //TODO: CHANGE THIS vvv
-        request.getServletContext().setAttribute("room", "123456");
+        request.getServletContext().setAttribute("room", "123455");
         //END
-        String res = "[{\"text\": \"abc123\",\"xpos\": 20, \"ypos\": 20, \"idname\": \"idname1\"},{\"text\": \"abc123\",\"xpos\": 20, \"ypos\": 20, \"idname\": \"idname2\"}]";
+
+        String room = (String) request.getServletContext().getAttribute("room");
+        NoteBase db = (NoteBase) request.getServletContext().getAttribute("notebase");
         PrintWriter pw = response.getWriter();
-        pw.print(res);
-        System.out.println("retrieval successful");
+        pw.print(db.retrieveNotes(room));
+        System.out.println("Retrieving notes for room: " + room);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher view = request.getRequestDispatcher("html/message.html");
         view.forward(request, response);
+        request.getServletContext().setAttribute("notebase", new NoteBase());
     }
 }

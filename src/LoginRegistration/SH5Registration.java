@@ -9,31 +9,40 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "SH5Registration")
+@WebServlet(name = "SH5Registration", urlPatterns = {})
 public class SH5Registration extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter pw = response.getWriter();
-        String new_room = request.getParameter("new_room");
-        String uid = (String) request.getServletContext().getAttribute("user_id");
+        String new_room = request.getParameter("is_new_room");
+        String roomid = request.getParameter("room_id");
+
+        String uid = (String) request.getServletContext().getAttribute("uid");
+
         switch (new_room) {
             case "true": {
-                String roomid = request.getParameter("roomid");
-                if (roomid.equals("undefined")) {
-                    pw.print("[\"reject\", \"Your room id is not valid\"]");
+                String ret_string = roomIsValid(roomid);
+                if (ret_string.equals("VALID")) {
+                    createNewRoom(roomid, uid);
+                    pw.print("[\"ACC\", \"Room created\"]");
+                    request.getServletContext().setAttribute("room", roomid);
+                } else {
+                    pw.print(ret_string);
                 }
-                createNewRoom(roomid, uid);
                 break;
             }
             case "false": {
-                String roomid = request.getParameter("roomid");
-                if (roomid.equals("undefined")) {
-                    pw.print("[\"reject\", \"Your room id is not valid\"]");
+                String ret_string = roomIsValid(roomid);
+                if (ret_string.equals("VALID")) {
+                    joinRoom(roomid, uid);
+                    pw.print("[\"ACC\", \"Room joined\"]");
+                    request.getServletContext().setAttribute("room", roomid);
+                } else {
+                    pw.print(ret_string);
                 }
-                joinRoom(roomid, uid);
                 break;
             }
             default:
-                pw.print("[\"reject\", \"Your submission is not valid\"]");
+                pw.print("[\"REJ\", \"Your submission is not valid\"]");
                 break;
         }
     }
@@ -45,7 +54,19 @@ public class SH5Registration extends HttpServlet {
 
     private void joinRoom(String roomid, String uid) {
         // Join the room
+    }
 
+    private String roomIsValid(String roomid) {
+        if (roomid.equals("undefined")) {
+            return ("[\"REJ\", \"Your room id is not valid\"]");
+        }
+        else if (roomid.length() != 8) {
+            return ("[\"REJ\", \"Your room id must be exactly 8 characters long\"]");
+        }
+        else if (!roomid.matches("[a-zA-Z0-9]+")) {
+            return ("[\"REJ\", \"Your room id must contain only alphanumeric characters\"]");
+        }
+        return "VALID";
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

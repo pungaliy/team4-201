@@ -12,21 +12,14 @@ import java.io.IOException;
 public class SH5Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String access_token = request.getParameter("access_token");
-        String uid = request.getParameter("user_id");
         String image = request.getParameter("image");
         String user_name = request.getParameter("first_name");
         String email = request.getParameter("email");
 
         request.getServletContext().setAttribute("access_token", access_token);
-        request.getServletContext().setAttribute("user_id", uid);
         request.getServletContext().setAttribute("image", image);
-        request.getServletContext().setAttribute("first_name", user_name);
-        request.getServletContext().setAttribute("email", email);
-
-        System.out.println(email);
-        System.out.println(access_token);
-        System.out.println(image);
-
+        request.getServletContext().setAttribute("name", user_name);
+        request.getServletContext().setAttribute("uid", email);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
