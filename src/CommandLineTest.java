@@ -10,23 +10,23 @@ public class CommandLineTest {
 	private Magic magic = new Magic();
 
  	public void GroceryTests(){
-		magic.addGrocery("fish room1", 1);
-		magic.addGrocery("beef room1", 1);
-		magic.addGrocery("milk room2", 2);
+		magic.addGrocery("fish room1", "1");
+		magic.addGrocery("beef room1", "1");
+		magic.addGrocery("milk room2", "2");
 		System.out.println("Room1 (fish and beef):");
-		magic.getGroceryList(1);
+		magic.getGroceryList("1");
 		System.out.println("Room2 (milk):");
-		magic.getGroceryList(2);
+		magic.getGroceryList("2");
 
-		magic.removeGrocery("fish room1", 1);
+		magic.removeGrocery("fish room1", "1");
 		System.out.println("Room1 removed fish (only have beef)");
-		magic.getGroceryList(1);
-		magic.removeGrocery("beef room2", 1);
+		magic.getGroceryList("1");
+		magic.removeGrocery("beef room2", "1");
 		System.out.println("Room1 remove beef fail (should still keep beef)");
-		magic.getGroceryList(1);
+		magic.getGroceryList("1");
 	}
 
-	public void TransactionTests(){
+	/*public void TransactionTests(){
  		db.Room room = new db.Room("999");
 		db.User user1 = new db.User("User1", "email1", "999");
 		db.User user2 = new db.User("User2", "email2", "999");
@@ -64,12 +64,12 @@ public class CommandLineTest {
 
 		//magic.printAllTransactions();
 
-	}
+	}*/
 
 	public static void main(String [] args){
  		CommandLineTest test = new CommandLineTest();
 		//test.GroceryTests();
-		test.TransactionTests();
+		//test.TransactionTests();
 
 		//TRY TO MERGE WITH html
 		//Merge sucessful I guess

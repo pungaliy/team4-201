@@ -21,6 +21,7 @@
 			return head+itemName+end;
         }
         function loadGroceryList(){
+        	alert("Loading groceries...");
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                 var GroceryList = [];
@@ -54,7 +55,7 @@
 
     </script>
 </head>
-<body onload="loadTransactionList()">
+<body onload="loadGroceryList()">
 <div id="removethis"></div>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">

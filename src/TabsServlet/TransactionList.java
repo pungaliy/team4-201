@@ -41,11 +41,11 @@ public class TransactionList extends HttpServlet{
 			int roomID = Integer.parseInt(room);
 
 
-			Vector<Transaction> allTransaction = magic.getAllRelatedTransaction(user1);
+			/*Vector<Transaction> allTransaction = magic.getAllRelatedTransaction(user1);
 			Gson gson = new Gson();
 			String output = gson.toJson(allTransaction);
 			PrintWriter out = response.getWriter();
-			out.print(output);
+			out.print(output);*/
 
 		}
 

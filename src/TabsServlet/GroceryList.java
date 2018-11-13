@@ -1,8 +1,8 @@
 package TabsServlet;
 
 import Methods.Magic;
-import TabsStuff.GroceryItem;
 import com.google.gson.Gson;
+import db.GroceryItem;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Vector;
 
 @WebServlet (name= "GroceryList", urlPatterns = {"/GroceryList"})
@@ -31,13 +32,12 @@ public class GroceryList extends HttpServlet {
 
 		//For testing
 		request.setAttribute("room", "5566");
-		magic.addGrocery("Beef", 5566);
+		magic.addGrocery("Beef", "5566");
 		//TODO: remove this
 
-		String room = (String) request.getAttribute("room");
-		int roomID = Integer.parseInt(room);
+		String roomID = (String) request.getAttribute("room");
 
-		Vector<GroceryItem> groceryList = magic.getGroceryList(roomID);
+		ArrayList<db.GroceryItem> groceryList = magic.getGroceryList("5566");
 		Gson gson = new Gson();
 		String output = gson.toJson(groceryList);
 		System.out.println(output);

@@ -9,7 +9,7 @@ import static com.mongodb.client.model.Filters.or;
 
 public class TabBase extends DataBase {
 
-    ArrayList<GroceryItem> retrieveGroceryItems(String roomID) {
+    public ArrayList<GroceryItem> retrieveGroceryItems(String roomID) {
         MongoCollection<GroceryItem> collection = database.getCollection("groceryitems", GroceryItem.class);
 
         ArrayList<GroceryItem> tmp = new ArrayList<>();
@@ -19,13 +19,13 @@ public class TabBase extends DataBase {
         return tmp;
     }
 
-    void addGroceryItem(GroceryItem item) {
+    public void addGroceryItem(GroceryItem item) {
         MongoCollection<GroceryItem> collection = database.getCollection("groceryitems", GroceryItem.class);
         collection.insertOne(item);
 
     }
 
-    void deleteGroceryItem(GroceryItem item) {
+    public void deleteGroceryItem(GroceryItem item) {
         MongoCollection<GroceryItem> collection = database.getCollection("groceryitems", GroceryItem.class);
         collection.deleteOne(eq("itemName", item.getItemName()));
     }

@@ -5,8 +5,10 @@ import TabsStuff.GroceryItem;
 import TabsStuff.TabsItem;
 import TabsStuff.TabsLedger;
 import TabsStuff.Transaction;
+import db.TabBase;
 import temp.tempUser;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 public class Magic {
@@ -15,22 +17,29 @@ public class Magic {
 	* This class contains methods that handle logic.
 	*/
 
-	private static FakeDB fakeDB = new FakeDB();
+	//private static FakeDB fakeDB = new FakeDB();
+	private static TabBase db = new TabBase();
 
-	public void addGrocery(String name, int roomID){
-		GroceryItem grocery = new GroceryItem(name, roomID);
-		fakeDB.addGrocery(grocery);
+	public void addGrocery(String name, String roomID){
+		db.GroceryItem grocery = new db.GroceryItem(roomID, name);
+		db.addGroceryItem(grocery);
+		System.out.println("Add grocery: " + name + " for room " + roomID);
 	}
 
-	public void removeGrocery(String name, int roomID){
-		fakeDB.removeGrocery(name, roomID);
+	public void removeGrocery(String name, String roomID){
+		ArrayList<db.GroceryItem> roomGrocery = db.retrieveGroceryItems(roomID);
+		for(db.GroceryItem i : roomGrocery){
+			if(i.getItemName().equals(name)){
+				db.deleteGroceryItem(i);
+			}
+		}
 	}
 
-	public Vector<GroceryItem> getGroceryList(int roomID){
-		return fakeDB.getGroceryList(roomID);
+	public ArrayList<db.GroceryItem> getGroceryList(String roomID){
+		return db.retrieveGroceryItems(roomID);
 	}
 
-	public void addSingleTransction(db.User purchaser, db.User splitter, float amount, String roomID, TabsItem item){
+	/*public void addSingleTransction(db.User purchaser, db.User splitter, float amount, String roomID, TabsItem item){
 		Transaction t = new Transaction(purchaser, splitter, amount, roomID, item);
 		fakeDB.addSingleTransaction(t);
 	}
@@ -76,5 +85,5 @@ public class Magic {
 					+ " Amount: " + t.getAmount());
 		}
 	}
-
+*/
 }
