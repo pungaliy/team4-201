@@ -17,12 +17,12 @@
 }
 
 .middle{
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 10px;
-    /* border: black; */
-    border-color: #9cafb7;
-    background-color: #adcbd8b5;
+    background-color: #c8dade61;
+    /* border-color: #357888; */
+    border-radius: 1vmin;
+    padding: 3vmin;
+    height: 80vmin;
+    box-shadow: 1px 1px 8px 2px #3578885c;
     height: 80vmin;
     margin-top: 3vmin;
     position: relative;
