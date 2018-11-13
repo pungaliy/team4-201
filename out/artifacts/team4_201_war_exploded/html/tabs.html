@@ -21,7 +21,6 @@
 			return head+itemName+end;
         }
         function loadGroceryList(){
-            alert("HI I am loading the Grocery List");
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                 var GroceryList = [];
@@ -35,10 +34,27 @@
             xhttp.open("GET", "/GroceryList", true);
             xhttp.send();
         }
+		function loadTransactionList(){
+			alert("HI I am loading the Transaction List");
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function () {
+				var TransactionList = [];
+				alert("try to parse json...")
+				TransactionList = JSON.parse(this.responseText);
+				TransactionList.forEach(function(item) {
+					document.getElementById("removethis").innerHTML
+						+= generateGroceryItemHTML(item["itemBought"]["itemName"] + " " + item["amount"] + " " +
+                        item["splitter"]);
+				});
+			};
+			//xhttp.setRequestHeader(“Content-Type”, “application/x-www-form-urlencoded”);
+			xhttp.open("GET", "/TransactionList", true);
+			xhttp.send();
+		}
 
     </script>
 </head>
-<body onload="loadGroceryList()">
+<body onload="loadTransactionList()">
 <div id="removethis"></div>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
