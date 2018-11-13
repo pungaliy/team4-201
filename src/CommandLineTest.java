@@ -72,5 +72,6 @@ public class CommandLineTest {
 		test.TransactionTests();
 
 		//TRY TO MERGE WITH html
+		//Merge sucessful I guess
 	}
 }
