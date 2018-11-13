@@ -33,7 +33,7 @@ public class DataBase {
     public ArrayList<User> retrieveUsers(String roomID) {
         MongoCollection<User> collection = database.getCollection("users", User.class);
         ArrayList<User> tmp = new ArrayList<>();
-        for( User user : collection.find(eq("roomid", roomID))) {
+        for( User user : collection.find(eq("roomID", roomID))) {
             tmp.add(user);
         }
         return tmp;
@@ -67,18 +67,19 @@ public class DataBase {
 
 //
 
-    public static void main(String[] args) {
-        DataBase db = new DataBase();
-        Room room = new Room("roomIDOne");
-        User user = new User("full name", "123", "roomID", "imgurl");
-        user.setImgURL("img");
-        db.addUser(user);
-        db.addRoom(room);
-//        Note note = new Note("note content main", 3.22, 2.33, "note1","room2");
-        System.out.println(db.roomExists("roomIDOne"));
-        User newUser = db.retrieveUser("123");
-        System.out.println(newUser.getUserID());
-//        String json = db.retrieveNotes("room2");
-//        System.out.println(json);
-    }
+//    public static void main(String[] args) {
+//        DataBase db = new DataBase();
+//        Room room = new Room("roomIDOne");
+//        User user = new User("full name", "123", "roomID", "imgurl");
+//        user.setImgURL("img");
+//        db.addUser(user);
+//        db.addRoom(room);
+////        Note note = new Note("note content main", 3.22, 2.33, "note1","room2");
+//        System.out.println(db.roomExists("roomIDOne"));
+//        User newUser = db.retrieveUser("123");
+//        System.out.println(newUser.getUserID());
+//        System.out.println(db.retrieveUsers("roomID"));
+////        String json = db.retrieveNotes("room2");
+////        System.out.println(json);
+//    }
 }
