@@ -70,5 +70,7 @@ public class CommandLineTest {
  		CommandLineTest test = new CommandLineTest();
 		//test.GroceryTests();
 		test.TransactionTests();
+
+		//TRY TO MERGE WITH html
 	}
 }
