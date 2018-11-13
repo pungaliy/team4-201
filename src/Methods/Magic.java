@@ -39,9 +39,9 @@ public class Magic {
 		return db.retrieveGroceryItems(roomID);
 	}
 
-	/*public void addSingleTransction(db.User purchaser, db.User splitter, float amount, String roomID, TabsItem item){
-		Transaction t = new Transaction(purchaser, splitter, amount, roomID, item);
-		fakeDB.addSingleTransaction(t);
+	public void addSingleTransction(String purchaser, String splitter, float amount, String roomID, String item){
+		db.Transaction t = new db.Transaction(purchaser, splitter, amount, roomID, item);
+		db.addTransaction(t);
 	}
 
 	public void addTransactionToAllSplitters(TabsLedger ledger){
@@ -76,14 +76,5 @@ public class Magic {
 		return fakeDB.searchTransactionSingle(user);
 	}
 
-	public void printAllTransactions(){
-		Vector<Transaction> all = fakeDB.getAllTransactions();
-		for(Transaction t : all){
-			System.out.println("Payer: " + t.getPurchaser().getFullName()
-					+ " Owner: " + t.getSplitter().getFullName()
-					+ " Item: " + t.getItemBought().getItemName()
-					+ " Amount: " + t.getAmount());
-		}
-	}
-*/
+
 }

@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Vector;
 
 @WebServlet(name= "TransactionList", urlPatterns = {"/TransactionList"})
@@ -37,11 +38,9 @@ public class TransactionList extends HttpServlet{
 			TabsLedger fishLedger = new TabsLedger(fish,user1, split);
 			//TODO: remove this
 
-			String room = (String) request.getAttribute("room");
-			int roomID = Integer.parseInt(room);
+			String roomID = (String) request.getAttribute("room");
 
-
-			/*Vector<Transaction> allTransaction = magic.getAllRelatedTransaction(user1);
+			ArrayList<Transaction> allTransaction = magic.getAllRelatedTransaction(user1);
 			Gson gson = new Gson();
 			String output = gson.toJson(allTransaction);
 			PrintWriter out = response.getWriter();

@@ -2,8 +2,8 @@ package db;
 
 public class Transaction {
     private String transactionID;
-    private String user1;
-    private String user2;
+    private String user1; //purchaser
+    private String user2; //splitter
     private float amount;
     private String roomID;
     private GroceryItem item;
