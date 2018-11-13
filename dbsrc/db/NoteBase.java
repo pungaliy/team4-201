@@ -43,14 +43,14 @@ public class NoteBase extends DataBase {
 
     }
 
-    public static void main(String [] args) {
-        NoteBase db = new NoteBase();
-        Note note  = new Note("contento", 1, 1, "noteid1", "roomid1");
-        db.insertNote(note);
-        System.out.println(db.retrieveNotes("roomid1"));
-        note.setText("new note text");
-        db.updateNote(note);
-        System.out.println(db.retrieveNotes("roomid1"));
-        db.deleteNote("noteid1");
-    }
+//    public static void main(String [] args) {
+//        NoteBase db = new NoteBase();
+//        Note note  = new Note("contento", 1, 1, "noteid1", "roomid1");
+//        db.insertNote(note);
+//        System.out.println(db.retrieveNotes("roomid1"));
+//        note.setText("new note text");
+//        db.updateNote(note);
+//        System.out.println(db.retrieveNotes("roomid1"));
+//        db.deleteNote("noteid1");
+//    }
 }
