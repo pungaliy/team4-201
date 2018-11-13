@@ -9,6 +9,7 @@ import db.Transaction;
 import org.junit.platform.commons.util.StringUtils;
 import temp.tempUser;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Vector;
 
@@ -20,6 +21,22 @@ public class Magic {
 
 	//private static FakeDB fakeDB = new FakeDB();
 	private static TabBase db = new TabBase();
+
+	public void addUser(db.User user){
+		db.addUser(user);
+	}
+
+	public db.User searchByUserIDandRoomID(String userID, String roomID){
+		ArrayList<db.User> allUsersInRoom = db.retrieveUsers(roomID);
+		for(db.User u : allUsersInRoom){
+			System.out.println(u.getUserID());
+			if(userID.equals(u.getUserID())){
+				System.out.println("FOUND");
+				return u;
+			}
+		}
+		return null;
+	}
 
 	public void addGrocery(String name, String roomID){
 		db.GroceryItem grocery = new db.GroceryItem(roomID, name);
@@ -42,10 +59,6 @@ public class Magic {
 
 	public void addSingleTransction(String purchaser, String splitter, float amount, String roomID, String item){
 		String ID = Long.toString(System.currentTimeMillis());
-		if(ID.length() > 8){
-			ID = ID.substring(0, 7);
-		}
-
 		Transaction t = new Transaction(ID, purchaser, splitter, amount, roomID, item);
 		db.addTransaction(t);
 	}
@@ -60,7 +73,7 @@ public class Magic {
 		db.User splitter = null;
 		for(db.User u : ledger.getSplitters()){
 			splitter = u;
-			if(!purchaser.equals(splitter)){
+			if(!purchaser.getUserID().equals(splitter.getUserID())){
 				addSingleTransction(purchaser.getUserID(), splitter.getUserID(), amount, roomID, item);
 			}
 		}

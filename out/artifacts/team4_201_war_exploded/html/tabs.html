@@ -20,6 +20,7 @@
                 '</span><span class="mdl-list__item-secondary-action"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-1"><input type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input"  /></label></span></li>';
 			return head+itemName+end;
         }
+
         function loadGroceryList(){
         	alert("Loading groceries...");
             var xhttp = new XMLHttpRequest();
@@ -42,10 +43,12 @@
 				var TransactionList = [];
 				alert("try to parse json...")
 				TransactionList = JSON.parse(this.responseText);
+				document.getElementById("removethis").innerHTML = "";
 				TransactionList.forEach(function(item) {
 					document.getElementById("removethis").innerHTML
-						+= generateGroceryItemHTML(item["itemBought"]["itemName"] + " " + item["amount"] + " " +
-                        item["splitter"]);
+						+= generateGroceryItemHTML(item["item"] + " " + item["amount"] + " " +
+                        item["user2"]);
+
 				});
 			};
 			//xhttp.setRequestHeader(“Content-Type”, “application/x-www-form-urlencoded”);
