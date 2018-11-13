@@ -26,11 +26,8 @@ public class Magic {
 		fakeDB.removeGrocery(name, roomID);
 	}
 
-	public void getGroceryList(int roomID){
-		Vector<GroceryItem> gList = fakeDB.getGroceryList(roomID);
-		for(GroceryItem g : gList){
-			System.out.println(g.getItemName());
-		}
+	public Vector<GroceryItem> getGroceryList(int roomID){
+		return fakeDB.getGroceryList(roomID);
 	}
 
 	public void addSingleTransction(tempUser purchaser, tempUser splitter, float amount, int roomID, TabsItem item){
