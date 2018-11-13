@@ -38,6 +38,11 @@ public class DataBase {
         }
         return tmp;
     }
+    public void addUser(User user) {
+        MongoCollection<User> collection = database.getCollection("users", User.class);
+        collection.insertOne(user);
+    }
+
 
 
 
