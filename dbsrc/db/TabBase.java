@@ -30,7 +30,7 @@ public class TabBase extends DataBase {
         collection.deleteOne(eq("itemName", item.getItemName()));
     }
 
-    ArrayList<Transaction> retrieveTransactionsByRoom(String roomID) {
+    public ArrayList<Transaction> retrieveTransactionsByRoom(String roomID) {
         MongoCollection<Transaction> collection = database.getCollection("transactions", Transaction.class);
 
         ArrayList<Transaction> tmp = new ArrayList<>();
@@ -40,7 +40,7 @@ public class TabBase extends DataBase {
         return tmp;
     }
 
-    ArrayList<Transaction> retrieveTransactionsByUser1(String userID) {
+    public ArrayList<Transaction> retrieveTransactionsByUser1(String userID) {
         MongoCollection<Transaction> collection = database.getCollection("transactions", Transaction.class);
 
         ArrayList<Transaction> tmp = new ArrayList<>();
@@ -50,7 +50,7 @@ public class TabBase extends DataBase {
         return tmp;
     }
 
-    ArrayList<Transaction> retrieveTransactionsByUser2(String userID) {
+    public ArrayList<Transaction> retrieveTransactionsByUser2(String userID) {
         MongoCollection<Transaction> collection = database.getCollection("transactions", Transaction.class);
 
         ArrayList<Transaction> tmp = new ArrayList<>();
@@ -60,7 +60,7 @@ public class TabBase extends DataBase {
         return tmp;
     }
 
-    ArrayList<Transaction> retrieveTransactionsByUserInvolved(String userID) {
+    public ArrayList<Transaction> retrieveTransactionsByUserInvolved(String userID) {
         MongoCollection<Transaction> collection = database.getCollection("transactions", Transaction.class);
 
         ArrayList<Transaction> tmp = new ArrayList<>();
@@ -71,13 +71,13 @@ public class TabBase extends DataBase {
 
     }
 
-    void addTransaction(Transaction transaction) {
+    public void addTransaction(Transaction transaction) {
         MongoCollection<Transaction> collection = database.getCollection("transactions", Transaction.class);
         collection.insertOne(transaction);
 
     }
 
-    void deleteTransaction(Transaction transaction) {
+    public void deleteTransaction(Transaction transaction) {
         MongoCollection<Transaction> collection = database.getCollection("transactions", Transaction.class);
         collection.deleteOne(eq("transactionID", transaction.getTransactionID()));
 

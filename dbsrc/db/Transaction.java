@@ -6,11 +6,11 @@ public class Transaction {
     private String user2; //splitter
     private float amount;
     private String roomID;
-    private GroceryItem item;
+    private String item;
 
     public Transaction() {}
 
-    public Transaction(String transactionID, String user1, String user2, float amount, String roomID, GroceryItem item) {
+    public Transaction(String transactionID, String user1, String user2, float amount, String roomID, String item) {
         this.transactionID = transactionID;
         this.user1 = user1;
         this.user2 = user2;
@@ -59,11 +59,11 @@ public class Transaction {
         this.roomID = roomID;
     }
 
-    public GroceryItem getItem() {
+    public String getItem() {
         return item;
     }
 
-    public void setItem(GroceryItem item) {
+    public void setItem(String item) {
         this.item = item;
     }
 }
