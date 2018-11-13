@@ -5,12 +5,19 @@
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-blue.min.css" />
         <link rel="stylesheet" type="text/css" href="../css/login.css" />
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id"
+              content="783442120973-ukfbb64dd1il9b5d3lubfim5b44423mi.apps.googleusercontent.com">
     </head>
+
+
     <div class="split left">
         <div class="centered">
             <img  class="fullLogo" src="../resources/fullLogo3.png" alt="Suite Home">
-            <button class="mdl-button mdl-js-button mdl-button--raised">
-                Sign  in
+            <script src="../unprocessed_js/login.js"></script>
+            <div class="g-signin2" id="sign_in_button" data-onsuccess="onSignInHI" data-onload="false"></div>
+            <button class="mdl-button mdl-js-button mdl-button--raised" onclick="mySignOut()">
+                Sign out
             </button>
         </div>
     </div>
@@ -31,27 +38,4 @@
             </form>
         </div>
     </div>
-    <!--<body>-->
-    <!--<div class="mdl-layout mdl-js-layout mdl-layout&#45;&#45;fixed-header">-->
-        <!--<header class="mdl-layout__header">-->
-
-        <!--</header></div>-->
-
-        <!--<main class="mdl-layout__content">-->
-            <!--<div class="page-content">-->
-                <!--<div>-->
-                    <!--<img  class="fullLogo" src="./fullLogo3.png" alt="Suite Home">-->
-                    <!--&lt;!&ndash;<img  class="wordLogo" src="./logo2.png" alt="Suite Home">&ndash;&gt;-->
-                <!--</div>-->
-                <!--<div class="mdl-grid">-->
-                    <!--<div id="login" class="mdl-cell mdl-cell&#45;&#45;6-col">-->
-                        <!--Sign In Functionality Goes Here-->
-                    <!--</div>-->
-                    <!--<div class="mdl-cell mdl-cell&#45;&#45;6-col">goes</div>-->
-                <!--</div>-->
-            <!--</div>-->
-
-        <!--</main>-->
-    <!--</div>-->
-    <!--</body>-->
 </html>
