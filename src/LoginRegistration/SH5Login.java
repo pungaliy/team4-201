@@ -16,6 +16,15 @@ public class SH5Login extends HttpServlet {
         String user_name = request.getParameter("first_name");
         String email = request.getParameter("email");
 
+        if (userExists(email)) {
+            User u = getUser(email);
+            request.getServletContext().setAttribute("room", u.getRoom());
+            response.getWriter().print("message-board");
+        } else {
+            response.getWriter().print("registration");
+
+        }
+
         request.getServletContext().setAttribute("access_token", access_token);
         request.getServletContext().setAttribute("image", image);
         request.getServletContext().setAttribute("name", user_name);

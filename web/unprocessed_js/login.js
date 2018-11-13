@@ -17,15 +17,8 @@ function send_stuff(googleUser) {
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "/login", true);
 
-    xhttp.onreadystatechange = function () {
-        console.log(xhttp.responseText);
-        if (xhttp.responseText === "sign_in_successful") {
-            setTimeout(function() {window.location = "http://localhost:8080/profile"}, 1000)
-        }
-
-        if (xhttp.responseText === "invalid_signin"){
-            window.alert("Sorry, that didn't work. I'm signing you out. Please try again");
-        }
+    xhttp.onreadystatechange = function (response) {
+        setTimeout(function() {window.location = "http://localhost:8080/" + response}, 500)
     };
 
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
