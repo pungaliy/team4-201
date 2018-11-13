@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Room {
     private String roomID;
     private String roomStatus;
-    private ArrayList<String> residents;
+//    private ArrayList<String> residents;
 
 
     //empty constructor, for codec purposes
@@ -19,12 +19,12 @@ public class Room {
     public Room(String roomID) {
         this.roomID = roomID;
         this.roomStatus = "DO NOT DISTURB";
-        this.residents = new ArrayList<String>();
+//        this.residents = new ArrayList<String>();
     }
 
     public Room(String roomID, ArrayList<String> residents,  String roomStatus) {
         this.roomID = roomID;
-        this.residents = residents;
+//        this.residents = residents;
         this.roomStatus = roomStatus;
     }
 
@@ -46,12 +46,12 @@ public class Room {
         this.roomStatus = roomStatus;
     }
 
-    public ArrayList<String> getResidents() {
-        return residents;
-    }
+//    public ArrayList<String> getResidents() {
+//        return residents;
+//    }
 
-    public void setResidents(ArrayList<String> residents) {
-        this.residents = residents;
-    }
+//    public void setResidents(ArrayList<String> residents) {
+//        this.residents = residents;
+//    }
 
 }
