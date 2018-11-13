@@ -1,6 +1,5 @@
 package db;
 
-
 import com.google.gson.Gson;
 import com.mongodb.MongoClientSettings;
 import com.mongodb.client.MongoClient;
@@ -17,10 +16,9 @@ import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
 public class DataBase {
-    protected  MongoClient mongoClient;
+    protected MongoClient mongoClient;
     protected MongoDatabase database;
     protected Gson gson;
-
 
     public DataBase() {
         mongoClient = MongoClients.create();

@@ -14,7 +14,8 @@ public class SH5DeletePostIt extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String idname = request.getParameter("idname");
         System.out.println("Deleting: " + idname);
-        NoteBase db = (NoteBase) request.getServletContext().getAttribute("notebase");
+//        NoteBase db = (NoteBase) request.getServletContext().getAttribute("notebase");
+        NoteBase db = new NoteBase();
         db.deleteNote(idname);
     }
 

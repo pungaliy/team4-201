@@ -17,27 +17,27 @@ public class ChoreBase extends DataBase {
         return tmp;
     }
 
-    void updateChore(Chore chore) {
+    public void updateChore(Chore chore) {
         MongoCollection<Chore> collection = database.getCollection("chores", Chore.class);
         collection.replaceOne(eq("choreID", chore.getChoreID()), chore);
     }
 
-    void insertChore(Chore chore) {
+    public void insertChore(Chore chore) {
         MongoCollection<Chore> collection = database.getCollection("chores", Chore.class);
         collection.insertOne(chore);
     }
 
-    void deleteChore(Chore chore) {
+    public void deleteChore(Chore chore) {
         MongoCollection<Chore> collection = database.getCollection("chores", Chore.class);
         collection.deleteOne(eq("choreID", chore.getChoreID()));
     }
 
-//    public static void main(String [] args) {
-//        ChoreBase cb = new ChoreBase();
-//        Chore chore = new Chore("THis is a chore",100, 100, "user1","room1","chore1");
-//        cb.insertChore(chore);
-//        chore.setCompleted(true);
-//        cb.updateChore(chore);
-//
-//    }
+    public static void main(String [] args) {
+        ChoreBase cb = new ChoreBase();
+        Chore chore = new Chore("THis is a chore",100, 100, "user1","room1","chore1");
+        cb.insertChore(chore);
+        chore.setCompleted(true);
+        cb.updateChore(chore);
+
+    }
 }
