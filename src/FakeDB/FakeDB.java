@@ -40,9 +40,9 @@ public class FakeDB {
 		return null;
 	}
 
-	public db.Room SearchRoomByID(int ID){
+	public db.Room SearchRoomByID(String ID){
 		for (db.Room r : rooms){
-			if(Integer.parseInt(r.getRoomID()) == ID){
+			if(r.getRoomID().equals(ID)){
 				return r;
 			}
 		}

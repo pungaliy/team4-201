@@ -21,7 +21,6 @@ public class TransactionList extends HttpServlet{
 
 			//For testing
 			request.setAttribute("room", "5566");
-
 			//TODO: remove this
 
 			String room = (String) request.getAttribute("room");

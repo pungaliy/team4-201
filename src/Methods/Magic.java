@@ -30,7 +30,7 @@ public class Magic {
 		return fakeDB.getGroceryList(roomID);
 	}
 
-	public void addSingleTransction(db.User purchaser, db.User splitter, float amount, int roomID, TabsItem item){
+	public void addSingleTransction(db.User purchaser, db.User splitter, float amount, String roomID, TabsItem item){
 		Transaction t = new Transaction(purchaser, splitter, amount, roomID, item);
 		fakeDB.addSingleTransaction(t);
 	}
@@ -40,7 +40,7 @@ public class Magic {
 		float amount = ledger.getItemBought().getPricePerItem()
 				* ledger.getItemBought().getQuantity()
 				/ ledger.getSplitters().size();
-		int roomID = Integer.parseInt(purchaser.getRoomID());
+		String roomID = purchaser.getRoomID();
 		TabsItem item = ledger.getItemBought();
 		db.User splitter = null;
 		for(db.User u : ledger.getSplitters()){
