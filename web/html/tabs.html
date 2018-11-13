@@ -14,27 +14,42 @@
     </style>
 
 	<script>
-	$(document).ready(function(){
-		$("#additembutton").click(function(){
-			alert("HI 4");
-			$.getJSON('GroceryList', function (data) {
-				var grocerylist = [];
-				$.each(data, function(key, value){
-					alert(value["roomID"] + value["itemName"]);
-					grocerylist.push(value["roomID"] + value["itemName"]);
+/*        $(document).ready(function(){
+            $("#additembutton").click(function(){
+                alert("HI 4");
+                $.getJSON('GroceryList', function (data) {
+                    var grocerylist = [];
+                    $.each(data, function(key, value){
+                        alert(value["roomID"] + value["itemName"]);
+                        grocerylist.push(value["roomID"] + value["itemName"]);
+                    });
+                    for(var i = 0; i < grocerylist.length; i++ ){
+                        alert(grocerylist[i]);
+                        $("#removethis").append(grocerylist[i]);
+                    }
+
                 });
-				for(var i = 0; i < grocerylist.length; i++ ){
-					alert(grocerylist[i]);
-					$("#removethis").append(grocerylist[i]);
-                }
-
+            });
+        });*/
+	function loadGroceryList(){
+		alert("HI I am loading the Grocery List");
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function () {
+			var GroceryList = [];
+			GroceryList = JSON.parse(this.responseText);
+			GroceryList.forEach(function(item) {
+				document.getElementById("removethis").innerHTML
+                    += (item["roomID"] + " " + item["itemName"] + "<br>");
 			});
-        });
+		};
+		//xhttp.setRequestHeader(“Content-Type”, “application/x-www-form-urlencoded”);
+		xhttp.open("GET", "/GroceryList", true);
+		xhttp.send();
+    }
 
-	});
     </script>
 </head>
-<body>
+<body onload="loadGroceryList()">
 <div id="removethis"></div>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
