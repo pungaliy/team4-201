@@ -1,11 +1,17 @@
 package LoginRegistration;
 
+import db.DataBase;
+import db.Room;
+import db.User;
+import org.omg.CORBA.Request;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -17,14 +23,13 @@ public class SH5Registration extends HttpServlet {
         String create = request.getParameter("create");
 
         String room_code = request.getParameter("room_code");
-        String uid = (String) request.getServletContext().getAttribute("uid");
 
         System.out.println(String.format("Doing something with %s %s %s",join, create, room_code));
 
         if (create != null) {
             String ret_string = roomIsValid(room_code, true);
             if (ret_string.equals("VALID")) {
-                createNewRoom(room_code, uid);
+                createNewRoom(room_code, request);
                 write(pw, "[\"ACC\", \"Room created\"]");
                 request.getServletContext().setAttribute("room", room_code);
             } else {
@@ -33,7 +38,7 @@ public class SH5Registration extends HttpServlet {
         } else if (join != null) {
             String ret_string = roomIsValid(room_code, false);
             if (ret_string.equals("VALID")) {
-                joinRoom(room_code, uid);
+                joinRoom(room_code, request);
                 write(pw, "[\"ACC\", \"Room joined\"]");
                 request.getServletContext().setAttribute("room", room_code);
             } else {
@@ -49,15 +54,25 @@ public class SH5Registration extends HttpServlet {
         pw.print(x);
     }
 
-    private void createNewRoom(String roomid, String uid) {
-        System.out.println("Would've created");
-        // Create the room object
-        // Add the user to the room
+    private void createNewRoom(String roomid, HttpServletRequest req) {
+        DataBase db = new DataBase();
+        db.addRoom(new Room(roomid));
+
+        String username = (String) req.getServletContext().getAttribute("name");
+        String image = (String) req.getServletContext().getAttribute("image");
+        String email = (String) req.getServletContext().getAttribute("email");
+        User u = new User(username, email, roomid, image);
+        db.addUser(u);
     }
 
-    private void joinRoom(String roomid, String uid) {
-        System.out.println("Would've joined");
-        // Join the room
+    private void joinRoom(String roomid, HttpServletRequest req) {
+        DataBase db = new DataBase();
+
+        String username = (String) req.getServletContext().getAttribute("name");
+        String image = (String) req.getServletContext().getAttribute("image");
+        String email = (String) req.getServletContext().getAttribute("email");
+        User u = new User(username, email, roomid, image);
+        db.addUser(u);
     }
 
     private String roomIsValid(String roomid, boolean create) {
@@ -78,7 +93,8 @@ public class SH5Registration extends HttpServlet {
     }
 
     private boolean roomExists(String roomid) {
-
+        DataBase db = new DataBase();
+        return db.roomExists(roomid);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

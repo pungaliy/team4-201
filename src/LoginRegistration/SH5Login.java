@@ -1,5 +1,8 @@
 package LoginRegistration;
 
+import db.DataBase;
+import db.User;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,22 +16,25 @@ public class SH5Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String access_token = request.getParameter("access_token");
         String image = request.getParameter("image");
-        String user_name = request.getParameter("first_name");
+        String username = request.getParameter("first_name");
         String email = request.getParameter("email");
 
-        if (userExists(email)) {
-            User u = getUser(email);
-            request.getServletContext().setAttribute("room", u.getRoom());
+
+        DataBase db = new DataBase();
+        User u = db.retrieveUser(email);
+
+        if (u != null) {
+            request.getServletContext().setAttribute("room", u.getRoomID());
             response.getWriter().print("message-board");
         } else {
             response.getWriter().print("registration");
-
         }
+
 
         request.getServletContext().setAttribute("access_token", access_token);
         request.getServletContext().setAttribute("image", image);
-        request.getServletContext().setAttribute("name", user_name);
-        request.getServletContext().setAttribute("uid", email);
+        request.getServletContext().setAttribute("name", username);
+        request.getServletContext().setAttribute("email", email);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

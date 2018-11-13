@@ -14,20 +14,38 @@ function onSignInHI(googleUser) {
 
 function send_stuff(googleUser) {
 
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "/login", true);
 
-    xhttp.onreadystatechange = function (response) {
-        setTimeout(function() {window.location = "http://localhost:8080/" + response}, 500)
-    };
+    $.ajax({
+        url: "/login",
+        method: "post",
+        data: {
+            "access_token": googleUser.getAuthResponse().access_token,
+            "user_id": googleUser.getBasicProfile().getId(),
+            "image": googleUser.getBasicProfile().getImageUrl(),
+            "first_name": googleUser.getBasicProfile().getName(),
+            "email": googleUser.getBasicProfile().getEmail(),
+        },
+        success: function (response) {
+            console.log(response)
+            setTimeout(function() {window.location = "http://localhost:8080/" + response}, 500);
+        }
+    });
 
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("access_token=" + googleUser.getAuthResponse().access_token
-        + "&user_id=" + googleUser.getBasicProfile().getId()
-        + "&image=" + googleUser.getBasicProfile().getImageUrl()
-        + "&first_name=" + googleUser.getBasicProfile().getName()
-        + "&email=" + googleUser.getBasicProfile().getEmail()
-    );
+    // var xhttp = new XMLHttpRequest();
+    // xhttp.open("POST", "/login", true);
+    //
+    // xhttp.onreadystatechange = function () {
+    //     console.log(response)
+    //     // setTimeout(function() {window.location = "http://localhost:8080/" + response}, 500)
+    // };
+    //
+    // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    // xhttp.send("access_token=" + googleUser.getAuthResponse().access_token
+    //     + "&user_id=" + googleUser.getBasicProfile().getId()
+    //     + "&image=" + googleUser.getBasicProfile().getImageUrl()
+    //     + "&first_name=" + googleUser.getBasicProfile().getName()
+    //     + "&email=" + googleUser.getBasicProfile().getEmail()
+    // );
 }
 
 function mySignOut() {

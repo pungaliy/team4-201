@@ -15,10 +15,6 @@ import java.io.PrintWriter;
 public class SH5RetrievePostIts extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        //TODO: CHANGE THIS vvv
-        request.getServletContext().setAttribute("room", "123455");
-        //END
-
         String room = (String) request.getServletContext().getAttribute("room");
         NoteBase db = (NoteBase) request.getServletContext().getAttribute("notebase");
         PrintWriter pw = response.getWriter();
