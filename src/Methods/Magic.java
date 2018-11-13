@@ -30,26 +30,26 @@ public class Magic {
 		return fakeDB.getGroceryList(roomID);
 	}
 
-	public void addSingleTransction(tempUser purchaser, tempUser splitter, float amount, int roomID, TabsItem item){
+	public void addSingleTransction(db.User purchaser, db.User splitter, float amount, int roomID, TabsItem item){
 		Transaction t = new Transaction(purchaser, splitter, amount, roomID, item);
 		fakeDB.addSingleTransaction(t);
 	}
 
 	public void addTransactionToAllSplitters(TabsLedger ledger){
-		tempUser purchaser = ledger.getPurchaser();
+		db.User purchaser = ledger.getPurchaser();
 		float amount = ledger.getItemBought().getPricePerItem()
 				* ledger.getItemBought().getQuantity()
 				/ ledger.getSplitters().size();
-		int roomID = purchaser.getRoomID();
+		int roomID = Integer.parseInt(purchaser.getRoomID());
 		TabsItem item = ledger.getItemBought();
-		tempUser splitter = null;
-		for(tempUser u : ledger.getSplitters()){
+		db.User splitter = null;
+		for(db.User u : ledger.getSplitters()){
 			splitter = u;
 			addSingleTransction(purchaser, splitter, amount, roomID, item);
 		}
 	}
 
-	public float getTabsTotal(tempUser user1, tempUser user2){
+	public float getTabsTotal(db.User user1, db.User user2){
 		Vector<Transaction> toMinus = fakeDB.searchTransaction(user1, user2);
 		Vector<Transaction> toAdd = fakeDB.searchTransaction(user2, user1);
 		float amount = 0;
@@ -63,11 +63,15 @@ public class Magic {
 		return amount;
 	}
 
+	public Vector<Transaction> getAllRelatedTransaction(db.User user){
+		return fakeDB.searchTransactionSingle(user);
+	}
+
 	public void printAllTransactions(){
 		Vector<Transaction> all = fakeDB.getAllTransactions();
 		for(Transaction t : all){
-			System.out.println("Payer: " + t.getPurchaser().getName()
-					+ " Owner: " + t.getSplitter().getName()
+			System.out.println("Payer: " + t.getPurchaser().getFullName()
+					+ " Owner: " + t.getSplitter().getFullName()
 					+ " Item: " + t.getItemBought().getItemName()
 					+ " Amount: " + t.getAmount());
 		}

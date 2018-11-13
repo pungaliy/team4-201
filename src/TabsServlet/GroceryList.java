@@ -13,8 +13,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Vector;
 
-@WebServlet (name= "RetriveGroceryList", urlPatterns = {"/tabs"})
-public class RetriveGroceryList extends HttpServlet {
+@WebServlet (name= "GroceryList", urlPatterns = {"/GroceryList"})
+public class GroceryList extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

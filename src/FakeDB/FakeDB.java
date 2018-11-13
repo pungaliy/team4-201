@@ -10,16 +10,16 @@ import temp.tempUser;
 import java.util.Vector;
 
 public class FakeDB {
-	private Vector<tempUser> users;
-	private Vector<tempRoom> rooms;
+	private Vector<db.User> users;
+	private Vector<db.Room> rooms;
 	private Vector<GroceryItem> groceryItems;
 	private Vector<TabsItem> tabsItems;
 	private Vector<Transaction> transactions;
 	private Vector<TabsTotal> tabsTotals;
 
 	public FakeDB(){
-		users = new Vector<tempUser>();
-		rooms = new Vector<tempRoom>();
+		users = new Vector<db.User>();
+		rooms = new Vector<db.Room>();
 		groceryItems = new Vector<GroceryItem>();
 		tabsItems = new Vector<TabsItem>();
 		transactions = new Vector<Transaction>();
@@ -27,18 +27,22 @@ public class FakeDB {
 
 	}
 
-	public tempUser SearchUserByEmail(String email){
-		for (tempUser u : users) {
-			if (u.getEmail().equals(email)){
+	public db.User SearchUserByEmail() {
+		return SearchUserByEmail();
+	}
+
+	public db.User SearchUserByEmail(String email){
+		for (db.User u : users) {
+			if (u.getUserID().equals(email)){
 				return u;
 			}
 		}
 		return null;
 	}
 
-	public tempRoom SearchRoomByID(int ID){
-		for (tempRoom r : rooms){
-			if(r.getRoomID() == ID){
+	public db.Room SearchRoomByID(int ID){
+		for (db.Room r : rooms){
+			if(Integer.parseInt(r.getRoomID()) == ID){
 				return r;
 			}
 		}
@@ -78,10 +82,20 @@ public class FakeDB {
 		return transactions;
 	}
 
-	public Vector<Transaction> searchTransaction(tempUser purchaser, tempUser splitter){
+	public Vector<Transaction> searchTransaction(db.User purchaser, db.User splitter){
 		Vector<Transaction> toReturn = new Vector<Transaction>();
 		for(Transaction t : transactions){
 			if(t.getPurchaser().equals(purchaser) && t.getSplitter().equals(splitter)){
+				toReturn.add(t);
+			}
+		}
+		return toReturn;
+	}
+
+	public Vector<Transaction> searchTransactionSingle(db.User user){
+		Vector<Transaction> toReturn = new Vector<Transaction>();
+		for(Transaction t : transactions){
+			if(t.getPurchaser().equals(user) || t.getSplitter().equals(user)){
 				toReturn.add(t);
 			}
 		}

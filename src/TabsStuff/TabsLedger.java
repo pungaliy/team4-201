@@ -6,10 +6,10 @@ import java.util.Vector;
 
 public class TabsLedger {
 	private TabsItem itemBought;
-	private tempUser purchaser;
-	private Vector<tempUser> splitters;
+	private db.User purchaser;
+	private Vector<db.User> splitters;
 
-	public TabsLedger(TabsItem item, tempUser buy, Vector<tempUser> split){
+	public TabsLedger(TabsItem item, db.User buy, Vector<db.User> split){
 		this.itemBought = item;
 		this.purchaser = buy;
 		this.splitters = split;
@@ -19,11 +19,11 @@ public class TabsLedger {
 		return itemBought;
 	}
 
-	public tempUser getPurchaser() {
+	public db.User getPurchaser() {
 		return purchaser;
 	}
 
-	public Vector<tempUser> getSplitters() {
+	public Vector<db.User> getSplitters() {
 		return splitters;
 	}
 }

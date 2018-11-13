@@ -3,15 +3,14 @@ package TabsStuff;
 import temp.tempUser;
 
 public class Transaction {
-	private tempUser purchaser;
-	private tempUser splitter;
+	private db.User purchaser;
+	private db.User splitter;
 	private float amount;
 	private int roomID;
 	private TabsItem itemBought;
-	private boolean isConfirmed;
+	private int transactionID;
 
-	public Transaction(tempUser purchaser, tempUser splitter, float amount, int roomID, TabsItem item){
-		this.isConfirmed = false;
+	public Transaction(db.User purchaser, db.User splitter, float amount, int roomID, TabsItem item){
 		this.purchaser = purchaser;
 		this.splitter = splitter;
 		this.amount = amount;
@@ -19,7 +18,7 @@ public class Transaction {
 		this.itemBought = item;
 	}
 
-	public tempUser getPurchaser() {
+	public db.User getPurchaser() {
 		return purchaser;
 	}
 
@@ -35,11 +34,8 @@ public class Transaction {
 		return itemBought;
 	}
 
-	public tempUser getSplitter() {
+	public db.User getSplitter() {
 		return splitter;
 	}
 
-	public boolean isConfirmed(){
-		return isConfirmed;
-	}
 }

@@ -1,15 +1,15 @@
 package TabsStuff;
 
-public class TabsItem extends Item {
+public class TabsItem {
 	private int quantity;
 	private float pricePerItem;
+	private String itemName;
 
 	public TabsItem(String name, int quantity, float price){
-		super(name);
+		this.itemName = name;
 		this.quantity = quantity;
 		this.pricePerItem = price;
 	}
-
 
 	public int getQuantity(){
 		return this.quantity;
@@ -17,5 +17,9 @@ public class TabsItem extends Item {
 
 	public float getPricePerItem(){
 		return this.pricePerItem;
+	}
+
+	public String getItemName(){
+		return this.itemName;
 	}
 }

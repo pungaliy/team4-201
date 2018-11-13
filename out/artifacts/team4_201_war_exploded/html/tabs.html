@@ -17,11 +17,11 @@
 	$(document).ready(function(){
 		$("#additembutton").click(function(){
 			alert("HI 4");
-			$.getJSON('tabs', function (data) {
+			$.getJSON('GroceryList', function (data) {
 				var grocerylist = [];
 				$.each(data, function(key, value){
-					alert(key + " " + value);
-					grocerylist.push(key + " " + value);
+					alert(value["roomID"] + value["itemName"]);
+					grocerylist.push(value["roomID"] + value["itemName"]);
                 });
 				for(var i = 0; i < grocerylist.length; i++ ){
 					alert(grocerylist[i]);
@@ -59,7 +59,7 @@
         <nav class="mdl-navigation">
             <a class="mdl-navigation__link" href="message.html">Home</a>
             <a class="mdl-navigation__link" href="">Calendar</a>
-            <a class="mdl-navigation__link" href="/tabs">Tabs</a>
+            <a class="mdl-navigation__link" href="/GroceryList">Tabs</a>
             <a class="mdl-navigation__link" href="chores.html">Chores</a>
         </nav>
     </div>

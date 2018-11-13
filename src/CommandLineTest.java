@@ -27,15 +27,15 @@ public class CommandLineTest {
 	}
 
 	public void TransactionTests(){
- 		tempRoom room = new tempRoom(999);
-		tempUser user1 = new tempUser("User1", "email1", room);
-		tempUser user2 = new tempUser("User2", "email2", room);
-		tempUser user3 = new tempUser("User3", "email3", room);
-		tempUser user4 = new tempUser("User3", "email3", room);
+ 		db.Room room = new db.Room("999");
+		db.User user1 = new db.User("User1", "email1", "999");
+		db.User user2 = new db.User("User2", "email2", "999");
+		db.User user3 = new db.User("User3", "email3", "999");
+		db.User user4 = new db.User("User4", "email4", "999");
 
 		//Fish: bought by user1, split with user2, user3, not himself
 		TabsItem fish = new TabsItem("Fish", 3, 16.5f);
-		Vector<tempUser> fishSplit = new Vector<tempUser>();
+		Vector<db.User> fishSplit = new Vector<db.User>();
 		fishSplit.add(user2);
 		fishSplit.add(user3);
 		TabsLedger fishLedger = new TabsLedger(fish, user1, fishSplit);
@@ -43,7 +43,7 @@ public class CommandLineTest {
 
 		//Beef: bought by user2, split with user2 and user3
 		TabsItem beef = new TabsItem("Beef", 3, 30.0f);
-		Vector<tempUser> beefSplit = new Vector<tempUser>();
+		Vector<db.User> beefSplit = new Vector<db.User>();
 		beefSplit.add(user2);
 		beefSplit.add(user3);
 		TabsLedger beefLedger = new TabsLedger(beef, user2, beefSplit);
