@@ -36,15 +36,17 @@ public class TransactionList extends HttpServlet{
 			split.add(user2);
 			split.add(user3);
 			TabsLedger fishLedger = new TabsLedger(fish,user1, split);
+			magic.addTransactionToAllSplitters(fishLedger);
 			//TODO: remove this
 
 			String roomID = (String) request.getAttribute("room");
 
-			ArrayList<Transaction> allTransaction = magic.getAllRelatedTransaction(user1);
+			ArrayList<db.Transaction> allTransaction = magic.getAllRelatedTransaction(user1);
 			Gson gson = new Gson();
 			String output = gson.toJson(allTransaction);
+			System.out.println(output);
 			PrintWriter out = response.getWriter();
-			out.print(output);*/
+			out.print(output);
 
 		}
 

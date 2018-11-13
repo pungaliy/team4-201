@@ -4,8 +4,9 @@ import FakeDB.FakeDB;
 import TabsStuff.GroceryItem;
 import TabsStuff.TabsItem;
 import TabsStuff.TabsLedger;
-import TabsStuff.Transaction;
 import db.TabBase;
+import db.Transaction;
+import org.junit.platform.commons.util.StringUtils;
 import temp.tempUser;
 
 import java.util.ArrayList;
@@ -40,7 +41,12 @@ public class Magic {
 	}
 
 	public void addSingleTransction(String purchaser, String splitter, float amount, String roomID, String item){
-		db.Transaction t = new db.Transaction(purchaser, splitter, amount, roomID, item);
+		String ID = Long.toString(System.currentTimeMillis());
+		if(ID.length() > 8){
+			ID = ID.substring(0, 7);
+		}
+
+		Transaction t = new Transaction(ID, purchaser, splitter, amount, roomID, item);
 		db.addTransaction(t);
 	}
 
@@ -50,15 +56,17 @@ public class Magic {
 				* ledger.getItemBought().getQuantity()
 				/ ledger.getSplitters().size();
 		String roomID = purchaser.getRoomID();
-		TabsItem item = ledger.getItemBought();
+		String item = ledger.getItemBought().getItemName();
 		db.User splitter = null;
 		for(db.User u : ledger.getSplitters()){
 			splitter = u;
-			addSingleTransction(purchaser, splitter, amount, roomID, item);
+			if(!purchaser.equals(splitter)){
+				addSingleTransction(purchaser.getUserID(), splitter.getUserID(), amount, roomID, item);
+			}
 		}
 	}
 
-	public float getTabsTotal(db.User user1, db.User user2){
+	/*public float getTabsTotal(db.User user1, db.User user2){
 		Vector<Transaction> toMinus = fakeDB.searchTransaction(user1, user2);
 		Vector<Transaction> toAdd = fakeDB.searchTransaction(user2, user1);
 		float amount = 0;
@@ -70,10 +78,10 @@ public class Magic {
 		}
 
 		return amount;
-	}
+	}*/
 
-	public Vector<Transaction> getAllRelatedTransaction(db.User user){
-		return fakeDB.searchTransactionSingle(user);
+	public ArrayList<db.Transaction> getAllRelatedTransaction(db.User user){
+		return db.retrieveTransactionsByUserInvolved(user.getUserID());
 	}
 
 
