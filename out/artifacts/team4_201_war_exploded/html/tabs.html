@@ -15,25 +15,55 @@
 
 	<script>
         function generateGroceryItemHTML(itemName){
-			var head = '<li className="mdl-list__item"><span className="mdl-list__item-primary-content">';
-			var end =
-                '</span><span class="mdl-list__item-secondary-action"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-1"><input type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input"  /></label></span></li>';
+			let head = '<li className="mdl-list__item"><span className="mdl-list__item-primary-content">';
+			let end =
+                '</span><span class="mdl-list__item-secondary-action"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"><input type="checkbox" class="mdl-checkbox__input"  /></label></span></li>';
 			return head+itemName+end;
         }
 
         function loadGroceryList(){
         	alert("Loading groceries...");
             var xhttp = new XMLHttpRequest();
+			xhttp.open("GET", "/GroceryList", true);
             xhttp.onreadystatechange = function () {
-                var GroceryList = [];
+                let GroceryList = [];
                 GroceryList = JSON.parse(this.responseText);
+                let list = document.getElementById("groceryList");
                 GroceryList.forEach(function(item) {
-                    document.getElementById("grocerylist").innerHTML
-                        += generateGroceryItemHTML(item["itemName"]);
+                    /*document.getElementById("groceryList").innerHTML
+                        += generateGroceryItemHTML(item["itemName"]);*/
+
+                    let listItem = document.createElement("li");
+					listItem.className = "mdl-list__item";
+
+                    let itemNameSpan = document.createElement("span");
+                    itemNameSpan.className = "mdl-list__item-primary-content";
+					/*var textNode = document.createTextNode(item["itemName"]);
+					textNode.className = "mdl-list__item-primary-content";
+					itemNameSpan.appendChild(textNode);*/
+					itemNameSpan.innerHTML = item["itemName"];
+
+                    let checkboxSpan = document.createElement("span");
+                    checkboxSpan.className = "mdl-list__item-secondary-action";
+                    let checkboxLabel = document.createElement("label");
+                    checkboxLabel.className = "mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect";
+                    let checkboxInput = document.createElement("input");
+                    checkboxInput.type = "checkbox";
+                    checkboxInput.className = "mdl-checkbox__input";
+                    checkboxLabel.appendChild(checkboxInput);
+                    checkboxSpan.appendChild(checkboxLabel)
+
+					listItem.appendChild(itemNameSpan);
+					listItem.appendChild(checkboxSpan);
+
+					componentHandler.upgradeElement(listItem);
+					list.appendChild(listItem);
+					componentHandler.upgradeElement(list);
                 });
+				componentHandler.upgradeDom();
             };
             //xhttp.setRequestHeader(“Content-Type”, “application/x-www-form-urlencoded”);
-            xhttp.open("GET", "/GroceryList", true);
+			xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
             xhttp.send();
         }
 		function loadTransactionList(){
@@ -58,7 +88,7 @@
 
     </script>
 </head>
-<body onload="loadTransactionList()">
+<body onload="loadGroceryList()">
 <div id="removethis"></div>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
@@ -92,9 +122,9 @@
             <div class="mdl-grid">
 
                 <!--grocery list-->
-                <div id="grocerylist" class="grocery mdl-cell mdl-cell--4-col">
-                    <img class="grocerylist" src="../resources/grocery3.png" alt="Suite Home" height="42" >
-                    <ul class="list demo-list-control mdl-list">
+                <div class="grocery mdl-cell mdl-cell--4-col">
+                    <img class="groceryList" src="../resources/grocery3.png" alt="Suite Home" height="42" >
+                    <ul id="groceryList" class="list demo-list-control mdl-list">
 
                         <!--one item in a list. use jsp to make more!-->
                         <li class="mdl-list__item">

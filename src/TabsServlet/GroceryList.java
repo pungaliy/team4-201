@@ -32,7 +32,7 @@ public class GroceryList extends HttpServlet {
 
 		//For testing
 		request.setAttribute("room", "5566");
-		magic.addGrocery("Beef", "5566");
+		//magic.addGrocery("Beef", "5566");
 		//TODO: remove this
 
 		String roomID = (String) request.getAttribute("room");
@@ -41,7 +41,6 @@ public class GroceryList extends HttpServlet {
 		Gson gson = new Gson();
 		String output = gson.toJson(groceryList);
 		System.out.println(output);
-
 		PrintWriter out = response.getWriter();
 		out.print(output);
 	}
