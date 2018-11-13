@@ -6,26 +6,36 @@
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
     <link rel="stylesheet" type="text/css" href="../css/tabs.css" />
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <style>
         .demo-list-control {
             width: 300px;
         }
-
-
     </style>
 
-    <script>
-        $(document).ready(function(){
-            var groceryList = ${groceryList};
-            for(int i = 0; i < groceryList.length; i++){
-            	document.getElementsByName("body").innerHTML += (groceryList[i] + <br>);
-            }
-        });
-    </script>
+	<script>
+	$(document).ready(function(){
+		$("#additembutton").click(function(){
+			alert("HI 4");
+			$.getJSON('tabs', function (data) {
+				var grocerylist = [];
+				$.each(data, function(key, value){
+					alert(key + " " + value);
+					grocerylist.push(key + " " + value);
+                });
+				for(var i = 0; i < grocerylist.length; i++ ){
+					alert(grocerylist[i]);
+					$("#removethis").append(grocerylist[i]);
+                }
 
+			});
+        });
+
+	});
+    </script>
 </head>
 <body>
+<div id="removethis"></div>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
@@ -132,7 +142,8 @@
 
                         </li>
                     </ul>
-                    <button class="addGroceryButton mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    <button id="additembutton"
+                            class="addGroceryButton mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                         Add an Item
                     </button>
                 </div>

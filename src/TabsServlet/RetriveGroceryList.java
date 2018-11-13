@@ -4,8 +4,7 @@ import Methods.Magic;
 import TabsStuff.GroceryItem;
 import com.google.gson.Gson;
 
-import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
+import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,6 +18,14 @@ public class RetriveGroceryList extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,
+			IOException {
+
+		response.setContentType("application/json;charset=UTF-8");
 
 		Magic magic = new Magic();
 
@@ -33,17 +40,10 @@ public class RetriveGroceryList extends HttpServlet {
 		Vector<GroceryItem> groceryList = magic.getGroceryList(roomID);
 		Gson gson = new Gson();
 		String output = gson.toJson(groceryList);
+		System.out.println(output);
 
-		request.setAttribute("groceryList", output);
-		/*response.setContentType("application/json;charset=UTF-8");
-		ServletOutputStream out = response.getOutputStream();
-		out.print(output);*/
-	}
-
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,
-			IOException {
-		doPost(request, response);
+		PrintWriter out = response.getWriter();
+		out.print(output);
 	}
 
 }

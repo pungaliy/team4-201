@@ -45,6 +45,11 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="servlet-api" level="project" />
-    <orderEntry type="library" name="gson-2.8.0" level="project" />
+    <orderEntry type="library" name="mongodb-driver-3.8.2-sources" level="project" />
+    <orderEntry type="library" name="gson-2.8.2-sources" level="project" />
+    <orderEntry type="library" name="gson-2.8.2" level="project" />
+    <orderEntry type="library" name="mongodb-driver-3.8.2" level="project" />
+    <orderEntry type="library" name="mongodb-driver-core-3.8.2-sources" level="project" />
+    <orderEntry type="library" name="mongodb-driver-core-3.8.2" level="project" />
   </component>
 </module>
