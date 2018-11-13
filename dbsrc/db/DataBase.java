@@ -31,7 +31,7 @@ public class DataBase {
     public ArrayList<User> retrieveUsers(String roomID) {
         MongoCollection<User> collection = database.getCollection("users", User.class);
         ArrayList<User> tmp = new ArrayList<>();
-        for( User user : collection.find(eq("roomid", roomID))) {
+        for(User user : collection.find(eq("roomid", roomID))) {
             tmp.add(user);
         }
         return tmp;

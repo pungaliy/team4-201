@@ -2,6 +2,7 @@ package Chores;
 
 import db.Chore;
 import db.ChoreBase;
+import db.DataBase;
 import db.User;
 
 import java.util.ArrayList;
@@ -110,18 +111,40 @@ public class ChoreManager {
         return userChores;
     }
 
-    public ArrayList<User> getWallOfShame(ArrayList<Chore> chores) {
-        ArrayList<User> wos = new ArrayList<User>();
+    public ArrayList<Chore> getWallOfShame(ArrayList<Chore> chores) {
+        ArrayList<Chore> wos = new ArrayList<>();
         for(Chore chore : chores) {
             if(chore.isShame()) {
-                wos.add(chore.getLastUser());
+                wos.add(chore);
             }
         }
         return wos;
     }
 
-//    public static void main(String[] args) {
-//        ChoreManager cm = new ChoreManager("room1", "Micah");
-//        cm.getChores("room1");
-//    }
+    public void print() {
+        System.out.println(this.user.getFullName());
+        ArrayList<Chore> chores = this.getMyChores(this.getChores());
+        for(Chore c : chores) {
+            System.out.println(c.getChoreDescription());
+        }
+    }
+
+    public static void main(String[] args) {
+        DataBase db = new DataBase();
+//        User micah = new User("Micah Steinberg", "mbsteinb@usc.edu", "coolroom");
+//        db.addUser(micah);
+//        User john = new User("John", "jbron@usc.edu", "coolroom");
+//        db.addUser(john);
+
+        ArrayList<User> users = db.retrieveUsers("coolroom");
+        System.out.println(users.size());
+        System.out.println(users);
+
+//        ChoreManager micahCm = new ChoreManager(micah);
+//        ChoreManager johnCm = new ChoreManager(john);
+//        micahCm.addChore("Take out the trash!", 10000);
+//        micahCm.addChore("Scrub the floor...", 15000);
+//        micahCm.print();
+//        johnCm.print();
+    }
 }

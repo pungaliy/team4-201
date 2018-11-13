@@ -7,27 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57585bcd-a68d-4c91-bd71-7a506325d814" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/team4_201_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/bson_3_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mongodb_driver_3_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mongodb_driver_core_3_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/team4-201.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Chores/ChoreManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/unprocessed_js/chores.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbsrc/db/Chore.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbsrc/db/Chore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dbsrc/db/ChoreBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbsrc/db/ChoreBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dbsrc/db/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbsrc/db/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbsrc/db/NoteBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbsrc/db/NoteBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PostItServlets/SH5AddNewPostIt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PostItServlets/SH5AddNewPostIt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PostItServlets/SH5DeletePostIt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PostItServlets/SH5DeletePostIt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PostItServlets/SH5RetrievePostIts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PostItServlets/SH5RetrievePostIts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PostItServlets/SH5UpdatePostIt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PostItServlets/SH5UpdatePostIt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sock/chores/ChoresServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/chores.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/chores.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chores/ChoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chores/ChoreManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,7 +36,7 @@
         <counts>
           <entry key="class" value="4" />
           <entry key="html" value="7" />
-          <entry key="java" value="22" />
+          <entry key="java" value="24" />
           <entry key="js" value="5" />
           <entry key="xml" value="1" />
         </counts>
@@ -62,7 +45,7 @@
         <counts>
           <entry key="CLASS" value="4" />
           <entry key="HTML" value="7" />
-          <entry key="JAVA" value="22" />
+          <entry key="JAVA" value="24" />
           <entry key="JavaScript" value="5" />
           <entry key="XML" value="1" />
         </counts>
@@ -76,14 +59,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="183" />
-          <entry key="java" value="5974" />
+          <entry key="java" value="6753" />
           <entry key="js" value="203" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="183" />
-          <entry key="JAVA" value="5974" />
+          <entry key="JAVA" value="6753" />
           <entry key="JavaScript" value="203" />
         </counts>
       </usages-collector>
@@ -94,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbsrc/db/DataBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="284">
+              <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,15 +89,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Chores/ChoreManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="113" column="51" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
+            <state relative-caret-position="216">
+              <caret line="134" column="28" selection-start-line="134" selection-start-column="28" selection-end-line="134" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#310#311#0" expanded="true" />
                 <element signature="e#342#343#0" expanded="true" />
                 <element signature="e#523#524#0" expanded="true" />
                 <element signature="e#553#554#0" expanded="true" />
-                <element signature="e#4092#4098#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,7 +105,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbsrc/db/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-45">
+            <state relative-caret-position="12">
               <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
@@ -132,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbsrc/db/Chore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="133" column="44" lean-forward="true" selection-start-line="133" selection-start-column="44" selection-end-line="133" selection-end-column="44" />
+            <state relative-caret-position="261">
+              <caret line="105" selection-start-line="105" selection-end-line="105" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2450#2451#0" expanded="true" />
@@ -152,8 +134,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbsrc/db/ChoreBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="273">
+              <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -221,15 +203,15 @@
         <option value="$PROJECT_DIR$/web/html/_chores_test.html" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/PostItServlets/SH5AddNewPostIt.java" />
-        <option value="$PROJECT_DIR$/dbsrc/db/DataBase.java" />
         <option value="$PROJECT_DIR$/dbsrc/db/NoteBase.java" />
         <option value="$PROJECT_DIR$/src/PostItServlets/SH5DeletePostIt.java" />
         <option value="$PROJECT_DIR$/src/PostItServlets/SH5RetrievePostIts.java" />
         <option value="$PROJECT_DIR$/src/PostItServlets/SH5UpdatePostIt.java" />
         <option value="$PROJECT_DIR$/web/unprocessed_js/chores.js" />
         <option value="$PROJECT_DIR$/web/html/chores.html" />
-        <option value="$PROJECT_DIR$/dbsrc/db/ChoreBase.java" />
         <option value="$PROJECT_DIR$/dbsrc/db/Chore.java" />
+        <option value="$PROJECT_DIR$/dbsrc/db/ChoreBase.java" />
+        <option value="$PROJECT_DIR$/dbsrc/db/DataBase.java" />
         <option value="$PROJECT_DIR$/src/Chores/ChoreManager.java" />
       </list>
     </option>
@@ -255,7 +237,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1316" />
     <option name="height" value="816" />
@@ -328,7 +310,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542111954469" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542152457845" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -354,7 +336,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.chores.html (1)">
+  <component name="RunManager" selected="Application.ChoreManager">
+    <configuration name="ChoreManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Chores.ChoreManager" />
+      <module name="team4-201" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Chores.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="chores.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/html/chores.html">
       <method v="2" />
     </configuration>
@@ -466,45 +461,6 @@
         </option>
       </method>
     </configuration>
-    <configuration name="chores.html (3)" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.12" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/html/chores.html" />
-      <deployment>
-        <artifact name="team4-201:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="chores_html_(3)_team4-201" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="team4-201:war exploded" />
-        </option>
-      </method>
-    </configuration>
     <configuration name="chores.html (4)" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.12" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/html/chores.html" />
       <deployment>
@@ -586,18 +542,18 @@
     <list>
       <item itemvalue="Tomcat Server.Unnamed" />
       <item itemvalue="JavaScript Debug.chores.html" />
-      <item itemvalue="Tomcat Server.chores.html (3)" />
       <item itemvalue="Tomcat Server.chores.html (4)" />
       <item itemvalue="Tomcat Server.chores.html" />
       <item itemvalue="Tomcat Server.chores.html (1)" />
+      <item itemvalue="Application.ChoreManager" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ChoreManager" />
         <item itemvalue="Tomcat Server.chores.html (1)" />
         <item itemvalue="Tomcat Server.chores.html" />
         <item itemvalue="JavaScript Debug.chores.html" />
         <item itemvalue="Tomcat Server.chores.html (4)" />
-        <item itemvalue="Tomcat Server.chores.html (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -618,7 +574,7 @@
       <workItem from="1542091471503" duration="479000" />
       <workItem from="1542091978419" duration="1425000" />
       <workItem from="1542093536869" duration="5411000" />
-      <workItem from="1542100761328" duration="10497000" />
+      <workItem from="1542100761328" duration="14701000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'remotes/origin/newdb' into micah_branch&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/modules.xml">
       <created>1542090933032</created>
@@ -638,7 +594,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24792000" />
+    <option name="totallyTimeSpent" value="28996000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -650,30 +606,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7648115" visible="true" weight="0.26037195" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7640264" visible="true" weight="0.26037195" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.23518851" side_tool="true" visible="true" weight="0.26037195" />
+      <window_info id="Web" order="7" sideWeight="0.2359736" side_tool="true" visible="true" weight="0.26037195" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4914163" weight="0.26987952" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4892704" visible="true" weight="0.26987952" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4985694" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4992636" weight="0.32796487" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49558175" weight="0.2693997" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49558175" weight="0.32796487" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50429183" side_tool="true" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49499285" weight="0.32771084" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5107296" side_tool="true" visible="true" weight="0.26987952" />
       <window_info anchor="bottom" id="Application Servers" order="11" sideWeight="0.4992636" weight="0.32796487" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" sideWeight="0.49570817" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49427754" weight="0.32891566" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -753,6 +709,13 @@
     <MESSAGE value="Merge remote-tracking branch 'remotes/origin/newdb' into micah_branch&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/modules.xml" />
     <MESSAGE value="Merge remote-tracking branch 'remotes/origin/message_board' into micah_branch&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/modules.xml&#10;#&#9;.idea/workspace.xml" />
     <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'remotes/origin/message_board' into micah_branch&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/modules.xml&#10;#&#9;.idea/workspace.xml" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((MongoDatabaseImpl)database).codecRegistry" custom="com.mongodb.client.internal.MongoDatabaseImpl" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web/html/_dragging_test.html">
@@ -880,16 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dbsrc/db/DataBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbsrc/db/Note.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -904,17 +857,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dbsrc/db/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbsrc/db/ChoreBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="273">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -923,8 +869,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dbsrc/db/Chore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="133" column="44" lean-forward="true" selection-start-line="133" selection-start-column="44" selection-end-line="133" selection-end-column="44" />
+        <state relative-caret-position="261">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2450#2451#0" expanded="true" />
@@ -939,17 +885,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/dbsrc/mongodb-driver-core-3.8.2-sources.jar!/com/mongodb/client/model/Filters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="82" column="36" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/dbsrc/mongodb-driver-3.8.2-sources.jar!/com/mongodb/client/internal/MongoCollectionImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="291" selection-start-line="291" selection-end-line="291" />
+          <folding>
+            <element signature="e#11791#11792#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbsrc/db/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbsrc/db/DataBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Chores/ChoreManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="113" column="51" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
+        <state relative-caret-position="216">
+          <caret line="134" column="28" selection-start-line="134" selection-start-column="28" selection-end-line="134" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#310#311#0" expanded="true" />
             <element signature="e#342#343#0" expanded="true" />
             <element signature="e#523#524#0" expanded="true" />
             <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#4092#4098#0" expanded="true" />
           </folding>
         </state>
       </provider>

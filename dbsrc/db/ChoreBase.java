@@ -32,12 +32,12 @@ public class ChoreBase extends DataBase {
         collection.deleteOne(eq("choreID", chore.getChoreID()));
     }
 
-    public static void main(String [] args) {
-        ChoreBase cb = new ChoreBase();
-        Chore chore = new Chore("THis is a chore",100, 100, "user1","room1","chore1");
-        cb.insertChore(chore);
-        chore.setCompleted(true);
-        cb.updateChore(chore);
-
-    }
+//    public static void main(String [] args) {
+//        ChoreBase cb = new ChoreBase();
+//        Chore chore = new Chore("THis is a chore",100, 100, "user1","room1","chore1");
+//        cb.insertChore(chore);
+//        chore.setCompleted(true);
+//        cb.updateChore(chore);
+//
+//    }
 }
