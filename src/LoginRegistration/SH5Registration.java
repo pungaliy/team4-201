@@ -72,6 +72,7 @@ public class SH5Registration extends HttpServlet {
         String image = (String) req.getServletContext().getAttribute("image");
         String email = (String) req.getServletContext().getAttribute("email");
         User u = new User(username, email, roomid, image);
+        req.getServletContext().setAttribute("user", u);
         db.addUser(u);
     }
 

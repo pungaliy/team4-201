@@ -72,8 +72,6 @@ var first_update_note = function(val) {
     });
 };
 
-
-
 var close_this = function (self) {
     $.ajax({
         url : '/delete_postit',
@@ -121,6 +119,10 @@ var render_post_its = function() {
             render_these_post_its(responseText)
         }
     });
+    $.ajax({
+        url: '/get-user',
+        method: 'post'
+    })
 };
 
 $(window).resize(function() {
