@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="57585bcd-a68d-4c91-bd71-7a506325d814" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,7 +54,8 @@
         <counts>
           <entry key="git.branch.checkout.remote" value="4" />
           <entry key="git.branch.create.new" value="3" />
-          <entry key="git.branch.delete.local" value="1" />
+          <entry key="git.branch.delete.local" value="2" />
+          <entry key="git.branch.merge" value="2" />
           <entry key="git.branch.rename" value="1" />
         </counts>
       </usages-collector>
@@ -90,8 +92,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="30">
+              <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -200,8 +202,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/unprocessed_js/message-board.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="109" column="41" selection-start-line="109" selection-start-column="41" selection-end-line="109" selection-end-column="41" />
+            <state relative-caret-position="675">
+              <caret line="107" column="41" selection-start-line="107" selection-start-column="41" selection-end-line="107" selection-end-column="41" />
               <folding>
                 <element signature="n#PostIt#0" />
                 <element signature="n#!!block;n#constructor#0;n#PostIt#0" />
@@ -221,15 +223,6 @@
                 <element signature="e#1564#2071#0" />
                 <element signature="e#1841#2067#0" />
                 <element signature="e#1913#2061#0" />
-                <element signature="e#2122#2322#0" />
-                <element signature="e#2195#2244#0" />
-                <element signature="e#2274#2316#0" />
-                <element signature="e#2426#2679#0" />
-                <element signature="e#2496#2601#0" />
-                <element signature="e#2631#2673#0" />
-                <element signature="e#2736#2929#0" />
-                <element signature="e#3011#3192#0" />
-                <element signature="e#3127#3186#0" />
                 <element signature="e#3227#3297#0" />
               </folding>
             </state>
@@ -339,34 +332,7 @@
             <path>
               <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
               <item name="team4-201" type="462c0819:PsiDirectoryNode" />
-              <item name="dbsrc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
-              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
-              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
-              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
-              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
-              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="unprocessed_js" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -381,7 +347,7 @@
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542180960837" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542182077577" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -708,7 +674,7 @@
       <workItem from="1542091471503" duration="479000" />
       <workItem from="1542091978419" duration="1425000" />
       <workItem from="1542093536869" duration="5411000" />
-      <workItem from="1542100761328" duration="34553000" />
+      <workItem from="1542100761328" duration="35632000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'remotes/origin/newdb' into micah_branch&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/modules.xml">
       <created>1542090933032</created>
@@ -728,7 +694,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48848000" />
+    <option name="totallyTimeSpent" value="49927000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -741,9 +707,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.765233" visible="true" weight="0.26037195" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.765233" visible="true" weight="0.26037195" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -760,8 +725,8 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4992636" weight="0.32796487" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49499285" weight="0.2686747" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.490701" visible="true" weight="0.32771084" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.509299" side_tool="true" visible="true" weight="0.32771084" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4899857" visible="true" weight="0.32771084" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5100143" side_tool="true" visible="true" weight="0.32771084" />
       <window_info anchor="bottom" id="Application Servers" order="11" sideWeight="0.4992636" weight="0.32796487" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49427754" weight="0.32891566" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
@@ -1109,8 +1074,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/message-board.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="109" column="41" selection-start-line="109" selection-start-column="41" selection-end-line="109" selection-end-column="41" />
+        <state relative-caret-position="675">
+          <caret line="107" column="41" selection-start-line="107" selection-start-column="41" selection-end-line="107" selection-end-column="41" />
           <folding>
             <element signature="n#PostIt#0" />
             <element signature="n#!!block;n#constructor#0;n#PostIt#0" />
@@ -1130,15 +1095,6 @@
             <element signature="e#1564#2071#0" />
             <element signature="e#1841#2067#0" />
             <element signature="e#1913#2061#0" />
-            <element signature="e#2122#2322#0" />
-            <element signature="e#2195#2244#0" />
-            <element signature="e#2274#2316#0" />
-            <element signature="e#2426#2679#0" />
-            <element signature="e#2496#2601#0" />
-            <element signature="e#2631#2673#0" />
-            <element signature="e#2736#2929#0" />
-            <element signature="e#3011#3192#0" />
-            <element signature="e#3127#3186#0" />
             <element signature="e#3227#3297#0" />
           </folding>
         </state>
@@ -1183,8 +1139,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="30">
+          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
         </state>
       </provider>
     </entry>
