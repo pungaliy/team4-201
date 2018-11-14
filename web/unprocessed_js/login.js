@@ -1,15 +1,5 @@
 function onSignInHI(googleUser) {
-    if(googleUser.hasGrantedScopes('https://www.googleapis.com/auth/calendar'))
-    {
-        console.log("we have already been granted the Calendar scope!")
-        send_stuff(googleUser)
-    }
-    else {
-        googleUser.grant({'scope': 'https://www.googleapis.com/auth/calendar'})
-            .then(function () {
-                setTimeout(send_stuff(googleUser), 1000);
-            });
-    }
+  setTimeout(send_stuff(googleUser), 1000);
 }
 
 function send_stuff(googleUser) {

@@ -73,8 +73,6 @@ var first_update_note = function(val) {
     });
 };
 
-
-
 var close_this = function (self) {
     //TODO
     $.ajax({
@@ -125,6 +123,10 @@ var render_post_its = function() {
             render_these_post_its(responseText)
         }
     });
+    $.ajax({
+        url: '/get-user',
+        method: 'post'
+    })
 };
 
 $(window).resize(function() {
