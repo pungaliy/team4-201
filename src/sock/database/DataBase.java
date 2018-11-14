@@ -32,22 +32,53 @@ public class DataBase {
     public ArrayList<User> retrieveUsers(String roomID) {
         MongoCollection<User> collection = database.getCollection("users", User.class);
         ArrayList<User> tmp = new ArrayList<>();
-        for( User user : collection.find(eq("roomid", roomID))) {
+        for( User user : collection.find(eq("roomID", roomID))) {
             tmp.add(user);
         }
         return tmp;
     }
 
+    public User retrieveUser(String userID) {
+        MongoCollection<User> collection = database.getCollection("users", User.class);
+        return collection.find(eq("userID", userID)).first();
+    }
+
+    public void addUser(User user) {
+        MongoCollection<User> collection = database.getCollection("users", User.class);
+        collection.insertOne(user);
+    }
+
+    public void addRoom(Room room) {
+        MongoCollection<Room> collection = database.getCollection("rooms", Room.class);
+        collection.insertOne(room);
+    }
+
+    public boolean roomExists(String roomID) {
+        MongoCollection<Room> collection = database.getCollection("rooms", Room.class);
+        if(collection.find(eq("roomID", roomID)).first() != null) {
+            return true;
+        }
+        return false;
+    }
 
 
 
+
+//
 
 //    public static void main(String[] args) {
 //        DataBase db = new DataBase();
-//
-//        Note note = new Note("note content main", 3.22, 2.33, "note1","room2");
-//        db.insertNote(note);
-//        String json = db.retrieveNotes("room2");
-//        System.out.println(json);
+//        Room room = new Room("roomIDOne");
+//        User user = new User("full name", "123", "roomID", "imgurl");
+//        user.setImgURL("img");
+//        db.addUser(user);
+//        db.addRoom(room);
+////        Note note = new Note("note content main", 3.22, 2.33, "note1","room2");
+//        System.out.println(db.roomExists("roomIDOne"));
+//        User newUser = db.retrieveUser("123");
+//        System.out.println(newUser.getUserID());
+//        System.out.println(db.retrieveUsers("roomID"));
+////        String json = db.retrieveNotes("room2");
+////        System.out.println(json);
 //    }
 }

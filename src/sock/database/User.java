@@ -12,10 +12,11 @@ public class User {
     //empty for codec purposes
     public User() {}
 
-    public User(String fullName, String userID, String roomID) {
+    public User(String fullName, String userID, String roomID, String imgURL) {
         this.setFullName(fullName);
         this.setUserID(userID);
         this.setRoomID(roomID);
+        this.setImgURL(imgURL);
     }
 
     public String getFullName() {
