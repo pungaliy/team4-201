@@ -32,7 +32,7 @@ public class TabsTotalList extends HttpServlet {
 			String user1name = magic.searchByUserIDandRoomID(t.getUser1(), roomID).getFullName();
 			String user2name = magic.searchByUserIDandRoomID(t.getUser2(), roomID).getFullName();
 			TabsTotal n = new TabsTotal(user1name, user2name, t.getAmount());
-			outputTabs.add(t);
+			outputTabs.add(n);
 		}
 
 		String output = gson.toJson(outputTabs);

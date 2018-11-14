@@ -95,7 +95,6 @@ public class Magic {
 		ArrayList<db.Transaction> toMinus = new ArrayList<Transaction>(); // 1, 2
 		ArrayList<db.Transaction> toAdd = new ArrayList<Transaction>(); //2, 1
 		for(Transaction t : roomTransaction){
-			System.out.println(t.getUser1()+ " " + t.getUser2()+ " " + t.getItem() + t.getAmount());
 			if(t.getUser1().equals(user1) && t.getUser2().equals(user2)){
 				toMinus.add(t);
 			} else if (t.getUser1().equals(user2) && t.getUser2().equals(user1)){
@@ -109,7 +108,6 @@ public class Magic {
 		for(Transaction t : toMinus){
 			amount -= t.getAmount();
 		}
-		System.out.println(user1 + " " + user2 + " " + amount);
 		return amount;
 	}
 

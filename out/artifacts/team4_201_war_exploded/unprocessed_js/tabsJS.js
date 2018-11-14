@@ -1,7 +1,16 @@
+$(document).ready(function(){
+	$("#addGroceryButton").click(function(){
+		addGroceryClick();
+	});
+	$("#addTransactionButton").click(function(){
+		addTransactionClick();
+	});
+});
+
 function loadAllList(){
 	loadGroceryList();
 	loadTransactionList();
-	loadTabsTotalList();
+	loadTabsTotalList()
 }
 function loadGroceryList(){
 	let xhttp = new XMLHttpRequest();
@@ -29,8 +38,9 @@ function loadGroceryList(){
 			let checkboxInput = document.createElement("input");
 			checkboxInput.type = "checkbox";
 			checkboxInput.className = "mdl-checkbox__input";
+			checkboxInput.id = item["itemName"];
 			checkboxInput.onclick = function(){
-				deleteGroceryClick();
+				deleteGroceryClick("5566", item["itemName"]);
 			};
 			checkboxLabel.appendChild(checkboxInput);
 			checkboxSpan.appendChild(checkboxLabel)
@@ -49,12 +59,15 @@ function loadGroceryList(){
 }
 
 function addGroceryClick(){
-	addGroceryPass();
-
+	addGroceryPass("5566", "Beef", "Y");
 }
 
-function addGroceryPass(){
-	let param = {roomID:"5566", itemName:"Beef", add:"Y"};
+function addGroceryPass(roomid, itemname, addYN){
+	let toPass = {};
+	toPass["roomID"] = roomid;
+	toPass["itemName"] = itemname;
+	toPass["add"] = addYN;
+	let param = toPass;
 	$.ajax({
 		type: "POST",
 		url: "/GroceryList",
@@ -69,12 +82,17 @@ function addGroceryPass(){
 	});
 }
 
-function deleteGroceryClick(){
-	deleteGroceryPass();
+function deleteGroceryClick(roomID, itemName){
+	deleteGroceryPass(roomID, itemName, "N");
 }
 
-function deleteGroceryPass(){
-	let param = {roomID:"5566", itemName:"Beef", add:"N"};
+function deleteGroceryPass(roomid, itemname, addYN){
+	let toPass = {};
+	toPass["roomID"] = roomid;
+	toPass["itemName"] = itemname;
+	toPass["add"] = addYN;
+	//let param = JSON.stringify(toPass);
+	let param = toPass;
 	$.ajax({
 		type: "POST",
 		url: "/GroceryList",
@@ -160,13 +178,20 @@ function loadTransactionList(){
 }
 
 function addTransactionClick(){
-	addTransactionPass();
+	addTransactionPass("5566", "LaCroix", "12", "1", "id3", ["id1", "id2", "id3"]);
 }
 
-function addTransactionPass(){
+function addTransactionPass(roomid, itemname, q, ppi, buy, split){
 	//It is actually adding a TabsLedger
 	//The servlet will take the tabs ledger and create independent transactions
-	let param = {roomID:"5566", itemName:"Cheese", quantity:"10", pricePerItem:"10", purchaser:"id3", splitters:["id1"]};
+	let toPass = {};
+	toPass["roomID"] = roomid;
+	toPass["itemName"] = itemname;
+	toPass["quantity"] = q;
+	toPass["pricePerItem"] = ppi;
+	toPass["purchaser"] = buy;
+	toPass["splitters"] = split;
+	let param = toPass;
 	$.ajax({
 		type: "POST",
 		url: "/TransactionList",
@@ -206,7 +231,14 @@ function loadTabsTotalList(){
 			componentHandler.upgradeElement(nameSpan);
 			let amountSpan = document.createElement("span");
 			amountSpan.className = "mdl-list__item-sub-title";
-			amountSpan.innerHTML = item["amount"];
+			if(parseFloat(item["amount"]) < 0){
+				let a = item["amount"];
+				a *= -1;
+				amountSpan.innerHTML = ( "-$" + a );
+			} else {
+				amountSpan.innerHTML = ("$" + item["amount"]);
+			}
+
 			componentHandler.upgradeElement(amountSpan);
 			span1.appendChild(i);
 			span1.appendChild(nameSpan);
