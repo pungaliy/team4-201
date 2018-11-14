@@ -89,16 +89,18 @@ public class ChoreManager {
         chore.replaceCurrentUser(toAssign, users.size());
         */
         ArrayList<User> validUsers = chore.getValidUsers(users);
-        User toAssign = validUsers.get(0);
-        int minChores = Integer.MAX_VALUE;
-        for(User user : validUsers) {
-            int numChores = getUserChores(user, chores).size();
-            if(numChores < minChores) {
-                minChores = numChores;
-                toAssign = user;
+        if(validUsers.size() >= 1) {
+            User toAssign = validUsers.get(0);
+            int minChores = Integer.MAX_VALUE;
+            for (User user : validUsers) {
+                int numChores = getUserChores(user, chores).size();
+                if (numChores < minChores) {
+                    minChores = numChores;
+                    toAssign = user;
+                }
             }
+            chore.assignTo(toAssign, users.size());
         }
-        chore.assignTo(toAssign, users.size());
     }
 
     public ArrayList<Chore> getMyChores(ArrayList<Chore> chores) { return getUserChores(this.user, chores); }
@@ -148,26 +150,30 @@ public class ChoreManager {
 
     public static void main(String[] args) {
         DataBase db = new DataBase();
-//        User micah = new User("Micah Steinberg", "mbsteinb@usc.edu", "coolroom", "sycamore.jpeg");
-//        db.addUser(micah);
-//        User john = new User("John", "jbron@usc.edu", "coolroom", "bird.png");
-//        db.addUser(john);
+//        db.addUser(new User("Paul", "paul@usc.edu", "room6666", "picture"));
+//        db.addUser(new User("John", "john@usc.edu", "room6666", "picture"));
+//        db.addUser(new User("Mary", "mary@usc.edu", "room6666", "picture"));
+//        db.addUser(new User("James", "james@usc.edu", "room6666", "picture"));
 
-        ArrayList<User> users = db.retrieveUsers("coolroom");
+        ArrayList<User> users = db.retrieveUsers("room6666");
         System.out.println(users.size());
         System.out.println(users);
 
         ChoreManager cm0 = new ChoreManager(users.get(0));
         ChoreManager cm1 = new ChoreManager(users.get(1));
-        cm0.addChore("Take out the trash!", 10000);
-        cm0.addChore("Scrub the floor...", 15000);
-        cm0.addChore("Do the dishes", 30000);
-        cm0.addChore("Clean the bathroom", 35000);
-        cm0.addChore("Sweep the floors", 45000);
-        cm0.addChore("Clean stuff", 60000);
+        ChoreManager cm2 = new ChoreManager(users.get(2));
+        ChoreManager cm3 = new ChoreManager(users.get(3));
+//        cm0.addChore("Take out the trash!", 10000);
+//        cm0.addChore("Scrub the floor...", 15000);
+//        cm0.addChore("Do the dishes", 30000);
+//        cm0.addChore("Clean the bathroom", 35000);
+//        cm0.addChore("Sweep the floors", 45000);
+//        cm0.addChore("Clean stuff", 60000);
 
         cm0.print();
         cm1.print();
+        cm2.print();
+        cm3.print();
 
 //        while(true) {
 //            System.out.println(cm0.minExpirationTime(cm0.getChores()));

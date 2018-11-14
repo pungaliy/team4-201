@@ -1,5 +1,6 @@
 var socket;
 function connectToChoreSocket() {
+    console.log("hello");
     socket = new WebSocket("ws://localhost:8080/sockets/chore");
     socket.onmessage = function(event) {
         var p = JSON.parse(event.data);
