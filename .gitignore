@@ -1,5 +1,4 @@
-lib/
-.idea/
+.DS_Store
 SuiteHome.iml
 out/
 */old

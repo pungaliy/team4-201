@@ -27,7 +27,8 @@ public class SH5AddNewPostIt extends HttpServlet {
         String idname = request.getParameter("idname");
         String room = (String) request.getServletContext().getAttribute("room");
 
-        NoteBase db = (NoteBase) request.getServletContext().getAttribute("notebase");
+//        NoteBase db =  (NoteBase) request.getServletContext().getAttribute("notebase");
+        NoteBase db = new NoteBase();
         addNote(xpos, ypos, text, idname, room, db);
     }
 
