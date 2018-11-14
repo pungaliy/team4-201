@@ -7,7 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57585bcd-a68d-4c91-bd71-7a506325d814" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sock/CalendarSocket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/unprocessed_js/calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/team4_201_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/team4_201_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mongodb_driver_core_3_8_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mongodb_driver_core_3_8_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/team4-201.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/team4-201.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chores/ChoreSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chores/ChoreSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/_calendar_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/_calendar_test.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,91 +80,75 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="642664379">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="2" />
+          <entry key="java" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="2" />
+          <entry key="JAVA" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="18" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="18" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbsrc/db/DataBase.java">
+        <entry file="file://$PROJECT_DIR$/src/Chores/ChoreManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+            <state relative-caret-position="261">
+              <caret line="163" column="23" lean-forward="true" selection-start-line="163" selection-start-column="23" selection-end-line="163" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/html/chores.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="87" column="25" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/html/_calendar_test.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/src/sock/CalendarSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbsrc/db/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-              <folding>
-                <element signature="e#620#621#0" expanded="true" />
-                <element signature="e#733#734#0" expanded="true" />
-                <element signature="e#762#763#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbsrc/db/Chore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="131" column="9" lean-forward="true" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1083#1084#0" expanded="true" />
-                <element signature="e#1118#1119#0" expanded="true" />
-                <element signature="e#1172#1173#0" expanded="true" />
-                <element signature="e#1220#1221#0" expanded="true" />
-                <element signature="e#1256#1257#0" expanded="true" />
-                <element signature="e#1288#1289#0" expanded="true" />
-                <element signature="e#1339#1340#0" expanded="true" />
-                <element signature="e#1381#1382#0" expanded="true" />
-                <element signature="e#2450#2451#0" expanded="true" />
-                <element signature="e#2487#2488#0" expanded="true" />
-                <element signature="e#2545#2546#0" expanded="true" />
-                <element signature="e#2597#2598#0" expanded="true" />
-                <element signature="e#2629#2630#0" expanded="true" />
-                <element signature="e#2657#2658#0" expanded="true" />
-                <element signature="e#2700#2701#0" expanded="true" />
-                <element signature="e#2734#2735#0" expanded="true" />
-                <element signature="e#3180#3181#0" expanded="true" />
-                <element signature="e#3266#3267#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbsrc/db/ChoreBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Chores/ChoreThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="22" column="44" selection-start-line="17" selection-start-column="5" selection-end-line="22" selection-end-column="44" />
+            <state relative-caret-position="2010">
+              <caret line="154" column="69" lean-forward="true" selection-start-line="154" selection-start-column="69" selection-end-line="154" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -167,8 +159,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Chores/ChoreSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+            <state relative-caret-position="214">
+              <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -177,60 +169,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/unprocessed_js/chores.js">
+        <entry file="file://$PROJECT_DIR$/src/PostItServlets/SH5UpdatePostIt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="77" column="28" lean-forward="true" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/html/chores.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="88" column="22" lean-forward="true" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
+            <state relative-caret-position="225">
+              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
               <folding>
-                <marker date="1542179926506" expanded="true" signature="371:372" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/unprocessed_js/message-board.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="109" column="41" selection-start-line="109" selection-start-column="41" selection-end-line="109" selection-end-column="41" />
-              <folding>
-                <element signature="n#PostIt#0" />
-                <element signature="n#!!block;n#constructor#0;n#PostIt#0" />
-                <element signature="n#!!block;n#componentDidMount#0;n#PostIt#0" />
-                <element signature="e#155#402#0" />
-                <element signature="e#195#391#0" />
-                <element signature="e#284#347#0" />
-                <element signature="n#!!block;n#render#0;n#PostIt#0" />
-                <element signature="e#456#1081#0" />
-                <element signature="e#537#694#0" />
-                <element signature="e#713#924#0" />
-                <element signature="e#758#901#0" />
-                <element signature="n#PostIts#0" />
-                <element signature="n#!!block;n#constructor#0;n#PostIts#0" />
-                <element signature="n#!!block;n#render#0;n#PostIts#0" />
-                <element signature="e#1239#1433#0" />
-                <element signature="e#1564#2071#0" />
-                <element signature="e#1841#2067#0" />
-                <element signature="e#1913#2061#0" />
-                <element signature="e#2122#2322#0" />
-                <element signature="e#2195#2244#0" />
-                <element signature="e#2274#2316#0" />
-                <element signature="e#2426#2679#0" />
-                <element signature="e#2496#2601#0" />
-                <element signature="e#2631#2673#0" />
-                <element signature="e#2736#2929#0" />
-                <element signature="e#3011#3192#0" />
-                <element signature="e#3127#3186#0" />
-                <element signature="e#3227#3297#0" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -286,13 +230,14 @@
         <option value="$PROJECT_DIR$/dbsrc/db/ChoreBase.java" />
         <option value="$PROJECT_DIR$/src/Chores/ChorePackage.java" />
         <option value="$PROJECT_DIR$/dbsrc/db/Chore.java" />
-        <option value="$PROJECT_DIR$/src/Chores/ChoreManager.java" />
         <option value="$PROJECT_DIR$/src/Chores/ChoreThread.java" />
         <option value="$PROJECT_DIR$/web/unprocessed_js/message-board.js" />
-        <option value="$PROJECT_DIR$/src/Chores/ChoreSocket.java" />
         <option value="$PROJECT_DIR$/web/html/chores.html" />
         <option value="$PROJECT_DIR$/web/unprocessed_js/chores.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/Chores/ChoreSocket.java" />
+        <option value="$PROJECT_DIR$/src/Chores/ChoreManager.java" />
+        <option value="$PROJECT_DIR$/src/sock/CalendarSocket.java" />
       </list>
     </option>
   </component>
@@ -317,18 +262,68 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="6" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1400" />
-    <option name="height" value="775" />
+    <option name="width" value="1280" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="team4-201" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="team4-201" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="team4-201" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="team4-201" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="dbsrc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="team4-201" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="team4-201" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="dbsrc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="db" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="team4-201" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="team4-201" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="team4-201" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="team4-201" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sock" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="team4-201" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="team4-201" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="team4-201" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="team4-201" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="html" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="team4-201" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="team4-201" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="unprocessed_js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -372,8 +367,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -381,16 +374,21 @@
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542180960837" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542181645948" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/sock" />
+      <recent name="$PROJECT_DIR$/web/unprocessed_js" />
+      <recent name="$PROJECT_DIR$/web/html" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/src/sock/chores" />
@@ -408,8 +406,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.chores.html">
-    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.12" ALTERNATIVE_JRE_ENABLED="false">
+  <component name="RunManager" selected="Tomcat Server.Unnamed">
+    <configuration name="ChoreManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Chores.ChoreManager" />
+      <module name="team4-201" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Chores.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.11" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="team4-201:war exploded">
@@ -478,7 +489,7 @@
         <option name="BuildArtifacts" enabled="true" />
       </method>
     </configuration>
-    <configuration name="chores.html (1)" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.12" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="chores.html (1)" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.11" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/html/chores.html" />
       <deployment>
         <artifact name="team4-201:war exploded">
@@ -488,46 +499,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="chores_html_(1)_team4-201_4" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="team4-201:war exploded" />
-        </option>
-      </method>
-    </configuration>
-    <configuration name="chores.html (2)" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.12" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/html/chores.html" />
-      <deployment>
-        <artifact name="team4-201:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="chores_html_(2)_team4-201_4" />
+        <option name="BASE_DIRECTORY_NAME" value="chores_html_(1)_team4-201" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -675,19 +647,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Unnamed" />
-      <item itemvalue="Tomcat Server.chores.html (1)" />
-      <item itemvalue="Tomcat Server.chores.html (2)" />
       <item itemvalue="Tomcat Server.chores.html (3)" />
       <item itemvalue="Tomcat Server.chores.html (4)" />
       <item itemvalue="Tomcat Server.chores.html" />
+      <item itemvalue="Application.ChoreManager" />
+      <item itemvalue="Tomcat Server.chores.html (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Tomcat Server.chores.html (1)" />
+        <item itemvalue="Application.ChoreManager" />
         <item itemvalue="Tomcat Server.chores.html" />
         <item itemvalue="Tomcat Server.chores.html (4)" />
         <item itemvalue="Tomcat Server.chores.html (3)" />
-        <item itemvalue="Tomcat Server.chores.html (2)" />
-        <item itemvalue="Tomcat Server.chores.html (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -709,6 +681,7 @@
       <workItem from="1542091978419" duration="1425000" />
       <workItem from="1542093536869" duration="5411000" />
       <workItem from="1542100761328" duration="34553000" />
+      <workItem from="1542181279300" duration="365000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'remotes/origin/newdb' into micah_branch&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/modules.xml">
       <created>1542090933032</created>
@@ -728,7 +701,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48848000" />
+    <option name="totallyTimeSpent" value="49392000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -740,34 +713,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.765233" visible="true" weight="0.26037195" />
+      <window_info id="Learn" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.73478264" visible="true" weight="0.20193861" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.23476702" side_tool="true" visible="true" weight="0.26037195" />
+      <window_info id="Web" order="7" sideWeight="0.2652174" side_tool="true" visible="true" weight="0.20193861" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4985694" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48354793" weight="0.26987952" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.73182553" weight="0.4729927" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49570817" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4992636" weight="0.32796487" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49499285" weight="0.2686747" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49434572" weight="0.36350363" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.490701" visible="true" weight="0.32771084" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.509299" side_tool="true" visible="true" weight="0.32771084" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.490701" weight="0.32771084" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5072698" side_tool="true" visible="true" weight="0.32846716" />
       <window_info anchor="bottom" id="Application Servers" order="11" sideWeight="0.4992636" weight="0.32796487" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49427754" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" sideWeight="0.4927302" visible="true" weight="0.32846716" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="right" id="JSF" />
-      <window_info anchor="right" id="CDI" />
-      <window_info anchor="right" id="Bean Validation" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -777,6 +748,9 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="JSF" order="9" />
+      <window_info anchor="right" id="CDI" order="10" />
+      <window_info anchor="right" id="Bean Validation" order="11" />
     </layout>
     <layout-to-restore>
       <window_info id="Image Layers" order="0" />
@@ -816,6 +790,26 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -837,6 +831,11 @@
           </value>
         </entry>
       </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
     </option>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -869,13 +868,6 @@
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/_simple_dragging_test.js" />
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/_chores_test.js" />
     <entry file="file://$PROJECT_DIR$/src/sock/calendar/SockCalendar.java" />
-    <entry file="file://$PROJECT_DIR$/web/html/_calendar_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/javax.servlet.jar!/javax/servlet/http/HttpServlet.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -956,13 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PostItServlets/SH5UpdatePostIt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbsrc/db/Note.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -981,9 +966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="291" selection-start-line="291" selection-end-line="291" />
-          <folding>
-            <element signature="e#11791#11792#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1005,9 +987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
           <caret line="106" selection-start-line="106" selection-end-line="106" />
-          <folding>
-            <element signature="e#4481#4482#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1032,18 +1011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
           <caret line="129" selection-start-line="129" selection-end-line="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chores/ChoreManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="149" lean-forward="true" selection-start-line="149" selection-end-line="149" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1073,9 +1040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1111,36 +1075,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="109" column="41" selection-start-line="109" selection-start-column="41" selection-end-line="109" selection-end-column="41" />
-          <folding>
-            <element signature="n#PostIt#0" />
-            <element signature="n#!!block;n#constructor#0;n#PostIt#0" />
-            <element signature="n#!!block;n#componentDidMount#0;n#PostIt#0" />
-            <element signature="e#155#402#0" />
-            <element signature="e#195#391#0" />
-            <element signature="e#284#347#0" />
-            <element signature="n#!!block;n#render#0;n#PostIt#0" />
-            <element signature="e#456#1081#0" />
-            <element signature="e#537#694#0" />
-            <element signature="e#713#924#0" />
-            <element signature="e#758#901#0" />
-            <element signature="n#PostIts#0" />
-            <element signature="n#!!block;n#constructor#0;n#PostIts#0" />
-            <element signature="n#!!block;n#render#0;n#PostIts#0" />
-            <element signature="e#1239#1433#0" />
-            <element signature="e#1564#2071#0" />
-            <element signature="e#1841#2067#0" />
-            <element signature="e#1913#2061#0" />
-            <element signature="e#2122#2322#0" />
-            <element signature="e#2195#2244#0" />
-            <element signature="e#2274#2316#0" />
-            <element signature="e#2426#2679#0" />
-            <element signature="e#2496#2601#0" />
-            <element signature="e#2631#2673#0" />
-            <element signature="e#2736#2929#0" />
-            <element signature="e#3011#3192#0" />
-            <element signature="e#3127#3186#0" />
-            <element signature="e#3227#3297#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1154,16 +1088,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chores/ChoreSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/chores.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
@@ -1171,20 +1095,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/chores.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="88" column="22" lean-forward="true" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
-          <folding>
-            <marker date="1542179926506" expanded="true" signature="371:372" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chores/ChoreSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PostItServlets/SH5UpdatePostIt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chores/ChoreManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="163" column="23" lean-forward="true" selection-start-line="163" selection-start-column="23" selection-end-line="163" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/chores.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="87" column="25" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/_calendar_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sock/CalendarSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2010">
+          <caret line="154" column="69" lean-forward="true" selection-start-line="154" selection-start-column="69" selection-end-line="154" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1219,6 +1187,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>jsp-api</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1230,7 +1199,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1266,7 +1235,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>javaee-api-7.0</last-edited>
+          <last-edited>javax.transaction</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
