@@ -14,7 +14,7 @@
         }
     </style>
 </head>
-<body onload="loadTransactionList()">
+<body onload="loadAllList()">
 <div id="removethis"></div>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
@@ -162,7 +162,7 @@
                 <!--amount-->
                 <div class="grocery mdl-cell mdl-cell--4-col">
                     <img class="grocerylist" src="../resources/amountowed3.png" alt="Suite Home" height="35" >
-                    <ul class="demo-list-two mdl-list">
+                    <ul id="tabsList" class="demo-list-two mdl-list">
                         <li class="mdl-list__item mdl-list__item--two-line">
                             <span class="mdl-list__item-primary-content">
                               <i class="material-icons mdl-list__item-avatar">person</i>

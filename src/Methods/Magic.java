@@ -1,6 +1,9 @@
 package Methods;
 
+import TabsStuff.TabsTotal;
 import db.TabBase;
+import db.Transaction;
+import db.User;
 
 import java.util.ArrayList;
 import java.util.Vector;
@@ -14,7 +17,17 @@ public class Magic {
 	private static TabBase db = new TabBase();
 
 	public void addUser(db.User user){
-		db.addUser(user);
+		if(db.retrieveUser(user.getUserID()) != null){
+
+		} else {
+			db.addUser(user);
+		}
+	}
+
+	public void addRoom(db.Room room){
+		if(!db.roomExists(room.getRoomID())){
+			db.addRoom(room);
+		}
 	}
 
 	public db.User searchByUserIDandRoomID(String userID, String roomID){
@@ -61,9 +74,34 @@ public class Magic {
 		}
 	}
 
-	/*public float getTabsTotal(db.User user1, db.User user2){
-		Vector<Transaction> toMinus = fakeDB.searchTransaction(user1, user2);
-		Vector<Transaction> toAdd = fakeDB.searchTransaction(user2, user1);
+	public ArrayList<TabsTotal> getAllTabs(String userID, String roomID){
+		ArrayList<db.User> roommates = new ArrayList<User>();
+		User current = db.retrieveUser(userID);
+		ArrayList<TabsTotal> output = new ArrayList<TabsTotal>();
+		for(User u : db.retrieveUsers(roomID)){
+			if(!u.getUserID().equals(userID)){
+				roommates.add(u);
+			}
+		}
+		for(User u : roommates){
+			TabsTotal t = new TabsTotal(userID, u.getUserID(), getTabsTotal(userID, u.getUserID()));
+			output.add(t);
+		}
+		return output;
+	}
+
+	public float getTabsTotal(String user1, String user2){
+		ArrayList<db.Transaction> roomTransaction = db.retrieveTransactionsByRoom(db.retrieveUser(user1).getRoomID());
+		ArrayList<db.Transaction> toMinus = new ArrayList<Transaction>(); // 1, 2
+		ArrayList<db.Transaction> toAdd = new ArrayList<Transaction>(); //2, 1
+		for(Transaction t : roomTransaction){
+			System.out.println(t.getUser1()+ " " + t.getUser2()+ " " + t.getItem() + t.getAmount());
+			if(t.getUser1().equals(user1) && t.getUser2().equals(user2)){
+				toMinus.add(t);
+			} else if (t.getUser1().equals(user2) && t.getUser2().equals(user1)){
+				toAdd.add(t);
+			}
+		}
 		float amount = 0;
 		for(Transaction t : toAdd ){
 			amount += t.getAmount();
@@ -71,9 +109,9 @@ public class Magic {
 		for(Transaction t : toMinus){
 			amount -= t.getAmount();
 		}
-
+		System.out.println(user1 + " " + user2 + " " + amount);
 		return amount;
-	}*/
+	}
 
 	public ArrayList<db.Transaction> getAllRelatedTransaction(String user){
 		return db.retrieveTransactionsByUserInvolved(user);

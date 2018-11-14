@@ -1,4 +1,8 @@
-
+function loadAllList(){
+	loadGroceryList();
+	loadTransactionList();
+	loadTabsTotalList();
+}
 function loadGroceryList(){
 	let xhttp = new XMLHttpRequest();
 	xhttp.open("GET", "/GroceryList", true);
@@ -56,7 +60,7 @@ function addGroceryPass(){
 		url: "/GroceryList",
 		data:JSON.stringify(param),
 		success: function(status){
-			loadGroceryList();
+			loadAllList();
 			console.log("Grocery Sent",status);
 		},
 		error:function(error){
@@ -130,7 +134,7 @@ function loadTransactionList(){
 			let tdAmount = document.createElement("td");
 			let tdSplit = document.createElement("td");
 			//TODO: get current userID and fullname here
-			if(item["user1"] === "user1"){
+			if(item["user1"] === "name1"){
 				tdAmount.innerHTML = item["amount"];
 				tdSplit.innerHTML = item["user2"];
 			} else {
@@ -162,17 +166,59 @@ function addTransactionClick(){
 function addTransactionPass(){
 	//It is actually adding a TabsLedger
 	//The servlet will take the tabs ledger and create independent transactions
-	let param = {roomID:"5566", itemName:"Coffee", quantity:"4", pricePerItem:"10", purchaser:"id1", splitters:["id2", "id3"]};
+	let param = {roomID:"5566", itemName:"Cheese", quantity:"10", pricePerItem:"10", purchaser:"id3", splitters:["id1"]};
 	$.ajax({
 		type: "POST",
 		url: "/TransactionList",
 		data:JSON.stringify(param),
 		success: function(status){
-			loadTransactionList();
+			loadAllList();
 			console.log("Transactions Sent",status);
 		},
 		error:function(error){
 			console.log("Error Transactions",error);
 		}
 	});
+}
+
+function loadTabsTotalList(){
+	let xhttp = new XMLHttpRequest();
+	xhttp.open("GET", "/TabsTotalList", true);
+	xhttp.onreadystatechange = function () {
+
+		let tabsTotalList = JSON.parse(this.responseText);
+		console.log("Try to parse...", tabsTotalList);
+		let list = document.getElementById("tabsList");
+		list.innerHTML = "";
+
+		tabsTotalList.forEach(function(item){
+			//user1 is always current user
+			//list.innerHTML += (item["user2"] + item["amount"]);
+			let listItem = document.createElement("li");
+			listItem.className = "mdl-list__item mdl-list__item--two-line";
+			let span1 = document.createElement("span");
+			span1.className = "mdl-list__item-primary-content";
+			let i = document.createElement("i");
+			i.className = "material-icons mdl-list__item-avatar";
+			componentHandler.upgradeElement(i);
+			let nameSpan = document.createElement("span");
+			nameSpan.innerHTML = item["user2"];
+			componentHandler.upgradeElement(nameSpan);
+			let amountSpan = document.createElement("span");
+			amountSpan.className = "mdl-list__item-sub-title";
+			amountSpan.innerHTML = item["amount"];
+			componentHandler.upgradeElement(amountSpan);
+			span1.appendChild(i);
+			span1.appendChild(nameSpan);
+			span1.appendChild(amountSpan);
+			componentHandler.upgradeElement(span1);
+			listItem.appendChild(span1);
+			componentHandler.upgradeElement(listItem);
+			list.appendChild(listItem);
+		});
+		componentHandler.upgradeElement(list);
+		componentHandler.upgradeDom();
+	};
+	xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+	xhttp.send();
 }

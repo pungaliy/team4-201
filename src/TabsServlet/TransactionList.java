@@ -5,6 +5,8 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import db.Room;
+import db.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,10 +30,22 @@ public class TransactionList extends HttpServlet{
 			//For testing
 				request.setAttribute("room", "5566");
 				request.setAttribute("userID", "id1");
-
 			//TODO: remove this
 
+			//TODO: remove this now
+			Room room = new Room("5566");
+			User user1 = new User("name1", "id1", "5566", "url1");
+			User user2 = new User("name2", "id2", "5566", "url2");
+			User user3 = new User("name3", "id3", "5566", "url3");
+			magic.addRoom(room);
+			magic.addUser(user1);
+			magic.addUser(user2);
+			magic.addUser(user3);
+
 			String roomID = (String) request.getAttribute("room");
+			String userID = "id1";
+
+
 
 			ArrayList<db.Transaction> allTransaction = magic.getAllRelatedTransaction("id1");
 
@@ -62,8 +76,6 @@ public class TransactionList extends HttpServlet{
 
 		BufferedReader buffer = new BufferedReader(request.getReader());
 		String reqJson = buffer.readLine();
-
-		System.out.println("Try to add transaction with this JSON: " + reqJson);
 
 		JsonObject jsonObj = gson.fromJson(reqJson, JsonObject.class);
 
