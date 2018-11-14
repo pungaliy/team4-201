@@ -155,3 +155,25 @@ function loadTransactionList(){
 	xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 	xhttp.send();
 }
+
+function addTransactionClick(){
+	addTransactionPass();
+}
+
+function addTransactionPass(){
+	//It is actually adding a TabsLedger
+	//The servlet will take the tabs ledger and create independent transactions
+	let param = {roomID:"5566", itemName:"Coffee", quantity:"4", pricePerItem:"10", purchaser:"user1", splitters:["user2", "user3", "user4"]};
+	$.ajax({
+		type: "POST",
+		url: "/TransactionList",
+		data:JSON.stringify(param),
+		success: function(status){
+			loadTransactionList();
+			console.log("Transactions Sent",status);
+		},
+		error:function(error){
+			console.log("Error Transactions",error);
+		}
+	});
+}

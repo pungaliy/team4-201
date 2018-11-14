@@ -1,15 +1,7 @@
 package Methods;
 
-import FakeDB.FakeDB;
-import TabsStuff.GroceryItem;
-import TabsStuff.TabsItem;
-import TabsStuff.TabsLedger;
 import db.TabBase;
-import db.Transaction;
-import org.junit.platform.commons.util.StringUtils;
-import temp.tempUser;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Vector;
 
@@ -19,7 +11,6 @@ public class Magic {
 	* This class contains methods that handle logic.
 	*/
 
-	//private static FakeDB fakeDB = new FakeDB();
 	private static TabBase db = new TabBase();
 
 	public void addUser(db.User user){
@@ -56,22 +47,16 @@ public class Magic {
 
 	public void addSingleTransction(String purchaser, String splitter, float amount, String roomID, String item){
 		String ID = Long.toString(System.currentTimeMillis());
-		Transaction t = new Transaction(ID, purchaser, splitter, amount, roomID, item);
+		db.Transaction t = new db.Transaction(ID, purchaser, splitter, amount, roomID, item);
 		db.addTransaction(t);
 	}
 
-	public void addTransactionToAllSplitters(TabsLedger ledger){
-		db.User purchaser = ledger.getPurchaser();
-		float amount = ledger.getItemBought().getPricePerItem()
-				* ledger.getItemBought().getQuantity()
-				/ ledger.getSplitters().size();
-		String roomID = purchaser.getRoomID();
-		String item = ledger.getItemBought().getItemName();
-		db.User splitter = null;
-		for(db.User u : ledger.getSplitters()){
-			splitter = u;
-			if(!purchaser.getUserID().equals(splitter.getUserID())){
-				addSingleTransction(purchaser.getUserID(), splitter.getUserID(), amount, roomID, item);
+	public void addTransactionToAllSplitters(String purchaser, int quantity, float pricePerItem, String roomID,
+											 Vector<String> splitters, String itemName){
+		float amount = pricePerItem * quantity / splitters.size();
+		for(String u: splitters){
+			if(!purchaser.equals(u)){
+				addSingleTransction(purchaser,u, amount, roomID, itemName);
 			}
 		}
 	}

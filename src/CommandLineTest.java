@@ -1,10 +1,4 @@
 import Methods.Magic;
-import TabsStuff.TabsItem;
-import TabsStuff.TabsLedger;
-import temp.tempRoom;
-import temp.tempUser;
-
-import java.util.Vector;
 
 public class CommandLineTest {
 	private Magic magic = new Magic();
