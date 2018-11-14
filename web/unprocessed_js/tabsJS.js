@@ -15,20 +15,28 @@ $(document).ready(function(){
 });
 
 function loadRoommatesForAddTransaction(){
-	let transactionOption = document.getElementById("addTransactionOptions");
+	let transactionOpt = document.getElementById("addTransactionOptions");
+	document.getElementById("roommateList").remove();
+	let newList = document.createElement("span");
+	newList.id = "roommateList";
+
 	//Get roomates from servlet here
 		let roommateList = [];
+		roommateList.push({name:"name1", userID:"id1"});
 		roommateList.push({name:"name2", userID:"id2"});
 		roommateList.push({name:"name3", userID:"id3"});
+
 	roommateList.forEach(function(roommate){
 		let name = document.createElement("textNode");
 		name.innerHTML = roommate["name"];
 		let checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
-		checkbox.id = roommate["userID"];
-		transactionOption.appendChild(name);
-		transactionOption.appendChild(checkbox);
+		checkbox.value = roommate["userID"];
+		newList.appendChild(name);
+		newList.appendChild(checkbox);
 	});
+	transactionOpt.appendChild(newList);
+
 }
 
 /*function connectToServer(){
@@ -232,7 +240,20 @@ function loadTransactionList(){
 }
 
 function addTransactionClick(){
-	addTransactionPass("5566", "LaCroix", "12", "1", "id3", ["id1", "id2", "id3"]);
+	let itemname = document.addTransactionOptions.newTransactionItemName.value;
+	let quantity = document.addTransactionOptions.newTransactionQuantity.value;
+	let pricePerItem = document.addTransactionOptions.newTransactionPricePerItem.value;
+	let splitters = [];
+	let allInput = document.getElementById("addTransactionOptions").getElementsByTagName("input");
+	for(let i = 0; i < allInput.length; i++){
+		if(allInput[i].type == "checkbox" && allInput[i].checked == true){
+			splitters.push(allInput[i].value);
+		}
+	}
+	console.log(itemname, quantity, pricePerItem);
+	addTransactionPass("5566", itemname, quantity, pricePerItem, "id3", splitters);
+	return false;
+
 }
 
 function addTransactionPass(roomid, itemname, q, ppi, buy, split){
