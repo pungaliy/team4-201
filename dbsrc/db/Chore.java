@@ -77,15 +77,7 @@ public class Chore {
 
     public void assignTo(User user, int userCount) {
         if(previousUsers.size() >= userCount-2) {
-            if(this.shame && previousUsers.size() >= 1) {
-                User shamedUser = this.previousUsers.get(this.previousUsers.size()-1);
-                this.previousUsers = new ArrayList<>();
-                this.previousUsers.add(shamedUser);
-            }
-            else {
-                this.previousUsers.clear();
-                this.shame = false;
-            }
+            this.previousUsers.clear();
         }
         else this.previousUsers.add(this.currentUser);
         this.currentUser = user;
@@ -128,7 +120,11 @@ public class Chore {
         this.shame = shame;
     }
 
-    public boolean isExpired() { return System.currentTimeMillis()-this.rotationTime >= this.rotationPeriod; }
+    public long expirationTime() {
+        return this.rotationTime+this.rotationPeriod-System.currentTimeMillis();
+    }
+
+    public boolean isExpired() { return expirationTime() <= 0; }
 
     public User getLastUser() {
         if(this.previousUsers.size() >= 1) {

@@ -27,7 +27,7 @@ public class ChoreManager {
 
     public ArrayList<Chore> getChores() {
         ArrayList<Chore> chores = this.cb.retrieveChores(user.getRoomID());
-//        if(chores.size() >= 1) update(chores);
+        if(chores.size() >= 1) update(chores);
         return chores;
     }
 
@@ -123,11 +123,19 @@ public class ChoreManager {
         return wos;
     }
 
-    public String getJSONPackage() {
-        ArrayList<Chore> allchores = getChores();
+    public String getJSONPackage(ArrayList<Chore> allchores) {
         ArrayList<Chore> mychores = getMyChores(allchores);
         ArrayList<Chore> shamedchores = getShamedChores(allchores);
         return gson.toJson(new ChorePackage(mychores, allchores, shamedchores));
+    }
+
+    public long minExpirationTime(List<Chore> chores) {
+        long minT = Long.MAX_VALUE;
+        for(Chore chore : chores) {
+            long t = chore.expirationTime();
+            if(t < minT) minT = t;
+        }
+        return minT;
     }
 
     public void print() {
@@ -153,7 +161,15 @@ public class ChoreManager {
         ChoreManager cm1 = new ChoreManager(users.get(1));
 //        cm0.addChore("Take out the trash!", 10000);
 //        cm0.addChore("Scrub the floor...", 15000);
+
         cm0.print();
         cm1.print();
+
+        while(true) {
+            System.out.println(cm0.minExpirationTime(cm0.getChores()));
+        }
+//        chores.get(0).setShame(false);
+//
+//        System.out.println(cm0.getShamedChores(chores));
     }
 }
