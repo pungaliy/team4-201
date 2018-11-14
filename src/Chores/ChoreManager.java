@@ -130,7 +130,7 @@ public class ChoreManager {
     }
 
     public long minExpirationTime(List<Chore> chores) {
-        long minT = Long.MAX_VALUE;
+        long minT = Long.MAX_VALUE - 6;
         for(Chore chore : chores) {
             long t = chore.expirationTime();
             if(t < minT) minT = t;
@@ -159,15 +159,19 @@ public class ChoreManager {
 
         ChoreManager cm0 = new ChoreManager(users.get(0));
         ChoreManager cm1 = new ChoreManager(users.get(1));
-//        cm0.addChore("Take out the trash!", 10000);
-//        cm0.addChore("Scrub the floor...", 15000);
+        cm0.addChore("Take out the trash!", 10000);
+        cm0.addChore("Scrub the floor...", 15000);
+        cm0.addChore("Do the dishes", 30000);
+        cm0.addChore("Clean the bathroom", 35000);
+        cm0.addChore("Sweep the floors", 45000);
+        cm0.addChore("Clean stuff", 60000);
 
         cm0.print();
         cm1.print();
 
-        while(true) {
-            System.out.println(cm0.minExpirationTime(cm0.getChores()));
-        }
+//        while(true) {
+//            System.out.println(cm0.minExpirationTime(cm0.getChores()));
+//        }
 //        chores.get(0).setShame(false);
 //
 //        System.out.println(cm0.getShamedChores(chores));
