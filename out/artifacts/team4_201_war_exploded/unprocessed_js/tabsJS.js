@@ -1,16 +1,49 @@
+//var socket;
+
 $(document).ready(function(){
+	$("#addGroceryOptions").hide();
+
 	$("#addGroceryButton").click(function(){
-		addGroceryClick();
+		$("#addGroceryOptions").toggle();
 	});
 	$("#addTransactionButton").click(function(){
 		addTransactionClick();
 	});
+
+
 });
+
+/*function connectToServer(){
+	socket = new WebSocket("ws://localhost:8080/TabsSocket");
+
+	socket.onopen = function(event) {
+		//document.getElementById("mychat").innerHTML += "Connected! <br>";
+		alert("Opened socket connection");
+	}
+	socket.onmessage = function(event) {
+		//document.getElementById("mychat").innerHTML += event.data + "<br>";
+		alert("On message");
+	}
+	socket.onclose = function(event) {
+		//document.getElementById("mychat").innerHTML += "Disconnected! <br>";
+		alert("On close");
+	}
+
+}
+
+function sendMessage(){
+	//It will send to the serverendpt
+	socket.send("A message");
+
+	//Make sure the form never submits!
+	return false;
+}*/
 
 function loadAllList(){
 	loadGroceryList();
 	loadTransactionList();
-	loadTabsTotalList()
+	loadTabsTotalList();
+	//connectToServer();
 }
 function loadGroceryList(){
 	let xhttp = new XMLHttpRequest();
@@ -59,7 +92,9 @@ function loadGroceryList(){
 }
 
 function addGroceryClick(){
-	addGroceryPass("5566", "Beef", "Y");
+	let name = document.addGroceryOptions.itemNameInput.value;
+	addGroceryPass("5566", name, "Y");
+	return false;
 }
 
 function addGroceryPass(roomid, itemname, addYN){
@@ -212,7 +247,6 @@ function loadTabsTotalList(){
 	xhttp.onreadystatechange = function () {
 
 		let tabsTotalList = JSON.parse(this.responseText);
-		console.log("Try to parse...", tabsTotalList);
 		let list = document.getElementById("tabsList");
 		list.innerHTML = "";
 

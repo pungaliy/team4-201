@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-blue.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
@@ -126,6 +127,10 @@
                             class="addGroceryButton mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                         Add an Item
                     </button>
+                    <form name="addGroceryOptions" id="addGroceryOptions" onsubmit="return addGroceryClick();">
+                        <input name="itemNameInput" id="itemNameInput" type="text" value=""/>
+                        <input type="submit" id="newItemSubmit" value="Add New Item"/>
+                    </form>
                 </div>
 
                 <!--transactions-->
