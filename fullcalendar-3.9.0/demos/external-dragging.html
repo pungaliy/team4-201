@@ -13,21 +13,21 @@
   $(document).ready(function() {
 
 
-    /* initialize the external events
+    /* initialize the external calendarEvents
     -----------------------------------------------------------------*/
 
-    $('#external-events .fc-event').each(function() {
+    $('#external-calendarEvents .fc-calendarEvent').each(function() {
 
-      // store jsonData so the calendar knows to render an event upon drop
-      $(this).jsonData('event', {
-        title: $.trim($(this).text()), // use the element's text as the event title
+      // store jsonData so the calendar knows to render an calendarEvent upon drop
+      $(this).jsonData('calendarEvent', {
+        title: $.trim($(this).text()), // use the element's text as the calendarEvent title
         stick: true // maintain when user navigates (see docs on the renderEvent method)
       });
 
-      // make the event draggable using jQuery UI
+      // make the calendarEvent draggable using jQuery UI
       $(this).draggable({
         zIndex: 999,
-        revert: true,      // will cause the event to go back to its
+        revert: true,      // will cause the calendarEvent to go back to its
         revertDuration: 0  //  original position after the drag
       });
 
@@ -72,7 +72,7 @@
     margin: 0 auto;
   }
 
-  #external-events {
+  #external-calendarEvents {
     float: left;
     width: 150px;
     padding: 0 10px;
@@ -81,24 +81,24 @@
     text-align: left;
   }
 
-  #external-events h4 {
+  #external-calendarEvents h4 {
     font-size: 16px;
     margin-top: 0;
     padding-top: 1em;
   }
 
-  #external-events .fc-event {
+  #external-calendarEvents .fc-calendarEvent {
     margin: 10px 0;
     cursor: pointer;
   }
 
-  #external-events p {
+  #external-calendarEvents p {
     margin: 1.5em 0;
     font-size: 11px;
     color: #666;
   }
 
-  #external-events p input {
+  #external-calendarEvents p input {
     margin: 0;
     vertical-align: middle;
   }
@@ -113,13 +113,13 @@
 <body>
   <div id='wrap'>
 
-    <div id='external-events'>
+    <div id='external-calendarEvents'>
       <h4>Draggable Events</h4>
-      <div class='fc-event'>My Event 1</div>
-      <div class='fc-event'>My Event 2</div>
-      <div class='fc-event'>My Event 3</div>
-      <div class='fc-event'>My Event 4</div>
-      <div class='fc-event'>My Event 5</div>
+      <div class='fc-calendarEvent'>My Event 1</div>
+      <div class='fc-calendarEvent'>My Event 2</div>
+      <div class='fc-calendarEvent'>My Event 3</div>
+      <div class='fc-calendarEvent'>My Event 4</div>
+      <div class='fc-calendarEvent'>My Event 5</div>
       <p>
         <input type='checkbox' id='drop-remove' />
         <label for='drop-remove'>remove after drop</label>

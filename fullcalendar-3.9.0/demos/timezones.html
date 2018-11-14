@@ -21,9 +21,9 @@
       navLinks: true, // can click day/week names to navigate views
       editable: true,
       selectable: true,
-      eventLimit: true, // allow "more" link when too many events
-      events: {
-        url: 'php/get-events.php',
+      eventLimit: true, // allow "more" link when too many calendarEvents
+      calendarEvents: {
+        url: 'php/get-calendarEvents.php',
         error: function() {
           $('#script-warning').show();
         }
@@ -31,11 +31,11 @@
       loading: function(bool) {
         $('#loading').toggle(bool);
       },
-      eventRender: function(event, el) {
-        // render the timezone offset below the event title
-        if (event.start.hasZone()) {
+      eventRender: function(calendarEvent, el) {
+        // render the timezone offset below the calendarEvent title
+        if (calendarEvent.start.hasZone()) {
           el.find('.fc-title').after(
-            $('<div class="tzo"/>').text(event.start.format('Z'))
+            $('<div class="tzo"/>').text(calendarEvent.start.format('Z'))
           );
         }
       },
@@ -115,7 +115,7 @@
 
     <div class='right'>
       <span id='loading'>loading...</span>
-      <span id='script-warning'><code>php/get-events.php</code> must be running.</span>
+      <span id='script-warning'><code>php/get-calendarEvents.php</code> must be running.</span>
     </div>
 
     <div class='clear'></div>

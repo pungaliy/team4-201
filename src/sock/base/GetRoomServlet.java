@@ -1,12 +1,6 @@
 package sock.base;
 
-import com.google.gson.Gson;
-import sock.calendar.Event;
-
 import java.io.IOException;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.TimeZone;
 
 @javax.servlet.annotation.WebServlet(name = "GetRoomServlet", urlPatterns = {"/GetRoomServlet"})
 public class GetRoomServlet extends javax.servlet.http.HttpServlet {
@@ -21,7 +15,7 @@ public class GetRoomServlet extends javax.servlet.http.HttpServlet {
 //        startDateTime1.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
 //        Calendar endDateTime1 = new GregorianCalendar(2018, 11, 5, 15, 0);
 //        endDateTime1.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
-//        Event event1 = new Event("Event #1", startDateTime1, endDateTime1);
+//        CalendarEvent event1 = new CalendarEvent("CalendarEvent #1", startDateTime1, endDateTime1);
 //
 //        SockUser user1 = new SockUser(1);
 //        user1.getUserCalendar().addSockEvent(event1);
@@ -30,7 +24,7 @@ public class GetRoomServlet extends javax.servlet.http.HttpServlet {
 //        startDateTime2.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
 //        Calendar endDateTime2 = new GregorianCalendar(2018, 11, 7, 18, 0);
 //        endDateTime2.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
-//        Event event2 = new Event("Event #2", startDateTime1, endDateTime1);
+//        CalendarEvent event2 = new CalendarEvent("CalendarEvent #2", startDateTime1, endDateTime1);
 //
 //        SockUser user2 = new SockUser(2);
 //        user2.getUserCalendar().addSockEvent(event2);

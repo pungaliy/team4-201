@@ -1,4 +1,4 @@
-package db;
+package sock.database;
 
 public class GroceryItem {
     private String roomID;

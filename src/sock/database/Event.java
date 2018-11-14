@@ -13,7 +13,7 @@ public class Event {
     }
 
     /**
-     * Constructor for a new Event. All parameters must be not null.
+     * Constructor for a new CalendarEvent. All parameters must be not null.
      *
      * @param eventID       The ID of this event.
      * @param eventSummary  Short title that describes the event.

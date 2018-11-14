@@ -67,8 +67,8 @@ v3.6.2 (2017-10-23)
 -------------------
 
 Bugfixes:
-- Google Calendar event sources not calling `loading` callback (#3884)
-- `eventDataTransform` w/ eventConstraint shouldn't be called during event resizing (#3859)
+- Google Calendar calendarEvent sources not calling `loading` callback (#3884)
+- `eventDataTransform` w/ eventConstraint shouldn't be called during calendarEvent resizing (#3859)
 - `navLinks` would go to the previously navigated date (#3869)
 - `nowIndicator` arrow would repeatedly render (#3872)
 - fc-content-skeleton DOM element would repeatedly render on navigation in agenda view
@@ -78,8 +78,8 @@ v3.6.1 (2017-10-11)
 -------------------
 
 Bugfixes:
-- JSON feed event sources always requesting current page (#3865)
-- multi-day events appearing multiple times in more+ popover (#3856)
+- JSON feed calendarEvent sources always requesting current page (#3865)
+- multi-day calendarEvents appearing multiple times in more+ popover (#3856)
 
 
 v3.6.0 (2017-10-10)
@@ -94,16 +94,16 @@ Features:
 
 Bugfixes:
 - objects used as non-standard Event properties ignored by `updateEvent` (#3839)
-- listDay error if event goes over period (#3843)
+- listDay error if calendarEvent goes over period (#3843)
 - `validDays` with `hiddenDays`, js error when no days active (#3846)
 - json feed Event Source object no longer has `url` property (#3845)
 - `updateEvent`, allDay to timed, when no end, wrong end date (#3144)
 - `removeEvents` by `_id` stopped working (#3828)
 - correct `this` context in FuncEventSource (#3848) thx @declspec
-- js event not received in unselect callback when selecting another cell (#3832)
+- js calendarEvent not received in unselect callback when selecting another cell (#3832)
 
 Incompatibilities:
-- The `viewRender` callback might now be fired AFTER events have been rendered
+- The `viewRender` callback might now be fired AFTER calendarEvents have been rendered
   to the DOM. However, the eventRender/eventAfterRender/eventAfterAllRender callbacks
   will always be fired after `viewRender`, just as before.
 - The internal `Grid` class (accessed via `$.fullCalendar.Grid`) has been removed.
@@ -114,9 +114,9 @@ v3.5.1 (2017-09-06)
 -------------------
 
 - fixed loading trigger not firing (#3810)
-- fixed overaggressively fetching events, on option changes (#3820)
-- fixed event object `date` property being discarded (tho still parsed) (#3819)
-- fixed event object `_id` property being discarded (#3811)
+- fixed overaggressively fetching calendarEvents, on option changes (#3820)
+- fixed calendarEvent object `date` property being discarded (tho still parsed) (#3819)
+- fixed calendarEvent object `_id` property being discarded (#3811)
 
 
 v3.5.0 (2017-08-30)
@@ -129,14 +129,14 @@ Features:
 	- jQuery UI "Cupertino" theme no longer included in zip archive
 	- improved theme switcher on demo page (#1436)
 	(big thanks to @joankaradimov)
-- 25% event rendering performance improvement across the board (#2524)
+- 25% calendarEvent rendering performance improvement across the board (#2524)
 - console message for unknown method/calendar (#3253)
 - Serbian cyrilic/latin (#3656)
 - available via Packagist (#2999, #3617)
 
 Bugfixes:
 - slot time label invisible when minTime starts out of alignment (#2786)
-- bug with inverse-background event rendering when out of range (#3652)
+- bug with inverse-background calendarEvent rendering when out of range (#3652)
 - wrongly disabled prev/next when current date outside of validRange (#3686, #3651)
 - updateEvent, error when changing allDay from false to true (#3518)
 - updateEvent doesn't support ID changes (#2928)
@@ -147,7 +147,7 @@ Bugfixes:
 Incompatibilities:
 - Event Objects obtained from clientEvents or various callbacks are no longer
   references to internally used objects. Rather, they are static object copies.
-- `clientEvents` method no longer returns events in same order as received.
+- `clientEvents` method no longer returns calendarEvents in same order as received.
   Do not depend on order.
 
 
@@ -156,7 +156,7 @@ v3.4.0 (2017-04-27)
 
 - composer.json for Composer (PHP package manager) (#3617)
 - fix toISOString for locales with non-trivial postformatting (#3619)
-- fix for nested inverse-background events (#3609)
+- fix for nested inverse-background calendarEvents (#3609)
 - Estonian locale (#3600)
 - fixed Latvian localization (#3525)
 - internal refactor of async systems
@@ -194,12 +194,12 @@ Behavior Changes:
   the view will always shift to begin with the given date. (#3515)
 
 Bugfixes:
-- event rendering when excessive `minTime`/`maxTime` (#2530)
-- event dragging not shown when excessive `minTime`/`maxTime` (#3055)
-- excessive `minTime`/`maxTime` not reflected in event fetching (#3514)
-	- when minTime is negative, or maxTime beyond 24 hours, when event jsonData is requested
+- calendarEvent rendering when excessive `minTime`/`maxTime` (#2530)
+- calendarEvent dragging not shown when excessive `minTime`/`maxTime` (#3055)
+- excessive `minTime`/`maxTime` not reflected in calendarEvent fetching (#3514)
+	- when minTime is negative, or maxTime beyond 24 hours, when calendarEvent jsonData is requested
 	  via a function or a feed, the given jsonData params will have time parts.
-- external event dragging via touchpunch broken (#3544)
+- external calendarEvent dragging via touchpunch broken (#3544)
 - can't make an immediate new selection after existing selection, with mouse.
   introduced in v3.2.0 (#3558)
 
@@ -211,7 +211,7 @@ Features:
 - `selectMinDistance`, threshold before a mouse selection begins (#2428)
 
 Bugfixes:
-- iOS 10, unwanted scrolling while dragging events/selection (#3403)
+- iOS 10, unwanted scrolling while dragging calendarEvents/selection (#3403)
 - dayClick triggered when swiping on touch devices (#3332)
 - dayClick not functioning on Firefix mobile (#3450)
 - title computed incorrectly for views with no weekends (#2884)
@@ -228,10 +228,10 @@ Bugfixes:
 v3.1.0 (2016-12-05)
 -------------------
 
-- experimental support for implicitly batched ("debounced") event rendering (#2938)
+- experimental support for implicitly batched ("debounced") calendarEvent rendering (#2938)
 	- `eventRenderWait` (off by default)
 - new `footer` option, similar to header toolbar (#654, #3299)
-- event rendering batch methods (#3351):
+- calendarEvent rendering batch methods (#3351):
 	- `renderEvents`
 	- `updateEvents`
 - more granular touch settings (#3377):
@@ -244,7 +244,7 @@ v3.1.0 (2016-12-05)
 - Kazakh locale (#3394)
 - Afrikaans locale (#3390)
 - internal refactor related to timing of rendering and firing handlers.
-  calls to rerender the current date-range and events from within handlers
+  calls to rerender the current date-range and calendarEvents from within handlers
   might not execute immediately. instead, will execute after handler finishes.
 
 
@@ -252,11 +252,11 @@ v3.0.1 (2016-09-26)
 -------------------
 
 Bugfixes:
-- list view rendering event times incorrectly (#3334)
-- list view rendering events/days out of order (#3347)
-- events with no title rendering as "undefined"
+- list view rendering calendarEvent times incorrectly (#3334)
+- list view rendering calendarEvents/days out of order (#3347)
+- calendarEvents with no title rendering as "undefined"
 - add .fc scope to table print styles (#3343)
-- "display no events" text fix for German (#3354)
+- "display no calendarEvents" text fix for German (#3354)
 
 
 v3.0.0 (2016-09-04)
@@ -335,7 +335,7 @@ v2.8.0 (2016-06-19)
 - refetchEventSources method (#3103, #1328, #254)
 - removeEventSources method (#3165, #948)
 - prevent flicker when refetchEvents is called (#3123, #2558)
-- fix for removing event sources that share same URL (#3209)
+- fix for removing calendarEvent sources that share same URL (#3209)
 - jQuery 3 support (#3197, #3124)
 - Travis CI integration (#3218)
 - EditorConfig for promoting consistent code style (#141)
@@ -352,18 +352,18 @@ v2.7.3 (2016-06-02)
 
 internal enhancements that plugins can benefit from:
 - EventEmitter not correctly working with stopListeningTo
-- normalizeEvent hook for manipulating event jsonData
+- normalizeEvent hook for manipulating calendarEvent jsonData
 
 
 v2.7.2 (2016-05-20)
 -------------------
 
-- fixed desktops/laptops with touch support not accepting mouse events for
+- fixed desktops/laptops with touch support not accepting mouse calendarEvents for
   dayClick/dragging/resizing (#3154, #3149)
 - fixed dayClick incorrectly triggered on touch scroll (#3152)
-- fixed touch event dragging wrongfully beginning upon scrolling document (#3160)
+- fixed touch calendarEvent dragging wrongfully beginning upon scrolling document (#3160)
 - fixed minified JS still contained comments
-- UI change: mouse users must hover over an event to reveal its resizers
+- UI change: mouse users must hover over an calendarEvent to reveal its resizers
 
 
 v2.7.1 (2016-05-01)
@@ -384,8 +384,8 @@ v2.7.0 (2016-04-23)
 touch device support (#994):
 	- smoother scrolling
 	- interactions initiated via "long press":
-		- event drag-n-drop
-		- event resize
+		- calendarEvent drag-n-drop
+		- calendarEvent resize
 		- time-range selecting
 	- `longPressDelay`
 
@@ -402,8 +402,8 @@ v2.6.0 (2016-01-07)
 - current time indicator (#414)
 - bundled with most recent version of moment (2.11.0)
 - UMD wrapper around lang files now handles commonjs (#2918)
-- fix bug where external event dragging would not respect eventOverlap
-- fix bug where external event dropping would not render the whole-day highlight
+- fix bug where external calendarEvent dragging would not respect eventOverlap
+- fix bug where external calendarEvent dropping would not render the whole-day highlight
 
 
 v2.5.0 (2015-11-30)
@@ -417,7 +417,7 @@ v2.4.0 (2015-08-16)
 -------------------
 
 - add new buttons to the header via `customButtons` ([225])
-- control stacking order of events via `eventOrder` ([364])
+- control stacking order of calendarEvents via `eventOrder` ([364])
 - control frequency of slot text via `slotLabelInterval` ([946])
 - `displayEventTime` ([1904])
 - `on` and `off` methods ([1910])
@@ -453,16 +453,16 @@ v2.3.0 (2015-02-21)
 
 - internal refactoring in preparation for other views
 - businessHours now renders on whole-days in addition to timed areas
-- events in "more" popover not sorted by time ([2385])
+- calendarEvents in "more" popover not sorted by time ([2385])
 - avoid using moment's deprecated zone method ([2443])
 - destroying the calendar sometimes causes all window resize handlers to be unbound ([2432])
 - multiple calendars on one page, can't accept external elements after navigating ([2433])
-- accept external events from jqui sortable ([1698])
+- accept external calendarEvents from jqui sortable ([1698])
 - external jqui drop processed before reverting ([1661])
 - IE8 fix: month view renders incorrectly ([2428])
 - IE8 fix: eventLimit:true wouldn't activate "more" link ([2330])
-- IE8 fix: dragging an event with an href
-- IE8 fix: invisible element while dragging agenda view events
+- IE8 fix: dragging an calendarEvent with an href
+- IE8 fix: invisible element while dragging agenda view calendarEvents
 - IE8 fix: erratic external element dragging
 
 [2385]: https://code.google.com/p/fullcalendar/issues/detail?id=2385
@@ -532,7 +532,7 @@ v2.2.3 (2014-11-26)
 - removeEventSource with Google Calendar object source, would not remove ([2368])
 - Events with invalid end dates are still accepted and rendered ([2350], [2237], [2296])
 - Bug when rendering business hours and navigating away from original view ([2365])
-- Links to Google Calendar events will use current timezone ([2122])
+- Links to Google Calendar calendarEvents will use current timezone ([2122])
 - Google Calendar plugin works with timezone names that have spaces
 - Google Calendar plugin accepts person email addresses as calendar IDs
 - Internally use numeric sort instead of alphanumeric sort ([2370])
@@ -565,13 +565,13 @@ v2.2.1 (2014-11-19)
 v2.2.0 (2014-11-14)
 -------------------
 
-- Background events. Event object's `rendering` property ([144], [1286])
+- Background calendarEvents. Event object's `rendering` property ([144], [1286])
 - `businessHours` option ([144])
-- Controlling where events can be dragged/resized and selections can go ([396], [1286], [2253])
+- Controlling where calendarEvents can be dragged/resized and selections can go ([396], [1286], [2253])
 	- `eventOverlap`, `selectOverlap`, and similar
 	- `eventConstraint`, `selectConstraint`, and similar
-- Improvements to dragging and dropping external events ([2004])
-	- Associating with real event jsonData. used with `eventReceive`
+- Improvements to dragging and dropping external calendarEvents ([2004])
+	- Associating with real calendarEvent jsonData. used with `eventReceive`
 	- Associating a `duration`
 - Performance boost for moment creation
 	- Be aware, FullCalendar-specific methods now attached directly to global moment.fn
@@ -592,7 +592,7 @@ v2.1.1 (2014-08-29)
 
 - removeEventSource not working with array ([2203])
 - mouseout not triggered after mouseover+updateEvent ([829])
-- agenda event's render with no <a> href, not clickable ([2263])
+- agenda calendarEvent's render with no <a> href, not clickable ([2263])
 
 [2203]: https://code.google.com/p/fullcalendar/issues/detail?id=2203
 [829]: https://code.google.com/p/fullcalendar/issues/detail?id=829
@@ -603,10 +603,10 @@ v2.1.0 (2014-08-25)
 -------------------
 
 Large code refactor with better OOP, better code reuse, and more comments.
-**No more reliance on jQuery UI** for event dragging, resizing, or anything else.
+**No more reliance on jQuery UI** for calendarEvent dragging, resizing, or anything else.
 
 Significant changes to HTML/CSS skeleton:
-- Leverages tables for liquid rendering of days and events. No costly manual repositioning ([809])
+- Leverages tables for liquid rendering of days and calendarEvents. No costly manual repositioning ([809])
 - **Backwards-incompatibilities**:
 	- **Many classNames have changed. Custom CSS will likely need to be adjusted.**
 	- IE7 definitely not supported anymore
@@ -614,54 +614,54 @@ Significant changes to HTML/CSS skeleton:
 	- Events are styled to be one line by default ([1992]). Can be undone through custom CSS,
 	  but not recommended (might get gaps [like this][111] in certain situations).
 
-A "more..." link when there are too many events on a day ([304]). Works with month and basic views
+A "more..." link when there are too many calendarEvents on a day ([304]). Works with month and basic views
 as well as the all-day section of the agenda views. New options:
 - `eventLimit`. a number or `true`
-- `eventLimitClick`. the `"popover`" value will reveal all events in a raised panel (the default)
+- `eventLimitClick`. the `"popover`" value will reveal all calendarEvents in a raised panel (the default)
 - `eventLimitText`
 - `dayPopoverFormat`
 
 Changes related to height and scrollbars:
 - `aspectRatio`/`height`/`contentHeight` values will be honored *no matter what*
-	- If too many events causing too much vertical space, scrollbars will be used ([728]).
+	- If too many calendarEvents causing too much vertical space, scrollbars will be used ([728]).
 	  This is default behavior for month view (**backwards-incompatibility**)
 	- If too few slots in agenda view, view will stretch to be the correct height ([2196])
 - `'auto'` value for `height`/`contentHeight` options. If content is too tall, the view will
   vertically stretch to accomodate and no scrollbars will be used ([521]).
 - Tall weeks in month view will borrow height from other weeks ([243])
-- Automatically scroll the view then dragging/resizing an event ([1025], [2078])
+- Automatically scroll the view then dragging/resizing an calendarEvent ([1025], [2078])
 - New `fixedWeekCount` option to determines the number of weeks in month view
 	- Supersedes `weekMode` (**deprecated**). Instead, use a combination of `fixedWeekCount` and
 	  one of the height options, possibly with an `'auto'` value
 
 Much nicer, glitch-free rendering of calendar *for printers* ([35]). Things you might not expect:
 - Buttons will become hidden
-- Agenda views display a flat list of events where the time slots would be
+- Agenda views display a flat list of calendarEvents where the time slots would be
 
 Other issues resolved along the way:
-- Space on right side of agenda events configurable through CSS ([204])
+- Space on right side of agenda calendarEvents configurable through CSS ([204])
 - Problem with window resize ([259])
 - Events sorting stays consistent across weeks ([510])
 - Agenda's columns misaligned on wide screens ([511])
 - Run `selectHelper` through `eventRender` callbacks ([629])
 - Keyboard access, tabbing ([637])
-- Run resizing events through `eventRender` ([714])
-- Resize an event to a different day in agenda views ([736])
+- Run resizing calendarEvents through `eventRender` ([714])
+- Resize an calendarEvent to a different day in agenda views ([736])
 - Allow selection across days in agenda views ([778])
-- Mouseenter delegated event not working on event elements ([936])
-- Agenda event dragging, snapping to different columns is erratic ([1101])
+- Mouseenter delegated calendarEvent not working on calendarEvent elements ([936])
+- Agenda calendarEvent dragging, snapping to different columns is erratic ([1101])
 - Android browser cuts off Day view at 8 PM with no scroll bar ([1203])
 - Don't fire `eventMouseover`/`eventMouseout` while dragging/resizing ([1297])
 - Customize the resize handle text ("=") ([1326])
-- If agenda event is too short, don't overwrite `.fc-event-time` ([1700])
-- Zooming calendar causes events to misalign ([1996])
-- Event destroy callback on event removal ([2017])
+- If agenda calendarEvent is too short, don't overwrite `.fc-calendarEvent-time` ([1700])
+- Zooming calendar causes calendarEvents to misalign ([1996])
+- Event destroy callback on calendarEvent removal ([2017])
 - Agenda views, when RTL, should have axis on right ([2132])
 - Make header buttons more accessibile ([2151])
 - daySelectionMousedown should interpret OSX ctrl+click as a right mouse click ([2169])
-- Best way to display time text on multi-day events *with times* ([2172])
+- Best way to display time text on multi-day calendarEvents *with times* ([2172])
 - Eliminate table use for header layout ([2186])
-- Event delegation used for event-related callbacks (like `eventClick`). Speedier.
+- Event delegation used for calendarEvent-related callbacks (like `eventClick`). Speedier.
 
 [35]: https://code.google.com/p/fullcalendar/issues/detail?id=35
 [204]: https://code.google.com/p/fullcalendar/issues/detail?id=204
@@ -714,7 +714,7 @@ v2.0.2 (2014-06-24)
 
 - bug with persisting addEventSource calls ([2191])
 - bug with persisting removeEvents calls with an array source ([2187])
-- bug with removeEvents method when called with 0 removes all events ([2082])
+- bug with removeEvents method when called with 0 removes all calendarEvents ([2082])
 
 [2191]: https://code.google.com/p/fullcalendar/issues/detail?id=2191
 [2187]: https://code.google.com/p/fullcalendar/issues/detail?id=2187
@@ -726,8 +726,8 @@ v2.0.1 (2014-06-15)
 
 - `delta` parameters reintroduced in `eventDrop` and `eventResize` handlers ([2156])
   - **Note**: this changes the argument order for `revertFunc`
-- wrongfully triggering a windowResize when resizing an agenda view event ([1116])
-- `this` values in event drag-n-drop/resize handlers consistently the DOM node ([1177])
+- wrongfully triggering a windowResize when resizing an agenda view calendarEvent ([1116])
+- `this` values in calendarEvent drag-n-drop/resize handlers consistently the DOM node ([1177])
 - `displayEventEnd` - v2 workaround to force display of an end time ([2090])
 - don't modify passed-in eventSource items ([954])
 - destroy method now removes fc-ltr class ([2033])
@@ -774,8 +774,8 @@ JS/CSS for the project and will serve as the new [Bower] endpoint.
 v1.6.4 (2013-09-01)
 -------------------
 
-- better algorithm for positioning timed agenda events ([1115])
-- `slotEventOverlap` option to tweak timed agenda event overlapping ([218])
+- better algorithm for positioning timed agenda calendarEvents ([1115])
+- `slotEventOverlap` option to tweak timed agenda calendarEvent overlapping ([218])
 - selection bug when slot height is customized ([1035])
 - supply view argument in `loading` callback ([1018])
 - fixed week number not displaying in agenda views ([1951])
@@ -803,12 +803,12 @@ v1.6.3 (2013-08-10)
 - `handleWindowResize` option ([PR 54])
 - `eventStartEditable`/`startEditable` options ([PR 49])
 - `eventDurationEditable`/`durationEditable` options ([PR 49])
-- specify function for `$.ajax` `jsonData` parameter for JSON event sources ([PR 59])
-- fixed bug with agenda event dropping in wrong column ([PR 55])
-- easier event element z-index customization ([PR 58])
+- specify function for `$.ajax` `jsonData` parameter for JSON calendarEvent sources ([PR 59])
+- fixed bug with agenda calendarEvent dropping in wrong column ([PR 55])
+- easier calendarEvent element z-index customization ([PR 58])
 - classNames on past/future days ([PR 88])
-- allow `null`/`undefined` event titles ([PR 84])
-- small optimize for agenda event rendering ([PR 56])
+- allow `null`/`undefined` calendarEvent titles ([PR 84])
+- small optimize for agenda calendarEvent rendering ([PR 56])
 - deprecated:
 	- `viewDisplay`
 	- `disableDragging`
@@ -831,8 +831,8 @@ v1.6.2 (2013-07-18)
 -------------------
 
 - `hiddenDays` option ([686])
-- bugfix: when `eventRender` returns `false`, incorrect stacking of events ([762])
-- bugfix: couldn't change `event.backgroundImage` when calling `updateEvent` (thx @stephenharris)
+- bugfix: when `eventRender` returns `false`, incorrect stacking of calendarEvents ([762])
+- bugfix: couldn't change `calendarEvent.backgroundImage` when calling `updateEvent` (thx @stephenharris)
 
 [686]: https://code.google.com/p/fullcalendar/issues/detail?id=686
 [762]: https://code.google.com/p/fullcalendar/issues/detail?id=762
@@ -841,9 +841,9 @@ v1.6.2 (2013-07-18)
 v1.6.1 (2013-04-14)
 -------------------
 
-- fixed event inner content overflow bug ([1783])
+- fixed calendarEvent inner content overflow bug ([1783])
 - fixed table header className bug [1772]
-- removed text-shadow on events (better for general use, thx @tkrotoff)
+- removed text-shadow on calendarEvents (better for general use, thx @tkrotoff)
 
 [1783]: https://code.google.com/p/fullcalendar/issues/detail?id=1783
 [1772]: https://code.google.com/p/fullcalendar/issues/detail?id=1772
@@ -853,14 +853,14 @@ v1.6.0 (2013-03-18)
 -------------------
 
 - visual facelift, with bootstrap-inspired buttons and colors
-- simplified HTML/CSS for events and buttons
+- simplified HTML/CSS for calendarEvents and buttons
 - `dayRender`, for modifying a day cell ([191], thx @althaus)
 - week numbers on side of calendar ([295])
 	- `weekNumber`
 	- `weekNumberCalculation`
 	- `weekNumberTitle`
 	- `W` formatting variable
-- finer snapping granularity for agenda view events ([495], thx @ms-doodle-com)
+- finer snapping granularity for agenda view calendarEvents ([495], thx @ms-doodle-com)
 - `eventAfterAllRender` ([753], thx @pdrakeweb)
 - `eventDataTransform` (thx @joeyspo)
 - `jsonData-date` attributes on cells (thx @Jae)
@@ -925,7 +925,7 @@ v1.5 (2011-03-19)
 - fullcalendar now inherits styles from jquery-ui themes differently.
   styles for buttons are distinct from styles for calendar cells.
   (solves [299])
-- can now color events through FullCalendar options and Event-Object properties ([117])
+- can now color calendarEvents through FullCalendar options and Event-Object properties ([117])
   THIS IS NOW THE PREFERRED METHOD OF COLORING EVENTS (as opposed to using className and CSS)
 	- FullCalendar options:
 		- eventColor (changes both background and border)
@@ -937,9 +937,9 @@ v1.5 (2011-03-19)
 		- backgroundColor
 		- borderColor
 		- textColor
-- can now specify an event source as an *object* with a `url` property (json feed) or
-  an `events` property (function or array) with additional properties that will
-  be applied to the entire event source:
+- can now specify an calendarEvent source as an *object* with a `url` property (json feed) or
+  an `calendarEvents` property (function or array) with additional properties that will
+  be applied to the entire calendarEvent source:
 	- color (changes both background and border)
 	- backgroudColor
 	- borderColor
@@ -960,7 +960,7 @@ v1.5 (2011-03-19)
 	  you can include any of the new Event-Source options in this object.
 	- the old `$.fullCalendar.gcalFeed` method still works
 - no more IE7 SSL popup ([504])
-- remove `cacheParam` - use json event source `cache` option instead
+- remove `cacheParam` - use json calendarEvent source `cache` option instead
 - latest jquery/jquery-ui
 
 [327]: https://code.google.com/p/fullcalendar/issues/detail?id=327
@@ -977,7 +977,7 @@ v1.4.11 (2011-02-22)
 --------------------
 
 - fixed rerenderEvents bug ([790])
-- fixed bug with faulty dragging of events from all-day slot in agenda views
+- fixed bug with faulty dragging of calendarEvents from all-day slot in agenda views
 - bundled with jquery 1.5 and jquery-ui 1.8.9
 
 [790]: https://code.google.com/p/fullcalendar/issues/detail?id=790
@@ -986,8 +986,8 @@ v1.4.11 (2011-02-22)
 v1.4.10 (2011-01-02)
 --------------------
 
-- fixed bug with resizing event to different week in 5-day month view ([740])
-- fixed bug with events not sticking after a removeEvents call ([757])
+- fixed bug with resizing calendarEvent to different week in 5-day month view ([740])
+- fixed bug with calendarEvents not sticking after a removeEvents call ([757])
 - fixed bug with underlying parseTime method, and other uses of parseInt ([688])
 
 [740]: https://code.google.com/p/fullcalendar/issues/detail?id=740
@@ -998,9 +998,9 @@ v1.4.10 (2011-01-02)
 v1.4.9 (2010-11-16)
 -------------------
 
-- new algorithm for vertically stacking events ([111])
-- resizing an event to a different week ([306])
-- bug: some events not rendered with consecutive calls to addEventSource ([679])
+- new algorithm for vertically stacking calendarEvents ([111])
+- resizing an calendarEvent to a different week ([306])
+- bug: some calendarEvents not rendered with consecutive calls to addEventSource ([679])
 
 [111]: https://code.google.com/p/fullcalendar/issues/detail?id=111
 [306]: https://code.google.com/p/fullcalendar/issues/detail?id=306
@@ -1012,8 +1012,8 @@ v1.4.8 (2010-10-16)
 
 - ignoreTimezone option (set to `false` to process UTC offsets in ISO8601 dates)
 - bugfixes
-	- event refetching not being called under certain conditions ([417], [554])
-	- event refetching being called multiple times under certain conditions ([586], [616])
+	- calendarEvent refetching not being called under certain conditions ([417], [554])
+	- calendarEvent refetching being called multiple times under certain conditions ([586], [616])
 	- selection cannot be triggered by right mouse button ([558])
 	- agenda view left axis sized incorrectly ([465])
 	- IE js error when calendar is too narrow ([517])
@@ -1037,16 +1037,16 @@ v1.4.7 (2010-07-05)
 
 - "dropping" external objects onto the calendar
 	- droppable (boolean, to turn on/off)
-	- dropAccept (to filter which events the calendar will accept)
+	- dropAccept (to filter which calendarEvents the calendar will accept)
 	- drop (trigger)
 - selectable options can now be specified with a View Option Hash
 - bugfixes
-	- dragged & reverted events having wrong time text ([406])
-	- bug rendering events that have an endtime with seconds, but no hours/minutes ([477])
+	- dragged & reverted calendarEvents having wrong time text ([406])
+	- bug rendering calendarEvents that have an endtime with seconds, but no hours/minutes ([477])
 	- gotoDate date overflow bug ([429])
 	- wrong date reported when clicking on edge of last column in agenda views [412]
-- support newlines in event titles
-- select/unselect callbacks now passes native js event
+- support newlines in calendarEvent titles
+- select/unselect callbacks now passes native js calendarEvent
 
 [406]: https://code.google.com/p/fullcalendar/issues/detail?id=406
 [477]: https://code.google.com/p/fullcalendar/issues/detail?id=477
@@ -1061,7 +1061,7 @@ v1.4.6 (2010-05-31)
 	- options: selectable, selectHelper, unselectAuto, unselectCancel
 	- callbacks: select, unselect
 	- methods: select, unselect
-- when dragging an event, the highlighting reflects the duration of the event
+- when dragging an calendarEvent, the highlighting reflects the duration of the calendarEvent
 - code compressing by Google Closure Compiler
 - bundled with jQuery 1.4.2 and jQuery UI 1.8.1
 
@@ -1069,7 +1069,7 @@ v1.4.6 (2010-05-31)
 v1.4.5 (2010-02-21)
 -------------------
 
-- lazyFetching option, which can force the calendar to fetch events on every view/date change
+- lazyFetching option, which can force the calendar to fetch calendarEvents on every view/date change
 - scroll state of agenda views are preserved when switching back to view
 - bugfixes
 	- calling methods on an uninitialized fullcalendar throws error
@@ -1077,7 +1077,7 @@ v1.4.5 (2010-02-21)
 	- error when rendering a hidden calendar (in jquery ui tabs for example) in IE ([340])
 	- interconnected bugs related to calendar resizing and scrollbars
 		- when switching views or clicking prev/next, calendar would "blink" ([333])
-		- liquid-width calendar's events shifted (depending on initial height of browser) ([341])
+		- liquid-width calendar's calendarEvents shifted (depending on initial height of browser) ([341])
 		- more robust underlying algorithm for calendar resizing
 
 [320]: https://code.google.com/p/fullcalendar/issues/detail?id=320
@@ -1089,7 +1089,7 @@ v1.4.5 (2010-02-21)
 v1.4.4 (2010-02-03)
 -------------------
 
-- optimized event rendering in all views (events render in 1/10 the time)
+- optimized calendarEvent rendering in all views (calendarEvents render in 1/10 the time)
 - gotoDate() does not force the calendar to unnecessarily rerender
 - render() method now correctly readjusts height
 
@@ -1098,15 +1098,15 @@ v1.4.3 (2009-12-22)
 -------------------
 
 - added destroy method
-- Google Calendar event pages respect currentTimezone
+- Google Calendar calendarEvent pages respect currentTimezone
 - caching now handled by jQuery's ajax
 - protection from setting aspectRatio to zero
 - bugfixes
-	- parseISO8601 and DST caused certain events to display day before
+	- parseISO8601 and DST caused certain calendarEvents to display day before
 	- button positioning problem in IE6
-	- ajax event source removed after recently being added, events still displayed
-	- event not displayed when end is an empty string
-	- dynamically setting calendar height when no events have been fetched, throws error
+	- ajax calendarEvent source removed after recently being added, calendarEvents still displayed
+	- calendarEvent not displayed when end is an empty string
+	- dynamically setting calendar height when no calendarEvents have been fetched, throws error
 
 
 v1.4.2 (2009-12-02)
@@ -1121,7 +1121,7 @@ v1.4.2 (2009-12-02)
 - bugfixes
 	- lightbox scripts that use iframes (like fancybox)
 	- day-of-week classNames were off when firstDay=1
-	- guaranteed space on right side of agenda events (even when stacked)
+	- guaranteed space on right side of agenda calendarEvents (even when stacked)
 	- accepts ISO8601 dates with a space (instead of 'T')
 
 
@@ -1154,7 +1154,7 @@ v1.4 (2009-10-19)
 	  (this will affect those who use revertFunc, adjust parameter list)
 - added 'prevYear' and 'nextYear' for buttons in header
 - minor change for theme users, ui-state-hover not applied to active/inactive buttons
-- added event-color-changing example in docs
+- added calendarEvent-color-changing example in docs
 - better defaults for right-to-left themed button icons
 
 
@@ -1189,7 +1189,7 @@ v1.3 (2009-09-21)
 - different 'views': month/basicWeek/basicDay
 - more flexible 'header' system for buttons
 - themable by jQuery UI themes
-- resizable events (require jQuery UI resizable plugin)
+- resizable calendarEvents (require jQuery UI resizable plugin)
 - rescoped & rewritten CSS, enhanced default look
 - cleaner css & rendering techniques for right-to-left
 - reworked options & API to support multiple views / be consistent with jQuery UI
@@ -1251,7 +1251,7 @@ v1.2.1 (2009-06-29)
 -------------------
 
 - bugfixes
-	- allows and corrects invalid end dates for events
+	- allows and corrects invalid end dates for calendarEvents
 	- doesn't throw an error in IE while rendering when display:none
 	- fixed 'loading' callback when used w/ multiple addEventSource calls
 	- gcal className can now be an array
@@ -1263,11 +1263,11 @@ v1.2 (2009-05-31)
 - expanded API
 	- 'className' CalEvent attribute
 	- 'source' CalEvent attribute
-	- dynamically get/add/remove/update events of current month
+	- dynamically get/add/remove/update calendarEvents of current month
 	- locale improvements: change month/day name text
 	- better date formatting ($.fullCalendar.formatDate)
-	- multiple 'event sources' allowed
-		- dynamically add/remove event sources
+	- multiple 'calendarEvent sources' allowed
+		- dynamically add/remove calendarEvent sources
 - options for prevYear and nextYear buttons
 - docs have been reworked (include addition of Google Calendar docs)
 - changed behavior of parseDate for number strings
@@ -1275,8 +1275,8 @@ v1.2 (2009-05-31)
 - bugfixes
 	- rightToLeft month start bug
 	- off-by-one errors with month formatting commands
-	- events from previous months sticking when clicking prev/next quickly
-- Google Calendar API changed to work w/ multiple event sources
+	- calendarEvents from previous months sticking when clicking prev/next quickly
+- Google Calendar API changed to work w/ multiple calendarEvent sources
 	- can also provide 'className' and 'draggable' options
 - date utilties moved from $ to $.fullCalendar
 - more documentation in source code
@@ -1298,7 +1298,7 @@ v1.1 (2009-05-10)
 	- cacheParam
 	- resize
 - Fixed rendering bugs
-	- Opera 9.25 (events placement & window resizing)
+	- Opera 9.25 (calendarEvents placement & window resizing)
 	- IE6 (window resizing)
 - Optimized window resizing for ALL browsers
 - Events on same day now sorted by start time (but first by timespan)

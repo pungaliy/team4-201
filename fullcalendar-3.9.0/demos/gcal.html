@@ -28,11 +28,11 @@
       googleCalendarApiKey: 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE',
 
       // US Holidays
-      events: 'en.usa#holiday@group.v.calendar.google.com',
+      calendarEvents: 'en.usa#holiday@group.v.calendar.google.com',
 
-      eventClick: function(event) {
-        // opens events in a popup window
-        window.open(event.url, 'gcalevent', 'width=700,height=600');
+      eventClick: function(calendarEvent) {
+        // opens calendarEvents in a popup window
+        window.open(calendarEvent.url, 'gcalevent', 'width=700,height=600');
         return false;
       },
 

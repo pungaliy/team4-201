@@ -326,7 +326,7 @@ temporary rendered events).
   width: 100%;
   /* hack to force re-sizing this inner element when scrollbars appear/disappear */ }
 
-/* Global Event Styles
+/* Global CalendarEvent Styles
 --------------------------------------------------------------------------------------------------*/
 .fc-event {
   position: relative;
@@ -399,7 +399,7 @@ temporary rendered events).
   margin-left: -20px;
   margin-top: -20px; }
 
-/* Event Selection (only for touch devices)
+/* CalendarEvent Selection (only for touch devices)
 --------------------------------------------------------------------------------------------------*/
 .fc-event.fc-selected {
   z-index: 9999 !important;
@@ -539,7 +539,7 @@ tr:first-child > td > .fc-day-grid-event {
   margin-right: -2px;
   /* to the day cell's edge */ }
 
-/* Event Limiting
+/* CalendarEvent Limiting
 --------------------------------------------------------------------------------------------------*/
 /* "more" link that represents hidden events */
 a.fc-more {
@@ -715,7 +715,7 @@ NOTE: use percentage font sizes or else old IE chokes
   border-top: 0;
   /* where they meet, let the header have the border */ }
 
-/* Global Event Styles
+/* Global CalendarEvent Styles
 --------------------------------------------------------------------------------------------------*/
 .ui-widget .fc-event {
   /* overpower jqui's styles on <a> tags. TODO: more DRY */
@@ -1038,7 +1038,7 @@ NOTE: use percentage font sizes or else old IE chokes
   right: 0;
   /* top and bottom will be in by JS */ }
 
-/* TimeGrid Event Containment
+/* TimeGrid CalendarEvent Containment
 --------------------------------------------------------------------------------------------------*/
 .fc-ltr .fc-time-grid .fc-event-container {
   /* space on the sides of events for LTR (default) */
@@ -1059,7 +1059,7 @@ NOTE: use percentage font sizes or else old IE chokes
   left: 0;
   right: 0; }
 
-/* Generic Vertical Event
+/* Generic Vertical CalendarEvent
 --------------------------------------------------------------------------------------------------*/
 .fc-v-event.fc-not-start {
   /* events that are continuing from another day */
@@ -1078,7 +1078,7 @@ NOTE: use percentage font sizes or else old IE chokes
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0; }
 
-/* TimeGrid Event Styling
+/* TimeGrid CalendarEvent Styling
 ----------------------------------------------------------------------------------------------------
 We use the full "fc-time-grid-event" class instead of using descendants because the event won't
 be a descendant of the grid when it is being dragged.

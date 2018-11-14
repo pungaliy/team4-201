@@ -1,8 +1,9 @@
 package sock.calendar;
 
 import com.google.gson.Gson;
+import sock.database.CalendarBase;
 import sock.database.DataBase;
-import sock.database.EventBase;
+import sock.database.Event;
 import sock.database.User;
 
 import javax.websocket.*;
@@ -83,12 +84,50 @@ public class CalendarSocket {
     class PrimitiveUser {
         private String userID;
         private String username;
-        private ArrayList<Event> events;
+        private ArrayList<CalendarEvent> events;
 
-        public PrimitiveUser(String userID, String username, ArrayList<Event> events) {
+        public PrimitiveUser(String userID, String username, ArrayList<CalendarEvent> calendarEvents) {
             this.userID = userID;
             this.username = username;
-            this.events = events;
+            this.events = calendarEvents;
+        }
+    }
+
+    class CalendarEvent {
+        private String userID;
+        private String eventSummary;
+        private GregorianCalendar startDateTime;
+        private GregorianCalendar endDateTime;
+
+        /**
+         * Constructor for a new CalendarEvent. All parameters must be not null.
+         *
+         * @param eventID The ID of this event.
+         * @param eventSummary Short title that describes the event.
+         * @param startDateTime A GregorianCalendar that represents the starting date and time.
+         * @param endDateTime A GregorianCalendar the represents the ending date and time.
+         */
+        public CalendarEvent(String eventID, String eventSummary, GregorianCalendar startDateTime, GregorianCalendar endDateTime) {
+            this.userID = eventID;
+            this.eventSummary = eventSummary;
+            this.startDateTime = startDateTime;
+            this.endDateTime = endDateTime;
+        }
+
+        public String getUserID() {
+            return userID;
+        }
+
+        public String getEventSummary() {
+            return eventSummary;
+        }
+
+        public GregorianCalendar getStartDateTime() {
+            return startDateTime;
+        }
+
+        public GregorianCalendar getEndDateTime() {
+            return endDateTime;
         }
     }
 
@@ -114,49 +153,62 @@ public class CalendarSocket {
 
                 //TODO: Make sure this block works.
                 ArrayList<PrimitiveUser> primitiveUsers = new ArrayList<>();
-//                ArrayList<User> users = new DataBase().retrieveUsers(calendarSession.getRoomID());
-//                for (User foo : users) {
-//                    String userID = foo.getUserID();
-//                    String name = foo.getFullName();
-//                    ArrayList<Event> userEvents = new EventBase().retrieveEvents(userID);
-//                    primitiveUsers.add(new PrimitiveUser(userID, name, userEvents));
-//                }
 
-                //TODO: Remove dummy data.
-                var std1 = new GregorianCalendar(2018, Calendar.NOVEMBER, 10, 12, 0);
-                std1.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
-                var etd1 = new GregorianCalendar(2018, Calendar.NOVEMBER, 10, 15, 0);
-                etd1.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
-                Event event1 = new Event("strawsnowrries@gmail.com", "Cool Event #1", std1, etd1);
+                CalendarBase calendarBase = new CalendarBase();
+                ArrayList<User> users = calendarBase.retrieveUsers("roomID");
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                for (User foo : users) {
+                    String userID = foo.getUserID();
+                    String name = foo.getFullName();
 
-                var std2 = new GregorianCalendar(2018, Calendar.NOVEMBER, 12, 9, 0);
-                std2.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
-                var etd2 = new GregorianCalendar(2018, Calendar.NOVEMBER, 12, 10, 30);
-                etd2.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
-                Event event2 = new Event("strawsnowrries@gmail.com", "Cool Event #2", std2, etd2);
+                    var retrievedEvents = new CalendarBase().retrieveEvents(userID);
+                    ArrayList<CalendarEvent> userCalendarEvents = new ArrayList<>();
+                    for (var bar : retrievedEvents) {
+                        userCalendarEvents.add(new CalendarEvent(bar.getUserID(), bar.getEventSummary(), gson.fromJson(bar.getStartDateTime(), GregorianCalendar.class), gson.fromJson(bar.getEndDateTime(), GregorianCalendar.class)));
+                    }
 
-                ArrayList<Event> eventArrayList1 = new ArrayList<>();
-                eventArrayList1.add(event1);
-                eventArrayList1.add(event2);
-                primitiveUsers.add(new PrimitiveUser("strawsnowrries@gmail.com", "Allan Zhang", eventArrayList1));
+                    primitiveUsers.add(new PrimitiveUser(userID, name, userCalendarEvents));
+                }
 
-                var std3 = new GregorianCalendar(2018, Calendar.NOVEMBER, 9, 11, 0);
-                std3.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
-                var etd3 = new GregorianCalendar(2018, Calendar.NOVEMBER, 9, 17, 0);
-                etd3.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
-                Event event3 = new Event("allanzha@usc.edu", "Cool Event #1", std3, etd3);
-
-                var std4 = new GregorianCalendar(2018, Calendar.NOVEMBER, 12, 9, 30);
-                std4.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
-                var etd4 = new GregorianCalendar(2018, Calendar.NOVEMBER, 12, 11, 30);
-                etd4.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
-                Event event4 = new Event("allanzha@usc.edu", "Cool Event #2", std4, etd4);
-
-                ArrayList<Event> eventArrayList2 = new ArrayList<>();
-                eventArrayList2.add(event3);
-                eventArrayList2.add(event4);
-                primitiveUsers.add(new PrimitiveUser("allanzha@usc.edu", "Ballin' Zhang", eventArrayList2));
-                //END DUMMY DATA...
+//                //TODO: Remove dummy data.
+//                var std1 = new GregorianCalendar(2018, Calendar.NOVEMBER, 10, 12, 0);
+//                std1.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+//                var etd1 = new GregorianCalendar(2018, Calendar.NOVEMBER, 10, 15, 0);
+//                etd1.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+//                CalendarEvent event1 = new CalendarEvent("strawsnowrries@gmail.com", "Cool CalendarEvent #1", std1, etd1);
+//
+//                var std2 = new GregorianCalendar(2018, Calendar.NOVEMBER, 12, 9, 0);
+//                std2.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+//                var etd2 = new GregorianCalendar(2018, Calendar.NOVEMBER, 12, 10, 30);
+//                etd2.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+//                CalendarEvent event2 = new CalendarEvent("strawsnowrries@gmail.com", "Cool CalendarEvent #2", std2, etd2);
+//
+//                ArrayList<CalendarEvent> eventArrayList1 = new ArrayList<>();
+//                eventArrayList1.add(event1);
+//                eventArrayList1.add(event2);
+//                primitiveUsers.add(new PrimitiveUser("strawsnowrries@gmail.com", "Allan Zhang", eventArrayList1));
+//
+//                var std3 = new GregorianCalendar(2018, Calendar.NOVEMBER, 9, 11, 0);
+//                std3.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+//                var etd3 = new GregorianCalendar(2018, Calendar.NOVEMBER, 9, 17, 0);
+//                etd3.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+//                CalendarEvent event3 = new CalendarEvent("allanzha@usc.edu", "Cool CalendarEvent #1", std3, etd3);
+//
+//                var std4 = new GregorianCalendar(2018, Calendar.NOVEMBER, 12, 9, 30);
+//                std4.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+//                var etd4 = new GregorianCalendar(2018, Calendar.NOVEMBER, 12, 11, 30);
+//                etd4.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+//                CalendarEvent event4 = new CalendarEvent("allanzha@usc.edu", "Cool CalendarEvent #2", std4, etd4);
+//
+//                ArrayList<CalendarEvent> eventArrayList2 = new ArrayList<>();
+//                eventArrayList2.add(event3);
+//                eventArrayList2.add(event4);
+//                primitiveUsers.add(new PrimitiveUser("allanzha@usc.edu", "Ballin' Zhang", eventArrayList2));
+//                //END DUMMY DATA...
 
                 String jsonMessage = gson.toJson(primitiveUsers);
 
@@ -172,10 +224,10 @@ public class CalendarSocket {
 
                 break;
             case ADD_EVENT:
-                Event event = gson.fromJson(calendarData.getJsonData(), Event.class);
+                CalendarEvent calendarEvent = gson.fromJson(calendarData.getJsonData(), CalendarEvent.class);
 
-                //TODO: Make sure this block works.
-                new EventBase().addEvent(event);
+                //TODO: Make sure this block works.calendarEvent
+//                new CalendarBase().addEvent(new Event(calendarEvent.getUserID(), calendarEvent.getEventSummary(), gson.toJson(calendarEvent.getStartDateTime()), gson.toJson(calendarEvent.getEndDateTime())));
 
                 for (var foo : calendarSessions) {
                     //determines if this message be sent to this user's session
@@ -191,7 +243,7 @@ public class CalendarSocket {
 
                     if (needsUpdating) {
                         try {
-                            foo.getSession().getBasicRemote().sendText(gson.toJson(new CalendarData(CalendarMessageType.UPDATE, foo.getUserID(), foo.getRoomID(), gson.toJson(event))));
+                            foo.getSession().getBasicRemote().sendText(gson.toJson(new CalendarData(CalendarMessageType.UPDATE, foo.getUserID(), foo.getRoomID(), gson.toJson(calendarEvent))));
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -217,4 +269,44 @@ public class CalendarSocket {
         throwable.printStackTrace();
     }
 
+    public static void main(String [] args) {
+        CalendarBase cb = new CalendarBase();
+//        for(int i = 0; i < 20; i++) {
+//            int day = 11 + (int) Math.floor(Math.random() * 7);
+//            int hour = (int) Math.floor(Math.random() * 18);
+//
+//
+//            var std = new GregorianCalendar(2018, Calendar.NOVEMBER, day, hour, 0);
+//            std.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+//            var etd = new GregorianCalendar(2018, Calendar.NOVEMBER, day, hour + (int)Math.floor(Math.random() * 6), 0);
+//            etd.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+//
+//            Event tmp = null;
+//            if (i % 2 == 0) {
+//                tmp = new Event("CP@usc", "summary" + i, gson.toJson(std), gson.toJson(etd));
+//            } else {
+//                tmp = new Event("strawsnowrries@gmail.com", "summary" + i, gson.toJson(std), gson.toJson(etd));
+//            }
+//
+//            cb.addEvent(tmp);
+//        }
+//
+//
+//        User user = new User("the CP", "CP@usc", "roomID", "imgurl");
+//        User user1 = new User("Allan Zhang", "strawsnowrries@gmail.com", "roomID", "imgurl");
+//        User user2 = new User("ben Vote", "ben@usc", "roomID", "imgurl");
+//        User user3 = new User("Micah Steinberg", "micah@usc", "roomID2", "imgurl");
+//        User user4 = new User("Katrina Chandra", "katrina@", "roomID2", "imgurl");
+//        cb.addUser(user);
+//        cb.addUser(user1);
+//        cb.addUser(user2);
+//        cb.addUser(user3);
+//        cb.addUser(user4);
+
+        System.out.println("Hello World");
+        ArrayList<User> users = cb.retrieveUsers("roomID");
+        for (User foo : users) {
+            System.out.println(foo.getFullName());
+        }
+    }
 }

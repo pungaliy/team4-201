@@ -16,7 +16,7 @@
 .fc {
   max-width: 100% !important; }
 
-/* Global Event Restyling
+/* Global CalendarEvent Restyling
 --------------------------------------------------------------------------------------------------*/
 .fc-event {
   background: #fff !important;
@@ -117,7 +117,7 @@
 .fc-time-grid .fc-event-container {
   margin: 0 !important; }
 
-/* TimeGrid *Event* Restyling
+/* TimeGrid *CalendarEvent* Restyling
 --------------------------------------------------------------------------------------------------*/
 /* naturally position events, vertically stacking them */
 .fc-time-grid .fc-event {
