@@ -1,4 +1,4 @@
-//var socket;
+
 
 $(document).ready(function(){
 	$("#addGroceryOptions").hide();
@@ -17,8 +17,11 @@ $(document).ready(function(){
 function loadRoommatesForAddTransaction(){
 	let transactionOpt = document.getElementById("addTransactionOptions");
 	document.getElementById("roommateList").remove();
+	document.getElementById("purchaserList").remove();
 	let newList = document.createElement("span");
 	newList.id = "roommateList";
+	let newPurchaserList= document.createElement("span");
+	newPurchaserList.id = "purchaserList";
 
 	//Get roomates from servlet here
 		let roommateList = [];
@@ -26,6 +29,10 @@ function loadRoommatesForAddTransaction(){
 		roommateList.push({name:"name2", userID:"id2"});
 		roommateList.push({name:"name3", userID:"id3"});
 
+	//Splitters
+	let listnamesplit = document.createElement("textNode");
+	listnamesplit.innerHTML = "Splitters: ";
+	transactionOpt.appendChild(listnamesplit);
 	roommateList.forEach(function(roommate){
 		let name = document.createElement("textNode");
 		name.innerHTML = roommate["name"];
@@ -37,39 +44,29 @@ function loadRoommatesForAddTransaction(){
 	});
 	transactionOpt.appendChild(newList);
 
-}
+	//Purchaser
+	let listnamebuy = document.createElement("textNode");
+	listnamebuy.innerHTML = "Purchaser: ";
+	transactionOpt.appendChild(listnamebuy);
+	roommateList.forEach(function(roommate){
+		let name = document.createElement("textNode");
+		name.innerHTML = roommate["name"];
+		let radio = document.createElement("input");
+		radio.type = "radio";
+		radio.value = roommate["userID"];
+		newPurchaserList.appendChild(name);
+		newPurchaserList.appendChild(radio);
+	});
+	transactionOpt.appendChild(newPurchaserList);
 
-/*function connectToServer(){
-	socket = new WebSocket("ws://localhost:8080/TabsSocket");
-
-	socket.onopen = function(event) {
-		//document.getElementById("mychat").innerHTML += "Connected! <br>";
-		alert("Opened socket connection");
-	}
-	socket.onmessage = function(event) {
-		//document.getElementById("mychat").innerHTML += event.data + "<br>";
-		alert("On message");
-	}
-	socket.onclose = function(event) {
-		//document.getElementById("mychat").innerHTML += "Disconnected! <br>";
-		alert("On close");
-	}
 
 }
 
-function sendMessage(){
-	//It will send to the serverendpt
-	socket.send("A message");
-
-	//Make sure the form never submits!
-	return false;
-}*/
 
 function loadAllList(){
 	loadGroceryList();
 	loadTransactionList();
 	loadTabsTotalList();
-	//connectToServer();
 	loadRoommatesForAddTransaction();
 }
 function loadGroceryList(){
@@ -244,14 +241,16 @@ function addTransactionClick(){
 	let quantity = document.addTransactionOptions.newTransactionQuantity.value;
 	let pricePerItem = document.addTransactionOptions.newTransactionPricePerItem.value;
 	let splitters = [];
+	let purchaser;
 	let allInput = document.getElementById("addTransactionOptions").getElementsByTagName("input");
 	for(let i = 0; i < allInput.length; i++){
 		if(allInput[i].type == "checkbox" && allInput[i].checked == true){
 			splitters.push(allInput[i].value);
+		} else if (allInput[i].type == "radio" && allInput[i].checked == true){
+			purchaser = allInput[i].value;
 		}
 	}
-	console.log(itemname, quantity, pricePerItem);
-	addTransactionPass("5566", itemname, quantity, pricePerItem, "id3", splitters);
+	addTransactionPass("5566", itemname, quantity, pricePerItem, purchaser, splitters);
 	return false;
 
 }

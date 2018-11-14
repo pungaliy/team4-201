@@ -96,18 +96,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="15" />
-          <entry key="html" value="3527" />
+          <entry key="html" value="3567" />
           <entry key="java" value="7666" />
-          <entry key="js" value="6039" />
-          <entry key="txt" value="1355" />
+          <entry key="js" value="6524" />
+          <entry key="txt" value="1433" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="3527" />
+          <entry key="HTML" value="3567" />
           <entry key="JAVA" value="7666" />
-          <entry key="JavaScript" value="6039" />
-          <entry key="PLAIN_TEXT" value="1370" />
+          <entry key="JavaScript" value="6524" />
+          <entry key="PLAIN_TEXT" value="1448" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
@@ -129,7 +129,7 @@
         <entry file="file://$PROJECT_DIR$/web/html/tabs.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="181">
-              <caret line="167" column="42" selection-start-line="167" selection-start-column="42" selection-end-line="167" selection-end-column="42" />
+              <caret line="167" column="47" selection-start-line="167" selection-start-column="47" selection-end-line="167" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -137,8 +137,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/unprocessed_js/tabsJS.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="160">
+              <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
               <folding>
                 <element signature="n#!!block;n#loadGroceryList#0" />
                 <element signature="n#!!block;n#addGroceryPass#0" />
@@ -153,7 +153,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TabSocket/TabsSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="737">
+            <state relative-caret-position="656">
               <caret line="28" column="50" lean-forward="true" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -281,8 +281,8 @@
         <option value="$PROJECT_DIR$/src/TabSocket/TabsThread.java" />
         <option value="$PROJECT_DIR$/src/TabSocket/TabsSocket.java" />
         <option value="$PROJECT_DIR$/web/unprocessed_js/tabsSocket.js" />
-        <option value="$PROJECT_DIR$/web/unprocessed_js/tabsJS.js" />
         <option value="$PROJECT_DIR$/web/html/tabs.html" />
+        <option value="$PROJECT_DIR$/web/unprocessed_js/tabsJS.js" />
       </list>
     </option>
   </component>
@@ -399,7 +399,7 @@
     <property name="SearchEverywhereHistoryKey" value="roomID&#9;PSI&#9;JAVA://TabsStuff.Transaction#roomID" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542181130002" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542181800698" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/TextInputEffects/TextInputEffects" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -741,11 +741,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542179035479</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Can add transaction with custom input. But cant set who is the purchaser yet">
+      <created>1542181157086</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1542181157086</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106702000" />
+    <option name="totallyTimeSpent" value="107361000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -760,17 +767,17 @@
     <frame x="0" y="23" width="1440" height="812" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.67150635" visible="true" weight="0.25751072" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6691542" visible="true" weight="0.25751072" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.32849365" side_tool="true" visible="true" weight="0.25751072" />
+      <window_info id="Favorites" order="5" sideWeight="0.33084577" side_tool="true" visible="true" weight="0.25751072" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" sideWeight="0.32911393" side_tool="true" weight="0.27543995" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32916668" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23472223" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44166666" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -859,7 +866,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First attempt to talk to front end 2" />
     <MESSAGE value="First attempt to talk to front end 3" />
     <MESSAGE value="merge from newdb" />
     <MESSAGE value="jQuery in the front cant get my JSON from the back" />
@@ -884,7 +890,8 @@
     <MESSAGE value="Hard code tabs total ok!!!!!" />
     <MESSAGE value="Can add grocery items dynamically now~~~" />
     <MESSAGE value="Very basic add transaction toggle display" />
-    <option name="LAST_COMMIT_MESSAGE" value="Very basic add transaction toggle display" />
+    <MESSAGE value="Can add transaction with custom input. But cant set who is the purchaser yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Can add transaction with custom input. But cant set who is the purchaser yet" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/_calendar_test.js">
@@ -1166,7 +1173,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TabSocket/TabsSocket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="737">
+        <state relative-caret-position="656">
           <caret line="28" column="50" lean-forward="true" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1180,14 +1187,14 @@
     <entry file="file://$PROJECT_DIR$/web/html/tabs.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
-          <caret line="167" column="42" selection-start-line="167" selection-start-column="42" selection-end-line="167" selection-end-column="42" />
+          <caret line="167" column="47" selection-start-line="167" selection-start-column="47" selection-end-line="167" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/tabsJS.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="160">
+          <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
           <folding>
             <element signature="n#!!block;n#loadGroceryList#0" />
             <element signature="n#!!block;n#addGroceryPass#0" />
