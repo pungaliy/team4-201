@@ -1,6 +1,9 @@
-
+let roomID;
+let currentUserID;
 
 $(document).ready(function(){
+	loadUserObjAndRoom();
+	loadAllList();
 	$("#addGroceryOptions").hide();
 	$("#addTransactionOptions").hide();
 
@@ -13,6 +16,18 @@ $(document).ready(function(){
 
 
 });
+
+function loadUserObjAndRoom(){
+	let xhttp = new XMLHttpRequest();
+	xhttp.open("POST", "/get-user", true);
+	xhttp.onreadystatechange = function () {
+		let userObj = JSON.parse(this.responseText);
+		currentUserID = userObj.userID;
+		roomID = userObj.roomID;
+	};
+	xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+	xhttp.send();
+}
 
 function loadRoommatesForAddTransaction(){
 	let transactionOpt = document.getElementById("addTransactionOptions");
@@ -117,7 +132,7 @@ function loadGroceryList(){
 
 function addGroceryClick(){
 	let name = document.addGroceryOptions.itemNameInput.value;
-	addGroceryPass("5566", name, "Y");
+	addGroceryPass(roomID, name, "Y");
 	return false;
 }
 

@@ -3,7 +3,7 @@ package LoginRegistration;
 import db.DataBase;
 import db.Room;
 import db.User;
-import org.omg.CORBA.Request;
+//import org.omg.CORBA.Request;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
