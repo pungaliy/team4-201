@@ -15,6 +15,13 @@ public class ChoreBase extends DataBase {
             tmp.add(chore);
         }
         return tmp;
+
+//        MongoCollection<User> collection = database.getCollection("chores", Chore.class);
+//        ArrayList<Chores> tmp = new ArrayList<>();
+//        for(Chore chore : collection.find(eq("roomID", roomID))) {
+//            tmp.add(chore);
+//        }
+//        return tmp;
     }
 
     public void updateChore(Chore chore) {

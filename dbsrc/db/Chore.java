@@ -1,7 +1,7 @@
 package db;
 
 import java.util.ArrayList;
-import java.util.Vector;
+import java.util.ArrayList;
 
 
 public class Chore {
@@ -11,7 +11,7 @@ public class Chore {
     private String roomID;
     private String choreID;
     private User currentUser;
-    private Vector<User> previousUsers;
+    private ArrayList<User> previousUsers;
     private long rotationPeriod;
     private boolean shame;
 
@@ -26,7 +26,7 @@ public class Chore {
         this.choreID = choreID;
         this.completed = false;
         this.shame = false;
-        this.previousUsers = new Vector<>();
+        this.previousUsers = new ArrayList<>();
     }
 
     public String getChoreDescription() {
@@ -79,7 +79,7 @@ public class Chore {
         if(previousUsers.size() >= userCount-2) {
             if(this.shame && previousUsers.size() >= 1) {
                 User shamedUser = this.previousUsers.get(this.previousUsers.size()-1);
-                this.previousUsers = new Vector<>();
+                this.previousUsers = new ArrayList<>();
                 this.previousUsers.add(shamedUser);
             }
             else {
@@ -91,9 +91,9 @@ public class Chore {
         this.currentUser = user;
     }
 
-    public Vector<User> getPreviousUsers() { return previousUsers; }
+    public ArrayList<User> getPreviousUsers() { return previousUsers; }
 
-    public void setPreviousUsers(Vector<User> previousUsers) { this.previousUsers = previousUsers; }
+    public void setPreviousUsers(ArrayList<User> previousUsers) { this.previousUsers = previousUsers; }
 
     public boolean isPreviousUser(User user) {
         for(User u : this.previousUsers) {

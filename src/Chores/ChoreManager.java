@@ -1,16 +1,15 @@
 package Chores;
 
+import com.google.gson.Gson;
 import db.Chore;
 import db.ChoreBase;
 import db.DataBase;
 import db.User;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class ChoreManager {
+    private static Gson gson = new Gson();
     private ChoreBase cb = new ChoreBase();
     private User user;
 
@@ -28,12 +27,14 @@ public class ChoreManager {
 
     public ArrayList<Chore> getChores() {
         ArrayList<Chore> chores = this.cb.retrieveChores(user.getRoomID());
-        update(chores);
+//        if(chores.size() >= 1) update(chores);
         return chores;
     }
 
     public boolean update() {
-        return update(this.cb.retrieveChores(user.getRoomID()));
+        ArrayList<Chore> chores = this.cb.retrieveChores(user.getRoomID());
+        if(chores.size() >= 1) return update(chores);
+        return false;
     }
 
     public boolean update(ArrayList<Chore> chores) {
@@ -45,6 +46,7 @@ public class ChoreManager {
             while(chore.isExpired()) {
                 reassignChore(chore, chores, users);
                 reassigned = true;
+                System.out.println("reassigned");
             }
             if(reassigned) {
                 this.cb.updateChore(chore);
@@ -87,7 +89,7 @@ public class ChoreManager {
         chore.replaceCurrentUser(toAssign, users.size());
         */
         ArrayList<User> validUsers = chore.getValidUsers(users);
-        User toAssign = validUsers.get((int)(Math.random()*users.size()));
+        User toAssign = validUsers.get(0);
         int minChores = Integer.MAX_VALUE;
         for(User user : validUsers) {
             int numChores = getUserChores(user, chores).size();
@@ -111,7 +113,7 @@ public class ChoreManager {
         return userChores;
     }
 
-    public ArrayList<Chore> getWallOfShame(ArrayList<Chore> chores) {
+    public ArrayList<Chore> getShamedChores(ArrayList<Chore> chores) {
         ArrayList<Chore> wos = new ArrayList<>();
         for(Chore chore : chores) {
             if(chore.isShame()) {
@@ -119,6 +121,13 @@ public class ChoreManager {
             }
         }
         return wos;
+    }
+
+    public String getJSONPackage() {
+        ArrayList<Chore> allchores = getChores();
+        ArrayList<Chore> mychores = getMyChores(allchores);
+        ArrayList<Chore> shamedchores = getShamedChores(allchores);
+        return gson.toJson(new ChorePackage(mychores, allchores, shamedchores));
     }
 
     public void print() {
@@ -131,20 +140,20 @@ public class ChoreManager {
 
     public static void main(String[] args) {
         DataBase db = new DataBase();
-//        User micah = new User("Micah Steinberg", "mbsteinb@usc.edu", "coolroom");
+//        User micah = new User("Micah Steinberg", "mbsteinb@usc.edu", "coolroom", "sycamore.jpeg");
 //        db.addUser(micah);
-//        User john = new User("John", "jbron@usc.edu", "coolroom");
+//        User john = new User("John", "jbron@usc.edu", "coolroom", "bird.png");
 //        db.addUser(john);
 
         ArrayList<User> users = db.retrieveUsers("coolroom");
         System.out.println(users.size());
         System.out.println(users);
 
-//        ChoreManager micahCm = new ChoreManager(micah);
-//        ChoreManager johnCm = new ChoreManager(john);
-//        micahCm.addChore("Take out the trash!", 10000);
-//        micahCm.addChore("Scrub the floor...", 15000);
-//        micahCm.print();
-//        johnCm.print();
+        ChoreManager cm0 = new ChoreManager(users.get(0));
+        ChoreManager cm1 = new ChoreManager(users.get(1));
+//        cm0.addChore("Take out the trash!", 10000);
+//        cm0.addChore("Scrub the floor...", 15000);
+        cm0.print();
+        cm1.print();
     }
 }

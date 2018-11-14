@@ -1,3 +1,12 @@
+var socket;
+function connectToChoreSocket() {
+    socket = new WebSocket("ws://localhost:8080/sockets/chore");
+    socket.onmessage = function(event) {
+        var p = JSON.parse(event.data);
+        console.log(p);
+    }
+}
+
 function displayMyChores() {
     var list = document.getElementById("my_chores");
     list.innerHTML = "";
