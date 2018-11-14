@@ -2,16 +2,34 @@
 
 $(document).ready(function(){
 	$("#addGroceryOptions").hide();
+	$("#addTransactionOptions").hide();
 
 	$("#addGroceryButton").click(function(){
 		$("#addGroceryOptions").toggle();
 	});
 	$("#addTransactionButton").click(function(){
-		addTransactionClick();
+		$("#addTransactionOptions").toggle();
 	});
 
 
 });
+
+function loadRoommatesForAddTransaction(){
+	let transactionOption = document.getElementById("addTransactionOptions");
+	//Get roomates from servlet here
+		let roommateList = [];
+		roommateList.push({name:"name2", userID:"id2"});
+		roommateList.push({name:"name3", userID:"id3"});
+	roommateList.forEach(function(roommate){
+		let name = document.createElement("textNode");
+		name.innerHTML = roommate["name"];
+		let checkbox = document.createElement("input");
+		checkbox.type = "checkbox";
+		checkbox.id = roommate["userID"];
+		transactionOption.appendChild(name);
+		transactionOption.appendChild(checkbox);
+	});
+}
 
 /*function connectToServer(){
 	socket = new WebSocket("ws://localhost:8080/TabsSocket");
@@ -44,6 +62,7 @@ function loadAllList(){
 	loadTransactionList();
 	loadTabsTotalList();
 	//connectToServer();
+	loadRoommatesForAddTransaction();
 }
 function loadGroceryList(){
 	let xhttp = new XMLHttpRequest();

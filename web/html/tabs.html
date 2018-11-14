@@ -163,6 +163,11 @@
                             mdl-js-ripple-effect mdl-button--accent">
                         New Transaction
                     </button>
+                    <form name="addTransactionOptions" id="addTransactionOptions" onsubmit="return false;">
+                        <input type="number" id="newTransactionPricePerItem"/>
+                        <input type="number" id="newTransactionQuantity"/>
+                        <input type="submit" id="newSplitSubmit" value="Split!"/>
+                    </form>
                 </div>
 
                 <!--amount-->
