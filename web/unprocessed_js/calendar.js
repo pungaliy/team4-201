@@ -234,21 +234,24 @@ function init() {
  */
 function addEvent() {
     //TODO: Handle actually getting a date somehow when the add event form is implemented. Replace dummy Java Event object.
+    let day = 11 + Math.floor(Math.random() * 7);
+    let hour = Math.floor(Math.random() * 18);
+
     var event = {
         userID: userID,
         eventSummary: "Javascript Sent Event",
         startDateTime: {
             year: 2018,
             month: 10,
-            dayOfMonth: 6,
-            hourOfDay: 16,
+            dayOfMonth: day,
+            hourOfDay: hour,
             minute: 0
         },
         endDateTime: {
             year: 2018,
             month: 10,
-            dayOfMonth: 6,
-            hourOfDay: 17,
+            dayOfMonth: day,
+            hourOfDay: hour + Math.floor(Math.random() * 6),
             minute: 0
         }
     };

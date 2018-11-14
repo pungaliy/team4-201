@@ -1,6 +1,8 @@
 package sock.calendar;
 
 import com.google.gson.Gson;
+import sock.database.DataBase;
+import sock.database.EventBase;
 import sock.database.User;
 
 import javax.websocket.*;
@@ -110,13 +112,14 @@ public class CalendarSocket {
                 CalendarSession calendarSession = new CalendarSession(calendarData.getUserID(), calendarData.getRoomID(), session);
                 calendarSessions.add(calendarSession);
 
-                //TODO: Integrate full below.
+                //TODO: Make sure this block works.
                 ArrayList<PrimitiveUser> primitiveUsers = new ArrayList<>();
-//                ArrayList<User> users = retrieveUsers(String roomid);
+//                ArrayList<User> users = new DataBase().retrieveUsers(calendarSession.getRoomID());
 //                for (User foo : users) {
-//                    String userID = foo.getEmail();
-//                    ArrayList<Event> userEvents = retrieveEvents(userID);
-//                    primitiveUsers.add(new PrimitiveUser(userID, userEvents));
+//                    String userID = foo.getUserID();
+//                    String name = foo.getFullName();
+//                    ArrayList<Event> userEvents = new EventBase().retrieveEvents(userID);
+//                    primitiveUsers.add(new PrimitiveUser(userID, name, userEvents));
 //                }
 
                 //TODO: Remove dummy data.
@@ -171,17 +174,17 @@ public class CalendarSocket {
             case ADD_EVENT:
                 Event event = gson.fromJson(calendarData.getJsonData(), Event.class);
 
-                //TODO: Update the database with the new event.
-                //addEvent(event);
+                //TODO: Make sure this block works.
+                new EventBase().addEvent(event);
 
-                //TODO: Get actual retrieve users function.
                 for (var foo : calendarSessions) {
                     //determines if this message be sent to this user's session
                     boolean needsUpdating = foo.getUserID().equals(calendarData.getUserID());
 
-//                    var bar = retrieveUsers(foo.getRoomID());
+                    //TODO: Make sure this block works.
+//                    ArrayList<User> bar = new DataBase().retrieveUsers(foo.getRoomID());
 //                    for (User baz : bar) {
-//                        if (baz.getEmail().equals(calendarData.getUserID())) {
+//                        if (baz.getUserID().equals(calendarData.getUserID())) {
 //                            needsUpdating = true;
 //                        }
 //                    }
