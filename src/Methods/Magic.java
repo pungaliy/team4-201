@@ -41,7 +41,6 @@ public class Magic {
 	public void addGrocery(String name, String roomID){
 		db.GroceryItem grocery = new db.GroceryItem(roomID, name);
 		db.addGroceryItem(grocery);
-		System.out.println("Add grocery: " + name + " for room " + roomID);
 	}
 
 	public void removeGrocery(String name, String roomID){

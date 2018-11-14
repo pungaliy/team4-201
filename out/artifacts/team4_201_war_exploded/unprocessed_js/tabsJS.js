@@ -32,6 +32,9 @@ function loadGroceryList(){
 			let checkboxInput = document.createElement("input");
 			checkboxInput.type = "checkbox";
 			checkboxInput.className = "mdl-checkbox__input";
+			checkboxInput.onclick = function(){
+				deleteGroceryClick();
+			};
 			checkboxLabel.appendChild(checkboxInput);
 			checkboxSpan.appendChild(checkboxLabel)
 
@@ -49,6 +52,11 @@ function loadGroceryList(){
 }
 
 function addGroceryClick(){
+	addGroceryPass();
+
+}
+
+function addGroceryPass(){
 	let param = {roomID:"5566", itemName:"fish", add:"Y"};
 	$.ajax({
 		type: "POST",
@@ -62,17 +70,26 @@ function addGroceryClick(){
 			console.log("Error sending grocery item",error);
 		}
 	});
-
 }
-function addGroceryPass(){
-	let xhttp = new XMLHttpRequest();
-	xhttp.open("POST", "/GroceryList", true);
-	xhttp.onreadystatechange = function () {
 
-	};
-	xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-	xhttp.send();
+function deleteGroceryClick(){
+	deleteGroceryPass();
+}
 
+function deleteGroceryPass(){
+	let param = {roomID:"5566", itemName:"Beef", add:"N"};
+	$.ajax({
+		type: "POST",
+		url: "/GroceryList",
+		data:JSON.stringify(param),
+		success: function(status){
+			loadGroceryList();
+			console.log("Grocery delete",status);
+		},
+		error:function(error){
+			console.log("Error removing grocery item",error);
+		}
+	});
 }
 
 function loadTransactionList(){

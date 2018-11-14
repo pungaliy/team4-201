@@ -27,17 +27,13 @@ public class GroceryList extends HttpServlet {
 		String reqJson = buffer.readLine();
 		JsonObject jsonObj = gson.fromJson(reqJson, JsonObject.class);
 		String add = jsonObj.get("add").getAsString();
-
-		System.out.println(jsonObj.get("add").getAsString()
-				+ " " + jsonObj.get("itemName").getAsString()
-				+ " " + jsonObj.get("roomID").getAsString());
-
 		if(add.equals("Y")){
 			magic.addGrocery(jsonObj.get("itemName").getAsString(), jsonObj.get("roomID").getAsString());
-			doGet(request, response);
 		} else {
+			magic.removeGrocery(jsonObj.get("itemName").getAsString(), jsonObj.get("roomID").getAsString());
 
 		}
+		doGet(request, response);
 	}
 
 	@Override
