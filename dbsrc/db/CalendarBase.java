@@ -26,4 +26,13 @@ public class CalendarBase extends DataBase {
         MongoCollection<Event> collection = database.getCollection("events", Event.class);
         collection.deleteOne(eq("userID", event.getUserID()));
     }
+
+    //test main
+    public static void main(String [] args) {
+        CalendarBase cb = new CalendarBase();
+        for(int i = 0; i < 100; i++) {
+            Event tmp = new Event(Integer.toString(i),"summary" + i, "start time", "end time");
+            cb.addEvent(tmp);
+        }
+    }
 }
