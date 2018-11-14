@@ -163,7 +163,7 @@ function addTransactionClick(){
 function addTransactionPass(){
 	//It is actually adding a TabsLedger
 	//The servlet will take the tabs ledger and create independent transactions
-	let param = {roomID:"5566", itemName:"Coffee", quantity:"4", pricePerItem:"10", purchaser:"user1", splitters:["user2", "user3", "user4"]};
+	let param = {roomID:"5566", itemName:"Coffee", quantity:"4", pricePerItem:"10", purchaser:"id1", splitters:["id2", "id3"]};
 	$.ajax({
 		type: "POST",
 		url: "/TransactionList",
