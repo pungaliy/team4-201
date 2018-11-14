@@ -29,9 +29,7 @@ public class Magic {
 	public db.User searchByUserIDandRoomID(String userID, String roomID){
 		ArrayList<db.User> allUsersInRoom = db.retrieveUsers(roomID);
 		for(db.User u : allUsersInRoom){
-			System.out.println(u.getUserID());
 			if(userID.equals(u.getUserID())){
-				System.out.println("FOUND");
 				return u;
 			}
 		}
@@ -92,8 +90,8 @@ public class Magic {
 		return amount;
 	}*/
 
-	public ArrayList<db.Transaction> getAllRelatedTransaction(db.User user){
-		return db.retrieveTransactionsByUserInvolved(user.getUserID());
+	public ArrayList<db.Transaction> getAllRelatedTransaction(String user){
+		return db.retrieveTransactionsByUserInvolved(user);
 	}
 
 

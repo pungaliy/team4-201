@@ -29,8 +29,8 @@ public class TransactionList extends HttpServlet{
 			//For testing
 				request.setAttribute("room", "5566");
 				request.setAttribute("userID", "id1");
-				db.User user1 = new db.User("user1", "id1","5566","url1");
-				db.User user2 = new db.User("user2", "id2","5566","url2");
+				//db.User user1 = new db.User("user1", "id1","5566","url1");
+				/*db.User user2 = new db.User("user2", "id2","5566","url2");
 				db.User user3 = new db.User("user3", "id3","5566","url3");
 				magic.addUser(user1);
 				magic.addUser(user2);
@@ -47,12 +47,12 @@ public class TransactionList extends HttpServlet{
 				split.add(user2);
 				split.add(user3);
 				TabsLedger fishLedger = new TabsLedger(fish,user1, split);
-				magic.addTransactionToAllSplitters(fishLedger);
+				magic.addTransactionToAllSplitters(fishLedger);*/
 			//TODO: remove this
 
 			String roomID = (String) request.getAttribute("room");
 
-			ArrayList<db.Transaction> allTransaction = magic.getAllRelatedTransaction(user1);
+			ArrayList<db.Transaction> allTransaction = magic.getAllRelatedTransaction("id1");
 
 			try {
 				ArrayList<db.Transaction> outputTransaction = new ArrayList<db.Transaction>();
@@ -60,14 +60,11 @@ public class TransactionList extends HttpServlet{
 				for (db.Transaction t : allTransaction) {
 					String user1Name = magic.searchByUserIDandRoomID(t.getUser1(), roomID).getFullName();
 					String user2Name = magic.searchByUserIDandRoomID(t.getUser2(), roomID).getFullName();
-					System.out.println(user1Name + " " + user2Name);
 					db.Transaction newT = new db.Transaction(t.getTransactionID(), user1Name, user2Name, t.getAmount(), t.getRoomID(), t.getItem());
 					outputTransaction.add(newT);
 				}
 				Gson gson = new Gson();
 				String output = gson.toJson(outputTransaction);
-				//String output = gson.toJson(allTransaction);
-				System.out.println(output);
 				PrintWriter out = response.getWriter();
 				out.print(output);
 			} catch (Exception e){

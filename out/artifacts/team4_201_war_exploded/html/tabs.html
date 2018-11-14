@@ -14,7 +14,7 @@
         }
     </style>
 </head>
-<body onload="loadGroceryList()">
+<body onload="loadTransactionList()">
 <div id="removethis"></div>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
@@ -131,14 +131,14 @@
                 <div class="grocery mdl-cell mdl-cell--4-col">
                     <img class="grocerylist" src="../resources/transactions.png" alt="Suite Home" height="35" >
 
-                    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                    <table id="transactionList" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
                         <thead>
                         <tr>
                             <th class="mdl-data-table__cell--non-numeric">Product</th>
                             <th>Total price</th>
                             <th>Split</th>
                         </thead>
-                        <tbody>
+                        <tbody id="transactionBody">
                             <tr>
                                 <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
                                 <td>$30</td>
