@@ -51,6 +51,7 @@ class PostIts extends React.Component {
 }
 
 var update_note = function(value) {
+    //TODO
     first_update_note($(value))
 };
 
@@ -75,6 +76,7 @@ var first_update_note = function(val) {
 
 
 var close_this = function (self) {
+    //TODO
     $.ajax({
         url : '/delete_postit',
         method: 'POST',
@@ -88,6 +90,7 @@ var close_this = function (self) {
 };
 
 var new_post_it = function () {
+    //TODO
     let m_idname = "post-it_" + new Date().getTime();
     $.ajax({
         url : '/add_postit',
@@ -112,6 +115,7 @@ var render_these_post_its = function(all_post_its){
 };
 
 var render_post_its = function() {
+    //Call on change
     console.log("rendering...");
     $.ajax({
         url : '/message-board',

@@ -46,7 +46,7 @@ function displayChoreRotation(c) {
         var due = (new Date(c[i].rotationTime+c[i].rotationPeriod)).toString().substring(0,21);
         table.innerHTML +=
             '<tr>' +
-                '<td className="mdl-data-table__cell--non-numeric">'+c[i].choreDescription+'</td>' +
+                '<td class="mdl-data-table__cell--non-numeric">'+c[i].choreDescription+'</td>' +
                 '<td>'+c[i].currentUser.fullName+'</td>' +
                 '<td>'+due+'</td>' +
             '</tr>';
@@ -64,18 +64,18 @@ function displayShameWall(c) {
     list.innerHTML = "";
     for(var i = 0; i < c.length; i++) {
         list.innerHTML +=
-            '<li className="mdl-list__item mdl-list__item--two-line">' +
-                '<span className="mdl-list__item-primary-content">' +
-                    '<i className="material-icons mdl-list__item-avatar">person</i>' +
+            '<li class="mdl-list__item mdl-list__item--two-line">' +
+                '<span class="mdl-list__item-primary-content">' +
+                    '<i class="material-icons mdl-list__item-avatar">person</i>' +
                     '<span>'+c[i].currentUser.fullName+'</span>' +
-                    '<span className="mdl-list__item-sub-title">Didn\'t '+c[i].choreDescription.toLowerCase()+'</span>' +
+                    '<span class="mdl-list__item-sub-title">Didn\'t '+c[i].choreDescription.toLowerCase()+'</span>' +
                 '</span>' +
             '</li>';
     }
     if(c.length == 0) {
         list.innerHTML +=
-            '<li className="mdl-list__item mdl-list__item--two-line">' +
-                '<span className="mdl-list__item-primary-content">' +
+            '<li class="mdl-list__item mdl-list__item--two-line">' +
+                '<span class="mdl-list__item-primary-content">' +
                     '<span>Everyone has completed their chores on time.</span>' +
                 '</span>' +
             '</li>';

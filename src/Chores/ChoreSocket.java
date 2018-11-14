@@ -16,7 +16,7 @@ public class ChoreSocket {
     @OnOpen
     public void open(Session session) {
         DataBase db = new DataBase();
-        ArrayList<User> users = db.retrieveUsers("room6666");
+        ArrayList<User> users = db.retrieveUsers("coolroom");
         executor.execute(new ChoreThread(session, users.get(0)));
         System.out.println("Connection!");
     }
