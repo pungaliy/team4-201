@@ -1,6 +1,8 @@
 package db;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.ArrayList;
+
 
 public class Chore {
     private String choreDescription;
@@ -8,23 +10,23 @@ public class Chore {
     private boolean completed;
     private String roomID;
     private String choreID;
-    private String currentUser;
-    private Vector<User> previousUsers;
+    private User currentUser;
+    private ArrayList<User> previousUsers;
     private long rotationPeriod;
     private boolean shame;
 
     public Chore() {}
 
-    public Chore(String choreDescription, long rotationPeriod, long rotationTime, String userID, String roomID, String choreID) {
+    public Chore(String choreDescription, long rotationPeriod, long rotationTime, User user, String roomID, String choreID) {
         this.choreDescription = choreDescription;
         this.rotationPeriod = rotationPeriod;
         this.rotationTime = rotationTime;
-        this.currentUser = userID;
+        this.currentUser = user;
         this.roomID = roomID;
         this.choreID = choreID;
         this.completed = false;
         this.shame = false;
-        this.previousUsers = new Vector<>();
+        this.previousUsers = new ArrayList<>();
     }
 
     public String getChoreDescription() {
@@ -67,20 +69,39 @@ public class Chore {
         this.choreID = choreID;
     }
 
-    public String getCurrentUser() {
-        return currentUser;
-    }
+    public User getCurrentUser() { return currentUser; }
 
-    public void setCurrentUser(String currentUser) {
+    public void setCurrentUser(User currentUser) {
         this.currentUser = currentUser;
     }
 
-    public Vector<User> getPreviousUsers() {
-        return previousUsers;
+    public void assignTo(User user, int userCount) {
+        if(previousUsers.size() >= userCount-2) {
+            this.previousUsers.clear();
+        }
+        else this.previousUsers.add(this.currentUser);
+        this.currentUser = user;
     }
 
-    public void setPreviousUsers(Vector<User> previousUsers) {
-        this.previousUsers = previousUsers;
+    public ArrayList<User> getPreviousUsers() { return previousUsers; }
+
+    public void setPreviousUsers(ArrayList<User> previousUsers) { this.previousUsers = previousUsers; }
+
+    public boolean isPreviousUser(User user) {
+        for(User u : this.previousUsers) {
+            if(u.getUserID().equals(user.getUserID())) return true;
+        }
+        return false;
+    }
+
+    public ArrayList<User> getValidUsers(ArrayList<User> users) {
+        ArrayList<User> validUsers = new ArrayList<>();
+        for(User u : users) {
+            if(!isPreviousUser(u) && !u.getUserID().equals(this.currentUser.getUserID())) {
+                validUsers.add(u);
+            }
+        }
+        return validUsers;
     }
 
     public long getRotationPeriod() {
@@ -97,5 +118,18 @@ public class Chore {
 
     public void setShame(boolean shame) {
         this.shame = shame;
+    }
+
+    public long expirationTime() {
+        return this.rotationTime+this.rotationPeriod-System.currentTimeMillis();
+    }
+
+    public boolean isExpired() { return expirationTime() <= 0; }
+
+    public User getLastUser() {
+        if(this.previousUsers.size() >= 1) {
+            return this.previousUsers.get(this.previousUsers.size()-1);
+        }
+        return null;
     }
 }

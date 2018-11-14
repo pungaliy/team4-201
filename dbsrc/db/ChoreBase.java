@@ -15,19 +15,26 @@ public class ChoreBase extends DataBase {
             tmp.add(chore);
         }
         return tmp;
+
+//        MongoCollection<User> collection = database.getCollection("chores", Chore.class);
+//        ArrayList<Chores> tmp = new ArrayList<>();
+//        for(Chore chore : collection.find(eq("roomID", roomID))) {
+//            tmp.add(chore);
+//        }
+//        return tmp;
     }
 
-    void updateChore(Chore chore) {
+    public void updateChore(Chore chore) {
         MongoCollection<Chore> collection = database.getCollection("chores", Chore.class);
         collection.replaceOne(eq("choreID", chore.getChoreID()), chore);
     }
 
-    void insertChore(Chore chore) {
+    public void insertChore(Chore chore) {
         MongoCollection<Chore> collection = database.getCollection("chores", Chore.class);
         collection.insertOne(chore);
     }
 
-    void deleteChore(Chore chore) {
+    public void deleteChore(Chore chore) {
         MongoCollection<Chore> collection = database.getCollection("chores", Chore.class);
         collection.deleteOne(eq("choreID", chore.getChoreID()));
     }
