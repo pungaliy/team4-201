@@ -1,10 +1,11 @@
 package TabsStuff;
 
 public class GroceryItem{
-	private int roomID;
+	private String roomID;
 	private String itemName;
+	private String add;
 
-	public GroceryItem(String name, int roomID){
+	public GroceryItem(String name, String roomID, String add){
 		this.itemName = name;
 		this.roomID = roomID;
 	}
@@ -12,8 +13,11 @@ public class GroceryItem{
 	public String getItemName(){
 		return this.itemName;
 	}
-	public int getRoomID(){
+	public String getRoomID(){
 		return this.roomID;
+	}
+	public String getAdd(){
+		return add;
 	}
 
 }

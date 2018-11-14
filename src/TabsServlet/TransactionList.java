@@ -29,9 +29,9 @@ public class TransactionList extends HttpServlet{
 			//For testing
 				request.setAttribute("room", "5566");
 				request.setAttribute("userID", "id1");
-				db.User user1 = new User("user1", "id1","5566");
-				db.User user2 = new User("user2", "id2","5566");
-				db.User user3 = new User("user3", "id3","5566");
+				db.User user1 = new db.User("user1", "id1","5566","url1");
+				db.User user2 = new db.User("user2", "id2","5566","url2");
+				db.User user3 = new db.User("user3", "id3","5566","url3");
 				magic.addUser(user1);
 				magic.addUser(user2);
 				magic.addUser(user3);
@@ -40,7 +40,7 @@ public class TransactionList extends HttpServlet{
 				residents.add("id1");
 				residents.add("id2");
 				residents.add("id3");
-				room.setResidents(residents);
+				//room.setResidents(residents);
 				TabsItem fish = new TabsItem("Fish", 3, 30.0f);
 				Vector<User> split = new Vector<User>();
 				split.add(user1);

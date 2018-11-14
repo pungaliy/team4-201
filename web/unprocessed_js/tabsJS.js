@@ -12,18 +12,17 @@ function loadGroceryList(){
 	xhttp.onreadystatechange = function () {
 		let GroceryList = JSON.parse(this.responseText);
 		let list = document.getElementById("groceryList");
+		//Clear the list
+		list.innerHTML = "";
+
 		GroceryList.forEach(function(item) {
-			/*document.getElementById("groceryList").innerHTML
-				+= generateGroceryItemHTML(item["itemName"]);*/
 
 			let listItem = document.createElement("li");
 			listItem.className = "mdl-list__item";
+			listItem.id = item["itemName"]+item["roomID"];
 
 			let itemNameSpan = document.createElement("span");
 			itemNameSpan.className = "mdl-list__item-primary-content";
-			/*var textNode = document.createTextNode(item["itemName"]);
-			textNode.className = "mdl-list__item-primary-content";
-			itemNameSpan.appendChild(textNode);*/
 			itemNameSpan.innerHTML = item["itemName"];
 
 			let checkboxSpan = document.createElement("span");
@@ -47,6 +46,33 @@ function loadGroceryList(){
 	};
 	xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 	xhttp.send();
+}
+
+function addGroceryClick(){
+	let param = {roomID:"5566", itemName:"fish", add:"Y"};
+	$.ajax({
+		type: "POST",
+		url: "/GroceryList",
+		data:JSON.stringify(param),
+		success: function(status){
+			loadGroceryList();
+			console.log("Grocery Sent",status);
+		},
+		error:function(error){
+			console.log("Error sending grocery item",error);
+		}
+	});
+
+}
+function addGroceryPass(){
+	let xhttp = new XMLHttpRequest();
+	xhttp.open("POST", "/GroceryList", true);
+	xhttp.onreadystatechange = function () {
+
+	};
+	xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+	xhttp.send();
+
 }
 
 function loadTransactionList(){

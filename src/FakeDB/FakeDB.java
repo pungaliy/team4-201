@@ -54,7 +54,7 @@ public class FakeDB {
 		System.out.println("Grocery added!");
 	}
 
-	public void removeGrocery(String name, int roomID){
+	/*public void removeGrocery(String name, int roomID){
 		GroceryItem toRemove = null;
 		for(GroceryItem g : groceryItems){
 			if(g.getItemName().equals(name) && g.getRoomID() == roomID){
@@ -62,9 +62,9 @@ public class FakeDB {
 			}
 		}
 		groceryItems.remove(toRemove);
-	}
+	}*/
 
-	public Vector<GroceryItem> getGroceryList(int roomID){
+	/*public Vector<GroceryItem> getGroceryList(int roomID){
 		Vector<GroceryItem> gList = new Vector<GroceryItem>();
 		for(GroceryItem g : groceryItems){
 			if(g.getRoomID() == roomID){
@@ -72,7 +72,7 @@ public class FakeDB {
 			}
 		}
 		return gList;
-	}
+	}*/
 
 	public void addSingleTransaction(Transaction t){
 		transactions.add(t);
