@@ -4,6 +4,7 @@ let currentUserID;
 $(document).ready(function(){
 	loadUserObjAndRoom();
 	loadAllList();
+	console.log(roomID, currentUserID);
 	$("#addGroceryOptions").hide();
 	$("#addTransactionOptions").hide();
 

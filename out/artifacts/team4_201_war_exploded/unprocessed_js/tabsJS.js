@@ -4,6 +4,7 @@ let currentUserID;
 $(document).ready(function(){
 	loadUserObjAndRoom();
 	loadAllList();
+	console.log(roomID, currentUserID);
 	$("#addGroceryOptions").hide();
 	$("#addTransactionOptions").hide();
 
@@ -132,7 +133,7 @@ function loadGroceryList(){
 
 function addGroceryClick(){
 	let name = document.addGroceryOptions.itemNameInput.value;
-	addGroceryPass("5566", name, "Y");
+	addGroceryPass(roomID, name, "Y");
 	return false;
 }
 

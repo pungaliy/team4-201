@@ -27,12 +27,7 @@ public class TransactionList extends HttpServlet{
 			response.setContentType("application/json;charset=UTF-8");
 			Magic magic = new Magic();
 
-			//For testing
-				request.setAttribute("room", "5566");
-				request.setAttribute("userID", "id1");
-			//TODO: remove this
-
-			//TODO: remove this now
+			//TODO: For testing
 			Room room = new Room("5566");
 			User user1 = new User("name1", "id1", "5566", "url1");
 			User user2 = new User("name2", "id2", "5566", "url2");
@@ -41,13 +36,14 @@ public class TransactionList extends HttpServlet{
 			magic.addUser(user1);
 			magic.addUser(user2);
 			magic.addUser(user3);
+			request.getServletContext().setAttribute("user", user1);
+			request.getServletContext().setAttribute("room", user1.getRoomID());
 
 			String roomID = (String) request.getAttribute("room");
-			String userID = "id1";
+			User current = (User)request.getAttribute("user");
+			String userID = current.getUserID();
 
-
-
-			ArrayList<db.Transaction> allTransaction = magic.getAllRelatedTransaction("id1");
+			ArrayList<db.Transaction> allTransaction = magic.getAllRelatedTransaction(userID);
 
 			try {
 				ArrayList<db.Transaction> outputTransaction = new ArrayList<db.Transaction>();

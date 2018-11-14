@@ -3,6 +3,8 @@ package TabsServlet;
 import Methods.Magic;
 import TabsStuff.TabsTotal;
 import com.google.gson.Gson;
+import db.Room;
+import db.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,9 +24,21 @@ public class TabsTotalList extends HttpServlet {
 		Magic magic = new Magic();
 		Gson gson = new Gson();
 
-		//TODO: for test
-		String userID = "id1";
-		String roomID = "5566";
+		//TODO: for testing
+		Room room = new Room("5566");
+		User user1 = new User("name1", "id1", "5566", "url1");
+		User user2 = new User("name2", "id2", "5566", "url2");
+		User user3 = new User("name3", "id3", "5566", "url3");
+		magic.addRoom(room);
+		magic.addUser(user1);
+		magic.addUser(user2);
+		magic.addUser(user3);
+		request.getServletContext().setAttribute("user", user1);
+		request.getServletContext().setAttribute("room", user1.getRoomID());
+
+		User current = (User)request.getAttribute("user");
+		String userID = current.getUserID();
+		String roomID = (String) request.getAttribute("room");
 
 		ArrayList<TabsTotal> tabs = magic.getAllTabs(userID, roomID);
 		ArrayList<TabsTotal> outputTabs = new ArrayList<TabsTotal>();

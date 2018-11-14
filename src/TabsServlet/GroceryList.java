@@ -4,6 +4,8 @@ import Methods.Magic;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import db.GroceryItem;
+import db.Room;
+import db.User;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -44,14 +46,21 @@ public class GroceryList extends HttpServlet {
 
 		Magic magic = new Magic();
 
-		//For testing
-		request.setAttribute("room", "5566");
-		//magic.addGrocery("Beef", "5566");
-		//TODO: remove this
+		//TODO: for testing
+		Room room = new Room("5566");
+		User user1 = new User("name1", "id1", "5566", "url1");
+		User user2 = new User("name2", "id2", "5566", "url2");
+		User user3 = new User("name3", "id3", "5566", "url3");
+		magic.addRoom(room);
+		magic.addUser(user1);
+		magic.addUser(user2);
+		magic.addUser(user3);
+		request.getServletContext().setAttribute("user", user1);
+		request.getServletContext().setAttribute("room", user1.getRoomID());
 
 		String roomID = (String) request.getAttribute("room");
 
-		ArrayList<db.GroceryItem> groceryList = magic.getGroceryList("5566");
+		ArrayList<db.GroceryItem> groceryList = magic.getGroceryList(roomID);
 		Gson gson = new Gson();
 		String output = gson.toJson(groceryList);
 		PrintWriter out = response.getWriter();
