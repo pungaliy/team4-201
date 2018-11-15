@@ -17,7 +17,6 @@ public class SH5GetUserServlet extends HttpServlet {
         System.out.println("Retrieving current user");
         User u = (User) request.getServletContext().getAttribute("user");
         System.out.println(u);
-        out = response.getWriter();
         while(u==null) {
             System.out.print("busy waiting ");
         };

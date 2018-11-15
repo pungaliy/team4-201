@@ -7,16 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57585bcd-a68d-4c91-bd71-7a506325d814" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/LoginRegistration/GetRoomServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PostItServlets/MessageSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/team4_201_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/team4_201_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mongodb_driver_core_3_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/team4-201.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/team4-201.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dbsrc/db/NoteBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbsrc/db/NoteBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chores/ChoreSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chores/ChoreSocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/chores.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/chores.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/message.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/unprocessed_js/chores.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/unprocessed_js/chores.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/unprocessed_js/message-board.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/unprocessed_js/message-board.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,7 +39,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="2" />
           <entry key="html" value="11" />
           <entry key="java" value="47" />
           <entry key="js" value="8" />
@@ -55,7 +52,7 @@
           <entry key="HTML" value="11" />
           <entry key="JAVA" value="47" />
           <entry key="JavaScript" value="8" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -64,33 +61,35 @@
           <entry key="git.branch.checkout.remote" value="4" />
           <entry key="git.branch.create.new" value="3" />
           <entry key="git.branch.delete.local" value="2" />
-          <entry key="git.branch.merge" value="2" />
+          <entry key="git.branch.merge" value="6" />
           <entry key="git.branch.rename" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="gitignore" value="9" />
           <entry key="html" value="382" />
-          <entry key="java" value="9839" />
+          <entry key="java" value="9845" />
           <entry key="js" value="2190" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="383" />
-          <entry key="JAVA" value="9839" />
+          <entry key="JAVA" value="9845" />
           <entry key="JavaScript" value="2189" />
+          <entry key="PLAIN_TEXT" value="9" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+            <state relative-caret-position="259">
+              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,13 +98,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LoginRegistration/GetRoomServlet.java">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -144,11 +140,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dbsrc/db/NoteBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="46" column="37" lean-forward="true" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+            <state relative-caret-position="319">
+              <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -168,7 +164,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PostItServlets/MessageSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="210">
               <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -248,7 +244,6 @@
         <option value="$PROJECT_DIR$/src/Chores/ChorePackage.java" />
         <option value="$PROJECT_DIR$/dbsrc/db/Chore.java" />
         <option value="$PROJECT_DIR$/src/Chores/ChoreThread.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Chores/ChoreSocket.java" />
         <option value="$PROJECT_DIR$/web/html/message.html" />
         <option value="$PROJECT_DIR$/src/Chores/ChoreManager.java" />
@@ -257,8 +252,9 @@
         <option value="$PROJECT_DIR$/src/PostItServlets/MessageSocket.java" />
         <option value="$PROJECT_DIR$/src/LoginRegistration/GetRoomServlet.java" />
         <option value="$PROJECT_DIR$/web/unprocessed_js/message-board.js" />
-        <option value="$PROJECT_DIR$/dbsrc/db/NoteBase.java" />
         <option value="$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/dbsrc/db/NoteBase.java" />
       </list>
     </option>
   </component>
@@ -304,13 +300,41 @@
             <path>
               <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
               <item name="team4-201" type="462c0819:PsiDirectoryNode" />
+              <item name="dbsrc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
+              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
+              <item name="dbsrc" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
+              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
+              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
               <item name="team4-201" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Chores" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
+              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="LoginRegistration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
+              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="PostItServlets" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -325,11 +349,11 @@
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542255675111" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542256121332" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -591,7 +615,7 @@
       <workItem from="1542091978419" duration="1425000" />
       <workItem from="1542093536869" duration="5411000" />
       <workItem from="1542100761328" duration="42832000" />
-      <workItem from="1542252024842" duration="970000" />
+      <workItem from="1542252024842" duration="1415000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'remotes/origin/newdb' into micah_branch&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/modules.xml">
       <created>1542090933032</created>
@@ -618,7 +642,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58097000" />
+    <option name="totallyTimeSpent" value="58542000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -633,25 +657,25 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.76237625" visible="true" weight="0.26037195" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7616488" visible="true" weight="0.26037195" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.23762377" side_tool="true" visible="true" weight="0.26037195" />
+      <window_info id="Web" order="7" sideWeight="0.23835126" side_tool="true" visible="true" weight="0.26037195" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4985694" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48211733" visible="true" weight="0.26987952" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48211733" weight="0.26987952" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49570817" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4992636" weight="0.32796487" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49499285" weight="0.2686747" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4899857" weight="0.32771084" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5178827" side_tool="true" visible="true" weight="0.26987952" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4892704" visible="true" weight="0.32771084" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5107296" side_tool="true" visible="true" weight="0.32771084" />
       <window_info anchor="bottom" id="Application Servers" order="11" sideWeight="0.4992636" weight="0.32796487" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49427754" weight="0.32891566" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
@@ -908,13 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbsrc/db/Chore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
@@ -1028,18 +1045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PostItServlets/MessageSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LoginRegistration/SH5Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1075,20 +1080,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dbsrc/db/NoteBase.java">
+    <entry file="file://$PROJECT_DIR$/src/PostItServlets/MessageSocket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="46" column="37" lean-forward="true" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+        <state relative-caret-position="210">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        <state relative-caret-position="259">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbsrc/db/NoteBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
         </state>
       </provider>
     </entry>

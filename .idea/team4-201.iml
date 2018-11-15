@@ -119,7 +119,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="mongodb-driver-core-3.8.2" level="project" />
     <orderEntry type="library" name="javaee-api-7.0" level="project" />
+    <orderEntry type="library" name="bson-3.8.2-sources" level="project" />
   </component>
 </module>
