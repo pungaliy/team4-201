@@ -7,17 +7,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e01caea0-f7ce-4d2e-ae68-6639be0f91c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TabsServlet/GetRoommates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TabsServlet/GoToTabs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/WEB-INF/classes/Methods/Magic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/WEB-INF/classes/Methods/Magic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/WEB-INF/classes/TabsServlet/GroceryList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/WEB-INF/classes/TabsServlet/GroceryList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/WEB-INF/classes/TabsServlet/TabsTotalList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/WEB-INF/classes/TabsServlet/TabsTotalList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/WEB-INF/classes/TabsServlet/TransactionList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/WEB-INF/classes/TabsServlet/TransactionList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/css/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/css/demo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/html/chores.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/html/chores.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/html/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/html/message.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/html/tabs.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/html/tabs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/unprocessed_js/tabsJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/unprocessed_js/tabsJS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/team4-201/Methods/Magic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/team4-201/Methods/Magic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/team4-201/TabsServlet/GroceryList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/team4-201/TabsServlet/GroceryList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/team4-201/TabsServlet/TabsTotalList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/team4-201/TabsServlet/TabsTotalList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Methods/Magic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Methods/Magic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TabSocket/TabsSocket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/team4-201/TabsServlet/TransactionList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/team4-201/TabsServlet/TransactionList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TabsServlet/GetRoommates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabsServlet/GetRoommates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TabsServlet/GroceryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabsServlet/GroceryList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TabsServlet/TabsTotalList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabsServlet/TabsTotalList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TabsServlet/TransactionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabsServlet/TransactionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/message.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/html/tabs.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/tabs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/unprocessed_js/tabsJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/unprocessed_js/tabsJS.js" afterDir="false" />
     </list>
@@ -90,33 +99,33 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="10" />
-          <entry key="java" value="147" />
-          <entry key="js" value="5" />
+          <entry key="html" value="14" />
+          <entry key="java" value="162" />
+          <entry key="js" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="10" />
-          <entry key="JAVA" value="147" />
-          <entry key="JavaScript" value="5" />
+          <entry key="HTML" value="14" />
+          <entry key="JAVA" value="162" />
+          <entry key="JavaScript" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="15" />
-          <entry key="html" value="3589" />
-          <entry key="java" value="9222" />
-          <entry key="js" value="7366" />
-          <entry key="txt" value="1561" />
+          <entry key="html" value="3595" />
+          <entry key="java" value="9350" />
+          <entry key="js" value="7761" />
+          <entry key="txt" value="1626" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="3589" />
-          <entry key="JAVA" value="9222" />
-          <entry key="JavaScript" value="7366" />
-          <entry key="PLAIN_TEXT" value="1576" />
+          <entry key="HTML" value="3595" />
+          <entry key="JAVA" value="9350" />
+          <entry key="JavaScript" value="7761" />
+          <entry key="PLAIN_TEXT" value="1641" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
@@ -135,20 +144,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/html/tabs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="123" column="48" selection-start-line="123" selection-start-column="48" selection-end-line="123" selection-end-column="48" />
+            <state relative-caret-position="230">
+              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbsrc/db/DataBase.java">
+        <entry file="file://$PROJECT_DIR$/web/html/message.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+            <state relative-caret-position="-10">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -156,14 +165,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/unprocessed_js/tabsJS.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-111">
-              <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+            <state relative-caret-position="117">
+              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
               <folding>
                 <element signature="n#!!block;n#loadGroceryList#0" />
                 <element signature="n#!!block;n#addGroceryClick#0" />
                 <element signature="n#!!block;n#addGroceryPass#0" />
                 <element signature="n#!!block;n#deleteGroceryClick#0" />
-                <element signature="n#!!block;n#deleteGroceryPass#0" />
                 <element signature="n#!!block;n#loadTransactionList#0" />
               </folding>
             </state>
@@ -171,32 +179,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TabsServlet/TransactionList.java">
+        <entry file="file://$PROJECT_DIR$/src/PostItServlets/SH5RetrievePostIts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="116" column="84" selection-start-line="116" selection-start-column="84" selection-end-line="116" selection-end-column="84" />
+            <state relative-caret-position="59">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Methods/Magic.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TabsServlet/GoToTabs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-              <folding>
-                <element signature="e#392#393#0" expanded="true" />
-                <element signature="e#423#424#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TabsServlet/GroceryList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="82" selection-end-column="26" />
+            <state relative-caret-position="241">
+              <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -207,8 +202,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TabsServlet/GetRoommates.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+            <state relative-caret-position="368">
+              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -217,19 +212,35 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/TabsServlet/TransactionList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="206">
+              <caret line="108" column="8" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LoginRegistration/SH5Login.java">
+        <entry file="file://$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="76" />
+            <state relative-caret-position="324">
+              <caret line="20" column="49" lean-forward="true" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/html/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-353" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/unprocessed_js/message-board.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
             </state>
           </provider>
         </entry>
@@ -273,7 +284,6 @@
         <option value="$PROJECT_DIR$/web/unprocessed_js/_calendar_test.js" />
         <option value="$PROJECT_DIR$/web/unprocessed_js/require.js" />
         <option value="$PROJECT_DIR$/web/html/_calendar_test.html" />
-        <option value="$PROJECT_DIR$/web/html/message.html" />
         <option value="$PROJECT_DIR$/web/css/tabs.css" />
         <option value="$PROJECT_DIR$/web/css/index.css" />
         <option value="$PROJECT_DIR$/web/css/chores.css" />
@@ -302,15 +312,17 @@
         <option value="$PROJECT_DIR$/web/unprocessed_js/tabsSocket.js" />
         <option value="$PROJECT_DIR$/src/LoginRegistration/SH5Registration.java" />
         <option value="$PROJECT_DIR$/src/Chores/ChoreSocket.java" />
-        <option value="$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java" />
-        <option value="$PROJECT_DIR$/src/TabsServlet/GroceryList.java" />
-        <option value="$PROJECT_DIR$/src/TabsServlet/TransactionList.java" />
         <option value="$PROJECT_DIR$/web/html/chores.html" />
-        <option value="$PROJECT_DIR$/src/TabsServlet/TabsTotalList.java" />
         <option value="$PROJECT_DIR$/src/Methods/Magic.java" />
+        <option value="$PROJECT_DIR$/web/html/message.html" />
+        <option value="$PROJECT_DIR$/src/TabsServlet/TabsTotalList.java" />
+        <option value="$PROJECT_DIR$/src/TabsServlet/TransactionList.java" />
+        <option value="$PROJECT_DIR$/src/TabsServlet/GroceryList.java" />
+        <option value="$PROJECT_DIR$/web/html/tabs.html" />
+        <option value="$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java" />
         <option value="$PROJECT_DIR$/src/TabsServlet/GetRoommates.java" />
         <option value="$PROJECT_DIR$/web/unprocessed_js/tabsJS.js" />
-        <option value="$PROJECT_DIR$/web/html/tabs.html" />
+        <option value="$PROJECT_DIR$/src/TabsServlet/GoToTabs.java" />
       </list>
     </option>
   </component>
@@ -333,6 +345,12 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
@@ -342,8 +360,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-24" />
-    <option name="y" value="37" />
+    <option name="x" value="16" />
+    <option name="y" value="30" />
     <option name="width" value="1440" />
     <option name="height" value="814" />
   </component>
@@ -363,24 +381,7 @@
             <path>
               <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
               <item name="team4-201" type="462c0819:PsiDirectoryNode" />
-              <item name="dbsrc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
-              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
-              <item name="dbsrc" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
-              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
-              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Chores" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
@@ -429,6 +430,12 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="unprocessed_js" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
+              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -446,7 +453,7 @@
     <property name="SearchEverywhereHistoryKey" value="roomID&#9;PSI&#9;JAVA://TabsStuff.Transaction#roomID" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542249460016" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542258723240" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/TextInputEffects/TextInputEffects" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -477,16 +484,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.tabs.html">
+  <component name="RunManager" selected="Tomcat Server.login.html (1)">
     <configuration name="CommandLineTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CommandLineTest" />
       <module name="team4-201" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="login.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/html/login.html">
-      <method v="2" />
     </configuration>
     <configuration name="Run Web Server" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.11" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -596,6 +600,84 @@
         </option>
       </method>
     </configuration>
+    <configuration name="login.html (1)" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.11" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/html/login.html" />
+      <deployment>
+        <artifact name="team4-201:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="login_html_(1)_team4-201" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="team4-201:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="login.html" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.11" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/html/login.html" />
+      <deployment>
+        <artifact name="team4-201:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="login_html_team4-201" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="team4-201:war exploded" />
+        </option>
+      </method>
+    </configuration>
     <configuration name="tabs.html" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.11" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/html/tabs.html" />
       <deployment>
@@ -637,18 +719,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Run Web Server" />
-      <item itemvalue="JavaScript Debug.login.html" />
       <item itemvalue="Application.CommandLineTest" />
       <item itemvalue="Tomcat Server.chores.html" />
       <item itemvalue="Tomcat Server.tabs.html" />
+      <item itemvalue="Tomcat Server.login.html" />
+      <item itemvalue="Tomcat Server.login.html (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Tomcat Server.login.html (1)" />
+        <item itemvalue="Tomcat Server.login.html" />
         <item itemvalue="Tomcat Server.tabs.html" />
         <item itemvalue="Tomcat Server.chores.html" />
         <item itemvalue="Application.CommandLineTest" />
-        <item itemvalue="JavaScript Debug.login.html" />
-        <item itemvalue="Tomcat Server.tabs.html" />
       </list>
     </recent_temporary>
   </component>
@@ -897,11 +980,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542183743541</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Roommate list for transactions is now also loaded from servlet~">
+      <created>1542249564438</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1542249564439</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117762000" />
+    <option name="totallyTimeSpent" value="123804000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -913,7 +1003,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-24" y="37" width="1440" height="814" extended-state="0" />
+    <frame x="16" y="30" width="1440" height="814" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7473684" visible="true" weight="0.25751072" />
@@ -931,7 +1021,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32916668" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32916668" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32825485" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.19305556" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32916668" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32916668" />
@@ -943,7 +1033,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.3297568" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -951,39 +1041,6 @@
       <window_info anchor="right" id="CDI" order="10" />
       <window_info anchor="right" id="Bean Validation" order="11" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7473684" visible="true" weight="0.25751072" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.25263157" side_tool="true" weight="0.25751072" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.32911393" side_tool="true" weight="0.27543995" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32916668" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3402778" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32916668" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32916668" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.19305556" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32916668" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32916668" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32916668" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.15555556" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1018,7 +1075,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Replaced tempRoom and tempUser with db.User and db.Room" />
     <MESSAGE value="Can get JSON from servlet to frontend now. Stupid jQuery." />
     <MESSAGE value="Can load and add grocery list from servlet json, but does not format with style." />
     <MESSAGE value="Can load and add grocery list from servlet json, but does not format with style. Add unversioned files" />
@@ -1043,46 +1099,22 @@
     <MESSAGE value="Can add transaction with custom purchaser now!!~!!!!!" />
     <MESSAGE value="On the way to integrate getuser servlet" />
     <MESSAGE value="On the way to integrate getuser servlet 2. Go to sleep now" />
-    <option name="LAST_COMMIT_MESSAGE" value="On the way to integrate getuser servlet 2. Go to sleep now" />
+    <MESSAGE value="Roommate list for transactions is now also loaded from servlet~" />
+    <option name="LAST_COMMIT_MESSAGE" value="Roommate list for transactions is now also loaded from servlet~" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/web/unprocessed_js/tabsJS.js</url>
+          <line>215</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/css/postit.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/chores.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/classie.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/set2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/text_test2.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/fonts/codropsicons/license.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/search_results.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="58" column="6" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/normalize.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1180,13 +1212,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TabSocket/TabsThread.java" />
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/tabsSocket.js" />
-    <entry file="file://$PROJECT_DIR$/src/TabSocket/TabsSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TabSocket/TabsSocket.java" />
     <entry file="file://$PROJECT_DIR$/src/Chores/ChoreSocket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-207">
@@ -1215,16 +1241,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
           <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-          <folding>
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#859#860#0" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
-            <element signature="e#988#989#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1252,30 +1268,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginRegistration/SH5Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TabsServlet/TabsTotalList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="16" selection-start-line="16" selection-end-line="60" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbsrc/db/DataBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1294,52 +1286,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TabsServlet/TransactionList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="116" column="84" selection-start-line="116" selection-start-column="84" selection-end-line="116" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TabsServlet/GroceryList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="82" selection-end-column="26" />
+        <state relative-caret-position="398">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TabsServlet/GetRoommates.java">
+    <entry file="file://$PROJECT_DIR$/src/PostItServlets/SH5AddNewPostIt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        <state relative-caret-position="-345">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TabsServlet/TabsTotalList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-461">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/tabsJS.js">
+    <entry file="file://$PROJECT_DIR$/src/LoginRegistration/SH5Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-111">
-          <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
-          <folding>
-            <element signature="n#!!block;n#loadGroceryList#0" />
-            <element signature="n#!!block;n#addGroceryClick#0" />
-            <element signature="n#!!block;n#addGroceryPass#0" />
-            <element signature="n#!!block;n#deleteGroceryClick#0" />
-            <element signature="n#!!block;n#deleteGroceryPass#0" />
-            <element signature="n#!!block;n#loadTransactionList#0" />
-          </folding>
+        <state relative-caret-position="384">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-353" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/message-board.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="20" column="49" lean-forward="true" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/html/tabs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="123" column="48" selection-start-line="123" selection-start-column="48" selection-end-line="123" selection-end-column="48" />
+        <state relative-caret-position="230">
+          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TabsServlet/TransactionList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="108" column="8" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TabsServlet/GetRoommates.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PostItServlets/SH5RetrievePostIts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/tabsJS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!block;n#loadGroceryList#0" />
+            <element signature="n#!!block;n#addGroceryClick#0" />
+            <element signature="n#!!block;n#addGroceryPass#0" />
+            <element signature="n#!!block;n#deleteGroceryClick#0" />
+            <element signature="n#!!block;n#loadTransactionList#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TabsServlet/GoToTabs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -4,7 +4,6 @@ var currentName;
 
 $(document).ready(function(){
 	loadUserObjAndRoom();
-	loadAllList();
 	$("#addGroceryOptions").hide();
 	$("#addTransactionOptions").hide();
 
@@ -19,17 +18,43 @@ $(document).ready(function(){
 });
 
 function loadUserObjAndRoom(){
-	let xhttp = new XMLHttpRequest();
+	console.log("Try to open ajax");
+	$.ajax({
+		url: "/Tabs",
+		method: "GET",
+		data: {},
+		dataType: "json",
+		success: function (response) {
+			console.log("Sucessfully loaded user and room", response);
+			//let userObj = JSON.parse(this.responseText);
+			let userObj = JSON.parse(response);
+			console.log(userObj);
+			currentUserID = userObj["userID"];
+			currentName = userObj["fullName"];
+			roomID = userObj["roomID"];
+			console.log("Loaded with these param:", currentUserID, currentName, roomID);
+		},
+		error: function(response){
+			console.log("Error loading userobj", response);
+		}
+	});
+	/*let xhttp = new XMLHttpRequest();
 	xhttp.open("POST", "/get-user", true);
+	xhttp.setRequestHeader("Content-Type", "application/json");
 	xhttp.onreadystatechange = function () {
+		console.log("HI2");
 		let userObj = JSON.parse(this.responseText);
+		console.log(userObj);
 		currentUserID = userObj["userID"];
 		currentName = userObj["fullName"];
 		roomID = userObj["roomID"];
 		console.log("Loaded with these param:", currentUserID, currentName, roomID);
+		loadGroceryList();
+		loadTransactionList();
+		loadTabsTotalList();
+		loadRoommatesForAddTransaction();
 	};
-	//xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-	xhttp.send();
+	xhttp.send();*/
 }
 
 function loadRoommatesForAddTransaction(){
@@ -40,43 +65,44 @@ function loadRoommatesForAddTransaction(){
 	newList.innerHTML = "";
 
 	//Get roomates from servlet here
+	let roommateList = [];
 	let xhttp = new XMLHttpRequest();
-	xhttp.open("GET", "/GetRoommates", false);
+	xhttp.open("GET", "/GetRoommates", true);
 	xhttp.onreadystatechange = function () {
-		let roommateList = JSON.parse(this.responseText);
+		roommateList = JSON.parse(this.responseText);
 		console.log("these are roommates", roommateList);
-		//Splitters
-		let listnamesplit = document.createElement("textNode");
-		listnamesplit.innerHTML = "Splitters: ";
-		transactionOpt.appendChild(listnamesplit);
-		roommateList.forEach(function(roommate){
-			let name = document.createElement("textNode");
-			name.innerHTML = roommate["fullName"];
-			let checkbox = document.createElement("input");
-			checkbox.type = "checkbox";
-			checkbox.value = roommate["userID"];
-			newList.appendChild(name);
-			newList.appendChild(checkbox);
-		});
-		transactionOpt.appendChild(newList);
-
-		//Purchaser
-		let listnamebuy = document.createElement("textNode");
-		listnamebuy.innerHTML = "Purchaser: ";
-		transactionOpt.appendChild(listnamebuy);
-		roommateList.forEach(function(roommate){
-			let name = document.createElement("textNode");
-			name.innerHTML = roommate["fullName"];
-			let radio = document.createElement("input");
-			radio.type = "radio";
-			radio.value = roommate["userID"];
-			newPurchaserList.appendChild(name);
-			newPurchaserList.appendChild(radio);
-		});
-		transactionOpt.appendChild(newPurchaserList);
 	};
 	//xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 	xhttp.send();
+	//Splitters
+	let listnamesplit = document.createElement("textNode");
+	listnamesplit.innerHTML = "Splitters: ";
+	transactionOpt.appendChild(listnamesplit);
+	roommateList.forEach(function(roommate){
+		let name = document.createElement("textNode");
+		name.innerHTML = roommate["fullName"];
+		let checkbox = document.createElement("input");
+		checkbox.type = "checkbox";
+		checkbox.value = roommate["userID"];
+		newList.appendChild(name);
+		newList.appendChild(checkbox);
+	});
+	transactionOpt.appendChild(newList);
+
+	//Purchaser
+	let listnamebuy = document.createElement("textNode");
+	listnamebuy.innerHTML = "Purchaser: ";
+	transactionOpt.appendChild(listnamebuy);
+	roommateList.forEach(function(roommate){
+		let name = document.createElement("textNode");
+		name.innerHTML = roommate["fullName"];
+		let radio = document.createElement("input");
+		radio.type = "radio";
+		radio.value = roommate["userID"];
+		newPurchaserList.appendChild(name);
+		newPurchaserList.appendChild(radio);
+	});
+	transactionOpt.appendChild(newPurchaserList);
 
 
 

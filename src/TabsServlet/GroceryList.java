@@ -23,7 +23,7 @@ public class GroceryList extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("application/json;charset=UTF-8");
+		response.setContentType("application/json");
 		Magic magic = new Magic();
 		Gson gson = new Gson();
 		BufferedReader buffer = new BufferedReader(request.getReader());
@@ -32,10 +32,10 @@ public class GroceryList extends HttpServlet {
 		String add = jsonObj.get("add").getAsString();
 		String itemName = jsonObj.get("itemName").getAsString();
 
-		//TODO: remove
+		/*//TODO: remove
 		User user1 = magic.searchByUserIDandRoomID("id1", "5566");
 		request.getServletContext().setAttribute("user", user1);
-		request.getServletContext().setAttribute("room", user1.getRoomID());
+		request.getServletContext().setAttribute("room", user1.getRoomID());*/
 
 		User current = (User) request.getServletContext().getAttribute("user");
 		String roomID = current.getRoomID();
@@ -47,14 +47,13 @@ public class GroceryList extends HttpServlet {
 			magic.removeGrocery(itemName, roomID);
 
 		}
-		doGet(request, response);
 	}
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,
 			IOException {
 
-		response.setContentType("application/json;charset=UTF-8");
+		response.setContentType("application/json");
 
 		Magic magic = new Magic();
 
@@ -68,9 +67,9 @@ public class GroceryList extends HttpServlet {
 		magic.addUser(user2);
 		magic.addUser(user3);*/
 		//TODO: remove
-		User user1 = magic.searchByUserIDandRoomID("id1", "5566");
+		/*User user1 = magic.searchByUserIDandRoomID("id1", "5566");
 		request.getServletContext().setAttribute("user", user1);
-		request.getServletContext().setAttribute("room", user1.getRoomID());
+		request.getServletContext().setAttribute("room", user1.getRoomID());*/
 
 		User current = (User) request.getServletContext().getAttribute("user");
 		String roomID = current.getRoomID();

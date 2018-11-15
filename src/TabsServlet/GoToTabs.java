@@ -1,9 +1,7 @@
 package TabsServlet;
 
 import Methods.Magic;
-import TabsStuff.TabsTotal;
 import com.google.gson.Gson;
-import db.Room;
 import db.User;
 
 import javax.servlet.ServletException;
@@ -16,8 +14,8 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 
 
-@WebServlet(name= "GetRoommates", urlPatterns = {"/GetRoommates"})
-public class GetRoommates extends HttpServlet {
+@WebServlet(name= "GoToTabs", urlPatterns = {"/Tabs"})
+public class GoToTabs extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,
 			IOException {
@@ -25,13 +23,10 @@ public class GetRoommates extends HttpServlet {
 		Magic magic = new Magic();
 		Gson gson = new Gson();
 
-
 		User current = (User)request.getServletContext().getAttribute("user");
-		String userID = current.getUserID();
-		String roomID = current.getRoomID();
 
-		ArrayList<User> roommates = magic.getRoommates(roomID);
-		String output = gson.toJson(roommates);
+		String output = gson.toJson(current);
+		System.out.println("Returning user: " + output);
 		response.setContentType("application/json");
 		PrintWriter out = response.getWriter();
 		out.print(output);
