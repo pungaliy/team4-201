@@ -121,5 +121,6 @@
     </orderEntry>
     <orderEntry type="library" name="db" level="project" />
     <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="javax.transaction" level="project" />
   </component>
 </module>
