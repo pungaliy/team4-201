@@ -23,16 +23,28 @@ public class GroceryList extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("application/json;charset=UTF-8");
 		Magic magic = new Magic();
 		Gson gson = new Gson();
 		BufferedReader buffer = new BufferedReader(request.getReader());
 		String reqJson = buffer.readLine();
 		JsonObject jsonObj = gson.fromJson(reqJson, JsonObject.class);
 		String add = jsonObj.get("add").getAsString();
+		String itemName = jsonObj.get("itemName").getAsString();
+
+		//TODO: remove
+		User user1 = magic.searchByUserIDandRoomID("id1", "5566");
+		request.getServletContext().setAttribute("user", user1);
+		request.getServletContext().setAttribute("room", user1.getRoomID());
+
+		User current = (User) request.getServletContext().getAttribute("user");
+		String roomID = current.getRoomID();
+
+		System.out.println("Try to add grocery: " + itemName + " to room " + roomID);
 		if(add.equals("Y")){
-			magic.addGrocery(jsonObj.get("itemName").getAsString(), jsonObj.get("roomID").getAsString());
+			magic.addGrocery(itemName, roomID);
 		} else {
-			magic.removeGrocery(jsonObj.get("itemName").getAsString(), jsonObj.get("roomID").getAsString());
+			magic.removeGrocery(itemName, roomID);
 
 		}
 		doGet(request, response);
@@ -47,18 +59,22 @@ public class GroceryList extends HttpServlet {
 		Magic magic = new Magic();
 
 		//TODO: for testing
-		Room room = new Room("5566");
+		/*Room room = new Room("5566");
 		User user1 = new User("name1", "id1", "5566", "url1");
 		User user2 = new User("name2", "id2", "5566", "url2");
 		User user3 = new User("name3", "id3", "5566", "url3");
 		magic.addRoom(room);
 		magic.addUser(user1);
 		magic.addUser(user2);
-		magic.addUser(user3);
+		magic.addUser(user3);*/
+		//TODO: remove
+		User user1 = magic.searchByUserIDandRoomID("id1", "5566");
 		request.getServletContext().setAttribute("user", user1);
 		request.getServletContext().setAttribute("room", user1.getRoomID());
 
-		String roomID = (String) request.getAttribute("room");
+		User current = (User) request.getServletContext().getAttribute("user");
+		String roomID = current.getRoomID();
+		System.out.println("RoomID in GroceryList Get: " + roomID);
 
 		ArrayList<db.GroceryItem> groceryList = magic.getGroceryList(roomID);
 		Gson gson = new Gson();

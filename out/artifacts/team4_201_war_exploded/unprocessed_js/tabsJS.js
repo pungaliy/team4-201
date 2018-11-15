@@ -1,10 +1,10 @@
-let roomID;
-let currentUserID;
+var roomID;
+var currentUserID;
+var currentName;
 
 $(document).ready(function(){
 	loadUserObjAndRoom();
 	loadAllList();
-	console.log(roomID, currentUserID);
 	$("#addGroceryOptions").hide();
 	$("#addTransactionOptions").hide();
 
@@ -23,10 +23,12 @@ function loadUserObjAndRoom(){
 	xhttp.open("POST", "/get-user", true);
 	xhttp.onreadystatechange = function () {
 		let userObj = JSON.parse(this.responseText);
-		currentUserID = userObj.userID;
-		roomID = userObj.roomID;
+		currentUserID = userObj["userID"];
+		currentName = userObj["fullName"];
+		roomID = userObj["roomID"];
+		console.log("Loaded with these param:", currentUserID, currentName, roomID);
 	};
-	xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+	//xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 	xhttp.send();
 }
 
@@ -149,7 +151,7 @@ function addGroceryPass(roomid, itemname, addYN){
 		data:JSON.stringify(param),
 		success: function(status){
 			loadAllList();
-			console.log("Grocery Sent",status);
+			console.log("Grocery Sent", param);
 		},
 		error:function(error){
 			console.log("Error sending grocery item",error);
@@ -195,7 +197,7 @@ function loadTransactionList(){
 		let headrow = document.createElement("tr");
 		let itemHead = document.createElement("th");
 		itemHead.className = "mdl-data-table__cell--non-numeric";
-		itemHead.innerHTML = "Procuct";
+		itemHead.innerHTML = "Product";
 		let priceHead = document.createElement("th");
 		priceHead.innerHTML = "Total price";
 		let splitHead = document.createElement("th");
@@ -227,7 +229,7 @@ function loadTransactionList(){
 			let tdAmount = document.createElement("td");
 			let tdSplit = document.createElement("td");
 			//TODO: get current userID and fullname here
-			if(item["user1"] === "name1"){
+			if(item["user1"] === currentName){
 				tdAmount.innerHTML = item["amount"];
 				tdSplit.innerHTML = item["user2"];
 			} else {
@@ -266,7 +268,7 @@ function addTransactionClick(){
 			purchaser = allInput[i].value;
 		}
 	}
-	addTransactionPass("5566", itemname, quantity, pricePerItem, purchaser, splitters);
+	addTransactionPass(roomID, itemname, quantity, pricePerItem, purchaser, splitters);
 	return false;
 
 }
@@ -282,6 +284,7 @@ function addTransactionPass(roomid, itemname, q, ppi, buy, split){
 	toPass["purchaser"] = buy;
 	toPass["splitters"] = split;
 	let param = toPass;
+	console.log("Try to send", param);
 	$.ajax({
 		type: "POST",
 		url: "/TransactionList",

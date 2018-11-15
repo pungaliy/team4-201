@@ -17,7 +17,7 @@ public class SH5GetUserServlet extends HttpServlet {
         User u = (User) request.getServletContext().getAttribute("user");
         while(u==null);
         String json_str = new Gson().toJson(u);
-        System.out.println("HI" + json_str);
+        //System.out.println("HI" + json_str);
         response.getWriter().print(json_str);
     }
 

@@ -25,20 +25,25 @@ public class TabsTotalList extends HttpServlet {
 		Gson gson = new Gson();
 
 		//TODO: for testing
-		Room room = new Room("5566");
+		/*Room room = new Room("5566");
 		User user1 = new User("name1", "id1", "5566", "url1");
 		User user2 = new User("name2", "id2", "5566", "url2");
 		User user3 = new User("name3", "id3", "5566", "url3");
 		magic.addRoom(room);
 		magic.addUser(user1);
 		magic.addUser(user2);
-		magic.addUser(user3);
+		magic.addUser(user3);*.
+		request.getServletContext().setAttribute("user", user1);
+		request.getServletContext().setAttribute("room", user1.getRoomID());*/
+
+		//TODO:remove
+		User user1 = magic.searchByUserIDandRoomID("id1", "5566");
 		request.getServletContext().setAttribute("user", user1);
 		request.getServletContext().setAttribute("room", user1.getRoomID());
 
-		User current = (User)request.getAttribute("user");
+		User current = (User)request.getServletContext().getAttribute("user");
 		String userID = current.getUserID();
-		String roomID = (String) request.getAttribute("room");
+		String roomID = current.getRoomID();
 
 		ArrayList<TabsTotal> tabs = magic.getAllTabs(userID, roomID);
 		ArrayList<TabsTotal> outputTabs = new ArrayList<TabsTotal>();
@@ -47,6 +52,7 @@ public class TabsTotalList extends HttpServlet {
 			String user2name = magic.searchByUserIDandRoomID(t.getUser2(), roomID).getFullName();
 			TabsTotal n = new TabsTotal(user1name, user2name, t.getAmount());
 			outputTabs.add(n);
+			System.out.println("Adding tabs with roommate: " + user2name + " with amount " + t.getAmount());
 		}
 
 		String output = gson.toJson(outputTabs);

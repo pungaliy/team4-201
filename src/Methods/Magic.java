@@ -21,12 +21,14 @@ public class Magic {
 
 		} else {
 			db.addUser(user);
+			System.out.println("Try to add user " + user.getUserID());
 		}
 	}
 
 	public void addRoom(db.Room room){
 		if(!db.roomExists(room.getRoomID())){
 			db.addRoom(room);
+			System.out.println("Try to add room " + room.getRoomID());
 		}
 	}
 
@@ -62,6 +64,7 @@ public class Magic {
 		String ID = Long.toString(System.currentTimeMillis());
 		db.Transaction t = new db.Transaction(ID, purchaser, splitter, amount, roomID, item);
 		db.addTransaction(t);
+		System.out.println("Adding transaction: puchaser=" + purchaser + " splitter=" + splitter + " amount=" + amount + " item=" +item +" for room=" + roomID);
 	}
 
 	public void addTransactionToAllSplitters(String purchaser, int quantity, float pricePerItem, String roomID,

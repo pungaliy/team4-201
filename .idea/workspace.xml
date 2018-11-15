@@ -15,9 +15,12 @@
       <change beforePath="$PROJECT_DIR$/out/production/team4-201/TabsServlet/GroceryList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/team4-201/TabsServlet/GroceryList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/team4-201/TabsServlet/TabsTotalList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/team4-201/TabsServlet/TabsTotalList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/team4-201/TabsServlet/TransactionList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/team4-201/TabsServlet/TransactionList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Methods/Magic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Methods/Magic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TabsServlet/GroceryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabsServlet/GroceryList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TabsServlet/TabsTotalList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabsServlet/TabsTotalList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TabsServlet/TransactionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabsServlet/TransactionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/tabs.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/tabs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/unprocessed_js/tabsJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/unprocessed_js/tabsJS.js" afterDir="false" />
     </list>
     <list id="4b467718-25fe-45fd-8309-4d2b18a49a7b" name="" comment="Can add transaction with custom purchaser now!!~!!!!!" />
@@ -80,41 +83,42 @@
     <session id="-1656058476">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="6" />
-          <entry key="java" value="135" />
+          <entry key="java" value="139" />
           <entry key="js" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="6" />
-          <entry key="JAVA" value="135" />
+          <entry key="JAVA" value="139" />
           <entry key="JavaScript" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="15" />
-          <entry key="html" value="3567" />
-          <entry key="java" value="7878" />
-          <entry key="js" value="6785" />
-          <entry key="txt" value="1540" />
+          <entry key="html" value="3575" />
+          <entry key="java" value="9011" />
+          <entry key="js" value="7208" />
+          <entry key="txt" value="1561" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="3567" />
-          <entry key="JAVA" value="7878" />
-          <entry key="JavaScript" value="6785" />
-          <entry key="PLAIN_TEXT" value="1555" />
+          <entry key="HTML" value="3575" />
+          <entry key="JAVA" value="9011" />
+          <entry key="JavaScript" value="7208" />
+          <entry key="PLAIN_TEXT" value="1576" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
@@ -135,17 +139,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/html/tabs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-20">
-              <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+            <state relative-caret-position="80">
+              <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TabsServlet/TransactionList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="116" column="84" selection-start-line="116" selection-start-column="84" selection-end-line="116" selection-end-column="84" />
+              <folding>
+                <element signature="e#3137#3145#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TabsServlet/TransactionList.java">
+        <entry file="file://$PROJECT_DIR$/dbsrc/db/DataBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+            <state relative-caret-position="-135">
+              <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -153,11 +169,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TabsServlet/TabsTotalList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="39" selection-end-column="44" />
+            <state relative-caret-position="175">
+              <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Methods/Magic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-835">
+              <caret line="62" column="113" lean-forward="true" selection-start-line="62" selection-start-column="113" selection-end-line="62" selection-end-column="113" />
             </state>
           </provider>
         </entry>
@@ -165,8 +190,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TabsServlet/GroceryList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="60" column="12" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
+            <state relative-caret-position="142">
+              <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -174,24 +199,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/unprocessed_js/tabsJS.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+            <state relative-caret-position="95">
+              <caret line="279" column="30" lean-forward="true" selection-start-line="279" selection-start-column="30" selection-end-line="279" selection-end-column="30" />
               <folding>
-                <element signature="n#!!block;n#loadRoommatesForAddTransaction#0" />
                 <element signature="n#!!block;n#loadGroceryList#0" />
+                <element signature="n#!!block;n#addGroceryClick#0" />
+                <element signature="n#!!block;n#addGroceryPass#0" />
+                <element signature="n#!!block;n#deleteGroceryClick#0" />
+                <element signature="n#!!block;n#deleteGroceryPass#0" />
+                <element signature="n#!!block;n#loadTransactionList#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbsrc/db/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -199,8 +219,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+            <state relative-caret-position="243">
+              <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -208,8 +228,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LoginRegistration/SH5Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="76" />
+            <state relative-caret-position="459">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -278,17 +298,18 @@
         <option value="$PROJECT_DIR$/src/TabsStuff/TabsLedger.java" />
         <option value="$PROJECT_DIR$/dbsrc/db/TabBase.java" />
         <option value="$PROJECT_DIR$/src/TabsStuff/TabsTotal.java" />
-        <option value="$PROJECT_DIR$/src/Methods/Magic.java" />
         <option value="$PROJECT_DIR$/src/TabSocket/TabsThread.java" />
         <option value="$PROJECT_DIR$/src/TabSocket/TabsSocket.java" />
         <option value="$PROJECT_DIR$/web/unprocessed_js/tabsSocket.js" />
         <option value="$PROJECT_DIR$/src/LoginRegistration/SH5Registration.java" />
-        <option value="$PROJECT_DIR$/web/html/tabs.html" />
         <option value="$PROJECT_DIR$/src/Chores/ChoreSocket.java" />
+        <option value="$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java" />
+        <option value="$PROJECT_DIR$/src/Methods/Magic.java" />
         <option value="$PROJECT_DIR$/src/TabsServlet/GroceryList.java" />
         <option value="$PROJECT_DIR$/src/TabsServlet/TabsTotalList.java" />
-        <option value="$PROJECT_DIR$/src/TabsServlet/TransactionList.java" />
+        <option value="$PROJECT_DIR$/web/html/tabs.html" />
         <option value="$PROJECT_DIR$/web/unprocessed_js/tabsJS.js" />
+        <option value="$PROJECT_DIR$/src/TabsServlet/TransactionList.java" />
       </list>
     </option>
   </component>
@@ -320,7 +341,7 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-35" />
+    <option name="x" value="21" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="812" />
@@ -330,6 +351,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -376,6 +398,12 @@
               <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
               <item name="team4-201" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="PostItServlets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="team4-201" type="b2602c69:ProjectViewProjectNode" />
+              <item name="team4-201" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="TabSocket" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -411,7 +439,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -423,7 +450,7 @@
     <property name="SearchEverywhereHistoryKey" value="roomID&#9;PSI&#9;JAVA://TabsStuff.Transaction#roomID" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542183699369" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542246977171" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/TextInputEffects/TextInputEffects" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -566,6 +593,7 @@
       <workItem from="1541968955321" duration="6244000" />
       <workItem from="1542070503865" duration="36470000" />
       <workItem from="1542158015165" duration="11362000" />
+      <workItem from="1542241691638" duration="5214000" />
     </task>
     <task id="LOCAL-00001" summary="Merge from KatrinaMessage">
       <created>1542070558515</created>
@@ -784,11 +812,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542182869765</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="On the way to integrate getuser servlet 2. Go to sleep now">
+      <created>1542183743541</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1542183743541</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109183000" />
+    <option name="totallyTimeSpent" value="115801000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -800,20 +835,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="812" extended-state="6" />
+    <frame x="-1" y="23" width="1440" height="814" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.74626863" visible="true" weight="0.25751072" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7473684" visible="true" weight="0.25751072" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.25373134" side_tool="true" visible="true" weight="0.25751072" />
+      <window_info id="Favorites" order="5" sideWeight="0.25263157" side_tool="true" weight="0.25751072" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" sideWeight="0.32911393" side_tool="true" weight="0.27543995" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32916668" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44166666" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33933517" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -836,28 +871,28 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.67276424" visible="true" weight="0.25707728" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7473684" visible="true" weight="0.25751072" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.43589744" side_tool="true" weight="0.17651822" />
+      <window_info id="Favorites" order="5" sideWeight="0.25263157" side_tool="true" weight="0.25751072" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.32723576" side_tool="true" weight="0.14736842" />
+      <window_info id="Web" order="7" sideWeight="0.32911393" side_tool="true" weight="0.27543995" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32916668" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3402778" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3291815" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.19395018" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32916668" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32916668" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.19305556" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32916668" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32916668" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32916668" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32916668" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.15555556" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -902,7 +937,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="jQuery in the front cant get my JSON from the back" />
     <MESSAGE value="Replaced tempRoom and tempUser with db.User and db.Room" />
     <MESSAGE value="Can get JSON from servlet to frontend now. Stupid jQuery." />
     <MESSAGE value="Can load and add grocery list from servlet json, but does not format with style." />
@@ -927,7 +961,8 @@
     <MESSAGE value="Can add transaction with custom input. But cant set who is the purchaser yet" />
     <MESSAGE value="Can add transaction with custom purchaser now!!~!!!!!" />
     <MESSAGE value="On the way to integrate getuser servlet" />
-    <option name="LAST_COMMIT_MESSAGE" value="On the way to integrate getuser servlet" />
+    <MESSAGE value="On the way to integrate getuser servlet 2. Go to sleep now" />
+    <option name="LAST_COMMIT_MESSAGE" value="On the way to integrate getuser servlet 2. Go to sleep now" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web/html/message.html">
@@ -1023,13 +1058,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/loadRoom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="17" column="53" lean-forward="true" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/loadRoom.js" />
     <entry file="file://$PROJECT_DIR$/src/TabsStuff/Item.java" />
     <entry file="file://$PROJECT_DIR$/dbsrc/db/NoteBase.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1079,48 +1108,10 @@
     <entry file="file://$PROJECT_DIR$/src/TabsStuff/TabsItem.java" />
     <entry file="file://$PROJECT_DIR$/src/TabsStuff/TabsLedger.java" />
     <entry file="file://$PROJECT_DIR$/src/TabsStuff/Transaction.java" />
-    <entry file="file://$PROJECT_DIR$/dbsrc/db/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-          <folding>
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#859#860#0" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
-            <element signature="e#988#989#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbsrc/db/TabBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1327">
           <caret line="75" column="42" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbsrc/db/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Methods/Magic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2592">
-          <caret line="96" column="45" selection-start-line="96" selection-start-column="45" selection-end-line="96" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbsrc/db/DataBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="999">
-          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1131,26 +1122,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TabSocket/TabsThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="28" column="23" lean-forward="true" selection-start-line="8" selection-end-line="28" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/tabsSocket.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TabSocket/TabsThread.java" />
+    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/tabsSocket.js" />
     <entry file="file://$PROJECT_DIR$/src/TabSocket/TabsSocket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding>
-            <element signature="e#415#424#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1174,17 +1151,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LoginRegistration/SH5Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="76" />
+        <state relative-caret-position="459">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="76" />
         </state>
       </provider>
     </entry>
@@ -1195,10 +1165,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/LoginRegistration/SH5GetUserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbsrc/db/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding>
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
+            <element signature="e#859#860#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#944#945#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TabsServlet/GroceryList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="60" column="12" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
+        <state relative-caret-position="142">
+          <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1207,35 +1201,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TabsServlet/TabsTotalList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="39" selection-end-column="44" />
+        <state relative-caret-position="175">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TabsServlet/TransactionList.java">
+    <entry file="file://$PROJECT_DIR$/web/html/tabs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+        <state relative-caret-position="80">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/tabs.html">
+    <entry file="file://$PROJECT_DIR$/dbsrc/db/DataBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        <state relative-caret-position="-135">
+          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbsrc/db/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Methods/Magic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-835">
+          <caret line="62" column="113" lean-forward="true" selection-start-line="62" selection-start-column="113" selection-end-line="62" selection-end-column="113" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/tabsJS.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        <state relative-caret-position="95">
+          <caret line="279" column="30" lean-forward="true" selection-start-line="279" selection-start-column="30" selection-end-line="279" selection-end-column="30" />
           <folding>
-            <element signature="n#!!block;n#loadRoommatesForAddTransaction#0" />
             <element signature="n#!!block;n#loadGroceryList#0" />
+            <element signature="n#!!block;n#addGroceryClick#0" />
+            <element signature="n#!!block;n#addGroceryPass#0" />
+            <element signature="n#!!block;n#deleteGroceryClick#0" />
+            <element signature="n#!!block;n#deleteGroceryPass#0" />
+            <element signature="n#!!block;n#loadTransactionList#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TabsServlet/TransactionList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="116" column="84" selection-start-line="116" selection-start-column="84" selection-end-line="116" selection-end-column="84" />
+          <folding>
+            <element signature="e#3137#3145#0" expanded="true" />
           </folding>
         </state>
       </provider>
