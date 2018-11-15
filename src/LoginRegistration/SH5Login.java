@@ -35,6 +35,7 @@ public class SH5Login extends HttpServlet {
         request.getServletContext().setAttribute("image", image);
         request.getServletContext().setAttribute("name", username);
         request.getServletContext().setAttribute("email", email);
+        request.getServletContext().setAttribute("user", u);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
