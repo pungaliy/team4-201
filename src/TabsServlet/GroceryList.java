@@ -23,7 +23,6 @@ public class GroceryList extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("application/json");
 		Magic magic = new Magic();
 		Gson gson = new Gson();
 		BufferedReader buffer = new BufferedReader(request.getReader());
@@ -32,10 +31,6 @@ public class GroceryList extends HttpServlet {
 		String add = jsonObj.get("add").getAsString();
 		String itemName = jsonObj.get("itemName").getAsString();
 
-		/*//TODO: remove
-		User user1 = magic.searchByUserIDandRoomID("id1", "5566");
-		request.getServletContext().setAttribute("user", user1);
-		request.getServletContext().setAttribute("room", user1.getRoomID());*/
 
 		User current = (User) request.getServletContext().getAttribute("user");
 		String roomID = current.getRoomID();
@@ -45,7 +40,6 @@ public class GroceryList extends HttpServlet {
 			magic.addGrocery(itemName, roomID);
 		} else {
 			magic.removeGrocery(itemName, roomID);
-
 		}
 	}
 
@@ -56,20 +50,6 @@ public class GroceryList extends HttpServlet {
 		response.setContentType("application/json");
 
 		Magic magic = new Magic();
-
-		//TODO: for testing
-		/*Room room = new Room("5566");
-		User user1 = new User("name1", "id1", "5566", "url1");
-		User user2 = new User("name2", "id2", "5566", "url2");
-		User user3 = new User("name3", "id3", "5566", "url3");
-		magic.addRoom(room);
-		magic.addUser(user1);
-		magic.addUser(user2);
-		magic.addUser(user3);*/
-		//TODO: remove
-		/*User user1 = magic.searchByUserIDandRoomID("id1", "5566");
-		request.getServletContext().setAttribute("user", user1);
-		request.getServletContext().setAttribute("room", user1.getRoomID());*/
 
 		User current = (User) request.getServletContext().getAttribute("user");
 		String roomID = current.getRoomID();
