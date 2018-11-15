@@ -34,48 +34,51 @@ function loadUserObjAndRoom(){
 
 function loadRoommatesForAddTransaction(){
 	let transactionOpt = document.getElementById("addTransactionOptions");
-	document.getElementById("roommateList").remove();
-	document.getElementById("purchaserList").remove();
-	let newList = document.createElement("span");
-	newList.id = "roommateList";
-	let newPurchaserList= document.createElement("span");
-	newPurchaserList.id = "purchaserList";
+	let newList = document.getElementById("roommateList");
+	newList.innerHTML = "";
+	let newPurchaserList = document.getElementById("purchaserList");
+	newList.innerHTML = "";
 
 	//Get roomates from servlet here
-		let roommateList = [];
-		roommateList.push({name:"name1", userID:"id1"});
-		roommateList.push({name:"name2", userID:"id2"});
-		roommateList.push({name:"name3", userID:"id3"});
+	let xhttp = new XMLHttpRequest();
+	xhttp.open("GET", "/GetRoommates", false);
+	xhttp.onreadystatechange = function () {
+		let roommateList = JSON.parse(this.responseText);
+		console.log("these are roommates", roommateList);
+		//Splitters
+		let listnamesplit = document.createElement("textNode");
+		listnamesplit.innerHTML = "Splitters: ";
+		transactionOpt.appendChild(listnamesplit);
+		roommateList.forEach(function(roommate){
+			let name = document.createElement("textNode");
+			name.innerHTML = roommate["fullName"];
+			let checkbox = document.createElement("input");
+			checkbox.type = "checkbox";
+			checkbox.value = roommate["userID"];
+			newList.appendChild(name);
+			newList.appendChild(checkbox);
+		});
+		transactionOpt.appendChild(newList);
 
-	//Splitters
-	let listnamesplit = document.createElement("textNode");
-	listnamesplit.innerHTML = "Splitters: ";
-	transactionOpt.appendChild(listnamesplit);
-	roommateList.forEach(function(roommate){
-		let name = document.createElement("textNode");
-		name.innerHTML = roommate["name"];
-		let checkbox = document.createElement("input");
-		checkbox.type = "checkbox";
-		checkbox.value = roommate["userID"];
-		newList.appendChild(name);
-		newList.appendChild(checkbox);
-	});
-	transactionOpt.appendChild(newList);
+		//Purchaser
+		let listnamebuy = document.createElement("textNode");
+		listnamebuy.innerHTML = "Purchaser: ";
+		transactionOpt.appendChild(listnamebuy);
+		roommateList.forEach(function(roommate){
+			let name = document.createElement("textNode");
+			name.innerHTML = roommate["fullName"];
+			let radio = document.createElement("input");
+			radio.type = "radio";
+			radio.value = roommate["userID"];
+			newPurchaserList.appendChild(name);
+			newPurchaserList.appendChild(radio);
+		});
+		transactionOpt.appendChild(newPurchaserList);
+	};
+	//xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+	xhttp.send();
 
-	//Purchaser
-	let listnamebuy = document.createElement("textNode");
-	listnamebuy.innerHTML = "Purchaser: ";
-	transactionOpt.appendChild(listnamebuy);
-	roommateList.forEach(function(roommate){
-		let name = document.createElement("textNode");
-		name.innerHTML = roommate["name"];
-		let radio = document.createElement("input");
-		radio.type = "radio";
-		radio.value = roommate["userID"];
-		newPurchaserList.appendChild(name);
-		newPurchaserList.appendChild(radio);
-	});
-	transactionOpt.appendChild(newPurchaserList);
+
 
 
 }

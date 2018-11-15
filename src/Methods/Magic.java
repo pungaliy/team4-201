@@ -1,6 +1,7 @@
 package Methods;
 
 import TabsStuff.TabsTotal;
+import db.Room;
 import db.TabBase;
 import db.Transaction;
 import db.User;
@@ -15,6 +16,10 @@ public class Magic {
 	*/
 
 	private static TabBase db = new TabBase();
+
+	public ArrayList<User> getRoommates(String roomID){
+		return db.retrieveUsers(roomID);
+	}
 
 	public void addUser(db.User user){
 		if(db.retrieveUser(user.getUserID()) != null){

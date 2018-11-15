@@ -3,6 +3,7 @@ package TabsServlet;
 import Methods.Magic;
 import TabsStuff.TabsTotal;
 import com.google.gson.Gson;
+import db.Room;
 import db.User;
 
 import javax.servlet.ServletException;
@@ -14,15 +15,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-@WebServlet(name= "TabsTotalList", urlPatterns = {"/TabsTotalList"})
-public class TabsTotalList extends HttpServlet {
+
+@WebServlet(name= "GetRoommates", urlPatterns = {"/GetRoommates"})
+public class GetRoommates extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,
-			IOException{
+			IOException {
 		response.setContentType("application/json;charset=UTF-8");
 		Magic magic = new Magic();
 		Gson gson = new Gson();
-
 		//TODO: for testing
 		/*Room room = new Room("5566");
 		User user1 = new User("name1", "id1", "5566", "url1");
@@ -44,18 +45,10 @@ public class TabsTotalList extends HttpServlet {
 		String userID = current.getUserID();
 		String roomID = current.getRoomID();
 
-		ArrayList<TabsTotal> tabs = magic.getAllTabs(userID, roomID);
-		ArrayList<TabsTotal> outputTabs = new ArrayList<TabsTotal>();
-		for(TabsTotal t : tabs){
-			String user1name = magic.searchByUserIDandRoomID(t.getUser1(), roomID).getFullName();
-			String user2name = magic.searchByUserIDandRoomID(t.getUser2(), roomID).getFullName();
-			TabsTotal n = new TabsTotal(user1name, user2name, t.getAmount());
-			outputTabs.add(n);
-			System.out.println("Adding tabs with roommate: " + user2name + " with amount " + t.getAmount());
-		}
-
-		String output = gson.toJson(outputTabs);
+		ArrayList<User> roommates = magic.getRoommates(roomID);
+		String output = gson.toJson(roommates);
 		PrintWriter out = response.getWriter();
 		out.print(output);
+
 	}
 }
