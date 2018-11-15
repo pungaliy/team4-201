@@ -1,5 +1,3 @@
-'use strict';
-
 class PostIt extends React.Component {
     constructor(props) {
         super(props);
@@ -51,8 +49,8 @@ class PostIts extends React.Component {
 }
 
 var update_note = function(value) {
-    //TODO
     first_update_note($(value))
+    broadcastChange();
 };
 
 var first_update_note = function(val) {
@@ -74,7 +72,6 @@ var first_update_note = function(val) {
 };
 
 var close_this = function (self) {
-    //TODO
     $.ajax({
         url : '/delete_postit',
         method: 'POST',
@@ -83,6 +80,7 @@ var close_this = function (self) {
         },
         success: function() {
             render_post_its();
+            broadcastChange();
         }
     });
 };
@@ -101,6 +99,7 @@ var new_post_it = function () {
         },
         success: function() {
             render_post_its();
+            broadcastChange();
         }
     });
 };
@@ -123,10 +122,6 @@ var render_post_its = function() {
             render_these_post_its(responseText)
         }
     });
-    $.ajax({
-        url: '/get-user',
-        method: 'post'
-    })
 };
 
 $(window).resize(function() {
@@ -135,4 +130,29 @@ $(window).resize(function() {
     }
 );
 
+var socket;
+var connectToMessageSocket = function() {
+    console.log("connecting...")
+    var currUser;
+    $.ajax({
+        url: '/get-user',
+        method: 'POST',
+        success: function(responseText) {
+            console.log(responseText);
+            socket = new WebSocket("ws://localhost:8080/sockets/message");
+            socket.onopen = function(event) {
+                socket.send(responseText);
+            };
+            socket.onmessage = function(event) {
+                render_post_its();
+            };
+        }
+    });
+};
+
+var broadcastChange = function() {
+    socket.send();
+};
+
 render_post_its();
+connectToMessageSocket();

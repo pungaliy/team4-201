@@ -1,5 +1,6 @@
-package Chores;
+package PostItServlets;
 
+import Chores.ChoreThread;
 import db.DataBase;
 import db.User;
 
@@ -9,27 +10,24 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@ServerEndpoint(value="/sockets/chore")
-public class ChoreSocket {
+@ServerEndpoint(value="/sockets/message")
+public class MessageSocket {
     public ExecutorService executor = Executors.newCachedThreadPool();
 
     @OnOpen
     public void open(Session session) {
-        DataBase db = new DataBase();
-        ArrayList<User> users = db.retrieveUsers("room6666");
-        executor.execute(new ChoreThread(session, users.get(0)));
-        System.out.println("Connection!");
+        System.out.println("Connected!");
     }
 
     @OnMessage
     public void message(String message, Session session) {
         System.out.println(message);
+        System.out.println(message.equals(""));
     }
 
     @OnClose
     public void close(Session session) {
         System.out.println("Disconnected!");
-
     }
 
     @OnError

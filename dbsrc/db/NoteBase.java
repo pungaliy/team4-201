@@ -47,7 +47,8 @@ public class NoteBase extends DataBase {
         NoteBase db = new NoteBase();
         Note note  = new Note("contento", 1, 1, "noteid1", "roomid1");
         db.insertNote(note);
-        System.out.println(db.retrieveNotes("roomid1"));
+        System.out.teNote(Note note) {
+            MongoCollectionprintln(db.retrieveNotes("roomid1"));
         note.setText("new note text");
         db.updateNote(note);
         System.out.println(db.retrieveNotes("roomid1"));

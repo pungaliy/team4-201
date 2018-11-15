@@ -1,6 +1,7 @@
 var socket;
 function connectToChoreSocket() {
     console.log("hello");
+    getCurrentUser();
     socket = new WebSocket("ws://localhost:8080/sockets/chore");
     socket.onmessage = function(event) {
         var p = JSON.parse(event.data);
@@ -10,6 +11,21 @@ function connectToChoreSocket() {
         displayShameWall(p.shamedchores);
         componentHandler.upgradeDom();
     }
+}
+
+function getCurrentUser() {
+    $.ajax({
+        url: '/get-user',
+        method: 'post',
+        success: function(responseText) {
+            var u = JSON.parse(responseText);
+            console.log(u);
+        }
+    });
+}
+
+function send(message) {
+    socket.send(message);
 }
 
 function displayMyChores(c) {
@@ -66,7 +82,7 @@ function displayShameWall(c) {
         list.innerHTML +=
             '<li class="mdl-list__item mdl-list__item--two-line">' +
                 '<span class="mdl-list__item-primary-content">' +
-                    '<i class="material-icons mdl-list__item-avatar">person</i>' +
+                    '<img src="'+c[i].currentUser.imgURL+'" class="material-icons mdl-list__item-avatar" />' +
                     '<span>'+c[i].currentUser.fullName+'</span>' +
                     '<span class="mdl-list__item-sub-title">Didn\'t '+c[i].choreDescription.toLowerCase()+'</span>' +
                 '</span>' +
@@ -81,3 +97,5 @@ function displayShameWall(c) {
             '</li>';
     }
 }
+
+connectToChoreSocket();
