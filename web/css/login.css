@@ -1,6 +1,13 @@
 
 /*title*/
-
+#sign_in_button{
+    height: 36px;
+    width: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2vmin;
+}
 h2{
     font-family: arvo;
     margin: 24px 0;
@@ -33,9 +40,13 @@ h2{
     font-size: 4vmin;
     font-family: Arvo;
 }
-.mdl-button{
-    font-family:Arvo;
+.mdl-button {
+    font-family: 'Raleway', Arial, sans-serif;
     text-style: bold;
+    /* height: 4vmin; */
+    vertical-align: middle;
+    /* width: 15vmin; */
+    color: #817c7e;
 }
 
 .mdl-layout__content{
@@ -67,7 +78,7 @@ h2{
 }
 
 .word{
-    margin-top: 7px;
+    margin-top: 4px;
 }
 
 /* Split the screen in half */
