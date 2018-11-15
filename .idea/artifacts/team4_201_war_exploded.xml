@@ -17,7 +17,6 @@
           <element id="file-copy" path="$PROJECT_DIR$/lib/javax.resource.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/lib/javax.transaction.jar" />
-          <element id="library" level="project" name="mongodb-driver-core-3.8.2" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="team4-201/web/Web" />
