@@ -50,9 +50,9 @@ public class ChoreSocket {
                 if(u.getRoomID().equals(currUser.getRoomID())) {
                     System.out.print(" - bull's eye!");
                     e.getValue().interrupt();
-                    ChoreThread ct = new ChoreThread(session, u);
-                    e.setValue(ct);
-                    ct.start();
+//                    ChoreThread ct = new ChoreThread(session, u);
+//                    e.setValue(ct);
+//                    ct.start();
                 }
                 System.out.println();
             }

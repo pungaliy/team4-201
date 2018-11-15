@@ -7,21 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57585bcd-a68d-4c91-bd71-7a506325d814" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Chores/AddChoreServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Chores/ChoreServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Chores/CompleteChoreServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/html/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbsrc/db/Chore.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbsrc/db/Chore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbsrc/db/ChoreBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbsrc/db/ChoreBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chores/ChoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chores/ChoreManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Chores/ChoreSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chores/ChoreSocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Chores/ChoreThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chores/ChoreThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LoginRegistration/MessageSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginRegistration/MessageSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/chores.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/chores.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/html/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/message.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/unprocessed_js/chores.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/unprocessed_js/chores.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/unprocessed_js/message-board.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/unprocessed_js/message-board.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,21 +23,22 @@
     <session id="1755798524">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="22" />
+          <entry key="html" value="23" />
           <entry key="java" value="72" />
           <entry key="js" value="16" />
           <entry key="xml" value="2" />
@@ -57,7 +47,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="HTML" value="22" />
+          <entry key="HTML" value="23" />
           <entry key="JAVA" value="72" />
           <entry key="JavaScript" value="16" />
           <entry key="PLAIN_TEXT" value="2" />
@@ -77,14 +67,14 @@
         <counts>
           <entry key="gitignore" value="9" />
           <entry key="html" value="874" />
-          <entry key="java" value="13412" />
+          <entry key="java" value="13413" />
           <entry key="js" value="3924" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="875" />
-          <entry key="JAVA" value="13412" />
+          <entry key="JAVA" value="13413" />
           <entry key="JavaScript" value="3923" />
           <entry key="PLAIN_TEXT" value="9" />
         </counts>
@@ -93,29 +83,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Chores/AddChoreServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Chores/ChoreSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+            <state relative-caret-position="385">
+              <caret line="52" column="65" selection-start-line="52" selection-start-column="65" selection-end-line="52" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1953#1954#0" expanded="true" />
-                <element signature="e#2004#2005#0" expanded="true" />
-                <element signature="e#2059#2060#0" expanded="true" />
-                <element signature="e#2103#2104#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,7 +98,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/html/message.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
+            <state relative-caret-position="675">
               <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
             </state>
           </provider>
@@ -133,8 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/unprocessed_js/message-board.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="148" column="14" lean-forward="true" selection-start-line="148" selection-start-column="14" selection-end-line="148" selection-end-column="14" />
+            <state relative-caret-position="1770">
+              <caret line="148" column="14" selection-start-line="148" selection-start-column="14" selection-end-line="148" selection-end-column="14" />
               <folding>
                 <element signature="n#!!block;n#constructor#0;n#PostIt#0" />
                 <element signature="n#!!block;n#render#0;n#PostIt#0" />
@@ -149,7 +123,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/unprocessed_js/chores.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
+            <state relative-caret-position="1455">
               <caret line="97" column="6" selection-start-line="97" selection-start-column="6" selection-end-line="97" selection-end-column="6" />
             </state>
           </provider>
@@ -158,20 +132,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/html/chores.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="85" column="51" lean-forward="true" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="51" />
+            <state relative-caret-position="529">
+              <caret line="85" column="51" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LoginRegistration/MessageSocket.java">
+        <entry file="file://$PROJECT_DIR$/web/html/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -179,8 +150,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Chores/ChoreThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            <state relative-caret-position="394">
+              <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,8 +162,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Chores/ChoreManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="25" column="76" lean-forward="true" selection-start-line="25" selection-start-column="76" selection-end-line="25" selection-end-column="76" />
+            <state relative-caret-position="255">
+              <caret line="25" column="76" selection-start-line="25" selection-start-column="76" selection-end-line="25" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -200,10 +171,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbsrc/db/Chore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
+            <state relative-caret-position="15">
               <caret line="110" column="26" selection-start-line="110" selection-start-column="26" selection-end-line="110" selection-end-column="26" />
             </state>
           </provider>
@@ -269,17 +240,17 @@
         <option value="$PROJECT_DIR$/web/html/header.html" />
         <option value="$PROJECT_DIR$/web/html/message.html" />
         <option value="$PROJECT_DIR$/src/Chores/ChoreServlet.java" />
-        <option value="$PROJECT_DIR$/src/Chores/ChoreThread.java" />
         <option value="$PROJECT_DIR$/dbsrc/db/ChoreBase.java" />
         <option value="$PROJECT_DIR$/src/Chores/CompleteChoreServlet.java" />
         <option value="$PROJECT_DIR$/web/html/chores.html" />
         <option value="$PROJECT_DIR$/src/Chores/AddChoreServlet.java" />
         <option value="$PROJECT_DIR$/web/unprocessed_js/message-board.js" />
-        <option value="$PROJECT_DIR$/src/LoginRegistration/MessageSocket.java" />
         <option value="$PROJECT_DIR$/web/unprocessed_js/chores.js" />
-        <option value="$PROJECT_DIR$/src/Chores/ChoreSocket.java" />
         <option value="$PROJECT_DIR$/src/Chores/ChoreManager.java" />
         <option value="$PROJECT_DIR$/dbsrc/db/Chore.java" />
+        <option value="$PROJECT_DIR$/src/LoginRegistration/MessageSocket.java" />
+        <option value="$PROJECT_DIR$/src/Chores/ChoreSocket.java" />
+        <option value="$PROJECT_DIR$/src/Chores/ChoreThread.java" />
       </list>
     </option>
   </component>
@@ -315,7 +286,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -383,7 +354,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -391,7 +362,7 @@
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542289726011" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542310107286" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -675,7 +646,8 @@
       <workItem from="1542252024842" duration="1613000" />
       <workItem from="1542256569734" duration="240000" />
       <workItem from="1542257124526" duration="3383000" />
-      <workItem from="1542267183571" duration="17594000" />
+      <workItem from="1542267183571" duration="17802000" />
+      <workItem from="1542308367343" duration="1139000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'remotes/origin/newdb' into micah_branch&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/modules.xml">
       <created>1542090933032</created>
@@ -702,7 +674,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79957000" />
+    <option name="totallyTimeSpent" value="81304000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -717,7 +689,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7541254" visible="true" weight="0.2639485" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7541254" visible="true" weight="0.26752505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -727,7 +699,7 @@
       <window_info id="Web" order="7" sideWeight="0.24587458" side_tool="true" weight="0.2639485" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4985694" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47854078" weight="0.26987952" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47854078" visible="true" weight="0.26987952" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49570817" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -737,7 +709,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.48569384" weight="0.3253012" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5214592" side_tool="true" weight="0.26987952" />
       <window_info anchor="bottom" id="Application Servers" order="11" sideWeight="0.4985694" weight="0.32771084" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" sideWeight="0.49356222" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49356222" weight="0.32891566" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1016,13 +988,7 @@
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/login.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/header.js" />
     <entry file="file://$PROJECT_DIR$/src/PostItServlets/SH5RetrievePostIts.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1037,13 +1003,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Chores/ChoreServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1055,13 +1014,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/classie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/dbsrc/db/ChoreBase.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1087,19 +1040,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chores/CompleteChoreServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chores/CompleteChoreServlet.java" />
     <entry file="file://$PROJECT_DIR$/src/Chores/AddChoreServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
+        <state relative-caret-position="360">
           <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1107,24 +1051,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/chores.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="85" column="51" lean-forward="true" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/html/message.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
+        <state relative-caret-position="675">
           <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/message-board.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="148" column="14" lean-forward="true" selection-start-line="148" selection-start-column="14" selection-end-line="148" selection-end-column="14" />
+        <state relative-caret-position="1770">
+          <caret line="148" column="14" selection-start-line="148" selection-start-column="14" selection-end-line="148" selection-end-column="14" />
           <folding>
             <element signature="n#!!block;n#constructor#0;n#PostIt#0" />
             <element signature="n#!!block;n#render#0;n#PostIt#0" />
@@ -1137,49 +1074,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/chores.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
+        <state relative-caret-position="1455">
           <caret line="97" column="6" selection-start-line="97" selection-start-column="6" selection-end-line="97" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chores/ChoreSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1953#1954#0" expanded="true" />
-            <element signature="e#2004#2005#0" expanded="true" />
-            <element signature="e#2059#2060#0" expanded="true" />
-            <element signature="e#2103#2104#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginRegistration/MessageSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Chores/ChoreThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Chores/ChoreManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="25" column="76" lean-forward="true" selection-start-line="25" selection-start-column="76" selection-end-line="25" selection-end-column="76" />
+        <state relative-caret-position="255">
+          <caret line="25" column="76" selection-start-line="25" selection-start-column="76" selection-end-line="25" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1188,8 +1091,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dbsrc/db/Chore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="15">
           <caret line="110" column="26" selection-start-line="110" selection-start-column="26" selection-end-line="110" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chores/ChoreThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LoginRegistration/MessageSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/chores.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="85" column="51" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chores/ChoreSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="52" column="65" selection-start-line="52" selection-start-column="65" selection-end-line="52" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

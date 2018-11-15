@@ -25,7 +25,7 @@ public class MessageSocket {
     public void message(String message, Session session) {
         System.out.println(message);
         System.out.println(message.equals("ping"));
-        if(message.equals("ping")) {
+        if(!message.equals("ping")) {
             sessionToUser.put(session, gson.fromJson(message, User.class));
         } else {
             System.out.println("Broadcasting...");
