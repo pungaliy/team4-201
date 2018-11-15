@@ -119,10 +119,6 @@ var render_post_its = function() {
             render_these_post_its(responseText)
         }
     });
-    $.ajax({
-        url: '/get-user',
-        method: 'post'
-    })
 };
 
 $(window).resize(function() {
