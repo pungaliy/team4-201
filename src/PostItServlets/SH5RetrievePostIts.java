@@ -17,12 +17,12 @@ import java.io.PrintWriter;
 public class SH5RetrievePostIts extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        User u = (User) request.getServletContext().getAttribute("user");
+        User u = (User) request.getSession().getAttribute("user");
         String json_str = new Gson().toJson(u);
         System.out.println(json_str);
 
-        String room = (String) request.getServletContext().getAttribute("room");
-        NoteBase db = (NoteBase) request.getServletContext().getAttribute("notebase");
+        String room = (String) request.getSession().getAttribute("room");
+        NoteBase db = (NoteBase) request.getSession().getAttribute("notebase");
 //        NoteBase db = new NoteBase();
         PrintWriter pw = response.getWriter();
         pw.print(db.retrieveNotes(room));
@@ -32,6 +32,6 @@ public class SH5RetrievePostIts extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher view = request.getRequestDispatcher("html/message.html");
         view.forward(request, response);
-        request.getServletContext().setAttribute("notebase", new NoteBase());
+        request.getSession().setAttribute("notebase", new NoteBase());
     }
 }

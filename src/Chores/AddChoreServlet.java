@@ -28,7 +28,7 @@ public class AddChoreServlet extends HttpServlet {
         }
         else {
             System.out.println(n);
-            User u = (User) request.getServletContext().getAttribute("user");
+            User u = (User) request.getSession().getAttribute("user");
             ChoreManager cm = new ChoreManager(u);
             cm.addChore(d, n);
             out.print("added");
