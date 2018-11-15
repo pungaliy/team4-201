@@ -27,7 +27,7 @@ public class TabsTotalList extends HttpServlet {
 		request.getServletContext().setAttribute("user", user1);
 		request.getServletContext().setAttribute("room", user1.getRoomID());*/
 
-		User current = (User)request.getServletContext().getAttribute("user");
+		User current = (User)request.getSession().getAttribute("user");
 		String userID = current.getUserID();
 		String roomID = current.getRoomID();
 

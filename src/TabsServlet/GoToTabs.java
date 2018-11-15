@@ -23,7 +23,7 @@ public class GoToTabs extends HttpServlet {
 		Magic magic = new Magic();
 		Gson gson = new Gson();
 
-		User current = (User)request.getServletContext().getAttribute("user");
+		User current = (User)request.getSession().getAttribute("user");
 
 		String output = gson.toJson(current);
 		System.out.println("Returning user: " + output);

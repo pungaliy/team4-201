@@ -26,7 +26,7 @@ public class GetRoommates extends HttpServlet {
 		Gson gson = new Gson();
 
 
-		User current = (User)request.getServletContext().getAttribute("user");
+		User current = (User)request.getSession().getAttribute("user");
 		String userID = current.getUserID();
 		String roomID = current.getRoomID();
 

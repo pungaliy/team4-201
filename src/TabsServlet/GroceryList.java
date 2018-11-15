@@ -31,7 +31,7 @@ public class GroceryList extends HttpServlet {
 		String add = jsonObj.get("add").getAsString();
 		String itemName = jsonObj.get("itemName").getAsString();
 
-		User current = (User) request.getServletContext().getAttribute("user");
+		User current = (User) request.getSession().getAttribute("user");
 		String roomID = current.getRoomID();
 
 		System.out.println("Try to add grocery: " + itemName + " to room " + roomID);
@@ -50,7 +50,7 @@ public class GroceryList extends HttpServlet {
 
 		Magic magic = new Magic();
 
-		User current = (User) request.getServletContext().getAttribute("user");
+		User current = (User) request.getSession().getAttribute("user");
 		String roomID = current.getRoomID();
 		String userID = current.getUserID();
 		System.out.println("RoomID in GroceryList Get: " + roomID + " retrieved by " + userID);
