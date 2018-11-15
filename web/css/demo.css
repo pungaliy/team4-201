@@ -168,7 +168,9 @@ body .nomargin-bottom {
 	color: #D8DADB;
 	font-weight: bold;
 }
-
+#error-messages{
+	padding-bottom: 4vmin;
+}
 .media-item {
 	display: inline-block;
 	padding: 1em;
