@@ -33,7 +33,7 @@ public class MessageSocket {
             for(Map.Entry<Session, User> e : sessionToUser.entrySet()) {
                 System.out.print(e.getValue().getFullName());
                 if(e.getValue().getRoomID().equals(currUser.getRoomID()) && !e.getKey().equals(session)) {
-                    System.out.print(" - bull's eye!")
+                    System.out.print(" - bull's eye!");
                     e.getKey().getAsyncRemote().sendText("pong");
                 }
                 System.out.println();
