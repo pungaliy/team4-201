@@ -17,6 +17,10 @@ public class ChoreThread extends Thread {
         this.cm = new ChoreManager(u);
     }
 
+    public Session getSession() { return this.s; }
+
+    public ChoreManager getChoreManager() { return this.cm; }
+
     public void run() {
         System.out.println("Running");
         while(this.s.isOpen()) {

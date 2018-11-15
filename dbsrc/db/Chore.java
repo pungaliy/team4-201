@@ -29,6 +29,18 @@ public class Chore {
         this.previousUsers = new ArrayList<>();
     }
 
+    public Chore(String choreDescription, long rotationPeriod, long rotationTime, String roomID, String choreID) {
+        this.choreDescription = choreDescription;
+        this.rotationPeriod = rotationPeriod;
+        this.rotationTime = rotationTime;
+        this.currentUser = null;
+        this.roomID = roomID;
+        this.choreID = choreID;
+        this.completed = false;
+        this.shame = false;
+        this.previousUsers = new ArrayList<>();
+    }
+
     public String getChoreDescription() {
         return choreDescription;
     }
@@ -79,7 +91,7 @@ public class Chore {
         if(previousUsers.size() >= userCount-2) {
             this.previousUsers.clear();
         }
-        else this.previousUsers.add(this.currentUser);
+        if(this.currentUser != null) this.previousUsers.add(this.currentUser);
         this.currentUser = user;
     }
 
@@ -96,8 +108,10 @@ public class Chore {
 
     public ArrayList<User> getValidUsers(ArrayList<User> users) {
         ArrayList<User> validUsers = new ArrayList<>();
+        String userID = "";
+        if(this.currentUser != null) userID = this.currentUser.getUserID();
         for(User u : users) {
-            if(!isPreviousUser(u) && !u.getUserID().equals(this.currentUser.getUserID())) {
+            if(!isPreviousUser(u) && !u.getUserID().equals(userID)) {
                 validUsers.add(u);
             }
         }

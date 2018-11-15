@@ -40,10 +40,10 @@
     <div class="mdl-layout__drawer">
         <span class="mdl-layout-title"><img class="house" src="../resources/logo.png" alt="Suite Home" height="60" ></span>
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="message.html">Home</a>
-            <a class="mdl-navigation__link" href="">Calendar</a>
+            <a class="mdl-navigation__link" href="/message-board">Home</a>
+            <a class="mdl-navigation__link" href="#calendar.html">Calendar</a>
             <a class="mdl-navigation__link" href="tabs.html">Tabs</a>
-            <a class="mdl-navigation__link" href="chores.html">Chores</a>
+            <a class="mdl-navigation__link" href="/chores">Chores</a>
         </nav>
     </div>
     <main class="mdl-layout__content">
@@ -53,8 +53,7 @@
                 <!--grocery list-->
                 <div class="grocery mdl-cell mdl-cell--4-col">
                     <img class="grocerylist" src="../resources/mychores.png" alt="Suite Home" height="39" >
-                    <ul id="my_chores" class="list demo-list-control mdl-list">
-                    </ul>
+                    <ul id="my_chores" class="list demo-list-control mdl-list"></ul>
                 </div>
 
                 <!--transactions-->
@@ -79,16 +78,14 @@
                 <!--amount-->
                 <div class="grocery mdl-cell mdl-cell--4-col">
                     <img class="grocerylist" src="../resources/shamewall.png" alt="Suite Home" height="36" >
-                    <ul id="shame_wall" class="demo-list-two mdl-list">
-                        <li class="mdl-list__item mdl-list__item--two-line">
-                            <span class="mdl-list__item-primary-content">
-                              <img src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg" class="material-icons mdl-list__item-avatar" /><!--person</img>-->
-                              <span>Bryan Cranston</span>
-                              <span class="mdl-list__item-sub-title">Didn't vacuum</span>
-                            </span>
-                        </li>
-                    </ul>
+                    <ul id="shame_wall" class="demo-list-two mdl-list"></ul>
                 </div>
+                <form id="add_chore_form" onsubmit="return addChore(this);" method="GET">
+                    Description:<input type="text" name="description" value="very goood" /><br />
+                    Rotation Period:<input type="text" name="rotation_period" value="3 days" />
+                    <span id="rotation_period_error"></span><br />
+                    <input type="submit" value="Submit" />
+                </form>
             </div>
         </div>
     </main>

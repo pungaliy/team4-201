@@ -25,14 +25,14 @@ public class MessageSocket {
     public void message(String message, Session session) {
         System.out.println(message);
         System.out.println(message.equals("ping"));
-        if(!message.equals("ping")) {
+        if(message.equals("ping")) {
             sessionToUser.put(session, gson.fromJson(message, User.class));
         } else {
             System.out.println("Broadcasting...");
-            User currUser = sessionToUser.get(session);
+            User user = sessionToUser.get(session);
             for(Map.Entry<Session, User> e : sessionToUser.entrySet()) {
                 System.out.print(e.getValue().getFullName());
-                if(e.getValue().getRoomID().equals(currUser.getRoomID()) && !e.getKey().equals(session)) {
+                if(e.getValue().getRoomID().equals(user.getRoomID()) && !e.getKey().equals(session)) {
                     System.out.print(" - bull's eye!");
                     e.getKey().getAsyncRemote().sendText("pong");
                 }

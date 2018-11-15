@@ -135,7 +135,6 @@ $(window).resize(function() {
 var socket;
 var connectToMessageSocket = function() {
     console.log("connecting...")
-    var currUser;
     $.ajax({
         url: '/get-user',
         method: 'POST',
@@ -147,6 +146,9 @@ var connectToMessageSocket = function() {
             };
             socket.onmessage = function(event) {
                 render_post_its();
+            };
+            socket.onclose = function(event) {
+                connectToMessageSocket();
             };
         }
     });

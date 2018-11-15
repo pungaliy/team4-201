@@ -10,17 +10,19 @@ import java.util.*;
 
 public class ChoreManager {
     private static Gson gson = new Gson();
-    private ChoreBase cb = new ChoreBase();
+    private static ChoreBase cb = new ChoreBase();
     private User user;
 
     public ChoreManager(User user) {
         this.user = user;
     }
 
+    public User getUser() { return this.user; }
+
     public void addChore(String choreDescription, long rotationPeriod) {
         ArrayList<Chore> chores = getChores();
-        Chore chore = new Chore(choreDescription, rotationPeriod, System.currentTimeMillis(), this.user,
-                this.user.getRoomID(), this.user.getUserID()+System.currentTimeMillis());
+        Chore chore = new Chore(choreDescription, rotationPeriod, System.currentTimeMillis(), this.user.getRoomID(),
+                this.user.getUserID()+System.currentTimeMillis());
         assignChore(chore, chores, this.cb.retrieveUsers(user.getRoomID()));
         this.cb.insertChore(chore);
     }
@@ -66,28 +68,6 @@ public class ChoreManager {
     }
 
     public void assignChore(Chore chore, ArrayList<Chore> chores, ArrayList<User> users) {
-        /*ArrayList<User> users = this.cb.retrieveUsers(roomID);
-        HashMap<String, Integer> choreCount = new HashMap<>();
-        for(User user : users) {
-            if(!chore.isPreviousUser(user.getUserID())) {
-                choreCount.put(user.getUserID(), 0);
-            }
-        }
-        for(Chore c : chores) {
-            String user = c.getCurrentUser();
-            choreCount.put(user, choreCount.get(user) + 1);
-        }
-        String toAssign = users.get((int)(Math.random()*users.size())).getUserID();
-        int minChores = Integer.MAX_VALUE;
-        for(Map.Entry<String, Integer> entry : choreCount.entrySet()) {
-            int numChores = entry.getValue();
-            if(numChores < minChores) {
-                minChores = numChores;
-                toAssign = entry.getKey();
-            }
-        }
-        chore.replaceCurrentUser(toAssign, users.size());
-        */
         ArrayList<User> validUsers = chore.getValidUsers(users);
         if(validUsers.size() >= 1) {
             User toAssign = validUsers.get(0);
