@@ -11,6 +11,7 @@ public class NewTabsSocket {
 
 	@OnOpen
 	public void open(Session session) {
+		sessions.add(session);
 		System.out.println("TabsSocket Connection!");
 	}
 
@@ -18,7 +19,7 @@ public class NewTabsSocket {
 	public void message(String message, Session session) {
 		for(Session s : sessions){
 			try {
-				s.getBasicRemote().sendText("UPDATE");
+				s.getBasicRemote().sendText("");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -33,5 +34,6 @@ public class NewTabsSocket {
 	@OnError
 	public void error(Throwable error) {
 		System.out.println("TabsSocket: Error!");
+		error.printStackTrace();
 	}
 }
