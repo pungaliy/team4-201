@@ -25,11 +25,11 @@ public class SH5Login extends HttpServlet {
 
         if (u != null) {
             request.getServletContext().setAttribute("room", u.getRoomID());
+            request.getServletContext().setAttribute("user", u);
             response.getWriter().print("message-board");
         } else {
             response.getWriter().print("registration");
         }
-
 
         request.getServletContext().setAttribute("access_token", access_token);
         request.getServletContext().setAttribute("image", image);

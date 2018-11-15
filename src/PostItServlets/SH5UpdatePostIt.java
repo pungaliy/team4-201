@@ -22,8 +22,8 @@ public class SH5UpdatePostIt extends HttpServlet {
         System.out.print("Updating " + idname + " with: ");
         System.out.println(xpos + " " + ypos + " " + text);
 
-//        NoteBase db = (NoteBase) request.getServletContext().getAttribute("notebase");
-        NoteBase db = new NoteBase();
+        NoteBase db = (NoteBase) request.getServletContext().getAttribute("notebase");
+//        NoteBase db = new NoteBase();
         updateNote(xpos, ypos, text, idname, room, db);
     }
 

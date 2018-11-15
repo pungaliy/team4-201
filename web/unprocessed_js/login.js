@@ -16,26 +16,10 @@ function send_stuff(googleUser) {
             "email": googleUser.getBasicProfile().getEmail(),
         },
         success: function (response) {
-            console.log(response)
+            console.log(response);
             setTimeout(function() {window.location = "http://localhost:8080/" + response}, 500);
         }
     });
-
-    // var xhttp = new XMLHttpRequest();
-    // xhttp.open("POST", "/login", true);
-    //
-    // xhttp.onreadystatechange = function () {
-    //     console.log(response)
-    //     // setTimeout(function() {window.location = "http://localhost:8080/" + response}, 500)
-    // };
-    //
-    // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    // xhttp.send("access_token=" + googleUser.getAuthResponse().access_token
-    //     + "&user_id=" + googleUser.getBasicProfile().getId()
-    //     + "&image=" + googleUser.getBasicProfile().getImageUrl()
-    //     + "&first_name=" + googleUser.getBasicProfile().getName()
-    //     + "&email=" + googleUser.getBasicProfile().getEmail()
-    // );
 }
 
 function mySignOut() {
@@ -50,5 +34,4 @@ function mySignOut() {
         console.log('User signed out.');
     });
     gapi.auth2.getAuthInstance().disconnect();
-
 }
