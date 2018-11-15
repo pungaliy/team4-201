@@ -10,7 +10,10 @@ class PostIt extends React.Component {
                 stop: function() {
                     first_update_note(this)
                 },
-                stack: "div"
+                stack: "div",
+                onblur: function() {
+                    $(this).css("z-index" , 11);
+                }
             })
         });
     }

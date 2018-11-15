@@ -24,18 +24,18 @@ public class SH5Login extends HttpServlet {
         User u = db.retrieveUser(email);
 
         if (u != null) {
-            request.getServletContext().setAttribute("room", u.getRoomID());
+            request.getSession().setAttribute("room", u.getRoomID());
+            request.getSession().setAttribute("user", u);
             response.getWriter().print("message-board");
         } else {
             response.getWriter().print("registration");
         }
 
-
-        request.getServletContext().setAttribute("access_token", access_token);
-        request.getServletContext().setAttribute("image", image);
-        request.getServletContext().setAttribute("name", username);
-        request.getServletContext().setAttribute("email", email);
-        request.getServletContext().setAttribute("user", u);
+        request.getSession().setAttribute("access_token", access_token);
+        request.getSession().setAttribute("image", image);
+        request.getSession().setAttribute("name", username);
+        request.getSession().setAttribute("email", email);
+        request.getSession().setAttribute("user", u);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
