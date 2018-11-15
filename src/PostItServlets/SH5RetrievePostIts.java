@@ -17,6 +17,10 @@ import java.io.PrintWriter;
 public class SH5RetrievePostIts extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        User u = (User) request.getServletContext().getAttribute("user");
+        String json_str = new Gson().toJson(u);
+        System.out.println(json_str);
+
         String room = (String) request.getServletContext().getAttribute("room");
         NoteBase db = (NoteBase) request.getServletContext().getAttribute("notebase");
 //        NoteBase db = new NoteBase();
