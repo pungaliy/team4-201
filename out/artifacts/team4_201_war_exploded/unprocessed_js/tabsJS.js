@@ -2,8 +2,36 @@ var roomID;
 var currentUserID;
 var currentName;
 
+var socket;
+
+function connectSocket(){
+	socket = new WebSocket("ws://localhost:8080/TabsSocket");
+	socket.onopen = function (event){
+		console.log("JS TabsSocket connected.");
+	};
+	socket.onmessage = function (event){
+		console.log("Need to update list...");
+		loadGroceryList();
+		loadTransactionList();
+		loadTabsTotalList();
+		loadRoommatesForAddTransaction();
+		console.log("All list up to date");
+	};
+	socket.onclose = function (event){
+		console.log("JS TabsSocket closed.");
+	};
+	socket.onerror = function (event){
+		console.log("JS TabsSocket error.", event);
+	};
+}
+
+function broadcastUpdate(){
+	socket.send("NewUpdate");
+}
+
 $(document).ready(function(){
 	loadUserObjAndRoom();
+	connectSocket();
 	$("#addGroceryOptions").hide();
 	$("#addTransactionOptions").hide();
 
@@ -169,10 +197,12 @@ function addGroceryPass(roomid, itemname, addYN){
 		success: function(status){
 			console.log("Grocery Sent", param);
 			loadGroceryList();
+			broadcastUpdate();
 		},
 		error:function(error){
 			console.log("Error sending grocery item",error);
 			loadGroceryList();
+			broadcastUpdate();
 		}
 	});
 }
@@ -195,10 +225,12 @@ function deleteGroceryPass(roomid, itemname, addYN){
 		success: function(status){
 			console.log("Grocery delete",status);
 			loadGroceryList();
+			broadcastUpdate();
 		},
 		error:function(error){
 			console.log("Error removing grocery item",error);
 			loadGroceryList();
+			broadcastUpdate();
 		}
 	});
 }
@@ -315,11 +347,13 @@ function addTransactionPass(roomid, itemname, q, ppi, buy, split){
 		success: function(status){
 			loadTransactionList();
 			loadTabsTotalList();
+			broadcastUpdate();
 			console.log("Transactions Sent",status);
 		},
 		error:function(error){
 			loadTransactionList();
 			loadTabsTotalList();
+			broadcastUpdate();
 			console.log("Error Transactions",error);
 		}
 	});
