@@ -1,5 +1,6 @@
 package LoginRegistration;
 
+import com.google.gson.Gson;
 import db.DataBase;
 import db.Room;
 import db.User;
@@ -18,6 +19,8 @@ import java.io.PrintWriter;
 @WebServlet(name = "SH5Registration", urlPatterns = {"/registration"})
 public class SH5Registration extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
         PrintWriter pw = response.getWriter();
         String join = request.getParameter("join");
         String create = request.getParameter("create");
@@ -62,6 +65,7 @@ public class SH5Registration extends HttpServlet {
         String image = (String) req.getServletContext().getAttribute("image");
         String email = (String) req.getServletContext().getAttribute("email");
         User u = new User(username, email, roomid, image);
+        req.getServletContext().setAttribute("user", u);
         db.addUser(u);
     }
 
