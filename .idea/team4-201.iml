@@ -119,8 +119,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="javaee-api-7.0" level="project" />
-    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
-    <orderEntry type="library" name="gson-2.8.2" level="project" />
+    <orderEntry type="library" name="db" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>

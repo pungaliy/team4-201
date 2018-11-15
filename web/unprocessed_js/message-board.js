@@ -67,6 +67,9 @@ var first_update_note = function(val) {
             ypos:  ypos,
             text: $(val).find("textarea").val(),
             idname: $(val).attr('id')
+        },
+        success: function() {
+            broadcastChange();
         }
     });
 };
@@ -86,7 +89,6 @@ var close_this = function (self) {
 };
 
 var new_post_it = function () {
-    //TODO
     let m_idname = "post-it_" + new Date().getTime();
     $.ajax({
         url : '/add_postit',
@@ -151,7 +153,7 @@ var connectToMessageSocket = function() {
 };
 
 var broadcastChange = function() {
-    socket.send();
+    socket.send("ping");
 };
 
 render_post_its();
