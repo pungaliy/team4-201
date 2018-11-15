@@ -34,7 +34,7 @@ public class SH5Registration extends HttpServlet {
             if (ret_string.equals("VALID")) {
                 createNewRoom(room_code, request);
                 write(pw, "[\"ACC\", \"Room created\"]");
-                request.getServletContext().setAttribute("room", room_code);
+                request.getSession().setAttribute("room", room_code);
             } else {
                 write(pw, ret_string);
             }
@@ -43,7 +43,7 @@ public class SH5Registration extends HttpServlet {
             if (ret_string.equals("VALID")) {
                 joinRoom(room_code, request);
                 write(pw, "[\"ACC\", \"Room joined\"]");
-                request.getServletContext().setAttribute("room", room_code);
+                request.getSession().setAttribute("room", room_code);
             } else {
                 write(pw, ret_string);
             }

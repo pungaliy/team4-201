@@ -17,12 +17,12 @@ public class SH5UpdatePostIt extends HttpServlet {
         String xpos = request.getParameter("xpos");
         String ypos = request.getParameter("ypos");
         String text = request.getParameter("text");
-        String room  = (String) request.getServletContext().getAttribute("room");
+        String room  = (String) request.getSession().getAttribute("room");
 
         System.out.print("Updating " + idname + " with: ");
         System.out.println(xpos + " " + ypos + " " + text);
 
-        NoteBase db = (NoteBase) request.getServletContext().getAttribute("notebase");
+        NoteBase db = (NoteBase) request.getSession().getAttribute("notebase");
 //        NoteBase db = new NoteBase();
         updateNote(xpos, ypos, text, idname, room, db);
     }

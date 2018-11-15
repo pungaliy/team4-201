@@ -1,5 +1,3 @@
-'use strict';
-
 class PostIt extends React.Component {
     constructor(props) {
         super(props);
@@ -12,7 +10,10 @@ class PostIt extends React.Component {
                 stop: function() {
                     first_update_note(this)
                 },
-                stack: "div"
+                stack: "div",
+                onblur: function() {
+                    $(this).css("z-index" , 11);
+                }
             })
         });
     }
@@ -52,6 +53,7 @@ class PostIts extends React.Component {
 
 var update_note = function(value) {
     first_update_note($(value))
+    broadcastChange();
 };
 
 var first_update_note = function(val) {
@@ -68,6 +70,9 @@ var first_update_note = function(val) {
             ypos:  ypos,
             text: $(val).find("textarea").val(),
             idname: $(val).attr('id')
+        },
+        success: function() {
+            broadcastChange();
         }
     });
 };
@@ -81,6 +86,7 @@ var close_this = function (self) {
         },
         success: function() {
             render_post_its();
+            broadcastChange();
         }
     });
 };
@@ -98,6 +104,7 @@ var new_post_it = function () {
         },
         success: function() {
             render_post_its();
+            broadcastChange();
         }
     });
 };
@@ -110,6 +117,7 @@ var render_these_post_its = function(all_post_its){
 };
 
 var render_post_its = function() {
+    //Call on change
     console.log("rendering...");
     $.ajax({
         url : '/message-board',
@@ -127,4 +135,31 @@ $(window).resize(function() {
     }
 );
 
+var socket;
+var connectToMessageSocket = function() {
+    console.log("connecting...")
+    $.ajax({
+        url: '/get-user',
+        method: 'POST',
+        success: function(responseText) {
+            console.log(responseText);
+            socket = new WebSocket("ws://localhost:8080/sockets/message");
+            socket.onopen = function(event) {
+                socket.send(responseText);
+            };
+            socket.onmessage = function(event) {
+                render_post_its();
+            };
+            socket.onclose = function(event) {
+                connectToMessageSocket();
+            };
+        }
+    });
+};
+
+var broadcastChange = function() {
+    socket.send("ping");
+};
+
 render_post_its();
+connectToMessageSocket();
