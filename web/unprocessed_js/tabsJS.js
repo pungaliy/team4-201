@@ -137,9 +137,9 @@ function loadGroceryList(){
 				listItem.appendChild(itemNameSpan);
 				listItem.appendChild(checkboxSpan);
 
-				componentHandler.upgradeElement(listItem);
+				//componentHandler.upgradeElement(listItem);
 				list.appendChild(listItem);
-				componentHandler.upgradeElement(list);
+				//componentHandler.upgradeElement(list);
 			});
 			componentHandler.upgradeDom();
 		},
@@ -224,23 +224,23 @@ function loadTransactionList(){
 			priceHead.innerHTML = "Total price";
 			let splitHead = document.createElement("th");
 			splitHead.innerHTML = "Split";
-			componentHandler.upgradeElement(itemHead);
-			componentHandler.upgradeElement(priceHead);
-			componentHandler.upgradeElement(splitHead);
+			//componentHandler.upgradeElement(itemHead);
+			//componentHandler.upgradeElement(priceHead);
+			//componentHandler.upgradeElement(splitHead);
 			headrow.appendChild(itemHead);
 			headrow.appendChild(priceHead);
 			headrow.appendChild(splitHead);
-			componentHandler.upgradeElement(headrow);
+			//componentHandler.upgradeElement(headrow);
 			tHead.appendChild(headrow);
-			componentHandler.upgradeElement(tHead);
+			//componentHandler.upgradeElement(tHead);
 			table.appendChild(tHead);
-			componentHandler.upgradeElement(table);
+			//componentHandler.upgradeElement(table);
 			/*let tBody = document.getElementById("transactionBody");
 		tBody.innerHTML = "";*/
 			let tBody = document.createElement("tbody");
-			componentHandler.upgradeElement(tBody);
+			//componentHandler.upgradeElement(tBody);
 			table.appendChild(tBody);
-			componentHandler.upgradeElement(table);
+			//componentHandler.upgradeElement(table);
 
 			TransactionList.forEach(function(item) {
 				let row = document.createElement("tr");
@@ -258,16 +258,16 @@ function loadTransactionList(){
 					tdAmount.innerHTML += item["amount"];
 					tdSplit.innerHTML = item["user1"];
 				}
-				componentHandler.upgradeElement(tdItemName);
-				componentHandler.upgradeElement(tdAmount);
-				componentHandler.upgradeElement(tdSplit);
+				//componentHandler.upgradeElement(tdItemName);
+				//componentHandler.upgradeElement(tdAmount);
+				//componentHandler.upgradeElement(tdSplit);
 				row.appendChild(tdItemName);
 				row.appendChild(tdAmount);
 				row.appendChild(tdSplit);
-				componentHandler.upgradeElement(row);
+				//componentHandler.upgradeElement(row);
 				tBody.appendChild(row);
-				componentHandler.upgradeElement(tBody);
-				componentHandler.upgradeElement(table);
+				//componentHandler.upgradeElement(tBody);
+				//componentHandler.upgradeElement(table);
 			});
 			componentHandler.upgradeDom();
 		},
@@ -314,10 +314,12 @@ function addTransactionPass(roomid, itemname, q, ppi, buy, split){
 		data:JSON.stringify(param),
 		success: function(status){
 			loadTransactionList();
+			loadTabsTotalList();
 			console.log("Transactions Sent",status);
 		},
 		error:function(error){
 			loadTransactionList();
+			loadTabsTotalList();
 			console.log("Error Transactions",error);
 		}
 	});
@@ -343,10 +345,10 @@ function loadTabsTotalList(){
 				span1.className = "mdl-list__item-primary-content";
 				let i = document.createElement("i");
 				i.className = "material-icons mdl-list__item-avatar";
-				componentHandler.upgradeElement(i);
+				//componentHandler.upgradeElement(i);
 				let nameSpan = document.createElement("span");
 				nameSpan.innerHTML = item["user2"];
-				componentHandler.upgradeElement(nameSpan);
+				//componentHandler.upgradeElement(nameSpan);
 				let amountSpan = document.createElement("span");
 				amountSpan.className = "mdl-list__item-sub-title";
 				if(parseFloat(item["amount"]) < 0){
@@ -357,16 +359,16 @@ function loadTabsTotalList(){
 					amountSpan.innerHTML = ("$" + item["amount"]);
 				}
 
-				componentHandler.upgradeElement(amountSpan);
+				//componentHandler.upgradeElement(amountSpan);
 				span1.appendChild(i);
 				span1.appendChild(nameSpan);
 				span1.appendChild(amountSpan);
-				componentHandler.upgradeElement(span1);
+				//componentHandler.upgradeElement(span1);
 				listItem.appendChild(span1);
-				componentHandler.upgradeElement(listItem);
+				//componentHandler.upgradeElement(listItem);
 				list.appendChild(listItem);
 			});
-			componentHandler.upgradeElement(list);
+			//componentHandler.upgradeElement(list);
 			componentHandler.upgradeDom();
 		},
 		error: function(response){

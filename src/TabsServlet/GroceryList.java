@@ -31,7 +31,6 @@ public class GroceryList extends HttpServlet {
 		String add = jsonObj.get("add").getAsString();
 		String itemName = jsonObj.get("itemName").getAsString();
 
-
 		User current = (User) request.getServletContext().getAttribute("user");
 		String roomID = current.getRoomID();
 
@@ -53,7 +52,8 @@ public class GroceryList extends HttpServlet {
 
 		User current = (User) request.getServletContext().getAttribute("user");
 		String roomID = current.getRoomID();
-		System.out.println("RoomID in GroceryList Get: " + roomID);
+		String userID = current.getUserID();
+		System.out.println("RoomID in GroceryList Get: " + roomID + " retrieved by " + userID);
 
 		ArrayList<db.GroceryItem> groceryList = magic.getGroceryList(roomID);
 		Gson gson = new Gson();

@@ -74,6 +74,7 @@ public class TransactionList extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
 			IOException {
+		response.setContentType("application/json");
 
 		Magic magic = new Magic();
 		Gson gson = new Gson();
@@ -82,11 +83,6 @@ public class TransactionList extends HttpServlet{
 		String reqJson = buffer.readLine();
 
 		JsonObject jsonObj = gson.fromJson(reqJson, JsonObject.class);
-
-		//TODO: remove
-		/*User user1 = magic.searchByUserIDandRoomID("id1", "5566");
-		request.getServletContext().setAttribute("user", user1);
-		request.getServletContext().setAttribute("room", user1.getRoomID());*/
 
 		User current = (User) request.getServletContext().getAttribute("user");
 		String userID = current.getUserID();
@@ -106,7 +102,7 @@ public class TransactionList extends HttpServlet{
 		}
 		System.out.println("Transaction post with value from json roomID: " + roomID);
 		magic.addTransactionToAllSplitters(purchaser, quantity, pricePerItem, roomID, splitters, itemName);
-		response.setContentType("application/json");
+
 	}
 
 }

@@ -32,6 +32,8 @@ public class GetRoommates extends HttpServlet {
 
 		ArrayList<User> roommates = magic.getRoommates(roomID);
 		String output = gson.toJson(roommates);
+		System.out.println("Getting roommates for room: " + roomID + " for user: " + userID);
+		System.out.println("Roommates are: " + output);
 		response.setContentType("application/json");
 		PrintWriter out = response.getWriter();
 		out.print(output);
