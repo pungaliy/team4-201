@@ -2,13 +2,13 @@ package sock;
 
 import com.google.gson.Gson;
 import db.CalendarBase;
-import db.DataBase;
 import db.Event;
 import db.User;
 
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.*;
 
 @ServerEndpoint(value = "/CalendarSocket")
@@ -151,11 +151,10 @@ public class CalendarSocket {
                 CalendarSession calendarSession = new CalendarSession(calendarData.getUserID(), calendarData.getRoomID(), session);
                 calendarSessions.add(calendarSession);
 
-                //TODO: Make sure this block works.
+                //retrieve the necessary data to send to this session
                 ArrayList<PrimitiveUser> primitiveUsers = new ArrayList<>();
-
                 CalendarBase calendarBase = new CalendarBase();
-                ArrayList<User> users = calendarBase.retrieveUsers("roomID");
+                ArrayList<User> users = calendarBase.retrieveUsers("691337");
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
@@ -165,7 +164,7 @@ public class CalendarSocket {
                     String userID = foo.getUserID();
                     String name = foo.getFullName();
 
-                    var retrievedEvents = new CalendarBase().retrieveEvents(userID);
+                    ArrayList<Event> retrievedEvents = new CalendarBase().retrieveEvents(userID);
                     ArrayList<CalendarEvent> userCalendarEvents = new ArrayList<>();
                     for (var bar : retrievedEvents) {
                         userCalendarEvents.add(new CalendarEvent(bar.getUserID(), bar.getEventSummary(), gson.fromJson(bar.getStartDateTime(), GregorianCalendar.class), gson.fromJson(bar.getEndDateTime(), GregorianCalendar.class)));
@@ -174,7 +173,118 @@ public class CalendarSocket {
                     primitiveUsers.add(new PrimitiveUser(userID, name, userCalendarEvents));
                 }
 
-//                //TODO: Remove dummy data.
+                String jsonMessage = gson.toJson(primitiveUsers);
+
+                //create a new CalendarData message to encapsulate the data we're sending back
+                calendarData = new CalendarData(CalendarMessageType.INIT, calendarSession.getUserID(), calendarSession.getRoomID(), jsonMessage);
+
+                //send the json'd INIT response data back
+                try {
+                    session.getBasicRemote().sendText(gson.toJson(calendarData));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                break;
+            case ADD_EVENT:
+                CalendarEvent calendarEvent = gson.fromJson(calendarData.getJsonData(), CalendarEvent.class);
+
+                new CalendarBase().addEvent(new Event(calendarEvent.getUserID(), calendarEvent.getEventSummary(), gson.toJson(calendarEvent.getStartDateTime()), gson.toJson(calendarEvent.getEndDateTime())));
+
+                for (var foo : calendarSessions) {
+                    //determines if this message be sent to this user's session
+                    boolean needsUpdating = foo.getUserID().equals(calendarData.getUserID());
+
+                    ArrayList<User> bar = new CalendarBase().retrieveUsers(foo.getRoomID());
+                    for (User baz : bar) {
+                        if (baz.getUserID().equals(calendarData.getUserID())) {
+                            needsUpdating = true;
+                        }
+                    }
+
+                    if (needsUpdating) {
+                        try {
+                            foo.getSession().getBasicRemote().sendText(gson.toJson(new CalendarData(CalendarMessageType.UPDATE, foo.getUserID(), foo.getRoomID(), gson.toJson(calendarEvent))));
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+
+                break;
+            case UPDATE:
+                //SHOULD NEVER BE REACHED....?????
+                break;
+        }
+    }
+
+    @OnClose
+    public void close(Session session) {
+        calendarSessions.removeIf(foo -> (foo.getSession().equals(session)));
+
+        System.out.println("Closed a session.");
+    }
+
+    @OnError
+    public void error(Throwable throwable) {
+        throwable.printStackTrace();
+    }
+
+    public static void main(String [] args) {
+        CalendarBase cb = new CalendarBase();
+        for(int i = 0; i < 20; i++) {
+            int day = 11 + (int) Math.floor(Math.random() * 7);
+            int hour = (int) Math.floor(Math.random() * 18);
+
+
+            var std = new GregorianCalendar(2018, Calendar.NOVEMBER, day, hour, 0);
+            std.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+            var etd = new GregorianCalendar(2018, Calendar.NOVEMBER, day, hour + (int)Math.floor(Math.random() * 6), 0);
+            etd.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+
+            Event tmp = null;
+
+            int j = (int) (Math.random() * 5);
+            switch (j) {
+                case 0:
+                    tmp = new Event("yeqing@usc.edu", "MyEvent #" + i, gson.toJson(std), gson.toJson(etd));
+                    break;
+                case 1:
+                    tmp = new Event("strawsnowrries@gmail.com", "MyEvent #" + i, gson.toJson(std), gson.toJson(etd));
+                    break;
+                case 2:
+                    tmp = new Event("voter@usc.edu", "MyEvent #" + i, gson.toJson(std), gson.toJson(etd));
+                    break;
+                case 3:
+                    tmp = new Event("msteinberg@usc.edu", "MyEvent #" + i, gson.toJson(std), gson.toJson(etd));
+                    break;
+                default:
+                    tmp = new Event("kchandr@usc.edu", "MyEvent #" + i, gson.toJson(std), gson.toJson(etd));
+                    break;
+            }
+
+            cb.addEvent(tmp);
+        }
+
+
+        User user1 = new User("Qing Ye", "yeqing@usc.edu", "691337", "imgurl");
+        User user2 = new User("Allan Zhang", "strawsnowrries@gmail.com", "691337", "imgurl");
+        User user3 = new User("Ben Voter", "voter@usc.edu", "691337", "imgurl");
+        User user4 = new User("Micah Steinberg", "msteinberg@usc.edu", "691337", "imgurl");
+        User user5 = new User("Katrina Chandra", "kchandr@usc.edu", "691337", "imgurl");
+        cb.addUser(user1);
+        cb.addUser(user2);
+        cb.addUser(user3);
+        cb.addUser(user4);
+        cb.addUser(user5);
+
+        ArrayList<User> users = cb.retrieveUsers("691337");
+        for (User foo : users) {
+            System.out.println(foo.getFullName());
+        }
+    }
+}
+
 //                var std1 = new GregorianCalendar(2018, Calendar.NOVEMBER, 10, 12, 0);
 //                std1.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
 //                var etd1 = new GregorianCalendar(2018, Calendar.NOVEMBER, 10, 15, 0);
@@ -208,105 +318,4 @@ public class CalendarSocket {
 //                eventArrayList2.add(event3);
 //                eventArrayList2.add(event4);
 //                primitiveUsers.add(new PrimitiveUser("allanzha@usc.edu", "Ballin' Zhang", eventArrayList2));
-//                //END DUMMY DATA...
-
-                String jsonMessage = gson.toJson(primitiveUsers);
-
-                //create a new CalendarData message to encapsulate the data we're sending back
-                calendarData = new CalendarData(CalendarMessageType.INIT, calendarSession.getUserID(), calendarSession.getRoomID(), jsonMessage);
-
-                //send the json'd INIT response data back
-                try {
-                    session.getBasicRemote().sendText(gson.toJson(calendarData));
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-                break;
-            case ADD_EVENT:
-                CalendarEvent calendarEvent = gson.fromJson(calendarData.getJsonData(), CalendarEvent.class);
-
-                //TODO: Make sure this block works.calendarEvent
-//                new CalendarBase().addEvent(new Event(calendarEvent.getUserID(), calendarEvent.getEventSummary(), gson.toJson(calendarEvent.getStartDateTime()), gson.toJson(calendarEvent.getEndDateTime())));
-
-                for (var foo : calendarSessions) {
-                    //determines if this message be sent to this user's session
-                    boolean needsUpdating = foo.getUserID().equals(calendarData.getUserID());
-
-                    //TODO: Make sure this block works.
-//                    ArrayList<User> bar = new DataBase().retrieveUsers(foo.getRoomID());
-//                    for (User baz : bar) {
-//                        if (baz.getUserID().equals(calendarData.getUserID())) {
-//                            needsUpdating = true;
-//                        }
-//                    }
-
-                    if (needsUpdating) {
-                        try {
-                            foo.getSession().getBasicRemote().sendText(gson.toJson(new CalendarData(CalendarMessageType.UPDATE, foo.getUserID(), foo.getRoomID(), gson.toJson(calendarEvent))));
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-
-                break;
-            case UPDATE:
-                //SHOULD NEVER BE REACHED....?????
-                break;
-        }
-    }
-
-    @OnClose
-    public void close(Session session) {
-        calendarSessions.removeIf(foo -> (foo.getSession().equals(session)));
-
-        System.out.println("Closed a session.");
-    }
-
-    @OnError
-    public void error(Throwable throwable) {
-        throwable.printStackTrace();
-    }
-
-    public static void main(String [] args) {
-        CalendarBase cb = new CalendarBase();
-//        for(int i = 0; i < 20; i++) {
-//            int day = 11 + (int) Math.floor(Math.random() * 7);
-//            int hour = (int) Math.floor(Math.random() * 18);
-//
-//
-//            var std = new GregorianCalendar(2018, Calendar.NOVEMBER, day, hour, 0);
-//            std.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
-//            var etd = new GregorianCalendar(2018, Calendar.NOVEMBER, day, hour + (int)Math.floor(Math.random() * 6), 0);
-//            etd.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
-//
-//            Event tmp = null;
-//            if (i % 2 == 0) {
-//                tmp = new Event("CP@usc", "summary" + i, gson.toJson(std), gson.toJson(etd));
-//            } else {
-//                tmp = new Event("strawsnowrries@gmail.com", "summary" + i, gson.toJson(std), gson.toJson(etd));
-//            }
-//
-//            cb.addEvent(tmp);
-//        }
-//
-//
-//        User user = new User("the CP", "CP@usc", "roomID", "imgurl");
-//        User user1 = new User("Allan Zhang", "strawsnowrries@gmail.com", "roomID", "imgurl");
-//        User user2 = new User("ben Vote", "ben@usc", "roomID", "imgurl");
-//        User user3 = new User("Micah Steinberg", "micah@usc", "roomID2", "imgurl");
-//        User user4 = new User("Katrina Chandra", "katrina@", "roomID2", "imgurl");
-//        cb.addUser(user);
-//        cb.addUser(user1);
-//        cb.addUser(user2);
-//        cb.addUser(user3);
-//        cb.addUser(user4);
-
-        System.out.println("Hello World");
-        ArrayList<User> users = cb.retrieveUsers("roomID");
-        for (User foo : users) {
-            System.out.println(foo.getFullName());
-        }
-    }
-}
+//                //END DUMMY DATA..

@@ -8,7 +8,7 @@ import static com.mongodb.client.model.Filters.eq;
 
 public class CalendarBase extends DataBase {
     public ArrayList<Event> retrieveEvents(String id) {
-        MongoCollection<Event> collection = database.getCollection("event", Event.class);
+        MongoCollection<Event> collection = database.getCollection("events", Event.class);
         ArrayList<Event> tmp = new ArrayList<>();
         for( Event event : collection.find(eq("userID", id))) {
             tmp.add(event);
