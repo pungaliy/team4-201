@@ -161,13 +161,14 @@ function onmessage(event) {
 
                 //make the id of each checkbox be "toggle___Calendar", where ___ is the PrimitiveUser's userID, but remove @ since its an illegal character
                 let checkboxID = (String("toggle" + primitiveUser.userID + "Calendar")).replace('@', '');
+                let checkboxMessage = "Toggle " + primitiveUser.username + "'s Calendar";
 
                 //create the line of HTML that will be appended to #checkboxes; by default, show only the user's calendar initially
                 let checkboxHTML = null;
                 if (primitiveUser.userID === userID) {
                     checkboxHTML = "<label class='mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect check' for='" + checkboxID + "'>";
                     checkboxHTML +=     "<input type='checkbox' id='" + checkboxID + "' class='mdl-checkbox__input' onChange='toggleCalendars()' checked>";
-                    checkboxHTML +=     "<span class='mdl-checkbox__label'>" + "Toggle " + primitiveUser.username + "'s Calendar" + "</span>";
+                    checkboxHTML +=     "<span class='mdl-checkbox__label'>" + checkboxMessage + "</span>";
                     checkboxHTML +="</label>";
 
                     //mark this user's calendar as showing since it is the actual user on the page
@@ -175,7 +176,7 @@ function onmessage(event) {
                 } else {
                     checkboxHTML = "<label class='mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect check' for='" + checkboxID + "'>";
                     checkboxHTML +=     "<input type='checkbox' id='" + checkboxID + "' class='mdl-checkbox__input' onChange='toggleCalendars()'>";
-                    checkboxHTML +=     "<span class='mdl-checkbox__label'>" + "Toggle " + primitiveUser.username + "'s Calendar" + "</span>";
+                    checkboxHTML +=     "<span class='mdl-checkbox__label'>" + checkboxMessage + "</span>";
                     checkboxHTML +="</label>";
 
                     //initialize the PrimitiveUser's calendar to not show initially
