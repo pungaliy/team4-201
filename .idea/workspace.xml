@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e01caea0-f7ce-4d2e-ae68-6639be0f91c3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/unprocessed_js/tabsJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/unprocessed_js/tabsJS.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TabsSock/NewTabsSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TabsSock/NewTabsSocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/unprocessed_js/tabsJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/unprocessed_js/tabsJS.js" afterDir="false" />
     </list>
@@ -100,17 +101,17 @@
         <counts>
           <entry key="dummy" value="15" />
           <entry key="html" value="3603" />
-          <entry key="java" value="9896" />
-          <entry key="js" value="8709" />
-          <entry key="txt" value="1802" />
+          <entry key="java" value="9963" />
+          <entry key="js" value="8726" />
+          <entry key="txt" value="1857" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="3603" />
-          <entry key="JAVA" value="9896" />
-          <entry key="JavaScript" value="8709" />
-          <entry key="PLAIN_TEXT" value="1817" />
+          <entry key="JAVA" value="9963" />
+          <entry key="JavaScript" value="8726" />
+          <entry key="PLAIN_TEXT" value="1872" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
@@ -150,11 +151,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TabsSock/NewTabsSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+            <state relative-caret-position="384">
+              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -162,11 +163,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/unprocessed_js/tabsJS.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="365" column="28" selection-start-line="365" selection-start-column="28" selection-end-line="365" selection-end-column="28" />
+            <state relative-caret-position="284">
+              <caret line="202" column="28" lean-forward="true" selection-start-line="202" selection-start-column="28" selection-end-line="202" selection-end-column="28" />
               <folding>
                 <element signature="n#!!block;n#loadUserObjAndRoom#0" />
                 <element signature="n#!!block;n#loadRoommatesForAddTransaction#0" />
@@ -180,7 +181,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/unprocessed_js/chores.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
+            <state relative-caret-position="509">
               <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
             </state>
           </provider>
@@ -319,8 +320,8 @@
         <option value="$PROJECT_DIR$/web/html/message.html" />
         <option value="$PROJECT_DIR$/src/TabsSocket.java" />
         <option value="$PROJECT_DIR$/src/NewTabsSocket.java" />
-        <option value="$PROJECT_DIR$/src/TabsSock/NewTabsSocket.java" />
         <option value="$PROJECT_DIR$/web/unprocessed_js/tabsJS.js" />
+        <option value="$PROJECT_DIR$/src/TabsSock/NewTabsSocket.java" />
       </list>
     </option>
   </component>
@@ -450,7 +451,7 @@
     <property name="SearchEverywhereHistoryKey" value="roomID&#9;PSI&#9;JAVA://TabsStuff.Transaction#roomID" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542318196946" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542337563244" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/TextInputEffects/TextInputEffects" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -717,7 +718,7 @@
       <workItem from="1542309587702" duration="642000" />
       <workItem from="1542312295980" duration="2949000" />
       <workItem from="1542316163834" duration="499000" />
-      <workItem from="1542316866311" duration="1322000" />
+      <workItem from="1542316866311" duration="1900000" />
     </task>
     <task id="LOCAL-00001" summary="Merge from KatrinaMessage">
       <created>1542070558515</created>
@@ -971,11 +972,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542316612288</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Websocket doesn't notify other sessions to update">
+      <created>1542318252174</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1542318252174</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135716000" />
+    <option name="totallyTimeSpent" value="136294000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -987,10 +995,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1440" height="814" extended-state="0" />
+    <frame x="1" y="23" width="1439" height="811" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7473684" visible="true" weight="0.27181688" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7473684" visible="true" weight="0.27201146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1000,7 +1008,7 @@
       <window_info id="Web" order="7" sideWeight="0.32911393" side_tool="true" weight="0.27543995" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32825485" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32409972" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32545203" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1095,7 +1103,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed the use of roomID from int to String" />
     <MESSAGE value="Try to get transaction list servlet done. Commit before merge from db" />
     <MESSAGE value="GroceryList servlet should work with db now" />
     <MESSAGE value="Before merging from db" />
@@ -1120,7 +1127,8 @@
     <MESSAGE value="Can log in and load properly now~ Ugly ajax are now running with jQuery" />
     <MESSAGE value="I don't know why it worked.... User behave properly now" />
     <MESSAGE value="Try to implement very basic websocket" />
-    <option name="LAST_COMMIT_MESSAGE" value="Try to implement very basic websocket" />
+    <MESSAGE value="Websocket doesn't notify other sessions to update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Websocket doesn't notify other sessions to update" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web/html/text_test.html">
@@ -1389,30 +1397,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/chores.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
+        <state relative-caret-position="509">
           <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TabsSock/NewTabsSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/tabsJS.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="365" column="28" selection-start-line="365" selection-start-column="28" selection-end-line="365" selection-end-column="28" />
+        <state relative-caret-position="284">
+          <caret line="202" column="28" lean-forward="true" selection-start-line="202" selection-start-column="28" selection-end-line="202" selection-end-column="28" />
           <folding>
             <element signature="n#!!block;n#loadUserObjAndRoom#0" />
             <element signature="n#!!block;n#loadRoommatesForAddTransaction#0" />
             <element signature="n#!!block;n#loadGroceryList#0" />
             <element signature="n#!!block;n#addGroceryClick#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TabsSock/NewTabsSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

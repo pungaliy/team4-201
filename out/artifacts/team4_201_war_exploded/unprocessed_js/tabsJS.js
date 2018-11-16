@@ -5,7 +5,7 @@ var currentName;
 var socket;
 
 function connectSocket(){
-	socket = new WebSocket("ws://localhost:8080/TabsSocket");
+	socket = new WebSocket("ws://localhost:8080/sockets/tabs");
 	socket.onopen = function (event){
 		console.log("JS TabsSocket connected.");
 	};
@@ -14,11 +14,12 @@ function connectSocket(){
 		loadGroceryList();
 		loadTransactionList();
 		loadTabsTotalList();
-		loadRoommatesForAddTransaction();
 		console.log("All list up to date");
 	};
 	socket.onclose = function (event){
 		console.log("JS TabsSocket closed.");
+		//connectSocket();
+		//console.log("JS TabsSocket reconnect");
 	};
 	socket.onerror = function (event){
 		console.log("JS TabsSocket error.", event);
@@ -26,7 +27,8 @@ function connectSocket(){
 }
 
 function broadcastUpdate(){
-	socket.send("NewUpdate");
+	console.log("Try to braodcast update...");
+	socket.send("");
 }
 
 $(document).ready(function(){
@@ -196,13 +198,15 @@ function addGroceryPass(roomid, itemname, addYN){
 		contentType: "application/json",
 		success: function(status){
 			console.log("Grocery Sent", param);
-			loadGroceryList();
 			broadcastUpdate();
+			loadGroceryList();
+			connectSocket();
 		},
 		error:function(error){
 			console.log("Error sending grocery item",error);
-			loadGroceryList();
 			broadcastUpdate();
+			loadGroceryList();
+			connectSocket();
 		}
 	});
 }
@@ -222,15 +226,18 @@ function deleteGroceryPass(roomid, itemname, addYN){
 		type: "POST",
 		url: "/GroceryList",
 		data:JSON.stringify(param),
+		contentType: "application/json",
 		success: function(status){
 			console.log("Grocery delete",status);
-			loadGroceryList();
 			broadcastUpdate();
+			loadGroceryList();
+			connectSocket();
 		},
 		error:function(error){
 			console.log("Error removing grocery item",error);
-			loadGroceryList();
 			broadcastUpdate();
+			loadGroceryList();
+			connectSocket();
 		}
 	});
 }
@@ -344,16 +351,19 @@ function addTransactionPass(roomid, itemname, q, ppi, buy, split){
 		type: "POST",
 		url: "/TransactionList",
 		data:JSON.stringify(param),
+		contentType: "application/json",
 		success: function(status){
+			broadcastUpdate();
 			loadTransactionList();
 			loadTabsTotalList();
-			broadcastUpdate();
+			connectSocket();
 			console.log("Transactions Sent",status);
 		},
 		error:function(error){
+			broadcastUpdate();
 			loadTransactionList();
 			loadTabsTotalList();
-			broadcastUpdate();
+			connectSocket();
 			console.log("Error Transactions",error);
 		}
 	});

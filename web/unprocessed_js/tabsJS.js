@@ -28,7 +28,7 @@ function connectSocket(){
 
 function broadcastUpdate(){
 	console.log("Try to braodcast update...");
-	socket.send("UPDATE");
+	socket.send("");
 }
 
 $(document).ready(function(){

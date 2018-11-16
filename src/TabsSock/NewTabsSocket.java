@@ -28,6 +28,7 @@ public class NewTabsSocket {
 
 	@OnClose
 	public void close(Session session) {
+		sessions.remove(session);
 		System.out.println("TabsSocket: Disconnected!");
 	}
 
