@@ -38,13 +38,32 @@ public class AddChoreServlet extends HttpServlet {
     private long calculateMs(String s) {
         String[] split = s.split("\\s+");
         if(split.length < 2) return -1;
-        long n = 1;
+        long n;
         try {
             n = Long.parseLong(split[0]);
         } catch(NumberFormatException nfe) {
             return -1;
         }
-        switch(split[1].toLowerCase()) {
+        String field = split[1].toLowerCase();
+        switch(field) {
+            case "years":
+            case "year":
+            case "yrs":
+            case "yr":
+            case "ys":
+            case "y":
+                n *= 365;
+                field = "days";
+                break;
+            case "months":
+            case "month":
+            case "mnths":
+            case "mnth":
+            case "mns":
+            case "mn":
+                n *= 30;
+                field = "days";
+                break;
             case "weeks":
             case "week":
             case "wks":
@@ -52,6 +71,10 @@ public class AddChoreServlet extends HttpServlet {
             case "ws":
             case "w":
                 n *= 7;
+                field = "days";
+                break;
+        }
+        switch(field) {
             case "days":
             case "day":
             case "dys":
@@ -71,7 +94,6 @@ public class AddChoreServlet extends HttpServlet {
             case "mins":
             case "min":
             case "mns":
-            case "mn":
             case "m":
                 n *= 60;
             case "seconds":
@@ -106,7 +128,8 @@ public class AddChoreServlet extends HttpServlet {
             case "mls":
                 break;
             default:
-                return -1;
+                n *= 86400000; //Assume days
+
         }
         return n;
     }
