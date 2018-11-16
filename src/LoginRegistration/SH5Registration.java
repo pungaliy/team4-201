@@ -61,22 +61,22 @@ public class SH5Registration extends HttpServlet {
         DataBase db = new DataBase();
         db.addRoom(new Room(roomid));
 
-        String username = (String) req.getServletContext().getAttribute("name");
-        String image = (String) req.getServletContext().getAttribute("image");
-        String email = (String) req.getServletContext().getAttribute("email");
+        String username = (String) req.getSession().getAttribute("name");
+        String image = (String) req.getSession().getAttribute("image");
+        String email = (String) req.getSession().getAttribute("email");
         User u = new User(username, email, roomid, image);
-        req.getServletContext().setAttribute("user", u);
+        req.getSession().setAttribute("user", u);
         db.addUser(u);
     }
 
     private void joinRoom(String roomid, HttpServletRequest req) {
         DataBase db = new DataBase();
 
-        String username = (String) req.getServletContext().getAttribute("name");
-        String image = (String) req.getServletContext().getAttribute("image");
-        String email = (String) req.getServletContext().getAttribute("email");
+        String username = (String) req.getSession().getAttribute("name");
+        String image = (String) req.getSession().getAttribute("image");
+        String email = (String) req.getSession().getAttribute("email");
         User u = new User(username, email, roomid, image);
-        req.getServletContext().setAttribute("user", u);
+        req.getSession().setAttribute("user", u);
         db.addUser(u);
     }
 
