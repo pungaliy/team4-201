@@ -29,7 +29,7 @@ var calendarSocket;
 
 //TODO: Get actual userID and roomID of the current user on this page.
 var userID = "strawsnowrries@gmail.com";
-var roomID = "691337";
+var roomID = "roomID";
 
 /**
  * calendarSocket's onopen function.
@@ -317,6 +317,7 @@ function setAllCalendars() {
 	ArrayList<Event> userEvents = retrieveEvents(userID);
 
 }
+
  Json object:
  userID
  Events[]
