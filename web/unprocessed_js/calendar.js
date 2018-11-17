@@ -165,7 +165,7 @@ function onmessage(event) {
                 //create the line of HTML that will be appended to #checkboxes; by default, show only the user's calendar initially
                 let checkboxHTML = null;
                 if (primitiveUser.userID === userID) {
-                    checkboxHTML = "<label class='mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect check' for='" + checkboxID + "'>";
+                    checkboxHTML = "<label class='mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect check'>";
                     checkboxHTML +=     "<input type='checkbox' id='" + checkboxID + "' class='mdl-checkbox__input' onChange='toggleCalendars()' checked>";
                     checkboxHTML +=     "<span class='mdl-checkbox__label'>" + checkboxMessage + "</span>";
                     checkboxHTML +="</label>";
@@ -173,7 +173,7 @@ function onmessage(event) {
                     //mark this user's calendar as showing since it is the actual user on the page
                     toggleEventMap.set(primitiveUser.userID, true);
                 } else {
-                    checkboxHTML = "<label class='mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect check' for='" + checkboxID + "'>";
+                    checkboxHTML = "<label class='mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect check'>";
                     checkboxHTML +=     "<input type='checkbox' id='" + checkboxID + "' class='mdl-checkbox__input' onChange='toggleCalendars()'>";
                     checkboxHTML +=     "<span class='mdl-checkbox__label'>" + checkboxMessage + "</span>";
                     checkboxHTML +="</label>";

@@ -73,32 +73,75 @@
 
                 <div class="mdl-cell mdl-cell--3-col" style="height: 100%;">
                     <div id='checkboxes'>
-                        <button onclick="setAllCalendars()">SET ALL CALENDARS</button>
+                    </div>
+
+                    <div>
+                        <button onclick="setAllCalendars()" class = "mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                            Show All Calendars</button>
+
                     </div>
 
                     <div style="float: bottom;">
-                        <!-- Colored FAB button with ripple -->
-                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                        <button id="show-dialog" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
                             <i class="material-icons">add</i>
                         </button>
+
+                        <!--<button id="show-dialog" type="button" class="mdl-button">Show Dialog</button>-->
+                        <dialog class="mdl-dialog" style="width: 600px; height: 400px;">
+
+                            <form id="eventForm" onsubmit="addEvent(); return false">
+                                <h4 class="mdl-dialog__title">Add a new event</h4>
+                                <div class="mdl-dialog__content">
+                                    Event summary: <br>
+                                    <input type="text" name="summary" required> <br>
+
+                                    Event start date: <br>
+                                    <input type="datetime-local" name="startDateTime" required><br>
+
+                                    Event end date: <br>
+                                    <input type="datetime-local" name="endDateTime" required><br>
+
+                                    Where should this event be added to?<br>
+                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+                                        <input type="radio" class="mdl-radio__button" name="whichCalendar" value="user" checked />
+                                        <span class="mdl-radio__label">Your Calendar</span>
+                                    </label>
+                                    <br>
+                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+                                        <input type="radio" class="mdl-radio__button" name="whichCalendar" value="room" />
+                                        <span class="mdl-radio__label">Room Calendar</span>
+                                    </label>
+
+                                </div>
+                                <div class="mdl-dialog__actions">
+                                    <input type="submit" class="mdl-button" value="Add Event">
+                                    <!--<button type="button" class="mdl-button">Add Event</button>-->
+                                    <button type="button" class="mdl-button close">Cancel</button>
+                                </div>
+                            </form>
+
+
+
+
+
+
+
+                        </dialog>
+                        <script>
+                            var dialog = document.querySelector('dialog');
+                            var showDialogButton = document.querySelector('#show-dialog');
+                            if (! dialog.showModal) {
+                                dialogPolyfill.registerDialog(dialog);
+                            }
+                            showDialogButton.addEventListener('click', function() {
+                                dialog.showModal();
+                            });
+                            dialog.querySelector('.close').addEventListener('click', function() {
+                                dialog.close();
+                            });
+                        </script>
                     </div>
 
-                    <form id="eventForm" onsubmit="addEvent(); return false">
-                        Event summary: <br>
-                        <input type="text" name="summary" required> <br>
-
-                        Event start date: <br>
-                        <input type="datetime-local" name="startDateTime" required><br>
-
-                        Event end date: <br>
-                        <input type="datetime-local" name="endDateTime" required><br>
-
-                        Where should this event be added to?<br>
-                        <input type="radio" name="whichCalendar" value="user" checked> Your Calendar<br>
-                        <input type="radio" name="whichCalendar" value="room">Room Calendar<br>
-
-                        <input type="submit" value="Add Event">
-                    </form>
                 </div>
             </div>
         </div>
