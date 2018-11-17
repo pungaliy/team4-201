@@ -160,11 +160,16 @@ function onmessage(event) {
 
                 //make the id of each checkbox be "toggle___Calendar", where ___ is the PrimitiveUser's userID, but remove @ since its an illegal character
                 let checkboxID = (String("toggle" + primitiveUser.userID + "Calendar")).replace('@', '');
-                let checkboxMessage = "Toggle " + primitiveUser.username + "'s Calendar";
 
-                //create the line of HTML that will be appended to #checkboxes; by default, show only the user's calendar initially
+                //the text to be displayed next to each checkbox
+                let checkboxMessage = "Toggle " + primitiveUser.username + "'s Calendar";
+                if (primitiveUser.username === "Room") {
+                    checkboxMessage = "Toggle Room Calendar"
+                }
+
+                //create the line of HTML that will be appended to #checkboxes; by default, show only the user's calendar & room calendar initially
                 let checkboxHTML = null;
-                if (primitiveUser.userID === userID) {
+                if (primitiveUser.userID === userID || primitiveUser.userID === roomID) {
                     checkboxHTML = "<label class='mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect check'>";
                     checkboxHTML +=     "<input type='checkbox' id='" + checkboxID + "' class='mdl-checkbox__input' onChange='toggleCalendars()' checked>";
                     checkboxHTML +=     "<span class='mdl-checkbox__label'>" + checkboxMessage + "</span>";
@@ -209,11 +214,10 @@ function onmessage(event) {
                         month: "Month"
                     }
                 });
-                //https://bootswatch.com/4/yeti/bootstrap.min.css
 
                 for (i = 0; i < room.length; ++i) {
                     let primitiveUser = room[i];
-                    if (primitiveUser.userID === userID) {
+                    if (primitiveUser.userID === userID || primitiveUser.userID === roomID) {
                         $('#calendar').fullCalendar('addEventSource', primitiveUser.eventSource);
                     }
                 }

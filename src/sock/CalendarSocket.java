@@ -3,6 +3,7 @@ package sock;
 import com.google.gson.Gson;
 import db.CalendarBase;
 import db.Event;
+import db.Room;
 import db.User;
 
 import javax.websocket.*;
@@ -154,12 +155,9 @@ public class CalendarSocket {
                 //retrieve the necessary data to send to this session
                 ArrayList<PrimitiveUser> primitiveUsers = new ArrayList<>();
                 CalendarBase calendarBase = new CalendarBase();
-                ArrayList<User> users = calendarBase.retrieveUsers("691337");
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                ArrayList<User> users = calendarBase.retrieveUsers(calendarData.roomID);
+
+                //user events
                 for (User foo : users) {
                     String userID = foo.getUserID();
                     String name = foo.getFullName();
@@ -173,6 +171,15 @@ public class CalendarSocket {
                     primitiveUsers.add(new PrimitiveUser(userID, name, userCalendarEvents));
                 }
 
+                //room events
+                ArrayList<Event> roomEvents = new CalendarBase().retrieveEvents(calendarSession.roomID);
+                ArrayList<CalendarEvent> roomCalendarEvents = new ArrayList<>();
+                for (var bar : roomEvents) {
+                    roomCalendarEvents.add(new CalendarEvent(bar.getUserID(), bar.getEventSummary(), gson.fromJson(bar.getStartDateTime(), GregorianCalendar.class), gson.fromJson(bar.getEndDateTime(), GregorianCalendar.class)));
+                }
+                primitiveUsers.add(new PrimitiveUser(calendarSession.roomID, "Room", roomCalendarEvents));
+
+                //jsonify it into a payload
                 String jsonMessage = gson.toJson(primitiveUsers);
 
                 //create a new CalendarData message to encapsulate the data we're sending back
@@ -244,7 +251,7 @@ public class CalendarSocket {
 
             Event tmp = null;
 
-            int j = (int) (Math.random() * 5);
+            int j = (int) (Math.random() * 6);
             switch (j) {
                 case 0:
                     tmp = new Event("yeqing@usc.edu", "MyEvent #" + i, gson.toJson(std), gson.toJson(etd));
@@ -258,25 +265,37 @@ public class CalendarSocket {
                 case 3:
                     tmp = new Event("msteinberg@usc.edu", "MyEvent #" + i, gson.toJson(std), gson.toJson(etd));
                     break;
-                default:
+                case 4:
                     tmp = new Event("kchandr@usc.edu", "MyEvent #" + i, gson.toJson(std), gson.toJson(etd));
+                    break;
+                default:
+                    tmp = new Event("691337", "RoomEvent #" + i, gson.toJson(std), gson.toJson(etd));
                     break;
             }
 
             cb.addEvent(tmp);
         }
 
-
         User user1 = new User("Qing Ye", "yeqing@usc.edu", "691337", "imgurl");
         User user2 = new User("Allan Zhang", "strawsnowrries@gmail.com", "691337", "imgurl");
         User user3 = new User("Ben Voter", "voter@usc.edu", "691337", "imgurl");
         User user4 = new User("Micah Steinberg", "msteinberg@usc.edu", "691337", "imgurl");
         User user5 = new User("Katrina Chandra", "kchandr@usc.edu", "691337", "imgurl");
+
         cb.addUser(user1);
         cb.addUser(user2);
         cb.addUser(user3);
         cb.addUser(user4);
         cb.addUser(user5);
+
+        ArrayList<String> residents = new ArrayList<>();
+        residents.add("yeqing@usc.edu");
+        residents.add("strawsnowrries@gmail.com");
+        residents.add("voter@usc.edu");
+        residents.add("msteinberg@usc.edu");
+        residents.add("kchandr@usc.edu");
+        Room room = new Room("691337", residents, "DO NOT DISTURB");
+        cb.addRoom(room);
 
         ArrayList<User> users = cb.retrieveUsers("691337");
         for (User foo : users) {
