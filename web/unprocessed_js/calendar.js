@@ -27,9 +27,8 @@ var toggleEventMap;
  */
 var calendarSocket;
 
-//TODO: Get actual userID and roomID of the current user on this page.
-var userID = "strawsnowrries@gmail.com";
-var roomID = "691337";
+var userID;
+var roomID;
 
 /**
  * A ton of colors to use for displaying each user's events...
@@ -276,6 +275,22 @@ function onerror(event) {
 }
 
 function init() {
+    $.ajax({
+        type: "POST",
+        url: "/get-user",
+        contentType: "application/json",
+        async: false,
+        success: function(response) {
+            let user  = JSON.parse(response);
+            userID = user.userID;
+            roomID = user.roomID;
+        }
+    });
+
+    //TODO: Remove the following two lines to fully enable SH5GetUserServlet.
+    userID = "strawsnowrries@gmail.com";
+    roomID = "691337";
+
     //create a WebSocket to CalendarSocket and set its functions
     calendarSocket = new WebSocket("ws://localhost:8080/CalendarSocket");
     calendarSocket.onopen = onopen;
@@ -290,26 +305,29 @@ function init() {
  * then proceed to send an UPDATE message to all appropriate FullCalendar. Updating will be handled in the UPDATE block in onmessage.
  */
 function addEvent() {
-    //TODO: Handle actually getting a date somehow when the add event form is implemented. Replace dummy Java Event object.
-    let day = 11 + Math.floor(Math.random() * 7);
-    let hour = Math.floor(Math.random() * 18);
+    let eventForm = document.getElementById("eventForm");
+    let summary = eventForm.elements.namedItem("summary").value;
+    let startDateTime = new Date(eventForm.elements.namedItem("startDateTime").value);
+    let endDateTime = new Date(eventForm.elements.namedItem("endDateTime").value);
+    let whichCalendar = eventForm.elements.namedItem("whichCalendar").value === "user" ? userID : roomID;
+    eventForm.reset();
 
-    var event = {
-        userID: userID,
-        eventSummary: "Javascript Sent Event",
+    let event = {
+        userID: whichCalendar,
+        eventSummary: summary,
         startDateTime: {
-            year: 2018,
-            month: 10,
-            dayOfMonth: day,
-            hourOfDay: hour,
-            minute: 0
+            year: startDateTime.getFullYear(),
+            month: startDateTime.getMonth(),
+            dayOfMonth: startDateTime.getDate(),
+            hourOfDay: startDateTime.getHours(),
+            minute: startDateTime.getMinutes()
         },
         endDateTime: {
-            year: 2018,
-            month: 10,
-            dayOfMonth: day,
-            hourOfDay: hour + Math.floor(Math.random() * 6),
-            minute: 0
+            year: endDateTime.getFullYear(),
+            month: endDateTime.getMonth(),
+            dayOfMonth: endDateTime.getDate(),
+            hourOfDay: endDateTime.getHours(),
+            minute: endDateTime.getMinutes()
         }
     };
 

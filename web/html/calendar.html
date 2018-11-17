@@ -78,10 +78,27 @@
 
                     <div style="float: bottom;">
                         <!-- Colored FAB button with ripple -->
-                        <button onclick="addEvent()" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
                             <i class="material-icons">add</i>
                         </button>
                     </div>
+
+                    <form id="eventForm" onsubmit="addEvent(); return false">
+                        Event summary: <br>
+                        <input type="text" name="summary" required> <br>
+
+                        Event start date: <br>
+                        <input type="datetime-local" name="startDateTime" required><br>
+
+                        Event end date: <br>
+                        <input type="datetime-local" name="endDateTime" required><br>
+
+                        Where should this event be added to?<br>
+                        <input type="radio" name="whichCalendar" value="user" checked> Your Calendar<br>
+                        <input type="radio" name="whichCalendar" value="room">Room Calendar<br>
+
+                        <input type="submit" value="Add Event">
+                    </form>
                 </div>
             </div>
         </div>
