@@ -9,7 +9,7 @@ import static com.mongodb.client.model.Filters.or;
 
 public class TabBase extends DataBase {
 
-    ArrayList<GroceryItem> retrieveGroceryItems(String roomID) {
+    public ArrayList<GroceryItem> retrieveGroceryItems(String roomID) {
         MongoCollection<GroceryItem> collection = database.getCollection("groceryitems", GroceryItem.class);
 
         ArrayList<GroceryItem> tmp = new ArrayList<>();

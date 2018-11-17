@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="mongodb-driver-3.8.2-sources">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dbsrc/mongodb-driver-3.8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dbsrc/mongodb-driver-core-3.8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dbsrc/bson-3.8.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/dbsrc/mongodb-driver-3.8.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dbsrc/mongodb-driver-core-3.8.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dbsrc/bson-3.8.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
