@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+    TODO: Change the FullCalendar theme possibly
+    Instructions on doing so:
+    Go to https://fullcalendar.io/releases/fullcalendar/3.9.0/demos/themes.html
+    In Google Chrome, Right-Click -> Inspect -> Sources -> theme-chooser.js
+    Add a breakpoint on line 29. The variable declared on line 28 will contain the link to the stylesheet that
+    is selected when you change the theme. Copy the URL in there, and replace the href in the below <link...> with it.
+
+    The fontawesome stylesheet is necessary for using Bootstrap 4 stylesheets. If you want to use something besides a
+    Bootstrap 4 stylesheet, you need to change the themeSystem variable used in the fullCalendar initialization code in
+    calendar.js, inside the
+
+    $(function() {
+        $('#calendar').fullCalendar({
+        ...
+        }
+    }
+
+    code block.
+    -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-blue.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css'/>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src='https://unpkg.com/moment@2.22.2/moment.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js'></script>
+    <script src="../unprocessed_js/calendar.js"></script>
+
+</head>
+<body onload="init()">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+                    <span class="logo">
+                        <img class="word" src="../resources/logo2.png" alt="Suite Home" height="42" >
+                    </span>
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+                <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+                    <i class="material-icons">search</i>
+                </label>
+                <div class="mdl-textfield__expandable-holder">
+                    <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title"><img class="house" src="../resources/logo.png" alt="Suite Home" height="60" ></span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="message.html">Home</a>
+            <a class="mdl-navigation__link" href="calendar.html">Calendar</a>
+            <a class="mdl-navigation__link" href="tabs.html">Tabs</a>
+            <a class="mdl-navigation__link" href="chores.html">Chores</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content" style="height: 100%;">
+        <div class="page-content" style="height: 95%;">
+            <div class="mdl-grid" style="height: 100%;">
+                <div id="calendar" class="mdl-cell mdl-cell--9-col" style="height: 100%;">
+                </div>
+
+                <div class="mdl-cell mdl-cell--3-col" style="height: 100%;">
+                    <div id='checkboxes'>
+                    </div>
+
+                    <div>
+                        <button onclick="setAllCalendars()" class = "mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                            Show All Calendars</button>
+
+                    </div>
+
+                    <div style="float: bottom;">
+                        <button id="show-dialog" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                            <i class="material-icons">add</i>
+                        </button>
+
+                        <!--<button id="show-dialog" type="button" class="mdl-button">Show Dialog</button>-->
+                        <dialog class="mdl-dialog" style="width: 600px; height: 400px;">
+
+                            <form id="eventForm" onsubmit="addEvent(); return false">
+                                <h4 class="mdl-dialog__title">Add a new event</h4>
+                                <div class="mdl-dialog__content">
+                                    Event summary: <br>
+                                    <input type="text" name="summary" required> <br>
+
+                                    Event start date: <br>
+                                    <input type="datetime-local" name="startDateTime" required><br>
+
+                                    Event end date: <br>
+                                    <input type="datetime-local" name="endDateTime" required><br>
+
+                                    Where should this event be added to?<br>
+                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+                                        <input type="radio" class="mdl-radio__button" name="whichCalendar" value="user" checked />
+                                        <span class="mdl-radio__label">Your Calendar</span>
+                                    </label>
+                                    <br>
+                                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+                                        <input type="radio" class="mdl-radio__button" name="whichCalendar" value="room" />
+                                        <span class="mdl-radio__label">Room Calendar</span>
+                                    </label>
+
+                                </div>
+                                <div class="mdl-dialog__actions">
+                                    <input type="submit" class="mdl-button" value="Add Event">
+                                    <!--<button type="button" class="mdl-button">Add Event</button>-->
+                                    <button type="button" class="mdl-button close">Cancel</button>
+                                </div>
+                            </form>
+
+
+
+
+
+
+
+                        </dialog>
+                        <script>
+                            var dialog = document.querySelector('dialog');
+                            var showDialogButton = document.querySelector('#show-dialog');
+                            if (! dialog.showModal) {
+                                dialogPolyfill.registerDialog(dialog);
+                            }
+                            showDialogButton.addEventListener('click', function() {
+                                dialog.showModal();
+                            });
+                            dialog.querySelector('.close').addEventListener('click', function() {
+                                dialog.close();
+                            });
+                        </script>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>
+
