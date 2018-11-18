@@ -1,4 +1,4 @@
-package TabsSock;
+package TabsServlet;
 
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;

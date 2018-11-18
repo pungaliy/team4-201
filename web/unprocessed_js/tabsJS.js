@@ -162,7 +162,7 @@ function loadGroceryList(){
 					deleteGroceryClick("5566", item["itemName"]);
 				};
 				checkboxLabel.appendChild(checkboxInput);
-				checkboxSpan.appendChild(checkboxLabel)
+				checkboxSpan.appendChild(checkboxLabel);
 
 				listItem.appendChild(itemNameSpan);
 				listItem.appendChild(checkboxSpan);

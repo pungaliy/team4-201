@@ -1,7 +1,6 @@
 package Methods;
 
-import TabsStuff.TabsTotal;
-import db.Room;
+import TabsServlet.TabsTotal;
 import db.TabBase;
 import db.Transaction;
 import db.User;

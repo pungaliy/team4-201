@@ -1,7 +1,6 @@
 package TabsServlet;
 
 import Methods.Magic;
-import TabsStuff.TabsTotal;
 import com.google.gson.Gson;
 import db.User;
 

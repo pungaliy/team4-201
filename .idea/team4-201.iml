@@ -119,9 +119,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="mongodb-driver-core-3.8.2" level="project" />
-    <orderEntry type="library" name="javaee-api-7.0" level="project" />
-    <orderEntry type="library" name="javax.websocket-api-1.1-javadoc" level="project" />
     <orderEntry type="library" name="javax.websocket-api-1.1" level="project" />
+    <orderEntry type="library" name="mongodb-driver-core-3.8.2" level="project" />
   </component>
 </module>

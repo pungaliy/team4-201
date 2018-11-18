@@ -1,6 +1,4 @@
-package TabsStuff;
-
-import temp.tempUser;
+package TabsServlet;
 
 public class TabsTotal {
 	private String user1;

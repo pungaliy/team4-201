@@ -1,9 +1,7 @@
 package TabsServlet;
 
 import Methods.Magic;
-import TabsStuff.TabsTotal;
 import com.google.gson.Gson;
-import db.Room;
 import db.User;
 
 import javax.servlet.ServletException;

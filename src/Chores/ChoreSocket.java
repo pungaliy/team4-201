@@ -1,10 +1,6 @@
 package Chores;
 
 import com.google.gson.Gson;
-import db.Chore;
-import db.ChoreBase;
-import db.DataBase;
-import db.User;
 
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
@@ -19,7 +15,7 @@ import java.util.concurrent.Executors;
 public class ChoreSocket {
     public static Map<Session, ChoreThread> sessionToThread = Collections.synchronizedMap(new HashMap<>());
     public static Gson gson = new Gson();
-    public static ChoreBase cb = new ChoreBase();
+    public static db.ChoreBase cb = new db.ChoreBase();
 
     @OnOpen
     public void open(Session session) {
@@ -31,21 +27,21 @@ public class ChoreSocket {
         System.out.println(message);
         System.out.println(message.equals("ping"));
         if(message.substring(0,4).equals("init")) { //Initialize by starting thread
-            User user = gson.fromJson(message.substring(4), User.class);
+            db.User user = gson.fromJson(message.substring(4), db.User.class);
             ChoreThread ct = new ChoreThread(session, user);
             sessionToThread.put(session, ct);
             ct.start();
         } else if(message.substring(0,4).equals("comp")) { //Mark chore as completed
             boolean checked = message.substring(4,5).equals("t");
-            ChoreBase cb = new ChoreBase();
-            Chore c = cb.retrieveChore(message.substring(5));
+            db.ChoreBase cb = new db.ChoreBase();
+            db.Chore c = cb.retrieveChore(message.substring(5));
             c.setCompleted(checked);
             cb.updateChore(c);
         } else { //Broadcast chores to other users in room
             System.out.println("Broadcasting...");
-            User currUser  = sessionToThread.get(session).getChoreManager().getUser();
+            db.User currUser  = sessionToThread.get(session).getChoreManager().getUser();
             for(Map.Entry<Session, ChoreThread> e : sessionToThread.entrySet()) {
-                User u = e.getValue().getChoreManager().getUser();
+                db.User u = e.getValue().getChoreManager().getUser();
                 System.out.print(u.getFullName());
                 if(u.getRoomID().equals(currUser.getRoomID())) {
                     System.out.print(" - bull's eye!");
