@@ -261,9 +261,12 @@ function loadTransactionList(){
 			priceHead.innerHTML = "Total price";
 			let splitHead = document.createElement("th");
 			splitHead.innerHTML = "Split";
+			let purchaserHead = document.createElement("th");
+			purchaserHead.innerHTML = "Purchaser";
 			headrow.appendChild(itemHead);
 			headrow.appendChild(priceHead);
 			headrow.appendChild(splitHead);
+			headrow.appendChild(purchaserHead);
 			tHead.appendChild(headrow);
 			table.appendChild(tHead);
 
@@ -277,18 +280,22 @@ function loadTransactionList(){
 				tdItemName.innerHTML = item["item"];
 				let tdAmount = document.createElement("td");
 				let tdSplit = document.createElement("td");
-				//TODO: get current userID and fullname here
-				if(item["user1"] === currentName){
+				let tdPurchaser = document.createElement("td");
+				/*if(item["user1"] === currentName){
 					tdAmount.innerHTML = item["amount"];
 					tdSplit.innerHTML = item["user2"];
 				} else {
 					tdAmount.innerHTML = "-";
 					tdAmount.innerHTML += item["amount"];
 					tdSplit.innerHTML = item["user1"];
-				}
+				}*/
+				tdAmount.innerHTML = item["amount"];
+				tdSplit.innerHTML = item["user2"];
+				tdPurchaser.innerHTML = item["user1"];
 				row.appendChild(tdItemName);
 				row.appendChild(tdAmount);
 				row.appendChild(tdSplit);
+				row.appendChild(tdPurchaser);
 
 				tBody.appendChild(row);
 
