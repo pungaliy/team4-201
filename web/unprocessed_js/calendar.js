@@ -291,9 +291,9 @@ function init() {
         }
     });
 
-    //TODO: Remove the following two lines to fully enable SH5GetUserServlet.
-    userID = "strawsnowrries@gmail.com";
-    roomID = "691337";
+    // //TODO: Remove the following two lines to fully enable SH5GetUserServlet.
+    // userID = "strawsnowrries@gmail.com";
+    // roomID = "691337";
 
     //create a WebSocket to CalendarSocket and set its functions
     calendarSocket = new WebSocket("ws://localhost:8080/CalendarSocket");
