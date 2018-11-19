@@ -35,6 +35,8 @@
     <script src='https://unpkg.com/moment@2.22.2/moment.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js'></script>
     <script src="../unprocessed_js/calendar.js"></script>
+    <script src="../unprocessed_js/search-room.js"></script>
+
 
     <!--<script type="text/javascript" src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>-->
     <!--<script type="text/javascript" src="../unprocessed_js/bootstrap-material-datetimepicker.js"></script>-->
@@ -59,14 +61,14 @@
                         <img class="word" src="../resources/logo2.png" alt="Suite Home" height="42" >
                     </span>
             <div class="mdl-layout-spacer"></div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+            <form id="search_form" onsubmit="return searchRoom(this.query.value);" class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
                 <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
                     <i class="material-icons">search</i>
                 </label>
                 <div class="mdl-textfield__expandable-holder">
-                    <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+                    <input name="query" class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
                 </div>
-            </div>
+            </form>
         </div>
     </header>
 
