@@ -1,6 +1,5 @@
 package Chores;
 
-import db.ChoreBase;
 import db.User;
 
 import javax.servlet.ServletException;

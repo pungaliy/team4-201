@@ -74,10 +74,17 @@ public class DataBase {
 
 //    public static void main(String[] args) {
 //        DataBase db = new DataBase();
-//
-//        Note note = new Note("note content main", 3.22, 2.33, "note1","room2");
-//        db.insertNote(note);
-//        String json = db.retrieveNotes("room2");
-//        System.out.println(json);
+//        Room room = new Room("roomIDOne");
+//        User user = new User("full name", "123", "roomID", "imgurl");
+//        user.setImgURL("img");
+//        db.addUser(user);
+//        db.addRoom(room);
+////        Note note = new Note("note content main", 3.22, 2.33, "note1","room2");
+//        System.out.println(db.roomExists("roomIDOne"));
+//        User newUser = db.retrieveUser("123");
+//        System.out.println(newUser.getUserID());
+//        System.out.println(db.retrieveUsers("roomID"));
+////        String json = db.retrieveNotes("room2");
+////        System.out.println(json);
 //    }
 }
