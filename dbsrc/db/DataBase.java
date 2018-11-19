@@ -44,6 +44,11 @@ public class DataBase {
         return collection.find(eq("userID", userID)).first();
     }
 
+    public Room retrieveRoom(String roomID) {
+        MongoCollection<Room> collection = database.getCollection("rooms", Room.class);
+        return collection.find(eq("roomID", roomID)).first();
+    }
+
     public void addUser(User user) {
         MongoCollection<User> collection = database.getCollection("users", User.class);
         collection.insertOne(user);
