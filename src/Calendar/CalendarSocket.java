@@ -1,4 +1,4 @@
-package sock;
+package Calendar;
 
 import com.google.gson.Gson;
 import db.CalendarBase;
@@ -9,7 +9,6 @@ import db.User;
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.*;
 
 @ServerEndpoint(value = "/CalendarSocket")

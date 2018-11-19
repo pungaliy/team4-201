@@ -36,8 +36,22 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js'></script>
     <script src="../unprocessed_js/calendar.js"></script>
 
+    <!--<script type="text/javascript" src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>-->
+    <!--<script type="text/javascript" src="../unprocessed_js/bootstrap-material-datetimepicker.js"></script>-->
+    <!--<link rel="stylesheet" href="../css/bootstrap-material-datetimepicker.css" />-->
+
+
+    <style>
+        .fc-today {
+            background: #c7d9dd !important;
+            border: none !important;
+            border-top: 1px solid #ddd !important;
+            font-weight: bold;
+        }
+    </style>
+
 </head>
-<body onload="init()">
+<body onload="initCalendar()">
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
@@ -66,14 +80,26 @@
         </nav>
     </div>
     <main class="mdl-layout__content" style="height: 100%;">
+        <button id="show-dialog" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" style="position: absolute; bottom: 10%; right: 29%; z-index: 100; background-color: #ea9e6aff;">
+            <i class="material-icons">add</i>
+        </button>
+
         <div class="page-content" style="height: 95%;">
             <div class="mdl-grid" style="height: 100%;">
                 <div id="calendar" class="mdl-cell mdl-cell--9-col" style="height: 100%;">
                 </div>
 
                 <div class="mdl-cell mdl-cell--3-col" style="height: 100%;">
-                    <div id='checkboxes'>
-                    </div>
+                    <!--<div class="container well">-->
+                    <!--<div class="form-control-wrapper">-->
+                    <!--<input type="text" id="date-start" class="form-control floating-label" placeholder="Start Date">-->
+                    <!--</div>-->
+                    <!--<div class="form-control-wrapper">-->
+                    <!--<input type="text" id="date-end" class="form-control floating-label" placeholder="End Date">-->
+                    <!--</div>-->
+                    <!--</div>-->
+
+                    <div id='checkboxes'></div>
 
                     <div>
                         <button onclick="setAllCalendars()" class = "mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
@@ -81,19 +107,18 @@
 
                     </div>
 
-                    <div style="float: bottom;">
-                        <button id="show-dialog" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
-                            <i class="material-icons">add</i>
-                        </button>
-
+                    <div>
                         <!--<button id="show-dialog" type="button" class="mdl-button">Show Dialog</button>-->
                         <dialog class="mdl-dialog" style="width: 600px; height: 400px;">
 
                             <form id="eventForm" onsubmit="addEvent(); return false">
                                 <h4 class="mdl-dialog__title">Add a new event</h4>
                                 <div class="mdl-dialog__content">
-                                    Event summary: <br>
-                                    <input type="text" name="summary" required> <br>
+                                    <div class = "mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" name="summary" type="text" required>
+                                        <label class="mdl-textfield__label">Event summary</label>
+                                    </div><br>
+
 
                                     Event start date: <br>
                                     <input type="datetime-local" name="startDateTime" required><br>
@@ -122,10 +147,6 @@
 
 
 
-
-
-
-
                         </dialog>
                         <script>
                             var dialog = document.querySelector('dialog');
@@ -147,6 +168,18 @@
         </div>
     </main>
 </div>
+<!--<script type="text/javascript">-->
+<!--$(document).ready(function() {-->
+<!--$('#date-start').bootstrapMaterialDatePicker-->
+<!--({-->
+<!--weekStart: 0, format: 'DD/MM/YYYY HH:mm', shortTime : true-->
+<!--}).on('change', function(e, date)-->
+<!--{-->
+<!--$('#date-end').bootstrapMaterialDatePicker('setMinDate', date);-->
+<!--});-->
+<!--});-->
+<!--</script>-->
+
 </body>
 </html>
 
