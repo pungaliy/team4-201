@@ -31,7 +31,6 @@ public class ChoreThread extends Thread {
                 Thread.sleep(sleepTime);
             } catch (InterruptedException ie) {
                 System.out.println("Thread interrupted!");
-                return;
             }
         }
     }

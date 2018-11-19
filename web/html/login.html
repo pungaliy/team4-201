@@ -27,17 +27,51 @@
     <div class="split right">
         <div class="centered">
             <h2>Search as a Guest</h2>
-            <form action="#">
+            <form id="search_form" onsubmit="return searchRoom(this.query.value);">
 
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <label class="mdl-textfield__label" for="sample3">Search for a room...</label>
 
-                    <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
-                        <i class="material-icons">search</i>
-                    </label>
-                    <input class="mdl-textfield__input" type="text" id="sample3">
+                    <div onclick="searchRoom(document.getElementById('search_form').query.value)">
+                        <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp" >
+                            <i class="material-icons">search</i>
+                        </label>
+                    </div>
+                    <input name="query" class="mdl-textfield__input" type="text" id="sample3">
                 </div>
             </form>
         </div>
+
     </div>
+    <!--<button id="show-dialog" type="button" class="mdl-button">Show Dialog</button>-->
+    <!--<dialog class="mdl-dialog">-->
+        <!--<h4 class="mdl-dialog__title">Room Status:</h4>-->
+        <!--<div class="mdl-dialog__content">-->
+            <!--<p id="dialog_message">-->
+                <!--Allowing us to collect data will let us get you the information you want faster.-->
+            <!--</p>-->
+        <!--</div>-->
+        <!--<div class="mdl-dialog__actions">-->
+            <!--&lt;!&ndash;<button type="button" class="mdl-button">Agree</button>&ndash;&gt;-->
+            <!--&lt;!&ndash;<button type="button" class="mdl-button close">Disagree</button>&ndash;&gt;-->
+        <!--</div>-->
+    <!--</dialog>-->
+    <!--<script>-->
+        <!--var button = document.querySelector('button');-->
+        <!--button.addEventListener('click', function() {-->
+            <!--dialog.showModal();-->
+            <!--/* Or dialog.show(); to show the dialog without a backdrop. */-->
+        <!--});-->
+        <!--var dialog = document.querySelector('dialog');-->
+        <!--var showDialogButton = document.querySelector('#show-dialog');-->
+        <!--if (! dialog.showModal) {-->
+            <!--dialogPolyfill.registerDialog(dialog);-->
+        <!--}-->
+        <!--showDialogButton.addEventListener('click', function() {-->
+            <!--dialog.showModal();-->
+        <!--});-->
+        <!--dialog.querySelector('.close').addEventListener('click', function() {-->
+            <!--dialog.close();-->
+        <!--});-->
+    <!--</script>-->
 </html>
