@@ -34,8 +34,8 @@ var roomID;
  * A ton of colors to use for displaying each user's events...
  */
 var colors = [
-    "#f205e6" ,"#1c0365" ,"#21ad5a" ,"#f98b11","#651be6","#d298e2" ,"#d0210a",
-    "#63b598", "#ce7d78", "#ea9e70", "#a48a9e", "#c6e1e8", "#648177" ,"#0d5ac1" ,
+    "#f205e680" ,"#1c036580" ,"#21ad5a80" ,"#f98b1180","#651be680","#d298e280" ,"#d0210a80",
+    "#63b59880", "#ce7d7880", "#ea9e7080", "#a48a9e80", "#c6e1e880", "#64817780" ,"#0d5ac180" ,
     "#d2737d" ,"#c0a43c" ,"#f2510e" ,"#a4e43f","#79806e" ,"#61da5e" ,"#cd2f00" ,
     "#9348af" ,"#01ac53" ,"#c5a4fb" ,"#996635","#b11573" ,"#4bb473" ,"#75d89e" ,
     "#2f3f94" ,"#2f7b99" ,"#da967d" ,"#34891f" ,"#b0d87b" ,"#ca4751" ,"#7e50a8" ,
@@ -162,10 +162,7 @@ function onmessage(event) {
                 let checkboxID = (String("toggle" + primitiveUser.userID + "Calendar")).replace('@', '');
 
                 //the text to be displayed next to each checkbox
-                let checkboxMessage = "Toggle " + primitiveUser.username + "'s Calendar";
-                if (primitiveUser.username === "Room") {
-                    checkboxMessage = "Toggle Room Calendar"
-                }
+                let checkboxMessage = primitiveUser.username;
 
                 //create the line of HTML that will be appended to #checkboxes; by default, show only the user's calendar & room calendar initially
                 let checkboxHTML = null;
@@ -188,16 +185,17 @@ function onmessage(event) {
                 }
 
                 //add the checkbox to #checkboxes
-                $("#checkboxes").append(checkboxHTML);
+                $('#checkboxes').append(checkboxHTML);
             }
+            componentHandler.upgradeDom();
 
             //load up the FullCalendar into the div with id="calendar"
             //WARNING: THIS BELOW METHOD IS ASYNCHRONOUS, BUT THE CONTENTS WILL BE EXECUTED IN SERIES.
             $(function() {
                 $('#calendar').fullCalendar({
-                    defaultView: 'listWeek',
+                    defaultView: 'listYear',
                     header: {
-                        left: 'agendaDay,agendaWeek,listWeek,month',
+                        left: 'agendaDay,agendaWeek,month,listYear',
                         // center: 'title',
                         right: 'prev,next'
                     },
@@ -210,7 +208,7 @@ function onmessage(event) {
                         today: "Today",
                         agendaDay: "Day",
                         agendaWeek: "Week",
-                        listWeek: "List",
+                        listYear: "List",
                         month: "Month"
                     }
                 });
@@ -278,22 +276,18 @@ function onerror(event) {
     console.log("ERROR.");
 }
 
-function init() {
+function initCalendar() {
     $.ajax({
         type: "POST",
         url: "/get-user",
         contentType: "application/json",
         async: false,
-        success: function(response) {
-            let user  = JSON.parse(response);
+        success: function (response) {
+            let user = JSON.parse(response);
             userID = user.userID;
             roomID = user.roomID;
         }
     });
-
-    // //TODO: Remove the following two lines to fully enable SH5GetUserServlet.
-    // userID = "strawsnowrries@gmail.com";
-    // roomID = "691337";
 
     //create a WebSocket to CalendarSocket and set its functions
     calendarSocket = new WebSocket("ws://localhost:8080/CalendarSocket");
@@ -301,6 +295,14 @@ function init() {
     calendarSocket.onmessage = onmessage;
     calendarSocket.onclose = onclose;
     calendarSocket.onerror = onerror;
+
+    $('#date-start').bootstrapMaterialDatePicker
+    ({
+        weekStart: 0, format: 'DD/MM/YYYY HH:mm', shortTime : true
+    }).on('change', function(e, date)
+    {
+        $('#date-end').bootstrapMaterialDatePicker('setMinDate', date);
+    });
 }
 
 /**
@@ -315,6 +317,7 @@ function addEvent() {
     let endDateTime = new Date(eventForm.elements.namedItem("endDateTime").value);
     let whichCalendar = eventForm.elements.namedItem("whichCalendar").value === "user" ? userID : roomID;
     eventForm.reset();
+    $('#eventForm').hide().show(0);
 
     let event = {
         userID: whichCalendar,
@@ -343,6 +346,7 @@ function addEvent() {
         jsonData: JSON.stringify(event)
     };
     calendarSocket.send(JSON.stringify(calenderData));
+    dialog.close();
 }
 
 /**
@@ -366,6 +370,8 @@ function toggleCalendars() {
             toggleEventMap.set(primitiveUser.userID, checked);
         }
     }
+
+    componentHandler.upgradeDom();
 }
 
 /**
@@ -384,7 +390,7 @@ function setAllCalendars() {
         if (!checked) {
             fullCalendar.addEventSource(primitiveUser.eventSource);
             toggleEventMap.set(primitiveUser.userID, true);
-            document.getElementById(checkboxID).checked = true;
+            document.getElementById(checkboxID).parentElement.MaterialCheckbox.check();
         }
     }
 }
