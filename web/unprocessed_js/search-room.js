@@ -1,18 +1,23 @@
 function searchRoom(query) {
     console.log("searching...");
-    $.ajax({
-        url: '/search',
-        method: 'POST',
-        data: {
-            query : query,
-        },
-        success: function(responseText) {
-            console.log(responseText);
-            if(responseText == "!=8") swal("Error", "Room code's must be exactly 8 digits long.", "error");
-            else if(responseText == "dne") swal("Error", "That room code does not exist.", "error");
-            else swal("Room "+query+"'s Status:", responseText, "info");
-        }
-    });
+    if(query.length != 8 && !(query.includes('@') && query.includes('.'))) {
+        console.log("Invalid query");
+        swal("Error", "Please input a valid 8-digit room code or user email.", "error");
+    }
+    else {
+        $.ajax({
+            url: '/search',
+            method: 'POST',
+            data: {
+                query: query,
+            },
+            success: function (responseText) {
+                console.log(responseText);
+                if (responseText == "dne") swal("Error", "Please input a valid 8-digit room code or user email.", "error");
+                else swal("Room Status:", responseText, "info");
+            }
+        });
+    }
     return false;
 }
 
