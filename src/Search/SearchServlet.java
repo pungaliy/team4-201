@@ -19,17 +19,19 @@ public class SearchServlet extends HttpServlet {
         String q = request.getParameter("query");
         PrintWriter out = response.getWriter();
         if(q.length() != 8) {
-            out.print("Room codes must be 8 digits long.");
-        } else {
-            DataBase db = new DataBase();
-            Room r = db.retrieveRoom(q);
-            if(r == null) {
-                out.print("That room does not exist.");
-            } else {
-                System.out.println(r);
-                System.out.println(r.getRoomStatus());
-                out.print("Room "+q+"'s Status: "+r.getRoomStatus());
-            }
+            System.out.println("!=8!=8!=8");
+            out.print("!=8");
+            return;
         }
+        DataBase db = new DataBase();
+        Room r = db.retrieveRoom(q);
+        if(r == null) {
+            System.out.println("DNEDNEDNE");
+            out.print("dne");
+            return;
+        }
+        System.out.println(r);
+        System.out.println(r.getRoomStatus());
+        out.print(r.getRoomStatus());
     }
 }
