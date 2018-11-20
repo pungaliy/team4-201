@@ -2,6 +2,20 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="../css/set1.css" />
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-blue.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -45,6 +59,32 @@
             <a class="mdl-navigation__link" href="/tabs">Tabs</a>
             <a class="mdl-navigation__link" href="/chores">Chores</a>
         </nav>
+
+        <!-- TODO: -->
+        <span class="input input--kaede">
+            <input class="input__field input__field--kaede" type="text" id="room_status" required/>
+            <label class="input__label input__label--kaede" for="room_status">
+                <span class="input__label-content input__label-content--kaede">Room Status</span>
+            </label>
+        </span>
+        <input onclick="updateRoomStatus(); return false" type="button" style="margin-left: 20px; margin-right: 20px; width: calc(100% - 40px); height: 50px; letter-spacing: 0; font-size: medium;" value="Update Status" class="submit mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+        <script>
+            //BAD CODING PRACTICES...
+
+            function updateRoomStatus() {
+                let roomStatus = document.getElementById("room_status").value;
+
+                $.ajax({
+                    method : 'POST' ,
+                    url : "/update-status",
+                    data : {status: roomStatus}
+                }).done(function(msg) {
+                    document.getElementById("room_status").value = "";
+                });
+            }
+
+        </script>
+
     </div>
     <main class="mdl-layout__content">
         <div class="page-content">
