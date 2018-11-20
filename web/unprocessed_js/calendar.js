@@ -162,10 +162,7 @@ function onmessage(event) {
                 let checkboxID = (String("toggle" + primitiveUser.userID + "Calendar")).replace('@', '');
 
                 //the text to be displayed next to each checkbox
-                let checkboxMessage = "Toggle " + primitiveUser.username + "'s Calendar";
-                if (primitiveUser.username === "Room") {
-                    checkboxMessage = "Toggle Room Calendar"
-                }
+                let checkboxMessage = primitiveUser.username;
 
                 //create the line of HTML that will be appended to #checkboxes; by default, show only the user's calendar & room calendar initially
                 let checkboxHTML = null;
@@ -188,8 +185,9 @@ function onmessage(event) {
                 }
 
                 //add the checkbox to #checkboxes
-                $("#checkboxes").append(checkboxHTML);
+                $('#checkboxes').append(checkboxHTML);
             }
+            componentHandler.upgradeDom();
 
             //load up the FullCalendar into the div with id="calendar"
             //WARNING: THIS BELOW METHOD IS ASYNCHRONOUS, BUT THE CONTENTS WILL BE EXECUTED IN SERIES.
@@ -284,16 +282,12 @@ function initCalendar() {
         url: "/get-user",
         contentType: "application/json",
         async: false,
-        success: function(response) {
-            let user  = JSON.parse(response);
+        success: function (response) {
+            let user = JSON.parse(response);
             userID = user.userID;
             roomID = user.roomID;
         }
     });
-
-    // //TODO: Remove the following two lines to fully enable SH5GetUserServlet.
-    // userID = "strawsnowrries@gmail.com";
-    // roomID = "691337";
 
     //create a WebSocket to CalendarSocket and set its functions
     calendarSocket = new WebSocket("ws://localhost:8080/CalendarSocket");
@@ -301,6 +295,14 @@ function initCalendar() {
     calendarSocket.onmessage = onmessage;
     calendarSocket.onclose = onclose;
     calendarSocket.onerror = onerror;
+
+    $('#date-start').bootstrapMaterialDatePicker
+    ({
+        weekStart: 0, format: 'DD/MM/YYYY HH:mm', shortTime : true
+    }).on('change', function(e, date)
+    {
+        $('#date-end').bootstrapMaterialDatePicker('setMinDate', date);
+    });
 }
 
 /**
@@ -315,6 +317,7 @@ function addEvent() {
     let endDateTime = new Date(eventForm.elements.namedItem("endDateTime").value);
     let whichCalendar = eventForm.elements.namedItem("whichCalendar").value === "user" ? userID : roomID;
     eventForm.reset();
+    $('#eventForm').hide().show(0);
 
     let event = {
         userID: whichCalendar,
@@ -343,6 +346,7 @@ function addEvent() {
         jsonData: JSON.stringify(event)
     };
     calendarSocket.send(JSON.stringify(calenderData));
+    dialog.close();
 }
 
 /**
@@ -366,6 +370,8 @@ function toggleCalendars() {
             toggleEventMap.set(primitiveUser.userID, checked);
         }
     }
+
+    componentHandler.upgradeDom();
 }
 
 /**
@@ -384,7 +390,7 @@ function setAllCalendars() {
         if (!checked) {
             fullCalendar.addEventSource(primitiveUser.eventSource);
             toggleEventMap.set(primitiveUser.userID, true);
-            document.getElementById(checkboxID).checked = true;
+            document.getElementById(checkboxID).parentElement.MaterialCheckbox.check();
         }
     }
 }

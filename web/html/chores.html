@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../css/chores.css" />
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="../unprocessed_js/chores.js"></script>
+    <script src="../unprocessed_js/search-room.js"></script>
     <style>
         .demo-list-control {
             width: 300px;
@@ -26,14 +27,14 @@
                         <img class="word" src="../resources/logo2.png" alt="Suite Home" height="42" >
                     </span>
             <div class="mdl-layout-spacer"></div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+            <form id="search_form" onsubmit="return searchRoom(this.query.value);" class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
                 <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
                     <i class="material-icons">search</i>
                 </label>
                 <div class="mdl-textfield__expandable-holder">
-                    <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+                    <input name="query" class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
                 </div>
-            </div>
+            </form>
         </div>
     </header>
 

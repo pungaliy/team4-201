@@ -35,6 +35,16 @@
     <script src='https://unpkg.com/moment@2.22.2/moment.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js'></script>
     <script src="../unprocessed_js/calendar.js"></script>
+    <style>
+        .fc-today {
+            background: #c7d9dd !important;
+            border: none !important;
+            border-top: 1px solid #ddd !important;
+            font-weight: bold;
+        }
+    </style>
+    <script src="../unprocessed_js/search-room.js"></script>
+
 
     <!--<script type="text/javascript" src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>-->
     <!--<script type="text/javascript" src="../unprocessed_js/bootstrap-material-datetimepicker.js"></script>-->
@@ -51,7 +61,7 @@
     </style>
 
 </head>
-<body onload="initCalendar()">
+<body>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
@@ -59,24 +69,24 @@
                         <img class="word" src="../resources/logo2.png" alt="Suite Home" height="42" >
                     </span>
             <div class="mdl-layout-spacer"></div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+            <form id="search_form" onsubmit="return searchRoom(this.query.value);" class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
                 <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
                     <i class="material-icons">search</i>
                 </label>
                 <div class="mdl-textfield__expandable-holder">
-                    <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+                    <input name="query" class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
                 </div>
-            </div>
+            </form>
         </div>
     </header>
 
     <div class="mdl-layout__drawer">
         <span class="mdl-layout-title"><img class="house" src="../resources/logo.png" alt="Suite Home" height="60" ></span>
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="message.html">Home</a>
-            <a class="mdl-navigation__link" href="calendar.html">Calendar</a>
-            <a class="mdl-navigation__link" href="tabs.html">Tabs</a>
-            <a class="mdl-navigation__link" href="chores.html">Chores</a>
+            <a class="mdl-navigation__link" href="/message">Home</a>
+            <a class="mdl-navigation__link" href="/calendar">Calendar</a>
+            <a class="mdl-navigation__link" href="/tabs">Tabs</a>
+            <a class="mdl-navigation__link" href="/chores">Chores</a>
         </nav>
     </div>
     <main class="mdl-layout__content" style="height: 100%;">
@@ -90,60 +100,65 @@
                 </div>
 
                 <div class="mdl-cell mdl-cell--3-col" style="height: 100%;">
-                    <!--<div class="container well">-->
-                    <!--<div class="form-control-wrapper">-->
-                    <!--<input type="text" id="date-start" class="form-control floating-label" placeholder="Start Date">-->
-                    <!--</div>-->
-                    <!--<div class="form-control-wrapper">-->
-                    <!--<input type="text" id="date-end" class="form-control floating-label" placeholder="End Date">-->
-                    <!--</div>-->
-                    <!--</div>-->
+                    <div style="width: 100%; height: 50px; font-size: 36px; padding-top: 16px;">Calendars</div>
+                    <div style="padding-left: 5px;" id='checkboxes'>
 
-                    <div id='checkboxes'></div>
-
-                    <div>
-                        <button onclick="setAllCalendars()" class = "mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                            Show All Calendars</button>
-
+                        <div style="position: fixed; bottom: 10%; ">
+                            <button style="background-color: #c7d9ddff;" onclick="setAllCalendars()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                                Show All Calendars</button>
+                        </div>
                     </div>
+
+
 
                     <div>
                         <!--<button id="show-dialog" type="button" class="mdl-button">Show Dialog</button>-->
-                        <dialog class="mdl-dialog" style="width: 600px; height: 400px;">
+                        <dialog class="mdl-dialog" style="width: 500px; height: 450px;">
 
                             <form id="eventForm" onsubmit="addEvent(); return false">
                                 <h4 class="mdl-dialog__title">Add a new event</h4>
                                 <div class="mdl-dialog__content">
                                     <div class = "mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                         <input class="mdl-textfield__input" name="summary" type="text" required>
-                                        <label class="mdl-textfield__label">Event summary</label>
+                                        <label class="mdl-textfield__label">Summary</label>
+                                    </div>
+
+                                    <!-- TODO: After adding an event, calling form.reset() to reset the form successfully removes
+                                    all the data from the form, however when trying to add yet another event, the input boxes are in the state where they think
+                                    they have content inside them but they do not. It doesn't affect functionality, but aesthetics... or...
+                                    Maybe remove the mdl-textfield--floating-label field???
+                                    "It is a feature, not a bug!"-->
+                                    <div class = "mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" name="startDateTime" type="text" required onfocus="this.type='datetime-local'" onblur="if (this.value === '') {this.type='text'} ">
+                                        <label class="mdl-textfield__label">When?</label>
+                                    </div>
+
+                                    <div class = "mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" name="endDateTime" type="text" required onfocus="this.type='datetime-local'" onblur="if (this.value === '') {this.type='text'} ">
+                                        <label class="mdl-textfield__label">Until?</label>
                                     </div><br>
 
-
-                                    Event start date: <br>
-                                    <input type="datetime-local" name="startDateTime" required><br>
-
-                                    Event end date: <br>
-                                    <input type="datetime-local" name="endDateTime" required><br>
-
-                                    Where should this event be added to?<br>
+                                    <span style="font-size: 16px;">Which calendar?</span><br>
                                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
                                         <input type="radio" class="mdl-radio__button" name="whichCalendar" value="user" checked />
-                                        <span class="mdl-radio__label">Your Calendar</span>
+                                        <span class="mdl-radio__label">My calendar</span>
                                     </label>
                                     <br>
                                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
                                         <input type="radio" class="mdl-radio__button" name="whichCalendar" value="room" />
-                                        <span class="mdl-radio__label">Room Calendar</span>
+                                        <span class="mdl-radio__label">Room calendar</span>
                                     </label>
 
                                 </div>
                                 <div class="mdl-dialog__actions">
                                     <input type="submit" class="mdl-button" value="Add Event">
-                                    <!--<button type="button" class="mdl-button">Add Event</button>-->
                                     <button type="button" class="mdl-button close">Cancel</button>
                                 </div>
                             </form>
+
+
+
+
 
 
 
@@ -168,17 +183,12 @@
         </div>
     </main>
 </div>
-<!--<script type="text/javascript">-->
-<!--$(document).ready(function() {-->
-<!--$('#date-start').bootstrapMaterialDatePicker-->
-<!--({-->
-<!--weekStart: 0, format: 'DD/MM/YYYY HH:mm', shortTime : true-->
-<!--}).on('change', function(e, date)-->
-<!--{-->
-<!--$('#date-end').bootstrapMaterialDatePicker('setMinDate', date);-->
-<!--});-->
-<!--});-->
-<!--</script>-->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        initCalendar();
+    });
+</script>
 
 </body>
 </html>
