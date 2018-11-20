@@ -1,0 +1,53 @@
+
+/*title*/
+.logo{
+    position:absolute;
+}
+
+.fullLogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.mdl-navigation__link{
+    text-align: center;
+    font-size: 4vmin;
+    font-family: Arvo;
+}
+
+.middle{
+    background-color: #c8dade61;
+    /* border-color: #357888; */
+    border-radius: 1vmin;
+    padding: 3vmin;
+    height: 80vmin;
+    box-shadow: 1px 1px 8px 2px #3578885c;
+    height: 80vmin;
+    margin-top: 3vmin;
+    position: relative;
+}
+.page-content{
+    width: auto;
+}
+/*app bar*/
+.mdl-layout__header{
+    background-color: #357888;
+    height: 60px;
+}
+
+.logo{
+
+}
+.house{
+    height: 95px;
+    /* text-align: center; */
+    margin: 20px;
+    margin-left: 7vmin;
+    /* position: absolute; */
+    /* right: 50px; */
+}
+
+.word{
+    margin-top: 4px;
+}

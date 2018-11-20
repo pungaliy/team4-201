@@ -1,0 +1,93 @@
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+    height: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ecd5c4;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #cf5d7e;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.postit {
+    border-radius: 5px;
+    width: 20vmin;
+    height: 20vmin;
+    font-size: 2vmin;
+    margin: 0;
+    background-color: #f1b68c;
+    color: black;
+    user-select: none;
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    box-shadow: 2px 2px 4px grey;
+    z-index: 11;
+}
+
+.postit-text {
+    text-align: left;
+    position: relative;
+    top: 1vmin;
+    left: 1vmin;
+    right: 1vmin;
+    bottom: 1vmin;
+    padding: .5vmin;
+    margin: 0;
+    border: none;
+    background: inherit;
+    resize: none;
+    height: calc(100% - 6vmin);
+    width: calc(100% - 3vmin);
+    background-color: transparent;
+    overflow: auto;
+    font-family: arvo;
+    font-size: 20px;
+    color: #902846;
+    /* box-shadow: 1px 10px 5px grey; */
+}
+
+.close_postit {
+    height: 3vmin;
+    width: 3vmin;
+    font-size: 2vmin;
+    top:0;
+    right:1px;
+    position: absolute;
+    z-index: 11;
+    background-color: transparent;
+    border: none;
+}
+
+.handle {
+    border-radius: 3px 3px 0 0;
+    height: 3vmin;
+    background: #db7a36;
+}
+
+.addButton{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 100;
+}
+
+.mdl-button--fab.mdl-button--colored {
+    background: rgb(53, 120, 136);
+    color: rgb(255,255,255);
+}
+
+.messageBoard{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
