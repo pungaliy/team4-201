@@ -54,6 +54,20 @@ public class DataBase {
         collection.insertOne(room);
     }
 
+    public Room getRoom(String roomID) {
+        MongoCollection<Room> collection = database.getCollection("rooms", Room.class);
+        return collection.find(eq("roomID", roomID)).first();
+    }
+
+    public void setRoomStatus(String roomID, String status) {
+        MongoCollection<Room> collection = database.getCollection("rooms", Room.class);
+        Room tmp = collection.find(eq("roomID", roomID)).first();
+        tmp.setRoomStatus(status);
+        collection.replaceOne(eq("roomID", roomID), tmp);
+
+    }
+
+
     public boolean roomExists(String roomID) {
         MongoCollection<Room> collection = database.getCollection("rooms", Room.class);
         if(collection.find(eq("roomID", roomID)).first() != null) {
