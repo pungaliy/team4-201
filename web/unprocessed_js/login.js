@@ -35,31 +35,3 @@ function mySignOut() {
     });
     gapi.auth2.getAuthInstance().disconnect();
 }
-
-function searchRoom(query) {
-    console.log("searching...");
-    $.ajax({
-        url: '/search',
-        method: 'POST',
-        data: {
-            query : query,
-        },
-        success: function(responseText) {
-            // MDCDialog("Room "+query+" Status:", responseText);
-            // componentHandler.upgradeDom();
-            // var dialog = document.querySelector('dialog');
-            // var showDialogButton = document.querySelector('#show-dialog');
-            // if (! dialog.showModal) {
-            //     dialogPolyfill.registerDialog(dialog);
-            // }
-            console.log(responseText);
-            window.alert(responseText);
-        }
-    });
-    return false;
-}
-
-// function MDCDialog(title, body) {
-//     document.body.innerHTML += '<div className="mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">  <div className="mdc-dialog__container">  <div className="mdc-dialog__surface"> <h2 className="mdc-dialog__title" id="my-dialog-title">'+title+'</h2> <div className="mdc-dialog__content" id="my-dialog-content">'+body+'</div> <footer className="mdc-dialog__actions"> <button type="button" className="mdc-button mdc-dialog__button" data-mdc-dialog-action="no">Ok</button> </footer> </div> </div> <div className="mdc-dialog__scrim"></div> </div>'
-//
-// }
