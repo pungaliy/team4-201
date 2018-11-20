@@ -1,3 +1,7 @@
+window.onbeforeunload = function(e){
+    gapi.auth2.getAuthInstance().signOut();
+};
+
 function onSignInHI(googleUser) {
   setTimeout(send_stuff(googleUser), 1000);
 }
@@ -20,18 +24,4 @@ function send_stuff(googleUser) {
             setTimeout(function() {window.location = "http://localhost:8080/" + response}, 500);
         }
     });
-}
-
-function mySignOut() {
-    if(!gapi.auth2){
-        gapi.load('auth2', function() {
-            gapi.auth2.init();
-        });
-    }
-
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function() {
-        console.log('User signed out.');
-    });
-    gapi.auth2.getAuthInstance().disconnect();
 }

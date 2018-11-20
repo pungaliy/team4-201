@@ -36,10 +36,14 @@ public class SH5Login extends HttpServlet {
         request.getSession().setAttribute("name", username);
         request.getSession().setAttribute("email", email);
         request.getSession().setAttribute("user", u);
+        request.getSession().setAttribute("is_logged_in", true);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher view = request.getRequestDispatcher("html/login.html");
+        String redirectURL = "html/login.html";
+        if(request.getSession().getAttribute("is_logged_in") != null)
+            if((boolean) request.getSession().getAttribute("is_logged_in")) redirectURL = "html/logged_in.html";
+        RequestDispatcher view = request.getRequestDispatcher(redirectURL);
         view.forward(request, response);
     }
 }

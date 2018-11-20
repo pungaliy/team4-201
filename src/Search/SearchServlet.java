@@ -18,11 +18,11 @@ public class SearchServlet extends HttpServlet {
         System.out.println("Searching");
         String q = request.getParameter("query");
         PrintWriter out = response.getWriter();
-        if(q.length() != 8) {
-            System.out.println("!=8!=8!=8");
-            out.print("!=8");
-            return;
-        }
+//        if(q.length() != 8) {
+//            System.out.println("!=8!=8!=8");
+//            out.print("!=8");
+//            return;
+//        }
         DataBase db = new DataBase();
         Room r = db.retrieveRoom(q);
         if(r == null) {
