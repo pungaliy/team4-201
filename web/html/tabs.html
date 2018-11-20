@@ -44,6 +44,29 @@
             <a class="mdl-navigation__link" href="/tabs">Tabs</a>
             <a class="mdl-navigation__link" href="/chores">Chores</a>
         </nav>
+        <span class="input input--kaede">
+            <input class="input__field input__field--kaede" type="text" id="room_status" required/>
+            <label class="input__label input__label--kaede" for="room_status">
+                <span class="input__label-content input__label-content--kaede">Room Status</span>
+            </label>
+        </span>
+        <input onclick="updateRoomStatus(); return false" type="button" style="margin-left: 20px; margin-right: 20px; width: calc(100% - 40px); height: 50px; letter-spacing: 0; font-size: medium;" value="Update Status" class="submit mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+        <script>
+            //BAD CODING PRACTICES...
+
+            function updateRoomStatus() {
+                let roomStatus = document.getElementById("room_status").value;
+
+                $.ajax({
+                    method : 'POST' ,
+                    url : "/update-status",
+                    data : {status: roomStatus}
+                }).done(function(msg) {
+                    document.getElementById("room_status").value = "";
+                });
+            }
+
+        </script>
     </div>
     <main class="mdl-layout__content">
         <div class="page-content">
