@@ -2,6 +2,8 @@ var roomID;
 var currentUserID;
 var currentName;
 
+var roommateImg = [];
+
 var socket;
 
 function connectSocket(){
@@ -101,6 +103,9 @@ function loadRoommatesForAddTransaction(){
 				checkbox.value = roommate["userID"];
 				newList.appendChild(name);
 				newList.appendChild(checkbox);
+				let newJson = {id: roommate["fullName"],image: roommate["imgURL"]};
+				console.log("Try to add img to array", newJson);
+				roommateImg.push(newJson);
 			});
 			transactionOpt.appendChild(newList);
 
@@ -125,6 +130,20 @@ function loadRoommatesForAddTransaction(){
 	});
 
 
+}
+
+function getImgUrl(roommate){
+	console.log("Finding imgURL for: " + roommate);
+	let link = "";
+	roommateImg.forEach(function (img) {
+		if(img["id"] == roommate){
+			console.log("found image match: " + img["id"]);
+			console.log("Return img url: " + img["image"]);
+			link = img["image"];
+		}
+	});
+	console.log("Returning: " + link);
+	return link;
 }
 
 
@@ -377,8 +396,6 @@ function loadTabsTotalList(){
 				listItem.className = "mdl-list__item mdl-list__item--two-line";
 				let span1 = document.createElement("span");
 				span1.className = "mdl-list__item-primary-content";
-				let i = document.createElement("i");
-				i.className = "material-icons mdl-list__item-avatar";
 
 				let nameSpan = document.createElement("span");
 				nameSpan.innerHTML = item["user2"];
@@ -391,8 +408,13 @@ function loadTabsTotalList(){
 				} else {
 					amountSpan.innerHTML = ("$" + item["amount"]);
 				}
+				let img = document.createElement("img");
+				img.src = getImgUrl(item["user2"]);
+				img.className = "material-icons mdl-list__item-avatar";
+				console.log(getImgUrl(item["user2"]));
+				console.log(img);
 
-				span1.appendChild(i);
+				span1.appendChild(img);
 				span1.appendChild(nameSpan);
 				span1.appendChild(amountSpan);
 				listItem.appendChild(span1);
