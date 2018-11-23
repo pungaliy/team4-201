@@ -5,10 +5,14 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-blue.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
     <link rel="stylesheet" type="text/css" href="../css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../css/materialize.css" />
+
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../unprocessed_js/tabsJS.js" ></script>
     <script src="../unprocessed_js/search-room.js"></script>
+    <script src="../unprocessed_js/materialize.js"></script>
+
 
     <style>
         .demo-list-control {
@@ -79,14 +83,11 @@
 
                         </li>
                     </ul>
-                    <button id="addGroceryButton"
-                            class="addGroceryButton mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                        Add an Item
+
+                    <button data-target="modal1" class="btn modal-trigger" id="addGroceryButton" class="addGroceryButton mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                        Add an item
                     </button>
-                    <form name="addGroceryOptions" id="addGroceryOptions" onsubmit="return addGroceryClick();">
-                        <input name="itemNameInput" id="itemNameInput" type="text" value=""/>
-                        <input type="submit" id="newItemSubmit" value="Add New Item"/>
-                    </form>
+
                 </div>
 
                 <!--transactions-->
@@ -113,22 +114,10 @@
                             </tr>
                         </tbody>
                     </table>
-                    <button
-                            id="addTransactionButton"
-                            class="addTransactionButton mdl-button mdl-js-button mdl-button--raised
-                            mdl-js-ripple-effect mdl-button--accent">
+                    <button data-target="modal2" class="btn modal-trigger" id="addTransactionButton" class="addTransactionButton mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                         New Transaction
                     </button>
-                    <form name="addTransactionOptions" id="addTransactionOptions" onsubmit="return addTransactionClick();">
-                        <br>
-                        <span id="purchaserList"></span><br>
-                        <span id="roommateList"></span><br>
-                        <input type="number" name="newTransactionPricePerItem" id="newTransactionPricePerItem"
-                               step="any" min="0"/>
-                        <input type="number" name="newTransactionQuantity" id="newTransactionQuantity" min="0"/>
-                        <input type="text" name="newTransactionItemName" id="newTransactionItemName"/>
-                        <input type="submit" id="newSplitSubmit" value="Split!"/>
-                    </form>
+
                 </div>
 
                 <!--amount-->
@@ -145,9 +134,48 @@
                         </li>
                     </ul>
                 </div>
+
+            </div>
+
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal bottom-sheet">
+                <div class="modal-content">
+                    <form name="addGroceryOptions" id="addGroceryOptions" onsubmit="return addGroceryClick();">
+                        <h5>Item Name:</h5><input name="itemNameInput" id="itemNameInput" type="text" value="Tissues"/>
+
+                    </form>
+                </div>
+
+            </div>
+            <!-- Modal Structure -->
+            <div id="modal2" class="modal bottom-sheet">
+                <div class="modal-content">
+                    <form name="addTransactionOptions" id="addTransactionOptions" onsubmit="return addTransactionClick();">
+                        <br>
+                        <span id="purchaserList"></span><br>
+                        <span id="roommateList"></span><br>
+                        <h5>Price: </h5><input type="number" name="newTransactionPricePerItem" id="newTransactionPricePerItem"
+                               value="1"step="any" min="0"/>
+                        <h5> # Items Bought</h5><input type="number" name="newTransactionQuantity" id="newTransactionQuantity" value="1"min="0"/>
+                        <h5>Item Name</h5><input type="text" name="newTransactionItemName" id="newTransactionItemName"/>
+                        <button  type="submit" id="newSplitSubmit" value="Split!" class="mdl-button mdl-js-button mdl-button--raised">
+                            Split
+                        </button>
+                        <!--<input type="submit" id="newSplitSubmit" value=/>-->
+
+                    </form>
+                </div>
+
             </div>
         </div>
     </main>
+    <script>
+        $(document).ready(function(){
+            $('.modal').modal();
+
+        });
+
+    </script>
 </div>
 </body>
 </html>

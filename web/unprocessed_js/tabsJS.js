@@ -31,21 +31,7 @@ function broadcastUpdate(){
 	socket.send("");
 }
 
-$(document).ready(function(){
-	loadUserObjAndRoom();
-	connectSocket();
-	$("#addGroceryOptions").hide();
-	$("#addTransactionOptions").hide();
 
-	$("#addGroceryButton").click(function(){
-		$("#addGroceryOptions").toggle();
-	});
-	$("#addTransactionButton").click(function(){
-		$("#addTransactionOptions").toggle();
-	});
-
-
-});
 
 function loadUserObjAndRoom(){
 	console.log("Try to open ajax");
