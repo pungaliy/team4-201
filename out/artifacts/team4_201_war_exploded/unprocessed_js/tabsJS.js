@@ -31,7 +31,18 @@ function broadcastUpdate(){
 	socket.send("");
 }
 
+$(document).ready(function(){
+	loadUserObjAndRoom();
+	connectSocket();
+	// $("#addGroceryOptions").hide();
+	// $("#addTransactionOptions").hide();
+	//
+	// $("#addTransactionButton").click(function(){
+	// 	$("#addTransactionOptions").toggle();
 
+
+
+});
 
 function loadUserObjAndRoom(){
 	console.log("Try to open ajax");
@@ -60,7 +71,8 @@ function loadUserObjAndRoom(){
 }
 
 function loadRoommatesForAddTransaction(){
-	let transactionOpt = document.getElementById("addTransactionOptions");
+	let transactionOpt = document.getElementById("splitters");
+	let purchaserOpt = document.getElementById("purchaser");
 	let newList = document.getElementById("roommateList");
 	newList.innerHTML = "";
 	let newPurchaserList = document.getElementById("purchaserList");
@@ -93,7 +105,7 @@ function loadRoommatesForAddTransaction(){
 			//Purchaser
 			let listnamebuy = document.createElement("textNode");
 			listnamebuy.innerHTML = "Purchaser: ";
-			transactionOpt.appendChild(listnamebuy);
+			purchaserOpt.appendChild(listnamebuy);
 			roommateList.forEach(function(roommate){
 				let name = document.createElement("textNode");
 				name.innerHTML = roommate["fullName"];
@@ -103,7 +115,7 @@ function loadRoommatesForAddTransaction(){
 				newPurchaserList.appendChild(name);
 				newPurchaserList.appendChild(radio);
 			});
-			transactionOpt.appendChild(newPurchaserList);
+			purchaserOpt.appendChild(newPurchaserList);
 		},
 		error: function(response){
 			console.log("Error loading roommates", response);

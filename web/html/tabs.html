@@ -142,7 +142,9 @@
                 <div class="modal-content">
                     <form name="addGroceryOptions" id="addGroceryOptions" onsubmit="return addGroceryClick();">
                         <h5>Item Name:</h5><input name="itemNameInput" id="itemNameInput" type="text" value="Tissues"/>
-
+                        <button  type="submit" id="newItemSubmit"  class="mdl-button mdl-js-button mdl-button--raised">
+                            Add New Item
+                        </button>
                     </form>
                 </div>
 
@@ -158,6 +160,8 @@
                                value="1"step="any" min="0"/>
                         <h5> # Items Bought</h5><input type="number" name="newTransactionQuantity" id="newTransactionQuantity" value="1"min="0"/>
                         <h5>Item Name</h5><input type="text" name="newTransactionItemName" id="newTransactionItemName"/>
+                        <div id="splitters"></div>
+                        <div id="purchaser"></div>
                         <button  type="submit" id="newSplitSubmit" value="Split!" class="mdl-button mdl-js-button mdl-button--raised">
                             Split
                         </button>

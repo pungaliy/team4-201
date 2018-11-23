@@ -48,7 +48,7 @@ h1 {
     margin-right: auto;
     background-color: #e0eff3eb;
     font-family: arvo;
-    height: 50vmin;
+    height: 55vmin;
     display: block;
 }
 
@@ -103,7 +103,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin-top: 7vmin;
+    margin-top: 3vmin;
 }
 
 .table-container {
