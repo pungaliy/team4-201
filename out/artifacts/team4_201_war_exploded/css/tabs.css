@@ -48,6 +48,8 @@ h1 {
     margin-right: auto;
     background-color: #e0eff3eb;
     font-family: arvo;
+    height: 40vmin;
+    display: block;
 }
 
 .grocerylist{
@@ -101,7 +103,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin-top: 8vmin;
+    margin-top: 7vmin;
 }
 
 .table-container {
