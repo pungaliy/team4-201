@@ -12,7 +12,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #dd9eb1;
+    background: #26a69a6b;
 }
 
 /* Handle on hover */
@@ -36,19 +36,20 @@
     margin-right: auto;
     background-color: #fffaf7c9;
     font-family: arvo;
+    height: 60vmin;
+    display: block;
 }
 
 h1{
     text-align: center;
-    font-family: arvo;
-    font-size: 6vmin;
-    /* display: block; */
-    color: #cf5d7e;
-    padding: 0;
+    font-family: century gothic;
+    font-size: 5vmin;
+    /* color: #7d4f0b; */
+    /* color: #26a69a; */
+    color: #ea6f6f;
     margin: 0;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
 }
+
 td{
     max-width: 20vmin;
     overflow-x: auto;
@@ -68,7 +69,7 @@ td{
     border-radius: 1vmin;
     padding: 3vmin;
     height: 80vmin;
-    box-shadow: 1px 1px 8px 2px #cf9c79;
+    box-shadow: 1px 1px 8px 2px #cf9c797d;
     /* border-right: 3px; */
 }
 
@@ -119,4 +120,13 @@ table {
     display: block;
     height: 50vmin;
     overflow-y: auto;
+    height: 60vmin;
+    display: block;
+}
+
+#add_chore_button{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10vmin;
 }

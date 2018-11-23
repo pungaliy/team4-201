@@ -1,4 +1,16 @@
 
+
+h1 {
+    text-align: center;
+    font-size: 5vmin;
+    /* display: block; */
+    color: #e48383;
+    font-family: century gothic;
+    padding: 0;
+    margin: 0;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
@@ -38,17 +50,6 @@
     font-family: arvo;
 }
 
-h1{
-    text-align: center;
-    font-family: arvo;
-    font-size: 6vmin;
-    /* display: block; */
-    color: #cf5d7e;
-    padding: 0;
-    margin: 0;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-}
 .grocerylist{
     display: block;
     margin-left: auto;
