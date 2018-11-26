@@ -44,7 +44,9 @@
     /* text-align: center; */
     margin: 20px;
     margin-left: 7vmin;
-    /* position: absolute; */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     /* right: 50px; */
 }
 
