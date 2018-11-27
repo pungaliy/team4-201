@@ -97,6 +97,7 @@ function loadRoommatesForAddTransaction(){
 				let checkbox = document.createElement("input");
 				checkbox.type = "checkbox";
 				checkbox.value = roommate["userID"];
+				checkbox.name = "splitters";
 				newList.appendChild(name);
 				newList.appendChild(checkbox);
 			});
@@ -113,6 +114,7 @@ function loadRoommatesForAddTransaction(){
 				//radio.type = "radio";
 				radio.type = "checkbox";
 				radio.value = roommate["userID"];
+				radio.name = "purchaser";
 				newPurchaserList.appendChild(name);
 				newPurchaserList.appendChild(radio);
 			});
@@ -315,9 +317,9 @@ function addTransactionClick(){
 	let purchaser;
 	let allInput = document.getElementById("addTransactionOptions").getElementsByTagName("input");
 	for(let i = 0; i < allInput.length; i++){
-		if(allInput[i].type == "checkbox" && allInput[i].checked == true){
+		if(allInput[i].type == "checkbox" && allInput[i].checked == true && allInput[i].name == "splitters"){
 			splitters.push(allInput[i].value);
-		} else if (allInput[i].type == "radio" && allInput[i].checked == true){
+		} else if (allInput[i].type == "checkbox" && allInput[i].checked == true && allInput[i].name == "purchaser"){
 			purchaser = allInput[i].value;
 		}
 	}
