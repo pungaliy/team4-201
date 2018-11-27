@@ -93,7 +93,7 @@ function loadRoommatesForAddTransaction(){
 			transactionOpt.appendChild(listnamesplit);
 			roommateList.forEach(function(roommate){
 				let name = document.createElement("textNode");
-				name.innerHTML = roommate["fullName"];
+				name.innerHTML = roommate["fullName"] + " ";
 				let checkbox = document.createElement("input");
 				checkbox.type = "checkbox";
 				checkbox.value = roommate["userID"];
@@ -108,9 +108,10 @@ function loadRoommatesForAddTransaction(){
 			purchaserOpt.appendChild(listnamebuy);
 			roommateList.forEach(function(roommate){
 				let name = document.createElement("textNode");
-				name.innerHTML = roommate["fullName"];
+				name.innerHTML = roommate["fullName"] + " ";
 				let radio = document.createElement("input");
-				radio.type = "radio";
+				//radio.type = "radio";
+				radio.type = "checkbox";
 				radio.value = roommate["userID"];
 				newPurchaserList.appendChild(name);
 				newPurchaserList.appendChild(radio);

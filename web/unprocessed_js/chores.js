@@ -102,12 +102,12 @@ function displayChoreRotation(c) {
                 '<td>'+due+'</td>' +
             '</tr>';
     }
-    if(c.length == 0) {
+    /*if(c.length == 0) {
         table.innerHTML +=
             '<p>' +
-                "Your room doesn't have chores yet. Click the ADD A CHORE button to start adding chores." +
+                "Your room doesn't have chores yet.<br>Click the ADD A CHORE button to start adding chores." +
             '</p>';
-    }
+    }*/
 }
 
 function displayShameWall(c) {
