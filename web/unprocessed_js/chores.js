@@ -57,7 +57,7 @@ function displayJSONPackage(json) {
     displayMyChores(p.mychores);
     displayChoreRotation(p.allchores);
     displayShameWall(p.shamedchores);
-    componentHandler.upgradeDom();
+
 }
 
 function displayMyChores(c) {
@@ -86,6 +86,8 @@ function displayMyChores(c) {
                 '</span>' +
             '</li>';
     }
+
+    componentHandler.upgradeDom();
 }
 
 function displayChoreRotation(c) {

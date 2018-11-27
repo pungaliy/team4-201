@@ -37,6 +37,8 @@ public class ChoreSocket {
             db.Chore c = cb.retrieveChore(message.substring(5));
             c.setCompleted(checked);
             cb.updateChore(c);
+            ChoreManager cm = sessionToThread.get(session).getChoreManager();
+            session.getAsyncRemote().sendText(cm.getJSONPackage(cm.getChores()));
         } else { //Broadcast chores to other users in room
             System.out.println("Broadcasting...");
             db.User currUser  = sessionToThread.get(session).getChoreManager().getUser();

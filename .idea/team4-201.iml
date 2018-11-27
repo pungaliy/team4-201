@@ -20,7 +20,64 @@
     </content>
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="gson-2.8.0" level="project" />
-    <orderEntry type="library" name="bson-3.8.2-sources" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/dbsrc/bson-3.8.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/dbsrc/gson-2.8.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/dbsrc/mongodb-driver-3.8.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/dbsrc/mongodb-driver-core-3.8.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/gson-2.8.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/javaee-api-7.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/javax.annotation.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/javax.ejb.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/javax.jms.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/javax.persistence.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/javax.resource.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/javax.servlet.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/javax.servlet.jsp.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/javax.servlet.jsp.jstl.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/javax.transaction.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/javax.websocket-api-1.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/servlet-api.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://$MODULE_DIR$/lib/javax.websocket-api-1.1-javadoc.jar!/" />
+        </JAVADOC>
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
