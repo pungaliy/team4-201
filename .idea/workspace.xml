@@ -7,11 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e01caea0-f7ce-4d2e-ae68-6639be0f91c3" name="Default Changelist" comment="Pushing for Allan">
-      <change beforePath="$PROJECT_DIR$/.idea/team4-201.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/team4-201.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/WEB-INF/classes/db/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/team4_201_war_exploded/WEB-INF/classes/db/DataBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chores/ChoreSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chores/ChoreSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/unprocessed_js/chores.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/unprocessed_js/chores.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/tabs.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/tabs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/html/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/html/calendar.html" afterDir="false" />
     </list>
     <list id="4b467718-25fe-45fd-8309-4d2b18a49a7b" name="" comment="Can add transaction with custom purchaser now!!~!!!!!" />
     <ignored path="C:\Users\kbcha\team4-201\.idea\shelf/" />
@@ -37,8 +35,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="12" />
-          <entry key="html" value="20" />
+          <entry key="css" value="13" />
+          <entry key="html" value="21" />
           <entry key="java" value="9" />
           <entry key="js" value="15" />
           <entry key="json" value="6" />
@@ -48,8 +46,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="12" />
-          <entry key="HTML" value="20" />
+          <entry key="CSS" value="13" />
+          <entry key="HTML" value="21" />
           <entry key="Image" value="2" />
           <entry key="JAVA" value="9" />
           <entry key="JSON" value="6" />
@@ -59,16 +57,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="485" />
-          <entry key="html" value="1353" />
+          <entry key="css" value="487" />
+          <entry key="html" value="1387" />
           <entry key="java" value="54" />
           <entry key="js" value="231" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="485" />
-          <entry key="HTML" value="1353" />
+          <entry key="CSS" value="487" />
+          <entry key="HTML" value="1387" />
           <entry key="JAVA" value="54" />
           <entry key="JavaScript" value="231" />
         </counts>
@@ -190,24 +188,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbsrc/db/ChoreBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbsrc/db/CalendarBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PostItServlets/SH5DeletePostIt.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
@@ -246,11 +226,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Chores/ChoreSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="39" column="65" lean-forward="true" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
+            <state relative-caret-position="-3">
+              <caret line="36" column="64" lean-forward="true" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/html/calendar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="88" column="69" lean-forward="true" selection-start-line="88" selection-start-column="69" selection-end-line="88" selection-end-column="69" />
+              <folding>
+                <element signature="n#style#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/css/tabs.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -301,6 +302,7 @@
       <find>kaede</find>
       <find>tabs.html</find>
       <find>todo</find>
+      <find>main</find>
     </findStrings>
     <replaceStrings>
       <replace>/tabs</replace>
@@ -317,7 +319,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/css/tabs.css" />
         <option value="$PROJECT_DIR$/web/css/index.css" />
         <option value="$PROJECT_DIR$/web/css/chores.css" />
         <option value="$PROJECT_DIR$/web/css/set2.css" />
@@ -365,9 +366,10 @@
         <option value="$PROJECT_DIR$/web/html/tabs.html" />
         <option value="$PROJECT_DIR$/web/html/message.html" />
         <option value="$PROJECT_DIR$/web/html/chores.html" />
-        <option value="$PROJECT_DIR$/web/html/calendar.html" />
         <option value="$PROJECT_DIR$/web/unprocessed_js/chores.js" />
         <option value="$PROJECT_DIR$/src/Chores/ChoreSocket.java" />
+        <option value="$PROJECT_DIR$/web/html/calendar.html" />
+        <option value="$PROJECT_DIR$/web/css/tabs.css" />
       </list>
     </option>
   </component>
@@ -405,9 +407,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="900" />
-    <option name="width" value="1032" />
-    <option name="height" value="1032" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="980" />
+    <option name="height" value="1031" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -488,7 +491,7 @@
     <property name="SearchEverywhereHistoryKey" value="roomID&#9;PSI&#9;JAVA://TabsStuff.Transaction#roomID" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543281773868" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543283728803" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/servlet-api.jar!/" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -1031,7 +1034,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150006000" />
+    <option name="totallyTimeSpent" value="151973000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1046,7 +1049,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.64122134" weight="0.18947369" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.64122134" visible="true" weight="0.18947369" />
       <window_info id="Structure" order="1" sideWeight="0.18320611" side_tool="true" weight="0.18947369" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1057,13 +1060,13 @@
       <window_info id="Learn" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49928468" weight="0.32761088" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49716598" weight="0.30071175" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49716598" visible="true" weight="0.30071175" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32916668" />
       <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49785408" weight="0.32677165" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.41814947" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.26868328" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.502834" side_tool="true" weight="0.30071175" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49785408" weight="0.32740214" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32916668" />
@@ -1183,7 +1186,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Pushing for Allan" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/tabsSocket.js" />
     <entry file="file://$PROJECT_DIR$/src/TabSocket/TabsSocket.java" />
     <entry file="file://$PROJECT_DIR$/dbsrc/db/User.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1259,7 +1261,6 @@
     <entry file="file://$PROJECT_DIR$/web/html/tabs.html" />
     <entry file="file://$PROJECT_DIR$/web/html/login.html" />
     <entry file="file://$PROJECT_DIR$/web/html/chores.html" />
-    <entry file="file://$PROJECT_DIR$/web/html/calendar.html" />
     <entry file="file://$PROJECT_DIR$/dbsrc/db/ChoreBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -1328,8 +1329,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Chores/ChoreSocket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="39" column="65" lean-forward="true" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
+        <state relative-caret-position="-3">
+          <caret line="36" column="64" lean-forward="true" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/calendar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="88" column="69" lean-forward="true" selection-start-line="88" selection-start-column="69" selection-end-line="88" selection-end-column="69" />
+          <folding>
+            <element signature="n#style#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/tabs.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
         </state>
       </provider>
     </entry>
