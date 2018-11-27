@@ -7,8 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57585bcd-a68d-4c91-bd71-7a506325d814" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/team4-201.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/team4-201.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,24 +21,26 @@
     <session id="1755798524">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="3" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="38" />
+          <entry key="html" value="40" />
           <entry key="java" value="87" />
-          <entry key="js" value="26" />
+          <entry key="js" value="27" />
           <entry key="md" value="1" />
           <entry key="xml" value="2" />
         </counts>
@@ -46,9 +48,9 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="HTML" value="38" />
+          <entry key="HTML" value="40" />
           <entry key="JAVA" value="87" />
-          <entry key="JavaScript" value="26" />
+          <entry key="JavaScript" value="27" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="XML" value="2" />
@@ -59,7 +61,7 @@
           <entry key="git.branch.checkout.remote" value="4" />
           <entry key="git.branch.create.new" value="3" />
           <entry key="git.branch.delete.local" value="2" />
-          <entry key="git.branch.merge" value="8" />
+          <entry key="git.branch.merge" value="10" />
           <entry key="git.branch.rename" value="1" />
         </counts>
       </usages-collector>
@@ -86,36 +88,26 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/html/message.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="43" column="204" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="204" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/unprocessed_js/message-board.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="149" column="48" lean-forward="true" selection-start-line="149" selection-start-column="48" selection-end-line="149" selection-end-column="48" />
-              <folding>
-                <element signature="n#!!block;n#constructor#0;n#PostIt#0" />
-                <element signature="n#!!block;n#render#0;n#PostIt#0" />
-                <element signature="n#PostIts#0" />
-                <element signature="n#!!block;n#constructor#0;n#PostIts#0" />
-                <element signature="n#!!block;n#render#0;n#PostIts#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/unprocessed_js/tabsJS.js">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/html/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/html/message.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -127,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="474">
+              <first_editor relative-caret-position="1515">
                 <caret line="101" selection-start-line="101" selection-end-line="101" />
               </first_editor>
               <second_editor />
@@ -140,10 +132,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/html/registration.html">
+        <entry file="file://$PROJECT_DIR$/web/unprocessed_js/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-565">
-              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+            <state relative-caret-position="345">
+              <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -151,7 +143,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/html/tabs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="615">
               <caret line="41" column="204" selection-start-line="41" selection-start-column="204" selection-end-line="41" selection-end-column="204" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -163,8 +155,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Search/SearchServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+            <state relative-caret-position="150">
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -176,7 +168,7 @@
         <entry file="file://$PROJECT_DIR$/web/html/test.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -184,8 +176,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbsrc/db/DataBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+            <state relative-caret-position="75">
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -257,7 +252,6 @@
         <option value="$PROJECT_DIR$/src/Chores/ChoreThread.java" />
         <option value="$PROJECT_DIR$/src/Chores/AddChoreServlet.java" />
         <option value="$PROJECT_DIR$/web/_dialog_test.html" />
-        <option value="$PROJECT_DIR$/web/unprocessed_js/message-board.js" />
         <option value="$PROJECT_DIR$/src/LoginRegistration/LogoutServlet.java" />
         <option value="$PROJECT_DIR$/src/LoginRegistration/SH5Login.java" />
         <option value="$PROJECT_DIR$/web/unprocessed_js/login.js" />
@@ -272,6 +266,7 @@
         <option value="$PROJECT_DIR$/src/Search/SearchServlet.java" />
         <option value="$PROJECT_DIR$/web/unprocessed_js/search-room.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/web/unprocessed_js/message-board.js" />
       </list>
     </option>
   </component>
@@ -296,7 +291,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="714" />
     <option name="height" value="900" />
   </component>
@@ -371,11 +366,11 @@
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542695071948" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542703862938" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -642,6 +637,8 @@
       <workItem from="1542267183571" duration="17802000" />
       <workItem from="1542308367343" duration="1470000" />
       <workItem from="1542611126866" duration="441000" />
+      <workItem from="1542776786047" duration="149000" />
+      <workItem from="1543284731087" duration="422000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'remotes/origin/newdb' into micah_branch&#10;&#10;# Conflicts:&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/modules.xml">
       <created>1542090933032</created>
@@ -668,7 +665,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103556000" />
+    <option name="totallyTimeSpent" value="105287000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -680,30 +677,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.749577" visible="true" weight="0.2746781" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7449324" visible="true" weight="0.28183118" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.250423" side_tool="true" visible="true" weight="0.2746781" />
+      <window_info id="Web" order="7" sideWeight="0.25506756" side_tool="true" visible="true" weight="0.28183118" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4985694" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47424892" weight="0.26987952" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.472103" weight="0.26987952" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49570817" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.48855507" weight="0.32771084" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49499285" weight="0.2686747" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4806867" visible="true" weight="0.2879518" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5193133" side_tool="true" visible="true" weight="0.2879518" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.47854078" visible="true" weight="0.28674698" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5214592" side_tool="true" visible="true" weight="0.28674698" />
       <window_info anchor="bottom" id="Application Servers" order="11" sideWeight="0.49785408" weight="0.3275862" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.490701" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4899857" weight="0.32891566" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -764,27 +760,9 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/dbsrc/mongodb-driver-core-3.8.2-sources.jar!/com/mongodb/MongoNamespace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/dbsrc/mongodb-driver-core-3.8.2-sources.jar!/com/mongodb/MongoClientSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/dbsrc/mongodb-driver-core-3.8.2-sources.jar!/com/mongodb/client/model/Filters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/dbsrc/mongodb-driver-core-3.8.2-sources.jar!/com/mongodb/MongoNamespace.java" />
+    <entry file="jar://$PROJECT_DIR$/dbsrc/mongodb-driver-core-3.8.2-sources.jar!/com/mongodb/MongoClientSettings.java" />
+    <entry file="jar://$PROJECT_DIR$/dbsrc/mongodb-driver-core-3.8.2-sources.jar!/com/mongodb/client/model/Filters.java" />
     <entry file="file://$PROJECT_DIR$/src/Chores/ChorePackage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -792,13 +770,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/dbsrc/mongodb-driver-3.8.2-sources.jar!/com/mongodb/client/internal/MongoDatabaseImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="129" selection-start-line="129" selection-end-line="129" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/dbsrc/mongodb-driver-3.8.2-sources.jar!/com/mongodb/client/internal/MongoDatabaseImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/LoginRegistration/GetRoomServlet.java" />
     <entry file="file://$PROJECT_DIR$/dbsrc/db/Note.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -814,9 +786,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/mongoSettings.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/mongoSettings.xml" />
     <entry file="file://$PROJECT_DIR$/src/LoginRegistration/SH5Registration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -864,9 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="25" column="76" selection-start-line="25" selection-start-column="76" selection-end-line="25" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -922,9 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -956,9 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
           <caret line="48" column="65" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -994,20 +955,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="76" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/html/calendar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="86" column="204" selection-start-line="86" selection-start-column="204" selection-end-line="86" selection-end-column="204" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1015,9 +966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="44" column="204" selection-start-line="44" selection-start-column="204" selection-end-line="44" selection-end-column="204" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1028,23 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/message.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="43" column="204" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="204" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/html/registration.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-565">
@@ -1052,34 +983,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/tabs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="41" column="204" selection-start-line="41" selection-start-column="204" selection-end-line="41" selection-end-column="204" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/html/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbsrc/db/DataBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/message-board.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="149" column="48" lean-forward="true" selection-start-line="149" selection-start-column="48" selection-end-line="149" selection-end-column="48" />
+        <state relative-caret-position="165">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding>
             <element signature="n#!!block;n#constructor#0;n#PostIt#0" />
             <element signature="n#!!block;n#render#0;n#PostIt#0" />
@@ -1093,16 +1000,6 @@
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/tabsJS.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Search/SearchServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/unprocessed_js/search-room.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1113,10 +1010,68 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="474">
+          <first_editor relative-caret-position="1515">
             <caret line="101" selection-start-line="101" selection-end-line="101" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/unprocessed_js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/tabs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="204" selection-start-line="41" selection-start-column="204" selection-end-line="41" selection-end-column="204" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Search/SearchServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbsrc/db/DataBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/html/message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1198,7 +1153,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>bson-3.8.2-sources</last-edited>
+          <last-edited>bson-3.8.2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
